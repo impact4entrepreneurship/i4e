@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leitbild – Impact4Entrepreneurship gGmbH</title>
+<meta name="description" content="Das Leitbild der Impact4Entrepreneurship gGmbH: Vision, Mission und Strategie. Wirtschaft aus Berufung, Wirkung aus Klarheit."><link rel="stylesheet" href="fonts/fonts.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232f003a'/><text x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23e09bd1'>i4e</text></svg>">
+<style>
+  :root{--pflaume:#2f003a;--pflaume-2:#22002b;--violett:#5b156d;--violett-2:#7a2a90;--rosa:#e09bd1;--creme:#faf5f8;--card:#fffdff;--ink:#26122e;--grau:#6f6577;--line:#ecdff0;--line-dark:rgba(224,155,209,.22)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--creme);line-height:1.72;font-size:17px;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--rosa);color:var(--pflaume)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  .col{max-width:760px;margin:0 auto}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,245,248,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+  .nav .logo img{height:42px;width:auto}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{font-size:15px;color:var(--grau);font-weight:500}
+  .nav-links a:hover{color:var(--violett)}
+  .nav .cta{font-size:14.5px;font-weight:600;color:#fff;background:var(--violett);padding:11px 20px;border-radius:100px}
+  .nav .cta:hover{background:var(--violett-2)}
+  @media(max-width:640px){.nav-links{display:none}.nav .logo img{height:34px}}
+
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--violett)}
+
+  /* Hero */
+  .hero{padding:74px 0 34px;text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:50%;top:-140px;transform:translateX(-50%);width:620px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(224,155,209,.22),transparent 66%);z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(34px,5.4vw,58px);color:var(--pflaume);letter-spacing:-.01em;line-height:1.1;margin:18px auto 18px;max-width:16ch}
+  .hero h1 em{font-style:italic;color:var(--violett)}
+  .hero .sub{color:var(--grau);font-size:19px;max-width:46ch;margin:0 auto}
+
+  /* Pillars */
+  .pillar{padding:70px 0;border-top:1px solid var(--line)}
+  .pillar .num{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--violett)}
+  .pillar .eyebrow{display:block;margin:14px 0 6px}
+  .pillar h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.8vw,44px);color:var(--pflaume);letter-spacing:-.01em;line-height:1.1;margin-bottom:22px}
+  .pillar p{color:var(--ink);font-size:17.5px;margin-bottom:16px}
+  .pillar p .hl{color:var(--violett);font-weight:600}
+  .pillar .quote{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.6vw,26px);color:var(--pflaume);line-height:1.35;border-left:3px solid var(--rosa);padding-left:22px;margin:6px 0 22px}
+
+  /* Dark pillar (Mission) */
+  .pillar.dark{background:var(--pflaume);color:#fff;border-top:none}
+  .pillar.dark .num{color:var(--rosa)}
+  .pillar.dark .eyebrow{color:var(--rosa)}
+  .pillar.dark h2{color:#fff}
+  .pillar.dark p{color:#e4d3ea}
+  .pillar.dark p .hl{color:var(--rosa)}
+
+  /* Wort des Geschäftsführers */
+  .gf{padding:20px 0 84px}
+  .gf-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 60px rgba(47,0,58,.07);padding:clamp(30px,4vw,52px);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,4vw,52px);align-items:center;max-width:940px;margin:0 auto}
+  .gf-photo{position:relative}
+  .gf-photo .frame{border-radius:180px 180px 14px 14px;overflow:hidden;background:var(--violett);box-shadow:0 20px 44px rgba(47,0,58,.22)}
+  .gf-photo .frame img{width:100%;aspect-ratio:3/3.5;object-fit:cover;object-position:50% 20%}
+  .gf-photo .dot{position:absolute;top:-16px;left:-16px;width:84px;height:84px;border:1px solid var(--rosa);border-radius:50%;opacity:.55;z-index:-1}
+  .gf-body .eyebrow{display:inline-flex;align-items:center;gap:10px}
+  .gf-body .eyebrow::before{content:"";width:24px;height:1px;background:var(--rosa)}
+  .gf-quote{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(22px,2.9vw,31px);line-height:1.32;color:var(--pflaume);margin:16px 0 22px}
+  .gf-quote .hl{color:var(--violett);font-style:normal}
+  .gf-by{display:flex;align-items:center;gap:12px}
+  .gf-by .nm{font-family:'Playfair Display',serif;font-weight:600;font-size:18px;color:var(--pflaume)}
+  .gf-by .rl{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--grau)}
+  @media(max-width:720px){.gf-card{grid-template-columns:1fr;text-align:left}.gf-photo{max-width:280px}}
+
+  /* Schluss */
+  .end{padding:80px 0;text-align:center}
+  .end .line{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(20px,2.8vw,28px);color:var(--violett);max-width:24ch;margin:0 auto 30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15.5px;padding:15px 30px;border-radius:100px;background:var(--violett);color:#fff;transition:.22s}
+  .btn:hover{background:var(--violett-2);transform:translateY(-2px)}
+
+  footer{background:var(--pflaume-2);color:#b79cc0;padding:44px 0;font-size:14px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .foot a:hover{color:#fff}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--rosa);outline-offset:3px}
+  @media(max-width:560px){body{font-size:16px}.pillar{padding:52px 0}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship – Wirtschaft aus Berufung. Wirkung aus Klarheit."></a>
+    <nav class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="leitbild.html">Leitbild</a>
+    </nav>
+    <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Unternehmergespr%C3%A4ch" class="cta">Unternehmergespräch</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Unser Leitbild</span>
+    <h1>Wirtschaft aus Berufung. <em>Wirkung aus Klarheit.</em></h1>
+    <p class="sub">Unser Leitbild in drei Bewegungen – Vision, Mission und Strategie.</p>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="pillar">
+  <div class="wrap col">
+    <span class="num">I</span>
+    <span class="eyebrow">Vision — Das Was</span>
+    <h2>Wirtschaft als Ausdruck innerer Berufung.</h2>
+    <p>Wirtschaft ist kein Zufallsprodukt, sondern Ausdruck innerer Berufung. Dort, wo der Mensch erkennt, wozu er wirklich gerufen ist, entsteht eine andere Qualität von Unternehmertum: klar, verantwortungsvoll und wirksam.</p>
+    <p class="quote">„Wirtschaft aus Berufung, Wirkung aus Klarheit" beschreibt genau diesen Weg.</p>
+    <p>Es geht nicht um bloßes Handeln, sondern um ein Handeln, das aus innerer Wahrheit geboren ist. <span class="hl">Klarheit im Denken führt zu Reinheit im Tun</span> – und daraus erwächst eine Wirkung, die über das Eigene hinausgeht und Gesellschaft gestaltet.</p>
+  </div>
+</section>
+
+<!-- MISSION (dunkel) -->
+<section class="pillar dark">
+  <div class="wrap col">
+    <span class="num">II</span>
+    <span class="eyebrow">Mission — Das Warum</span>
+    <h2>Bildung, die den ganzen Menschen formt.</h2>
+    <p>Der Kern unserer Arbeit liegt in der Förderung von Bildung – nicht als reine Wissensvermittlung, sondern als Formung des ganzen Menschen. Schüler und Studenten sollen befähigt werden, ethisch zu denken, religiös zu reflektieren und zugleich marktwirtschaftlich verantwortungsvoll zu handeln.</p>
+    <p>Bildung wird hier zu einem Raum, in dem Werte nicht nur gelehrt, sondern erkannt und gelebt werden. Der Zweck ist klar: <span class="hl">Menschen hervorzubringen, die nicht nur kompetent sind, sondern auch innerlich ausgerichtet</span> – Menschen, die wissen, warum sie tun, was sie tun.</p>
+  </div>
+</section>
+
+<!-- STRATEGIE -->
+<section class="pillar">
+  <div class="wrap col">
+    <span class="num">III</span>
+    <span class="eyebrow">Strategie — Das Wie</span>
+    <h2>Theorie und Praxis, die ins Leben greifen.</h2>
+    <p>Dieser Auftrag wird durch die Verbindung von Theorie und Praxis verwirklicht. Bildungsangebote werden so gestaltet, dass sie nicht im Abstrakten bleiben, sondern konkret ins Leben greifen. Erkenntnisse aus unternehmerischer Praxis, wissenschaftlicher Forschung und fundierter Lehre fließen zusammen und werden in lebendige Lernprozesse übersetzt.</p>
+    <p>Zentral ist der Austausch: Unternehmer, Gründer und Wissenschaftler treten in einen echten Dialog mit den Geförderten. Wissen wird nicht einseitig vermittelt, sondern gemeinsam durchdrungen – immer mit dem Ziel, ein sozial verantwortliches und werteorientiertes Handeln hervorzubringen.</p>
+    <p>Ein besonderer Fokus liegt auf der Integration religiöser und ethischer Perspektiven der Bibel in wirtschaftliche Zusammenhänge. Diese werden nicht isoliert betrachtet, sondern in ihren praktischen Auswirkungen auf Gesellschaft und Unternehmertum verstanden. So entsteht eine Brücke zwischen uralter Weisheit und heutiger Realität.</p>
+    <p>Die gewonnenen Erkenntnisse bleiben nicht im Verborgenen. Sie werden aktiv mit privaten und öffentlichen Bildungsträgern geteilt, um Studiengänge weiterzuentwickeln und neue Maßstäbe für werteorientierte Wirtschaft zu setzen. Veröffentlichung und Weitergabe sind dabei kein Zusatz, sondern Teil des Auftrags: <span class="hl">Licht soll nicht verborgen bleiben, sondern wirken.</span></p>
+  </div>
+</section>
+
+<!-- WORT DES GESCHÄFTSFÜHRERS -->
+<section class="gf">
+  <div class="wrap">
+    <div class="gf-card">
+      <div class="gf-photo">
+        <span class="dot"></span>
+        <div class="frame"><img src="images/michael-deck.jpg" alt="Michael Deck, Geschäftsführer der Impact4Entrepreneurship gGmbH"></div>
+      </div>
+      <div class="gf-body">
+        <span class="eyebrow">Wort des Geschäftsführers</span>
+        <p class="gf-quote">„Ich begleite Unternehmer dabei, ihr Unternehmen als Ausdruck ihrer <span class="hl">Berufung</span> zu bauen – verwurzelt in biblischen Prinzipien, mit wirtschaftlicher Klarheit."</p>
+        <div class="gf-by">
+          <div>
+            <div class="nm">Michael Deck</div>
+            <div class="rl">Geschäftsführer · Impact4Entrepreneurship gGmbH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHLUSS -->
+<section class="end">
+  <div class="wrap">
+    <p class="line">Aus Berufung wird Klarheit. Aus Klarheit wird Wirkung.</p>
+    <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Unternehmergespr%C3%A4ch" class="btn">Ins Gespräch kommen →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Impact4Entrepreneurship gGmbH</span>
+    <span style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <a href="index.html">Start</a>
+      <a href="leitbild.html">Leitbild</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
