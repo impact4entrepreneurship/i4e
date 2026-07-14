@@ -88,6 +88,34 @@
   .contact .lines a{color:#fff;border-bottom:1px solid rgba(224,155,209,.55)}
   .contact .lines a:hover{border-color:var(--rosa)}
 
+  /* Events / I4E Akademie */
+  .events{padding:16px 0 96px}
+  .events .head{text-align:center;margin-bottom:44px}
+  .events .eyebrow{color:var(--violett);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+  .events .eyebrow::before,.events .eyebrow::after{content:"";width:26px;height:1px;background:var(--rosa)}
+  .events h2{font-size:clamp(30px,4.4vw,50px);color:var(--pflaume);margin:16px 0 6px}
+  .events .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(19px,2.5vw,24px);color:var(--violett)}
+  .event-card{display:grid;grid-template-columns:minmax(0,.92fr) 1.35fr;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(47,0,58,.07);max-width:940px;margin:0 auto;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .event-card:hover{transform:translateY(-5px);box-shadow:0 34px 74px rgba(47,0,58,.14);border-color:var(--rosa)}
+  .event-media{position:relative;min-height:300px;background:var(--violett)}
+  .event-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+  .date-badge{position:absolute;left:22px;bottom:22px;width:66px;background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 10px 24px rgba(47,0,58,.28);text-align:center}
+  .date-badge .m{display:block;background:var(--pflaume);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 0}
+  .date-badge .d{display:block;font-family:'Playfair Display',serif;font-size:27px;font-weight:700;color:var(--pflaume);padding:6px 0 8px}
+  .event-body{padding:clamp(28px,3.6vw,44px);display:flex;flex-direction:column;justify-content:center}
+  .event-body .cat{color:var(--violett);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:13px}
+  .event-body h3{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(23px,3vw,31px);color:var(--pflaume);line-height:1.14;margin-bottom:14px}
+  .event-body p{color:var(--grau);font-size:16px;margin-bottom:20px}
+  .event-meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--pflaume);font-weight:600;margin-bottom:24px}
+  .event-meta span{display:inline-flex;align-items:center;gap:7px}
+  .event-meta .ic{color:var(--violett)}
+  .event-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .price-pill{background:var(--rosa-soft);color:var(--violett);font-weight:700;font-size:14px;padding:9px 18px;border-radius:100px}
+  .event-foot .mehr{font-weight:600;font-size:15px;color:var(--violett)}
+  .event-foot .mehr::after{content:" →";transition:margin-left .2s ease}
+  .event-card:hover .mehr::after{margin-left:4px}
+  @media(max-width:720px){.event-card{grid-template-columns:1fr}.event-media{min-height:210px}}
+
   /* Footer */
   footer{background:var(--pflaume-2);color:#b79cc0;padding:46px 0;font-size:14px}
   .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
@@ -107,6 +135,7 @@
   <div class="wrap nav">
     <a href="#top" class="logo"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship – Wirtschaft aus Berufung. Wirkung aus Klarheit."></a>
     <nav style="display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500">
+      <a href="#events" style="color:var(--grau)">Events</a>
       <a href="leitbild.html" style="color:var(--grau)">Leitbild</a>
       <a href="https://impact4entrepreneurship.github.io/kursbibliothek/" style="color:var(--grau)">Kursbibliothek</a>
       <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Unternehmergespr%C3%A4ch" class="btn btn-primary nav-cta">Unternehmergespräch</a>
@@ -173,6 +202,37 @@
   <div class="wrap">
     <p class="q">Menschen suchen selten eine Agentur. Sie suchen <span class="hl">Lösungen</span> für ihre unternehmerischen Herausforderungen – und einen Begleiter, der sie versteht.</p>
     <div class="by">Michael Deck · Impact4Entrepreneurship</div>
+  </div>
+</section>
+
+<!-- EVENTS / I4E AKADEMIE -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Nächster Termin</span>
+      <h2>Events</h2>
+      <p class="sub">I4E Akademie</p>
+    </div>
+    <a class="event-card reveal" href="https://impact4entrepreneurship.github.io/heiliger-businesscanvas-webinar/">
+      <div class="event-media">
+        <img src="images/michael-deck.jpg" alt="Michael Deck – Der Heilige BusinessCanvas, Live-Webinar">
+        <div class="date-badge"><span class="m">Sep</span><span class="d">18</span></div>
+      </div>
+      <div class="event-body">
+        <div class="cat">Akademie · Live-Webinar</div>
+        <h3>Der Heilige BusinessCanvas</h3>
+        <p>Dein Unternehmen beginnt nicht bei der Idee – es beginnt bei deiner Berufung. In zwei Stunden löst du mit unternehmerischen Methoden eine echte gesellschaftliche Herausforderung, begleitet von Mentoren aus Wirtschaft, Wissenschaft und Ethik.</p>
+        <div class="event-meta">
+          <span><span class="ic">◆</span> 18. September 2026</span>
+          <span><span class="ic">◷</span> 19:00 Uhr · 2 Stunden</span>
+          <span><span class="ic">◉</span> Live &amp; Online</span>
+        </div>
+        <div class="event-foot">
+          <span class="price-pill">Kostenlos</span>
+          <span class="mehr">Zum Webinar</span>
+        </div>
+      </div>
+    </a>
   </div>
 </section>
 
