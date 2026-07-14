@@ -54,6 +54,19 @@
   .pillar.dark p{color:#e4d3ea}
   .pillar.dark p .hl{color:var(--rosa)}
 
+  /* Schrift-Wort / Bibelstelle */
+  .scripture{background:var(--pflaume);color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
+  .scripture::after{content:"";position:absolute;left:50%;top:-160px;transform:translateX(-50%);width:680px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(224,155,209,.20),transparent 66%);z-index:0}
+  .scripture .wrap{position:relative;z-index:1}
+  .scripture .eyebrow{color:var(--rosa);display:inline-flex;align-items:center;gap:12px}
+  .scripture .eyebrow::before,.scripture .eyebrow::after{content:"";width:26px;height:1px;background:var(--rosa);opacity:.7}
+  .scripture .mark{font-family:'Playfair Display',serif;font-size:96px;line-height:.4;color:var(--rosa);opacity:.55;display:block;margin:30px 0 6px;height:52px}
+  .scripture blockquote{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.7vw,29px);line-height:1.5;color:#fff;max-width:800px;margin:0 auto}
+  .scripture blockquote p{margin-bottom:20px}
+  .scripture blockquote p:last-child{margin-bottom:0}
+  .scripture .hl{color:var(--rosa);font-style:normal}
+  .scripture cite{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#c9a9d4;margin-top:34px}
+
   /* Wort des Geschäftsführers */
   .gf{padding:20px 0 84px}
   .gf-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 60px rgba(47,0,58,.07);padding:clamp(30px,4vw,52px);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,4vw,52px);align-items:center;max-width:940px;margin:0 auto}
@@ -138,6 +151,20 @@
     <p>Zentral ist der Austausch: Unternehmer, Gründer und Wissenschaftler treten in einen echten Dialog mit den Geförderten. Wissen wird nicht einseitig vermittelt, sondern gemeinsam durchdrungen – immer mit dem Ziel, ein sozial verantwortliches und werteorientiertes Handeln hervorzubringen.</p>
     <p>Ein besonderer Fokus liegt auf der Integration religiöser und ethischer Perspektiven der Bibel in wirtschaftliche Zusammenhänge. Diese werden nicht isoliert betrachtet, sondern in ihren praktischen Auswirkungen auf Gesellschaft und Unternehmertum verstanden. So entsteht eine Brücke zwischen uralter Weisheit und heutiger Realität.</p>
     <p>Die gewonnenen Erkenntnisse bleiben nicht im Verborgenen. Sie werden aktiv mit privaten und öffentlichen Bildungsträgern geteilt, um Studiengänge weiterzuentwickeln und neue Maßstäbe für werteorientierte Wirtschaft zu setzen. Veröffentlichung und Weitergabe sind dabei kein Zusatz, sondern Teil des Auftrags: <span class="hl">Licht soll nicht verborgen bleiben, sondern wirken.</span></p>
+  </div>
+</section>
+
+<!-- SCHRIFT-WORT · MATTHÄUS 5,14-16 -->
+<section class="scripture">
+  <div class="wrap">
+    <span class="eyebrow">Der Grund unter allem</span>
+    <span class="mark" aria-hidden="true">&ldquo;</span>
+    <blockquote>
+      <p>Ihr seid die Unternehmer, durch die es in der Welt <span class="hl">hell wird</span>. Es kann das Unternehmen, das erfolgreich ist, nicht unbekannt bleiben.</p>
+      <p>Man gründet auch kein Unternehmen, um es erfolglos zu lassen, sondern damit es erfolgreich wird – und es <span class="hl">allen Stakeholdern gut tut</span>.</p>
+      <p>So lasst eure Unternehmen in der Gesellschaft bekannt und einflussreich werden, damit die Menschen das Gute wahrnehmen, das ihr durch eure Unternehmen in die Welt bringt, und euren Vater im Himmel dafür preisen.</p>
+      <cite>Matthäus 5,14–16 · nach CKS</cite>
+    </blockquote>
   </div>
 </section>
 
