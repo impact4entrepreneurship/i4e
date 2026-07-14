@@ -95,7 +95,8 @@
   .events .eyebrow::before,.events .eyebrow::after{content:"";width:26px;height:1px;background:var(--rosa)}
   .events h2{font-size:clamp(30px,4.4vw,50px);color:var(--pflaume);margin:16px 0 6px}
   .events .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(19px,2.5vw,24px);color:var(--violett)}
-  .event-card{display:grid;grid-template-columns:minmax(0,.92fr) 1.35fr;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(47,0,58,.07);max-width:940px;margin:0 auto;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .event-list{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+  .event-card{display:grid;grid-template-columns:minmax(0,.92fr) 1.35fr;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(47,0,58,.07);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
   .event-card:hover{transform:translateY(-5px);box-shadow:0 34px 74px rgba(47,0,58,.14);border-color:var(--rosa)}
   .event-media{position:relative;min-height:300px;background:var(--violett)}
   .event-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
@@ -213,26 +214,60 @@
       <h2>Events</h2>
       <p class="sub">I4E Akademie</p>
     </div>
-    <a class="event-card reveal" href="https://impact4entrepreneurship.github.io/heiliger-businesscanvas-webinar/">
-      <div class="event-media">
-        <img src="images/michael-deck.jpg" alt="Michael Deck – Der Heilige BusinessCanvas, Live-Webinar">
-        <div class="date-badge"><span class="m">Sep</span><span class="d">18</span></div>
-      </div>
-      <div class="event-body">
-        <div class="cat">Akademie · Live-Webinar</div>
-        <h3>Der Heilige BusinessCanvas</h3>
-        <p>Dein Unternehmen beginnt nicht bei der Idee – es beginnt bei deiner Berufung. In zwei Stunden löst du mit unternehmerischen Methoden eine echte gesellschaftliche Herausforderung, begleitet von Mentoren aus Wirtschaft, Wissenschaft und Ethik.</p>
-        <div class="event-meta">
-          <span><span class="ic">◆</span> 18. September 2026</span>
-          <span><span class="ic">◷</span> 19:00 Uhr · 2 Stunden</span>
-          <span><span class="ic">◉</span> Live &amp; Online</span>
+    <div class="event-list">
+
+      <!-- ===== EVENT-KARTE ===== (zum Ergänzen einfach diesen Block kopieren) -->
+      <a class="event-card reveal" href="https://impact4entrepreneurship.github.io/heiliger-businesscanvas-webinar/">
+        <div class="event-media">
+          <img src="images/michael-deck.jpg" alt="Michael Deck – Der Heilige BusinessCanvas, Live-Webinar">
+          <div class="date-badge"><span class="m">Sep</span><span class="d">18</span></div>
         </div>
-        <div class="event-foot">
-          <span class="price-pill">Kostenlos</span>
-          <span class="mehr">Zum Webinar</span>
+        <div class="event-body">
+          <div class="cat">Akademie · Live-Webinar</div>
+          <h3>Der Heilige BusinessCanvas</h3>
+          <p>Dein Unternehmen beginnt nicht bei der Idee – es beginnt bei deiner Berufung. In zwei Stunden löst du mit unternehmerischen Methoden eine echte gesellschaftliche Herausforderung, begleitet von Mentoren aus Wirtschaft, Wissenschaft und Ethik.</p>
+          <div class="event-meta">
+            <span><span class="ic">◆</span> 18. September 2026</span>
+            <span><span class="ic">◷</span> 19:00 Uhr · 2 Stunden</span>
+            <span><span class="ic">◉</span> Live &amp; Online</span>
+          </div>
+          <div class="event-foot">
+            <span class="price-pill">Kostenlos</span>
+            <span class="mehr">Zum Webinar</span>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+
+      <!-- ===== VORLAGE FÜR EINEN WEITEREN TERMIN =====
+           Zum Aktivieren die umgebenden Kommentar-Zeichen entfernen und Inhalte ersetzen.
+           - href: Link zur Anmelde-/Info-Seite des Events
+           - Datums-Badge: <span class="m">Monat</span> (z. B. Okt) und <span class="d">Tag</span>
+           - Bild: images/DEIN-BILD.jpg  (ins images-Verzeichnis legen)
+           - price-pill: z. B. "90 €" statt "Kostenlos"
+
+      <a class="event-card reveal" href="LINK-ZUM-EVENT">
+        <div class="event-media">
+          <img src="images/EVENT-BILD.jpg" alt="Titel des Events">
+          <div class="date-badge"><span class="m">Okt</span><span class="d">29</span></div>
+        </div>
+        <div class="event-body">
+          <div class="cat">Akademie · Kurs</div>
+          <h3>Titel des Events</h3>
+          <p>Kurze Beschreibung des Events in ein bis zwei Sätzen.</p>
+          <div class="event-meta">
+            <span><span class="ic">◆</span> 29. Oktober 2026</span>
+            <span><span class="ic">◷</span> 19:00 Uhr</span>
+            <span><span class="ic">◉</span> Vor Ort / Online</span>
+          </div>
+          <div class="event-foot">
+            <span class="price-pill">90 €</span>
+            <span class="mehr">Mehr erfahren</span>
+          </div>
+        </div>
+      </a>
+      ===== ENDE VORLAGE ===== -->
+
+    </div>
   </div>
 </section>
 
