@@ -114,6 +114,27 @@
   .ben p{color:var(--grau);font-size:15px}
   @media(max-width:820px){.ben-grid{grid-template-columns:1fr}}
 
+  /* Methode / Zukunftsvision */
+  .method{padding:88px 0;background:linear-gradient(180deg,var(--creme),#fff)}
+  .method-step{max-width:920px;margin:0 auto 50px}
+  .ms-head{display:flex;align-items:center;gap:18px;margin-bottom:16px}
+  .ms-num{flex:none;width:54px;height:54px;border-radius:50%;background:var(--violett);color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:23px;display:flex;align-items:center;justify-content:center}
+  .ms-kicker{color:var(--violett);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .ms-head h3{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px);color:var(--pflaume);line-height:1.14;margin-top:3px}
+  .ms-lead{color:var(--ink);font-size:17px;margin:0 0 22px;max-width:62ch}
+  .ms-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .ms-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;box-shadow:0 16px 40px rgba(47,0,58,.05)}
+  .ms-card .k{font-family:'Playfair Display',serif;color:var(--rosa);font-size:14px;font-weight:700}
+  .ms-card h4{font-family:'Inter',sans-serif;font-weight:600;font-size:16px;color:var(--pflaume);margin:2px 0 8px}
+  .ms-card p{color:var(--grau);font-size:14.5px}
+  .ms-examples{margin-top:22px;background:var(--rosa-soft);border-radius:16px;padding:24px 26px}
+  .ms-ex-label{color:var(--violett);font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+  .ms-examples ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 30px}
+  .ms-examples li{position:relative;padding-left:24px;color:var(--pflaume);font-size:15.5px;font-style:italic;font-family:'Playfair Display',serif;line-height:1.4}
+  .ms-examples li::before{content:"?";position:absolute;left:0;top:0;color:var(--violett);font-weight:700;font-family:'Inter',sans-serif;font-style:normal}
+  .method-close{max-width:760px;margin:46px auto 0;text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(19px,2.4vw,25px);color:var(--violett);line-height:1.4}
+  @media(max-width:760px){.ms-cards{grid-template-columns:1fr}.ms-examples ul{grid-template-columns:1fr}}
+
   /* Mentor */
   .mentor{background:linear-gradient(180deg,#fff,var(--creme));padding:90px 0}
   .mentor-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:center}
@@ -342,6 +363,79 @@
   </div>
 </section>
 
+<!-- METHODE / ZUKUNFTSVISION -->
+<section class="method" id="methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Die Methode</span>
+      <h2>Ihre beste Zukunftsvision – in drei Schritten.</h2>
+      <p class="sub">Vom Wünschenswerten zum Planbaren.</p>
+    </div>
+
+    <div class="method-step reveal">
+      <div class="ms-head">
+        <span class="ms-num">1</span>
+        <div><div class="ms-kicker">Schritt 1</div><h3>Die richtigen Fragen stellen</h3></div>
+      </div>
+      <p class="ms-lead">Klarheit beginnt nicht mit Antworten, sondern mit den richtigen Fragen – solchen, die Sie über die gewohnten Grenzen Ihres Denkens hinausführen und echte Selbstreflexion auslösen.</p>
+      <div class="ms-cards">
+        <div class="ms-card"><div class="k">01</div><h4>Bedeutung statt Dringlichkeit</h4><p>Nicht die schnellen Alltagsfragen, sondern die, die tiefer auf Ihre Werte, Ziele und Ihr Wachstum zielen.</p></div>
+        <div class="ms-card"><div class="k">02</div><h4>Ohne einfache Antwort</h4><p>Fragen, auf die Sie heute noch keine Antwort haben – gerade sie öffnen neue Perspektiven.</p></div>
+        <div class="ms-card"><div class="k">03</div><h4>Fragen, die verändern</h4><p>Fragen, deren Beantwortung Ihr Bewusstsein weitet und spürbare Veränderung anstößt.</p></div>
+      </div>
+      <div class="ms-examples">
+        <div class="ms-ex-label">Fragen wie diese</div>
+        <ul>
+          <li>Was würde ich tun, wenn ich keine Angst vor dem Scheitern hätte?</li>
+          <li>Welche Wirkung möchte ich in der Welt sehen – und wie trage ich dazu bei?</li>
+          <li>Wie sähe mein idealer Tag in zehn Jahren aus?</li>
+          <li>Welche Werte schätze ich am meisten – spiegelt meine Zukunft sie wider?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="method-step reveal">
+      <div class="ms-head">
+        <span class="ms-num">2</span>
+        <div><div class="ms-kicker">Schritt 2</div><h3>Mögliche Zukunftsbilder entwerfen</h3></div>
+      </div>
+      <p class="ms-lead">Statt sich früh festzulegen, entwerfen wir mehrere mögliche Versionen Ihrer Zukunft. Diese Vielfalt an Bildern macht sichtbar, was in Ihnen steckt – und lässt Sie das stimmigste auswählen.</p>
+      <div class="ms-cards">
+        <div class="ms-card"><div class="k">01</div><h4>Vielfalt erkunden</h4><p>Welche unterschiedlichen Wege könnten Sie gehen? Interessen, Fähigkeiten und Lebensbereiche kommen ins Spiel.</p></div>
+        <div class="ms-card"><div class="k">02</div><h4>Bilder benennen</h4><p>Jedes Zukunftsbild bekommt eine prägnante Überschrift, die seinen Kern einfängt – ein Wegweiser für die Ausarbeitung.</p></div>
+        <div class="ms-card"><div class="k">03</div><h4>Frei gestalten</h4><p>Bestehende Ideen dürfen jederzeit verändert, verworfen oder neu gedacht werden. Nichts schränkt Sie ein.</p></div>
+      </div>
+      <div class="ms-examples">
+        <div class="ms-ex-label">Beispiele für Zukunftsbilder</div>
+        <ul>
+          <li>Die Pionierin, die neue Wege in ihrer Branche eröffnet.</li>
+          <li>Der Mentor, der sein Wissen an die nächste Generation weitergibt.</li>
+          <li>Die Netzwerkerin, die Menschen und Möglichkeiten verbindet.</li>
+          <li>Der Gestalter, der unternehmerisch echte Wirkung stiftet.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="method-step reveal">
+      <div class="ms-head">
+        <span class="ms-num">3</span>
+        <div><div class="ms-kicker">Schritt 3</div><h3>Rückwärts vom Ziel planen</h3></div>
+      </div>
+      <p class="ms-lead">Steht Ihr Zielbild, planen wir mit der Backcasting-Methode rückwärts: vom gewünschten Punkt in fünf Jahren zurück ins Heute. So wird aus der Vision ein konkreter, steuerbarer Weg.</p>
+      <div class="ms-cards">
+        <div class="ms-card"><div class="k">01</div><h4>Zielbild schärfen</h4><p>Eine klare, konkrete Vorstellung davon, wie Ihr Ziel in fünf Jahren aussieht – über alle Lebensbereiche.</p></div>
+        <div class="ms-card"><div class="k">02</div><h4>Rückwärts planen</h4><p>Vom Zielzeitpunkt zurück: Was braucht es in jedem Halbjahr, um dorthin zu gelangen?</p></div>
+        <div class="ms-card"><div class="k">03</div><h4>Meilensteine setzen</h4><p>Feste Checkpunkte auf dem Weg, an denen sich Fortschritt messen und nachjustieren lässt.</p></div>
+        <div class="ms-card"><div class="k">04</div><h4>Aktionspläne ableiten</h4><p>Aus jedem Meilenstein konkrete Schritte: was, mit welchem Ergebnis, bis wann.</p></div>
+        <div class="ms-card"><div class="k">05</div><h4>Auf Stimmigkeit prüfen</h4><p>Bauen die Schritte logisch aufeinander auf? Ist der Weg realistisch und widerspruchsfrei?</p></div>
+        <div class="ms-card"><div class="k">06</div><h4>Festhalten &amp; anpassen</h4><p>Die Roadmap wird dokumentiert und lebt: Das Ziel bleibt, der Weg darf sich verändern.</p></div>
+      </div>
+    </div>
+
+    <p class="method-close reveal">So wird aus einer Vision kein frommer Wunsch, sondern ein Weg, den Sie Schritt für Schritt gehen können.</p>
+  </div>
+</section>
+
 <!-- MENTOR -->
 <section class="mentor" id="mentor">
   <div class="wrap">
@@ -355,11 +449,12 @@
         <h2>Michael Deck</h2>
         <p>Als Unternehmer und Geschäftsführer der <span class="hl">Impact4Entrepreneurship gGmbH</span> begleitet Michael Deck Menschen, die mehr wollen als Wachstum um seiner selbst willen – Unternehmer, die Verantwortung und Berufung zusammendenken.</p>
         <p class="soft">Seine Überzeugung: Ein Unternehmen beginnt nicht bei der Idee, sondern bei der Berufung des Menschen dahinter. Aus dieser Haltung heraus schafft er im Gespräch Klarheit, verbindet ethische, unternehmerische und praktische Perspektiven – und begleitet, wo gewünscht, bis in die Umsetzung mit Künstlicher Intelligenz.</p>
+        <p>Michael Deck ist zudem ausgebildeter <span class="hl">Geistlicher Begleiter</span> – eine Ausbildung, die er bei den Benediktinermönchen im Europakloster Gut Aich absolviert hat. Aus dieser Tradition bringt er das Hören mit dem <em>Ohr des Herzens</em> mit. So verbindet sich in der Begleitung unternehmerische Klarheit mit geistlicher Tiefe.</p>
         <div class="mentor-facts">
           <span>Unternehmer &amp; Geschäftsführer</span>
+          <span>Geistlicher Begleiter · Gut Aich</span>
           <span>Werteorientiert</span>
           <span>Vertraulich · 1:1</span>
-          <span>Praxis, Lehre &amp; Ethik</span>
         </div>
       </div>
     </div>
