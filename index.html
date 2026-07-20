@@ -148,6 +148,18 @@
   .incl-list li b{color:var(--pflaume)}
   @media(max-width:640px){.incl-list{grid-template-columns:1fr}}
 
+  /* Stimmen / Testimonials */
+  .voices{padding:20px 0 92px}
+  .voice-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .voice-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:38px 36px 30px;box-shadow:0 24px 60px rgba(47,0,58,.06);position:relative;display:flex;flex-direction:column}
+  .voice-card::before{content:"\201C";position:absolute;top:14px;left:26px;font-family:'Playfair Display',serif;font-size:76px;line-height:1;color:var(--rosa);opacity:.55}
+  .voice-card .quote{font-family:'Playfair Display',serif;font-size:19.5px;font-weight:500;font-style:italic;line-height:1.5;color:var(--pflaume);position:relative;z-index:1;margin:14px 0 26px}
+  .voice-card .who{display:flex;align-items:center;gap:16px;margin-top:auto}
+  .voice-card .who img{width:62px;height:62px;border-radius:50%;object-fit:cover;box-shadow:0 8px 20px rgba(47,0,58,.18)}
+  .voice-card .who .n{font-family:'Playfair Display',serif;font-weight:700;color:var(--pflaume);font-size:17px;line-height:1.2}
+  .voice-card .who .r{color:var(--violett);font-size:13.5px;font-weight:600;letter-spacing:.02em;margin-top:2px}
+  @media(max-width:760px){.voice-grid{grid-template-columns:1fr}}
+
   /* FAQ */
   .faq{padding:16px 0 96px}
   .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
@@ -361,6 +373,39 @@
         <li><b>KI-Check</b>: konkrete Prüfung, wo Künstliche Intelligenz Sie sinnvoll entlastet.</li>
         <li><b>Begleitung in die Umsetzung</b> – auf Wunsch bis zum funktionierenden System.</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STIMMEN / TESTIMONIALS -->
+<section class="voices" id="stimmen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Stimmen</span>
+      <h2>Was andere erlebt haben.</h2>
+      <p class="sub">Klarheit, die trägt.</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card reveal">
+        <p class="quote">In den Gesprächen mit Michael habe ich wiedergefunden, warum ich Wegfinder überhaupt ins Leben gerufen habe. Er hört wirklich zu und stellt die Fragen, die man sich selbst nicht stellt. Aus dieser Klarheit ist neue Kraft und eine klare Richtung entstanden.</p>
+        <div class="who">
+          <img src="images/testimonial-birgit.jpg" alt="Birgit Nandzik, Wegfinder e.V.">
+          <div>
+            <div class="n">Birgit Nandzik</div>
+            <div class="r">Wegfinder e.V.</div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card reveal">
+        <p class="quote">Als Unternehmerin stand ich an einem Punkt, an dem vieles gleichzeitig wichtig war. Michael nimmt sich Zeit und schafft einen Raum, in dem sich das Wesentliche zeigt. Danach wusste ich nicht nur, was ich tue – sondern wieder, wofür. Diese Klarheit trägt bis heute.</p>
+        <div class="who">
+          <img src="images/testimonial-viktoria.jpg" alt="Viktoria Kuhlen, Chiropraktik Magdeburg">
+          <div>
+            <div class="n">Viktoria Kuhlen</div>
+            <div class="r">Chiropraktik Magdeburg</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
