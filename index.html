@@ -138,6 +138,24 @@
   .stance .q{font-family:'Playfair Display',serif;font-size:clamp(24px,3.4vw,38px);font-weight:500;line-height:1.3;color:var(--pflaume);max-width:24ch;margin:0 auto}
   .stance .q .hl{color:var(--violett)}
   .stance .by{margin-top:24px;color:var(--grau);font-size:14.5px;letter-spacing:.04em}
+  .stance .leitwort{max-width:680px;margin:46px auto 0;padding-top:34px;border-top:1px solid var(--line)}
+  .stance .leitwort .lw{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(20px,2.8vw,28px);font-weight:500;color:var(--violett);line-height:1.35}
+  .stance .leitwort .lw-by{margin-top:14px;color:var(--grau);font-size:13.5px;letter-spacing:.05em;text-transform:uppercase}
+
+  /* Geistliche Dimension */
+  .spirit{background:var(--pflaume);color:#fff;padding:92px 0}
+  .spirit .eyebrow{color:var(--rosa)}
+  .spirit .eyebrow::before{content:"";width:26px;height:1px;background:var(--rosa)}
+  .spirit h2{font-size:clamp(28px,3.8vw,42px);margin:16px 0 20px;color:#fff;max-width:18ch}
+  .spirit .intro{color:#d9c2e2;font-size:18px;max-width:56ch;margin-bottom:14px}
+  .spirit .intro .hl{color:#fff;font-weight:600}
+  .spirit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .spirit-item{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:18px;padding:32px 28px;transition:.22s}
+  .spirit-item:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
+  .spirit-item .lat{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--rosa)}
+  .spirit-item h3{font-size:22px;margin:4px 0 11px;color:#fff}
+  .spirit-item p{color:#cdb6d6;font-size:15px}
+  @media(max-width:820px){.spirit-grid{grid-template-columns:1fr}}
 
   /* Ablauf / Enthalten */
   .incl{padding:20px 0 92px}
@@ -348,12 +366,43 @@
   </div>
 </section>
 
+<!-- GEISTLICHE DIMENSION -->
+<section class="spirit" id="geistlich">
+  <div class="wrap">
+    <span class="eyebrow">Mehr als Strategie</span>
+    <h2>Klarheit hat eine tiefere Quelle.</h2>
+    <p class="intro">Wirkung aus Klarheit ist kein reines Business-Coaching. Es ruht auf einer jahrhundertealten Tradition geistlicher Begleitung. In der Schule des heiligen Benedikt beginnt alles mit einem einzigen Wort: <span class="hl">„Höre."</span></p>
+    <p class="intro">Bevor wir planen, hören wir – auf das Wesentliche, auf Ihre Berufung, auf das, was durch Sie in die Welt wirken will. Aus diesem Hören entsteht eine Klarheit, die trägt – auch wenn es unternehmerisch stürmisch wird.</p>
+    <div class="spirit-grid">
+      <div class="spirit-item reveal">
+        <div class="lat">Ausculta</div>
+        <h3>Höre</h3>
+        <p>Zuhören mit dem Herzen, bevor entschieden wird. Das Wesentliche zeigt sich zuerst in der Stille.</p>
+      </div>
+      <div class="spirit-item reveal">
+        <div class="lat">Ora et labora</div>
+        <h3>Bete &amp; arbeite</h3>
+        <p>Inneres Leben und unternehmerisches Handeln gehören zusammen – nicht getrennt, sondern als Einheit.</p>
+      </div>
+      <div class="spirit-item reveal">
+        <div class="lat">Discretio</div>
+        <h3>Unterscheide</h3>
+        <p>Das rechte Maß finden. Das Wesentliche vom Lauten trennen – und dem Guten Raum geben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- HALTUNG -->
 <section class="stance">
   <div class="wrap">
     <img class="qi reveal" src="images/michael-headshot.jpg" alt="Michael Deck">
     <p class="q reveal">Menschen suchen selten ein Programm. Sie suchen <span class="hl">Klarheit</span> – und einen Begleiter, der sie wirklich versteht.</p>
     <div class="by reveal">Michael Deck · Impact4Entrepreneurship</div>
+    <div class="leitwort reveal">
+      <p class="lw">„Höre mit dem Ohr deines Herzens."</p>
+      <div class="lw-by">Aus der Regel des heiligen Benedikt</div>
+    </div>
   </div>
 </section>
 
@@ -433,6 +482,10 @@
       <details class="faq-item reveal">
         <summary>Welche Rolle spielt Künstliche Intelligenz? <span class="pl">+</span></summary>
         <div class="a"><p>KI ist Werkzeug, nicht Ziel. Wir prüfen nüchtern, wo sie Sie wirklich entlastet und neue Möglichkeiten schafft – und lassen sie dort weg, wo sie keinen echten Nutzen bringt.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Welche Rolle spielen Glaube und Spiritualität? <span class="pl">+</span></summary>
+        <div class="a"><p>Wirkung aus Klarheit ist geprägt von der christlichen Tradition geistlicher Begleitung, wie ich sie bei den Benediktinern im Europakloster Gut Aich gelernt habe. Diese Haltung – zuhören, unterscheiden, dem Wesentlichen Raum geben – trägt jedes Gespräch.</p><p>Sie bringen so viel oder so wenig Glaube ein, wie für Sie stimmig ist. Der Raum ist offen, wertschätzend und ohne Druck.</p></div>
       </details>
       <details class="faq-item reveal">
         <summary>Wie vertraulich sind die Gespräche? <span class="pl">+</span></summary>
