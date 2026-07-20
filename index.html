@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unternehmer mit Berufung, Unternehmen mit Wirkung – Michael Deck | Impact4Entrepreneurship</title>
-<meta name="description" content="Klarheit für Unternehmer. In vertraulichen Unternehmergesprächen verbinden wir persönliche Berufung mit unternehmerischer Verantwortung – und entwickeln innovative Geschäftsmodelle, in denen Künstliche Intelligenz dort unterstützt, wo sie wirklich entlastet."><link rel="stylesheet" href="fonts/fonts.css">
+<title>Wirkung aus Klarheit – 1:1-Mentoring mit Michael Deck | Impact4Entrepreneurship</title>
+<meta name="description" content="Wirkung aus Klarheit – das persönliche 1:1-Mentoring-Programm von Michael Deck für Unternehmer. In vertraulichen Gesprächen verbinden wir Ihre Berufung mit Ihrer unternehmerischen Verantwortung und entwickeln eine klare Zukunftsperspektive, die messbare Wirkung entfaltet.">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232f003a'/><text x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23e09bd1'>i4e</text></svg>">
 <style>
   :root{
@@ -32,12 +33,15 @@
   .btn .ar{transition:transform .22s ease}
   .btn:hover .ar{transform:translateX(4px)}
   a:focus-visible,.btn:focus-visible{outline:2px solid var(--rosa);outline-offset:3px}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
 
   /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(250,245,248,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
   .nav .logo img{height:42px;width:auto}
+  .nav-links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500}
   .nav-cta{font-size:14.5px}
+  @media(max-width:720px){.nav-links a:not(.nav-cta){display:none}}
   @media(max-width:620px){.nav .logo img{height:34px}.nav-cta{padding:11px 18px}}
 
   /* Motto-Band */
@@ -45,77 +49,127 @@
   .motto .sep{width:5px;height:5px;border-radius:50%;background:var(--rosa)}
 
   /* Hero */
-  .hero{padding:74px 0 66px;position:relative;overflow:hidden}
+  .hero{padding:64px 0 40px;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;right:-180px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(224,155,209,.28),transparent 66%);z-index:0}
-  .hero .wrap{position:relative;z-index:1}
-  .hero h1{font-size:clamp(38px,6vw,66px);margin:26px 0 22px;max-width:15ch;color:var(--pflaume)}
-  .hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(19px,2.5vw,25px);color:var(--violett);max-width:34ch;margin-bottom:18px}
-  .hero .kurz{color:var(--grau);font-size:18px;max-width:40ch;margin-bottom:34px}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(38px,6vw,64px);margin:22px 0 20px;max-width:16ch;color:var(--pflaume)}
+  .hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(19px,2.5vw,25px);color:var(--violett);max-width:32ch;margin-bottom:16px}
+  .hero .kurz{color:var(--grau);font-size:18px;max-width:42ch;margin-bottom:30px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-promises{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .hero-promises span{background:var(--rosa-soft);color:var(--violett);font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:100px}
+  .hero-media{position:relative;display:flex;justify-content:center;align-items:flex-end}
+  .hero-media .halo{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:104%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 60%,rgba(122,42,144,.20),transparent 62%)}
+  .hero-media img{position:relative;z-index:1;max-height:440px;width:auto;filter:drop-shadow(0 26px 44px rgba(47,0,58,.28))}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-media{display:none}}
 
-  /* Fließtext */
-  .text-sec{padding:20px 0 90px}
-  .text-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(36px,5vw,64px);box-shadow:0 24px 60px rgba(47,0,58,.06);max-width:800px;margin:0 auto}
+  /* Fließtext / Problem */
+  .text-sec{padding:20px 0 40px}
+  .text-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(36px,5vw,64px);box-shadow:0 24px 60px rgba(47,0,58,.06);max-width:820px;margin:0 auto}
   .text-card .lead{font-family:'Playfair Display',serif;font-size:clamp(21px,2.6vw,26px);font-weight:500;line-height:1.4;color:var(--pflaume);margin-bottom:26px}
   .text-card p{color:var(--ink);font-size:17.5px;margin-bottom:18px}
+  .text-card p:last-child{margin-bottom:0}
   .text-card p.soft{color:var(--grau)}
   .text-card .hl{color:var(--violett);font-weight:600}
 
-  /* Drei Schritte */
-  .steps-sec{background:var(--pflaume);color:#fff;padding:92px 0}
-  .steps-sec .eyebrow{color:var(--rosa);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+  /* Sektion-Kopf zentriert */
+  .sec-head{text-align:center;max-width:720px;margin:0 auto 46px}
+  .sec-head .eyebrow{color:var(--violett)}
+  .sec-head .eyebrow::before,.sec-head .eyebrow::after{content:"";width:26px;height:1px;background:var(--rosa)}
+  .sec-head h2{font-size:clamp(29px,4.2vw,46px);color:var(--pflaume);margin:16px 0 8px}
+  .sec-head .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(18px,2.4vw,23px);color:var(--violett)}
+
+  /* Versprechen – 3 Kacheln */
+  .promise{padding:64px 0 20px}
+  .promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .p-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;box-shadow:0 20px 50px rgba(47,0,58,.05);transition:.22s}
+  .p-card:hover{transform:translateY(-5px);box-shadow:0 30px 66px rgba(47,0,58,.12);border-color:var(--rosa)}
+  .p-card .ic{width:52px;height:52px;border-radius:14px;background:var(--rosa-soft);color:var(--violett);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+  .p-card h3{font-size:22px;color:var(--pflaume);margin-bottom:10px}
+  .p-card p{color:var(--grau);font-size:15.5px}
+  @media(max-width:820px){.promise-grid{grid-template-columns:1fr}}
+
+  /* Drei Phasen */
+  .steps-sec{background:var(--pflaume);color:#fff;padding:92px 0;margin-top:40px}
+  .steps-sec .eyebrow{color:var(--rosa)}
   .steps-sec .eyebrow::before{content:"";width:26px;height:1px;background:var(--rosa)}
   .steps-sec h2{font-size:clamp(28px,3.8vw,42px);margin:16px 0 6px;color:#fff;max-width:20ch}
-  .steps-sec .sh-note{color:#c9a9d4;max-width:44ch;margin-bottom:52px}
+  .steps-sec .sh-note{color:#c9a9d4;max-width:46ch;margin-bottom:52px}
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .stp{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:18px;padding:34px 30px;transition:.22s}
+  .stp{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:18px;padding:34px 30px;transition:.22s;position:relative}
   .stp:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
+  .stp .num{font-family:'Playfair Display',serif;font-size:15px;color:var(--pflaume);background:var(--rosa);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px}
   .stp .verb{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--rosa)}
-  .stp h3{font-size:23px;margin:10px 0 12px;color:#fff}
+  .stp h3{font-size:23px;margin:6px 0 12px;color:#fff}
   .stp p{color:#cdb6d6;font-size:15.5px}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
 
-  /* Zitat / Haltung */
-  .stance{padding:90px 0;text-align:center}
-  .stance .q{font-family:'Playfair Display',serif;font-size:clamp(26px,3.6vw,40px);font-weight:500;line-height:1.28;color:var(--pflaume);max-width:22ch;margin:0 auto}
+  /* Nutzen – 6er Raster */
+  .benefits{padding:88px 0}
+  .ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .ben{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 28px;transition:.2s}
+  .ben:hover{border-color:var(--rosa);transform:translateY(-3px)}
+  .ben .chk{color:var(--violett);font-size:17px;font-weight:700;margin-bottom:12px;display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:9px;background:var(--rosa-soft)}
+  .ben h3{font-size:19px;color:var(--pflaume);margin-bottom:8px}
+  .ben p{color:var(--grau);font-size:15px}
+  @media(max-width:820px){.ben-grid{grid-template-columns:1fr}}
+
+  /* Mentor */
+  .mentor{background:linear-gradient(180deg,#fff,var(--creme));padding:90px 0}
+  .mentor-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:52px;align-items:center}
+  .mentor-photo{position:relative}
+  .mentor-photo img{width:100%;border-radius:22px;box-shadow:0 30px 70px rgba(47,0,58,.18);object-fit:cover}
+  .mentor-photo .tag{position:absolute;left:-14px;bottom:26px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 20px;box-shadow:0 18px 40px rgba(47,0,58,.14)}
+  .mentor-photo .tag b{font-family:'Playfair Display',serif;color:var(--pflaume);font-size:18px}
+  .mentor-photo .tag span{display:block;color:var(--violett);font-size:13px;font-weight:600;letter-spacing:.04em}
+  .mentor-body .eyebrow{color:var(--violett)}
+  .mentor-body .eyebrow::before{content:"";width:26px;height:1px;background:var(--rosa)}
+  .mentor-body h2{font-size:clamp(28px,3.8vw,42px);color:var(--pflaume);margin:16px 0 18px}
+  .mentor-body p{color:var(--ink);font-size:17px;margin-bottom:16px}
+  .mentor-body p.soft{color:var(--grau)}
+  .mentor-body .hl{color:var(--violett);font-weight:600}
+  .mentor-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .mentor-facts span{border:1px solid var(--line);color:var(--pflaume);font-size:13.5px;font-weight:600;padding:8px 15px;border-radius:100px;background:#fff}
+  @media(max-width:820px){.mentor-grid{grid-template-columns:1fr;gap:30px}.mentor-photo{max-width:420px;margin:0 auto}}
+
+  /* Haltung / Zitat mit Foto */
+  .stance{padding:96px 0;text-align:center}
+  .stance .qi{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;margin:0 auto 26px;box-shadow:0 14px 34px rgba(47,0,58,.2);border:3px solid #fff}
+  .stance .q{font-family:'Playfair Display',serif;font-size:clamp(24px,3.4vw,38px);font-weight:500;line-height:1.3;color:var(--pflaume);max-width:24ch;margin:0 auto}
   .stance .q .hl{color:var(--violett)}
-  .stance .by{margin-top:26px;color:var(--grau);font-size:14.5px;letter-spacing:.04em}
+  .stance .by{margin-top:24px;color:var(--grau);font-size:14.5px;letter-spacing:.04em}
+
+  /* Ablauf / Enthalten */
+  .incl{padding:20px 0 92px}
+  .incl-wrap{max-width:840px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(32px,4.5vw,56px);box-shadow:0 24px 60px rgba(47,0,58,.06)}
+  .incl-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px 34px;margin-top:8px}
+  .incl-list li{position:relative;padding-left:34px;color:var(--ink);font-size:16px}
+  .incl-list li::before{content:"✓";position:absolute;left:0;top:1px;width:22px;height:22px;background:var(--violett);color:#fff;border-radius:50%;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .incl-list li b{color:var(--pflaume)}
+  @media(max-width:640px){.incl-list{grid-template-columns:1fr}}
+
+  /* FAQ */
+  .faq{padding:16px 0 96px}
+  .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s}
+  .faq-item[open]{border-color:var(--rosa)}
+  .faq-item summary{list-style:none;cursor:pointer;padding:22px 26px;font-family:'Playfair Display',serif;font-weight:600;font-size:18.5px;color:var(--pflaume);display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary .pl{color:var(--violett);font-size:22px;transition:transform .2s;flex:none}
+  .faq-item[open] summary .pl{transform:rotate(45deg)}
+  .faq-item .a{padding:0 26px 24px;color:var(--grau);font-size:16px}
+  .faq-item .a p{margin-bottom:12px}
+  .faq-item .a p:last-child{margin-bottom:0}
 
   /* Kontakt-Band */
-  .contact{background:linear-gradient(130deg,var(--violett),var(--pflaume));color:#fff;text-align:center;padding:88px 0}
-  .contact h2{font-size:clamp(30px,4.4vw,50px);color:#fff;max-width:18ch;margin:0 auto}
-  .contact p{color:#e7cdee;max-width:34ch;margin:20px auto 34px;font-size:18px}
+  .contact{background:linear-gradient(130deg,var(--violett),var(--pflaume));color:#fff;text-align:center;padding:92px 0}
+  .contact .eyebrow{color:var(--rosa);justify-content:center}
+  .contact .eyebrow::before,.contact .eyebrow::after{content:"";width:26px;height:1px;background:var(--rosa)}
+  .contact h2{font-size:clamp(30px,4.4vw,50px);color:#fff;max-width:20ch;margin:14px auto 0}
+  .contact p{color:#e7cdee;max-width:38ch;margin:20px auto 34px;font-size:18px}
   .contact .lines{margin-top:30px;font-size:14.5px;color:#e0c4e8;letter-spacing:.03em}
   .contact .lines a{color:#fff;border-bottom:1px solid rgba(224,155,209,.55)}
   .contact .lines a:hover{border-color:var(--rosa)}
-
-  /* Events / I4E Akademie */
-  .events{padding:16px 0 96px}
-  .events .head{text-align:center;margin-bottom:44px}
-  .events .eyebrow{color:var(--violett);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
-  .events .eyebrow::before,.events .eyebrow::after{content:"";width:26px;height:1px;background:var(--rosa)}
-  .events h2{font-size:clamp(30px,4.4vw,50px);color:var(--pflaume);margin:16px 0 6px}
-  .events .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(19px,2.5vw,24px);color:var(--violett)}
-  .event-list{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
-  .event-card{display:grid;grid-template-columns:minmax(0,.92fr) 1.35fr;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(47,0,58,.07);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-  .event-card:hover{transform:translateY(-5px);box-shadow:0 34px 74px rgba(47,0,58,.14);border-color:var(--rosa)}
-  .event-media{position:relative;min-height:300px;background:var(--violett)}
-  .event-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
-  .date-badge{position:absolute;left:22px;bottom:22px;width:66px;background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 10px 24px rgba(47,0,58,.28);text-align:center}
-  .date-badge .m{display:block;background:var(--pflaume);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 0}
-  .date-badge .d{display:block;font-family:'Playfair Display',serif;font-size:27px;font-weight:700;color:var(--pflaume);padding:6px 0 8px}
-  .event-body{padding:clamp(28px,3.6vw,44px);display:flex;flex-direction:column;justify-content:center}
-  .event-body .cat{color:var(--violett);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:13px}
-  .event-body h3{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(23px,3vw,31px);color:var(--pflaume);line-height:1.14;margin-bottom:14px}
-  .event-body p{color:var(--grau);font-size:16px;margin-bottom:20px}
-  .event-meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--pflaume);font-weight:600;margin-bottom:24px}
-  .event-meta span{display:inline-flex;align-items:center;gap:7px}
-  .event-meta .ic{color:var(--violett)}
-  .event-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-  .price-pill{background:var(--rosa-soft);color:var(--violett);font-weight:700;font-size:14px;padding:9px 18px;border-radius:100px}
-  .event-foot .mehr{font-weight:600;font-size:15px;color:var(--violett)}
-  .event-foot .mehr::after{content:" →";transition:margin-left .2s ease}
-  .event-card:hover .mehr::after{margin-left:4px}
-  @media(max-width:720px){.event-card{grid-template-columns:1fr}.event-media{min-height:210px}}
 
   /* Footer */
   footer{background:var(--pflaume-2);color:#b79cc0;padding:46px 0;font-size:14px}
@@ -125,9 +179,8 @@
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
 
-  @media(max-width:820px){.steps{grid-template-columns:1fr}}
-  @media(max-width:560px){body{font-size:16px}.hero,.steps-sec,.stance,.contact{padding-top:60px;padding-bottom:60px}}
-  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.stp:hover{transform:none}}
+  @media(max-width:560px){body{font-size:16px}.hero,.steps-sec,.stance,.contact,.mentor,.benefits{padding-top:60px;padding-bottom:60px}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn:hover,.stp:hover,.p-card:hover,.ben:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -135,11 +188,12 @@
 <header>
   <div class="wrap nav">
     <a href="#top" class="logo"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship – Wirtschaft aus Berufung. Wirkung aus Klarheit."></a>
-    <nav style="display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500">
-      <a href="#events" style="color:var(--grau)">Events</a>
+    <nav class="nav-links">
+      <a href="#weg" style="color:var(--grau)">Der Weg</a>
+      <a href="#mentor" style="color:var(--grau)">Ihr Mentor</a>
       <a href="leitbild.html" style="color:var(--grau)">Leitbild</a>
-      <a href="https://impact4entrepreneurship.github.io/kursbibliothek/" style="color:var(--grau)">Kursbibliothek</a>
-      <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Unternehmergespr%C3%A4ch" class="btn btn-primary nav-cta">Unternehmergespräch</a>
+      <a href="#faq" style="color:var(--grau)">Fragen</a>
+      <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Wirkung%20aus%20Klarheit%20%E2%80%93%20Unternehmergespr%C3%A4ch" class="btn btn-primary nav-cta">Unternehmergespräch</a>
     </nav>
   </div>
 </header>
@@ -149,50 +203,134 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="motto reveal">Berufung leben <span class="sep"></span> Wirkung entfalten <span class="sep"></span> Zukunft gestalten</div>
-    <h1 class="reveal">Unternehmer mit Berufung, Unternehmen mit Wirkung.</h1>
-    <p class="sub reveal">Klarheit für Unternehmer.</p>
-    <p class="kurz reveal">Innovative Geschäftsmodelle mit Künstlicher Intelligenz – dort, wo sie wirklich entlastet.</p>
-    <div class="hero-cta reveal">
-      <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Unternehmergespr%C3%A4ch" class="btn btn-primary">Unternehmergespräch anfragen <span class="ar">→</span></a>
-      <a href="https://impact4entrepreneurship.github.io/michael-deck/" target="_blank" rel="noopener" class="btn btn-ghost">KI-Agentur</a>
+    <div class="hero-text">
+      <div class="motto reveal">Berufung leben <span class="sep"></span> Klarheit gewinnen <span class="sep"></span> Wirkung entfalten</div>
+      <h1 class="reveal">Wirkung aus Klarheit.</h1>
+      <p class="sub reveal">Das persönliche 1:1-Mentoring für Unternehmer mit Michael Deck.</p>
+      <p class="kurz reveal">Sie haben viel aufgebaut. Jetzt geht es um das Wesentliche: Ihre Berufung mit Ihrer unternehmerischen Verantwortung verbinden – und eine Zukunft gestalten, die messbare Wirkung entfaltet.</p>
+      <div class="hero-cta reveal">
+        <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Wirkung%20aus%20Klarheit%20%E2%80%93%20Unternehmergespr%C3%A4ch" class="btn btn-primary">Unternehmergespräch anfragen <span class="ar">→</span></a>
+        <a href="#weg" class="btn btn-ghost">So läuft es ab</a>
+      </div>
+      <div class="hero-promises reveal">
+        <span>Persönliche Klarheit</span>
+        <span>Zukunftsperspektive</span>
+        <span>Begleitung 1:1</span>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="halo"></div>
+      <img src="images/michael-frei.png" alt="Michael Deck, Ihr Mentor bei Impact4Entrepreneurship">
     </div>
   </div>
 </section>
 
-<!-- FLIESSTEXT -->
+<!-- VERSPRECHEN -->
+<section class="promise">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Was dieses Mentoring Ihnen gibt</span>
+      <h2>Drei Dinge, die sich verändern.</h2>
+      <p class="sub">Klarheit, Perspektive, Wirkung.</p>
+    </div>
+    <div class="promise-grid">
+      <div class="p-card reveal">
+        <div class="ic">◆</div>
+        <h3>Klarheit über sich</h3>
+        <p>Sie wissen wieder, wofür Sie stehen. Ihre persönliche Berufung und Ihr Unternehmen ziehen an einem Strang – statt sich auszubremsen.</p>
+      </div>
+      <div class="p-card reveal">
+        <div class="ic">◈</div>
+        <h3>Perspektive für morgen</h3>
+        <p>Aus Klarheit entsteht eine tragfähige Zukunftsperspektive: ein Bild davon, wohin Ihr Unternehmen geht – und warum das für Sie stimmig ist.</p>
+      </div>
+      <div class="p-card reveal">
+        <div class="ic">◉</div>
+        <h3>Wirkung, die zählt</h3>
+        <p>Aus der Perspektive werden Entscheidungen und Geschäftsmodelle, die messbaren Nutzen stiften – für Sie, Ihr Team und die Menschen, die Sie erreichen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
 <section class="text-sec">
   <div class="wrap">
     <div class="text-card reveal">
       <p class="lead">Viele Unternehmer haben viel aufgebaut – und spüren doch irgendwann, dass etwas Wesentliches fehlt.</p>
-      <p>Wir begleiten Unternehmer dabei, ihre persönliche <span class="hl">Berufung</span> mit ihrer unternehmerischen Verantwortung zu verbinden. In vertraulichen Unternehmergesprächen schaffen wir Klarheit, schärfen den Blick für das Wesentliche und entwickeln eine klare Zukunftsperspektive.</p>
-      <p>Aus dieser Klarheit heraus entstehen innovative Geschäftsmodelle. Wir prüfen, wie Künstliche Intelligenz dort sinnvoll unterstützen kann, wo sie wirklich entlastet, Prozesse verbessert und neue Möglichkeiten schafft.</p>
-      <p>Wenn gewünscht, begleiten wir die Umsetzung direkt. So wird aus einer Idee ein funktionierendes System – <span class="hl">das messbaren Nutzen stiftet.</span></p>
+      <p>Der Kalender ist voll, die Zahlen stimmen vielleicht sogar – aber die <span class="hl">innere Klarheit</span> ist unterwegs verloren gegangen. Entscheidungen kosten mehr Kraft als früher. Das „Warum" ist leiser geworden.</p>
+      <p>Sie merken: Es geht nicht um noch eine Strategie, noch ein Tool, noch mehr Tempo. Es geht darum, den Blick wieder auf das Wesentliche zu richten – und von dort aus zu handeln.</p>
+      <p class="soft">Genau hier setzt <b class="hl">Wirkung aus Klarheit</b> an: ein vertraulicher Raum, in dem zuerst der Mensch und seine Berufung stehen – und die Zukunft des Unternehmens daraus wächst.</p>
     </div>
   </div>
 </section>
 
-<!-- DREI SCHRITTE -->
+<!-- DREI PHASEN -->
 <section class="steps-sec" id="weg">
   <div class="wrap">
     <span class="eyebrow">So arbeiten wir</span>
-    <h2>Vom vertraulichen Gespräch zum funktionierenden System.</h2>
-    <p class="sh-note">Zuerst der Mensch und seine Berufung. Die technische Umsetzung folgt als logischer nächster Schritt – nie umgekehrt.</p>
+    <h2>Ihr Weg in drei Phasen.</h2>
+    <p class="sh-note">Zuerst der Mensch und seine Berufung. Die Zukunftsperspektive und die Umsetzung folgen als logische nächste Schritte – nie umgekehrt.</p>
     <div class="steps">
       <div class="stp reveal">
-        <div class="verb">Berufung leben</div>
+        <div class="num">1</div>
+        <div class="verb">Erkennen</div>
         <h3>Klarheit im Gespräch</h3>
-        <p>In vertraulichen Unternehmergesprächen verbinden wir Ihre persönliche Berufung mit Ihrer unternehmerischen Verantwortung – und schärfen den Blick für das Wesentliche.</p>
+        <p>In vertraulichen Unternehmergesprächen verbinden wir Ihre persönliche Berufung mit Ihrer unternehmerischen Verantwortung – und schärfen den Blick für das, was wirklich zählt.</p>
       </div>
       <div class="stp reveal">
-        <div class="verb">Wirkung entfalten</div>
-        <h3>Zukunftsperspektive &amp; Geschäftsmodell</h3>
-        <p>Aus der gewonnenen Klarheit entwickeln wir eine klare Perspektive und innovative Geschäftsmodelle, die zu Ihnen und Ihrem Unternehmen passen.</p>
+        <div class="num">2</div>
+        <div class="verb">Gestalten</div>
+        <h3>Zukunftsperspektive entwickeln</h3>
+        <p>Aus der gewonnenen Klarheit entwickeln wir eine klare Perspektive und Geschäftsmodelle, die zu Ihnen und Ihrem Unternehmen passen – tragfähig und werteorientiert.</p>
       </div>
       <div class="stp reveal">
-        <div class="verb">Zukunft gestalten</div>
-        <h3>Umsetzung mit KI</h3>
-        <p>Wo Künstliche Intelligenz wirklich entlastet, begleiten wir die Umsetzung – bis aus der Idee ein System wird, das messbaren Nutzen stiftet.</p>
+        <div class="num">3</div>
+        <div class="verb">Umsetzen</div>
+        <h3>Wirkung in die Tat bringen</h3>
+        <p>Wir übersetzen die Perspektive in konkrete Schritte. Wo Künstliche Intelligenz wirklich entlastet, begleiten wir die Umsetzung – bis aus der Idee ein System wird, das Nutzen stiftet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUTZEN -->
+<section class="benefits">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Was Sie gewinnen</span>
+      <h2>Konkret für Sie als Unternehmer.</h2>
+    </div>
+    <div class="ben-grid">
+      <div class="ben reveal"><div class="chk">✓</div><h3>Absolute Klarheit</h3><p>Ein klares Bild davon, wofür Sie und Ihr Unternehmen stehen – als Grundlage für jede Entscheidung.</p></div>
+      <div class="ben reveal"><div class="chk">✓</div><h3>Berufung &amp; Business verbunden</h3><p>Ihr persönliches Warum und Ihre unternehmerische Verantwortung ziehen wieder in dieselbe Richtung.</p></div>
+      <div class="ben reveal"><div class="chk">✓</div><h3>Tragfähige Zukunftsperspektive</h3><p>Eine Richtung, die stimmig ist – kein Trend-Getriebe, sondern ein Weg, der zu Ihnen passt.</p></div>
+      <div class="ben reveal"><div class="chk">✓</div><h3>Blockaden lösen</h3><p>Ein vertraulicher Sparringspartner hilft, festgefahrene Themen zu bewegen und Entscheidungen zu treffen.</p></div>
+      <div class="ben reveal"><div class="chk">✓</div><h3>KI, die wirklich entlastet</h3><p>Wir prüfen nüchtern, wo Künstliche Intelligenz Sie entlastet – und wo nicht. Kein Selbstzweck.</p></div>
+      <div class="ben reveal"><div class="chk">✓</div><h3>Messbare Wirkung</h3><p>Aus Klarheit werden Schritte, die im Alltag ankommen – für Sie, Ihr Team und Ihre Kunden.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTOR -->
+<section class="mentor" id="mentor">
+  <div class="wrap">
+    <div class="mentor-grid">
+      <div class="mentor-photo reveal">
+        <img src="images/michael-deck.jpg" alt="Michael Deck, Geschäftsführer der Impact4Entrepreneurship gGmbH und Ihr persönlicher Mentor">
+        <div class="tag"><b>Michael Deck</b><span>Ihr Mentor</span></div>
+      </div>
+      <div class="mentor-body reveal">
+        <span class="eyebrow">Ihr Mentor</span>
+        <h2>Michael Deck</h2>
+        <p>Als Unternehmer und Geschäftsführer der <span class="hl">Impact4Entrepreneurship gGmbH</span> begleitet Michael Deck Menschen, die mehr wollen als Wachstum um seiner selbst willen – Unternehmer, die Verantwortung und Berufung zusammendenken.</p>
+        <p class="soft">Seine Überzeugung: Ein Unternehmen beginnt nicht bei der Idee, sondern bei der Berufung des Menschen dahinter. Aus dieser Haltung heraus schafft er im Gespräch Klarheit, verbindet ethische, unternehmerische und praktische Perspektiven – und begleitet, wo gewünscht, bis in die Umsetzung mit Künstlicher Intelligenz.</p>
+        <div class="mentor-facts">
+          <span>Unternehmer &amp; Geschäftsführer</span>
+          <span>Werteorientiert</span>
+          <span>Vertraulich · 1:1</span>
+          <span>Praxis, Lehre &amp; Ethik</span>
+        </div>
       </div>
     </div>
   </div>
@@ -201,72 +339,64 @@
 <!-- HALTUNG -->
 <section class="stance">
   <div class="wrap">
-    <p class="q">Menschen suchen selten eine Agentur. Sie suchen <span class="hl">Lösungen</span> für ihre unternehmerischen Herausforderungen – und einen Begleiter, der sie versteht.</p>
-    <div class="by">Michael Deck · Impact4Entrepreneurship</div>
+    <img class="qi reveal" src="images/michael-headshot.jpg" alt="Michael Deck">
+    <p class="q reveal">Menschen suchen selten ein Programm. Sie suchen <span class="hl">Klarheit</span> – und einen Begleiter, der sie wirklich versteht.</p>
+    <div class="by reveal">Michael Deck · Impact4Entrepreneurship</div>
   </div>
 </section>
 
-<!-- EVENTS / I4E AKADEMIE -->
-<section class="events" id="events">
+<!-- ENTHALTEN / ABLAUF -->
+<section class="incl">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Nächster Termin</span>
-      <h2>Events</h2>
-      <p class="sub">I4E Akademie</p>
+    <div class="sec-head reveal">
+      <span class="eyebrow">Was enthalten ist</span>
+      <h2>Ihr Mentoring im Überblick.</h2>
     </div>
-    <div class="event-list">
+    <div class="incl-wrap reveal">
+      <ul class="incl-list">
+        <li><b>Vertrauliche 1:1-Gespräche</b> mit Michael Deck – im festen Rhythmus über den vereinbarten Zeitraum.</li>
+        <li><b>Klarheits-Prozess</b> zu Berufung, Werten und unternehmerischer Verantwortung.</li>
+        <li><b>Zukunftsperspektive &amp; Geschäftsmodell</b>, gemeinsam Schritt für Schritt entwickelt.</li>
+        <li><b>Sparring für Entscheidungen</b> zwischen den Terminen, wenn es darauf ankommt.</li>
+        <li><b>KI-Check</b>: konkrete Prüfung, wo Künstliche Intelligenz Sie sinnvoll entlastet.</li>
+        <li><b>Begleitung in die Umsetzung</b> – auf Wunsch bis zum funktionierenden System.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-      <!-- ===== EVENT-KARTE ===== (zum Ergänzen einfach diesen Block kopieren) -->
-      <a class="event-card reveal" href="https://impact4entrepreneurship.github.io/heiliger-businesscanvas-webinar/">
-        <div class="event-media">
-          <img src="images/michael-deck.jpg" alt="Michael Deck – Der Heilige BusinessCanvas, Live-Webinar">
-          <div class="date-badge"><span class="m">Sep</span><span class="d">18</span></div>
-        </div>
-        <div class="event-body">
-          <div class="cat">Akademie · Live-Webinar</div>
-          <h3>Der Heilige BusinessCanvas</h3>
-          <p>Dein Unternehmen beginnt nicht bei der Idee – es beginnt bei deiner Berufung. In zwei Stunden löst du mit unternehmerischen Methoden eine echte gesellschaftliche Herausforderung, begleitet von Mentoren aus Wirtschaft, Wissenschaft und Ethik.</p>
-          <div class="event-meta">
-            <span><span class="ic">◆</span> 18. September 2026</span>
-            <span><span class="ic">◷</span> 19:00 Uhr · 2 Stunden</span>
-            <span><span class="ic">◉</span> Live &amp; Online</span>
-          </div>
-          <div class="event-foot">
-            <span class="price-pill">Kostenlos</span>
-            <span class="mehr">Zum Webinar</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- ===== VORLAGE FÜR EINEN WEITEREN TERMIN =====
-           Zum Aktivieren die umgebenden Kommentar-Zeichen entfernen und Inhalte ersetzen.
-           - href: Link zur Anmelde-/Info-Seite des Events
-           - Datums-Badge: <span class="m">Monat</span> (z. B. Okt) und <span class="d">Tag</span>
-           - Bild: images/DEIN-BILD.jpg  (ins images-Verzeichnis legen)
-           - price-pill: z. B. "90 €" statt "Kostenlos"
-
-      <a class="event-card reveal" href="LINK-ZUM-EVENT">
-        <div class="event-media">
-          <img src="images/EVENT-BILD.jpg" alt="Titel des Events">
-          <div class="date-badge"><span class="m">Okt</span><span class="d">29</span></div>
-        </div>
-        <div class="event-body">
-          <div class="cat">Akademie · Kurs</div>
-          <h3>Titel des Events</h3>
-          <p>Kurze Beschreibung des Events in ein bis zwei Sätzen.</p>
-          <div class="event-meta">
-            <span><span class="ic">◆</span> 29. Oktober 2026</span>
-            <span><span class="ic">◷</span> 19:00 Uhr</span>
-            <span><span class="ic">◉</span> Vor Ort / Online</span>
-          </div>
-          <div class="event-foot">
-            <span class="price-pill">90 €</span>
-            <span class="mehr">Mehr erfahren</span>
-          </div>
-        </div>
-      </a>
-      ===== ENDE VORLAGE ===== -->
-
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Häufige Fragen</span>
+      <h2>Gut zu wissen.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Für wen ist „Wirkung aus Klarheit" gedacht? <span class="pl">+</span></summary>
+        <div class="a"><p>Für Unternehmerinnen und Unternehmer, die schon viel aufgebaut haben und jetzt Klarheit über das Wesentliche suchen – die ihre persönliche Berufung mit ihrer unternehmerischen Verantwortung verbinden und daraus eine stimmige Zukunft gestalten möchten.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Wie läuft die Begleitung konkret ab? <span class="pl">+</span></summary>
+        <div class="a"><p>In drei Phasen: Zuerst schaffen wir in vertraulichen Gesprächen Klarheit. Daraus entwickeln wir eine Zukunftsperspektive und passende Geschäftsmodelle. Und schließlich übersetzen wir das in konkrete Schritte – auf Wunsch bis in die Umsetzung.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Ist das ein Coaching oder eine Beratung? <span class="pl">+</span></summary>
+        <div class="a"><p>Beides in einem – und doch etwas Eigenes. Es beginnt beim Menschen (wie ein Mentoring) und führt bis zu konkreten unternehmerischen Ergebnissen (wie eine Beratung). Immer vertraulich, immer 1:1.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Welche Rolle spielt Künstliche Intelligenz? <span class="pl">+</span></summary>
+        <div class="a"><p>KI ist Werkzeug, nicht Ziel. Wir prüfen nüchtern, wo sie Sie wirklich entlastet und neue Möglichkeiten schafft – und lassen sie dort weg, wo sie keinen echten Nutzen bringt.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Wie vertraulich sind die Gespräche? <span class="pl">+</span></summary>
+        <div class="a"><p>Vollständig. Alles, was Sie einbringen, bleibt zwischen Ihnen und Michael Deck. Vertrauen ist die Grundlage für die Klarheit, um die es hier geht.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Wie starte ich? <span class="pl">+</span></summary>
+        <div class="a"><p>Mit einem unverbindlichen Unternehmergespräch. Darin klären wir, ob und wie eine Begleitung für Sie passt. Schreiben Sie einfach eine kurze Nachricht – der Rest ergibt sich im Gespräch.</p></div>
+      </details>
     </div>
   </div>
 </section>
@@ -274,9 +404,10 @@
 <!-- KONTAKT -->
 <section class="contact" id="kontakt">
   <div class="wrap">
-    <h2>Lassen Sie uns ins Gespräch kommen.</h2>
-    <p>Ein vertrauliches Unternehmergespräch ist der erste Schritt. Schreiben Sie uns – unverbindlich.</p>
-    <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Unternehmergespr%C3%A4ch" class="btn btn-light">Unternehmergespräch anfragen <span class="ar">→</span></a>
+    <span class="eyebrow">Der erste Schritt</span>
+    <h2>Beginnen Sie mit Klarheit.</h2>
+    <p>Ein vertrauliches Unternehmergespräch ist der Anfang. Schreiben Sie uns – unverbindlich.</p>
+    <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Wirkung%20aus%20Klarheit%20%E2%80%93%20Unternehmergespr%C3%A4ch" class="btn btn-light">Unternehmergespräch anfragen <span class="ar">→</span></a>
     <div class="lines"><a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></div>
   </div>
 </section>
