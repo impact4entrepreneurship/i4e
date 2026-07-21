@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masterclass „Unternehmen aus Berufung. Unternehmen aus Wirkung." | Impact4Entrepreneurship</title>
+<meta name="description" content="Die Masterclass für Unternehmerinnen und Unternehmer, die ihre Berufung mit ihrer unternehmerischen Verantwortung verbinden wollen. Start im September 2026. Begrenzte Plätze – jetzt bewerben.">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%232f003a'/><text x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23e09bd1'>i4e</text></svg>">
+<style>
+  :root{
+    --pflaume:#2f003a;--pflaume-2:#22002b;--violett:#5b156d;--violett-2:#7a2a90;
+    --rosa:#e09bd1;--rosa-soft:#f5e2f0;
+    --creme:#faf5f8;--card:#fffdff;--ink:#26122e;--grau:#6f6577;--line:#ecdff0;
+    --line-dark:rgba(224,155,209,.22);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--creme);line-height:1.68;-webkit-font-smoothing:antialiased;font-size:17px}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-height:1.14}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--rosa);color:var(--pflaume)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:100px;font-weight:600;
+    font-size:16.5px;border:1.5px solid transparent;transition:.2s;cursor:pointer;text-align:center;justify-content:center}
+  .btn-primary{background:var(--violett);color:#fff;box-shadow:0 14px 34px rgba(91,21,109,.3)}
+  .btn-primary:hover{background:var(--violett-2);transform:translateY(-2px)}
+  .btn-light{background:#fff;color:var(--violett);box-shadow:0 14px 34px rgba(0,0,0,.18)}
+  .btn-light:hover{transform:translateY(-2px)}
+  .btn .ar{transition:.2s}.btn:hover .ar{transform:translateX(4px)}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--rosa);outline-offset:3px}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--violett)}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rosa);flex:none}
+
+  /* Kopfzeile */
+  header{position:absolute;top:0;left:0;right:0;z-index:20;padding:22px 0}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .nav .logo img{height:40px;filter:brightness(0) invert(1);opacity:.95}
+  .nav a.zurueck{font-size:14.5px;color:rgba(255,255,255,.72)}
+  .nav a.zurueck:hover{color:#fff}
+
+  /* HERO */
+  .hero{background:var(--pflaume);color:#fff;padding:130px 0 78px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;
+    background:radial-gradient(circle,rgba(224,155,209,.16),transparent 68%);top:-190px;right:-160px}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end}
+  .hero .eyebrow{color:var(--rosa)}
+  .hero h1{font-size:clamp(36px,5.2vw,58px);margin:20px 0 20px;color:#fff}
+  .hero h1 .zwei{display:block;color:var(--rosa)}
+  .hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+    font-size:clamp(18px,2.3vw,23px);color:#e7d5ea;max-width:30ch;margin-bottom:26px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .hero .termin{margin-top:24px;font-size:15.5px;color:#cbb3d2}
+  .hero .termin strong{color:#fff}
+  .hero-bild{position:relative;display:flex;justify-content:center;align-items:flex-end}
+  .hero-bild::before{content:"";position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);
+    width:400px;height:400px;border-radius:50%;
+    background:radial-gradient(circle,rgba(224,155,209,.26),rgba(224,155,209,0) 70%)}
+  .hero-bild img{position:relative;z-index:2;max-height:560px;width:auto;margin-bottom:-78px;
+    filter:drop-shadow(0 26px 50px rgba(0,0,0,.45))}
+
+  /* Countdown */
+  .countdown{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .cd-box{background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:16px;
+    padding:16px 10px;min-width:88px;text-align:center;flex:1}
+  .cd-box .zahl{font-family:'Playfair Display',serif;font-weight:700;font-size:36px;color:#fff;line-height:1;
+    font-variant-numeric:tabular-nums}
+  .cd-box .txt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rosa);margin-top:8px;font-weight:600}
+  .cd-hinweis{margin-top:14px;font-size:14px;color:#b79cc0}
+
+  /* Vertrauensband */
+  .trust{background:var(--pflaume-2);color:#d9c6de;padding:22px 0;text-align:center;font-size:16px}
+  .trust strong{color:#fff}
+
+  /* Sektionen */
+  section{padding:88px 0}
+  .sec-head{text-align:center;max-width:760px;margin:0 auto 46px}
+  .sec-head h2{font-size:clamp(29px,4.2vw,45px);color:var(--pflaume);margin:16px 0 10px}
+  .sec-head .sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+    font-size:clamp(18px,2.3vw,22px);color:var(--violett)}
+  .sec-head p.text{color:var(--grau);font-size:17px;margin-top:12px}
+
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+
+  .z-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 20px 50px rgba(47,0,58,.05);transition:.22s}
+  .z-card:hover{transform:translateY(-5px);box-shadow:0 30px 66px rgba(47,0,58,.12);border-color:var(--rosa)}
+  .z-card .nr{width:46px;height:46px;border-radius:14px;background:var(--rosa-soft);color:var(--violett);
+    font-family:'Playfair Display',serif;font-weight:700;font-size:20px;display:flex;align-items:center;
+    justify-content:center;margin-bottom:18px}
+  .z-card h3{font-size:21px;color:var(--pflaume);margin-bottom:9px}
+  .z-card p{color:var(--grau);font-size:15.5px}
+
+  /* CTA-Band */
+  .cta-band{background:var(--violett);color:#fff;padding:64px 0;text-align:center}
+  .cta-band h2{font-size:clamp(25px,3.4vw,36px);color:#fff;margin-bottom:12px}
+  .cta-band p{color:#f0dcf0;margin-bottom:26px;font-size:17px}
+
+  /* Einblick (dunkel) */
+  .einblick{background:var(--pflaume);color:#fff}
+  .einblick .sec-head h2{color:#fff}
+  .einblick .sec-head .sub{color:var(--rosa)}
+  .einblick .eyebrow{color:var(--rosa)}
+  .e-card{background:rgba(255,255,255,.05);border:1px solid var(--line-dark);border-radius:20px;padding:32px 28px;transition:.22s}
+  .e-card:hover{background:rgba(255,255,255,.09);transform:translateY(-4px)}
+  .e-card .ic{font-size:26px;margin-bottom:14px;display:block}
+  .e-card h3{font-size:20px;color:#fff;margin-bottom:9px}
+  .e-card p{color:#cbb3d2;font-size:15.5px}
+
+  /* Ablauf */
+  .stp{display:flex;gap:22px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+    border-radius:20px;padding:30px 30px;box-shadow:0 16px 40px rgba(47,0,58,.05);margin-bottom:18px}
+  .stp .num{flex:none;width:52px;height:52px;border-radius:50%;background:var(--violett);color:#fff;
+    font-family:'Playfair Display',serif;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center}
+  .stp .verb{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--violett)}
+  .stp h3{font-size:21px;color:var(--pflaume);margin:2px 0 8px}
+  .stp p{color:var(--grau);font-size:15.5px}
+
+  /* Stimmen */
+  .voice{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 20px 50px rgba(47,0,58,.05)}
+  .voice .quote{font-family:'Playfair Display',serif;font-size:18px;line-height:1.5;color:var(--pflaume);margin-bottom:22px}
+  .voice .who{display:flex;align-items:center;gap:14px}
+  .voice .who img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
+  .voice .n{font-weight:600;font-size:15.5px;color:var(--pflaume)}
+  .voice .r{font-size:13.5px;color:var(--grau)}
+
+  /* Gastgeber */
+  .gast{background:linear-gradient(180deg,#fff,var(--creme))}
+  .gast-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}
+  .gast-bild img{border-radius:22px;box-shadow:0 28px 70px rgba(47,0,58,.16)}
+  .gast h2{font-size:clamp(28px,3.8vw,42px);color:var(--pflaume);margin:14px 0 18px}
+  .gast ul{list-style:none;margin-top:8px}
+  .gast li{position:relative;padding-left:32px;margin-bottom:15px;color:var(--ink);font-size:16px}
+  .gast li::before{content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;
+    background:var(--rosa-soft);border:2px solid var(--rosa)}
+
+  /* FAQ */
+  .faq-list{max-width:820px;margin:0 auto}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden}
+  .faq-item summary{cursor:pointer;list-style:none;padding:22px 26px;font-weight:600;font-size:17px;
+    color:var(--pflaume);display:flex;justify-content:space-between;gap:18px;align-items:center}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item .pl{color:var(--violett);font-size:22px;flex:none;transition:.2s}
+  .faq-item[open] .pl{transform:rotate(45deg)}
+  .faq-item .a{padding:0 26px 22px;color:var(--grau);font-size:16px}
+  .faq-item .a p{margin-bottom:10px}
+  .faq-item .a ul{margin:8px 0 0 20px}
+  .faq-item .a li{margin-bottom:6px}
+
+  /* Abschluss */
+  .final{background:var(--pflaume);color:#fff;text-align:center;padding:96px 0}
+  .final h2{font-size:clamp(30px,4.4vw,48px);color:#fff;margin:18px 0 16px}
+  .final p{color:#cbb3d2;max-width:56ch;margin:0 auto 30px;font-size:17.5px}
+  .final .eyebrow{color:var(--rosa)}
+  .final .klein{font-size:14.5px;color:#a98fb2;margin-top:22px}
+
+  footer{background:var(--pflaume-2);color:#b79cc0;padding:40px 0;font-size:14px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .foot a:hover{color:#fff}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .hero-grid,.gast-grid{grid-template-columns:1fr;gap:38px}
+    .hero-bild{max-width:420px;margin:0 auto}
+    .hero-bild img{max-height:400px;margin-bottom:-78px}
+    .g3,.g2{grid-template-columns:1fr}
+    .hero{padding-top:110px}
+  }
+  @media(max-width:560px){
+    body{font-size:16px}
+    section,.final{padding:60px 0}
+    .cd-box{min-width:0;padding:13px 6px}
+    .cd-box .zahl{font-size:27px}
+    .btn{width:100%}
+    .stp{flex-direction:column;gap:14px}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+    .btn:hover,.z-card:hover,.e-card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship"></a>
+    <a href="index.html" class="zurueck">← Zur Hauptseite</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Masterclass · Start September 2026</span>
+        <h1>Unternehmen aus Berufung.<span class="zwei">Unternehmen aus Wirkung.</span></h1>
+        <p class="sub">Für Unternehmer, die nicht mehr nur funktionieren wollen – sondern wissen, wofür.</p>
+        <div class="hero-cta">
+          <a href="#bewerben" class="btn btn-light">Jetzt bewerben <span class="ar">→</span></a>
+        </div>
+        <p class="termin">Beginn: <strong>Dienstag, 1. September 2026</strong> · Begrenzte Teilnehmerzahl</p>
+
+        <div class="countdown" id="countdown" aria-live="polite" aria-label="Verbleibende Zeit bis zum Start">
+          <div class="cd-box"><div class="zahl" id="cd-t">–</div><div class="txt">Tage</div></div>
+          <div class="cd-box"><div class="zahl" id="cd-s">–</div><div class="txt">Stunden</div></div>
+          <div class="cd-box"><div class="zahl" id="cd-m">–</div><div class="txt">Minuten</div></div>
+          <div class="cd-box"><div class="zahl" id="cd-k">–</div><div class="txt">Sekunden</div></div>
+        </div>
+        <p class="cd-hinweis" id="cd-hinweis">bis zum Start der Masterclass</p>
+      </div>
+      <div class="hero-bild">
+        <img src="images/michael-frei.png" alt="Michael Deck, Gastgeber der Masterclass">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">Begleitet von <strong>Michael Deck</strong> – Unternehmer, Geschäftsführer der Impact4Entrepreneurship gGmbH und ausgebildeter Geistlicher Begleiter.</div>
+</div>
+
+<!-- ZIELE -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ziele</span>
+      <h2>Was Sie mitnehmen.</h2>
+      <p class="text">Drei Ergebnisse, an denen Sie nach der Masterclass messen können, ob sich der Weg gelohnt hat.</p>
+    </div>
+    <div class="g3">
+      <div class="z-card reveal">
+        <div class="nr">1</div>
+        <h3>Ihr klares Warum</h3>
+        <p>Ein ausformuliertes Bild davon, wofür Sie und Ihr Unternehmen stehen – belastbar genug, um jede Entscheidung daran zu prüfen.</p>
+      </div>
+      <div class="z-card reveal">
+        <div class="nr">2</div>
+        <h3>Ihre Zukunftsperspektive</h3>
+        <p>Eine tragfähige Richtung für die kommenden Jahre samt passender Geschäftsmodelle – kein Trend-Getriebe, sondern ein Weg, der zu Ihnen passt.</p>
+      </div>
+      <div class="z-card reveal">
+        <div class="nr">3</div>
+        <h3>Konkrete nächste Schritte</h3>
+        <p>Aus Klarheit werden Schritte, die im Alltag ankommen: für Sie, Ihr Team und Ihre Kunden – begleitet bis in die Umsetzung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA-BAND -->
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Die Plätze sind bewusst begrenzt.</h2>
+    <p>Damit jede Teilnehmerin und jeder Teilnehmer wirklich zu Wort kommt.</p>
+    <a href="#bewerben" class="btn btn-light">Jetzt bewerben <span class="ar">→</span></a>
+  </div>
+</div>
+
+<!-- EINBLICK -->
+<section class="einblick">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Einblick</span>
+      <h2>Woran wir arbeiten.</h2>
+      <p class="sub">Drei Fragen, die in der Masterclass beantwortet werden.</p>
+    </div>
+    <div class="g3">
+      <div class="e-card reveal">
+        <span class="ic">◆</span>
+        <h3>Was ist meine Berufung?</h3>
+        <p>Wir trennen das, was Sie können, von dem, wofür Sie da sind. In vertraulichen Gesprächen zeigt sich, was wirklich trägt – und was Sie nur aus Gewohnheit weiterführen.</p>
+      </div>
+      <div class="e-card reveal">
+        <span class="ic">◆</span>
+        <h3>Wie wird daraus ein Unternehmen?</h3>
+        <p>Berufung bleibt folgenlos, wenn sie kein Gefäß bekommt. Wir entwickeln Geschäftsmodelle, die zu Ihren Werten passen und wirtschaftlich tragen.</p>
+      </div>
+      <div class="e-card reveal">
+        <span class="ic">◆</span>
+        <h3>Wo entsteht echte Wirkung?</h3>
+        <p>Wir prüfen nüchtern, wo Ihr Handeln Nutzen stiftet – und wo Künstliche Intelligenz Sie wirklich entlastet statt nur zu beschäftigen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABLAUF -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">So arbeiten wir</span>
+      <h2>Ihr Weg in drei Phasen.</h2>
+      <p class="text">Zuerst der Mensch und seine Berufung. Die Zukunftsperspektive und die Umsetzung folgen als logische nächste Schritte – nie umgekehrt.</p>
+    </div>
+    <div style="max-width:860px;margin:0 auto">
+      <div class="stp reveal">
+        <div class="num">1</div>
+        <div>
+          <span class="verb">Erkennen</span>
+          <h3>Klarheit im Gespräch</h3>
+          <p>In vertraulichen Unternehmergesprächen verbinden wir Ihre persönliche Berufung mit Ihrer unternehmerischen Verantwortung – und schärfen den Blick für das, was wirklich zählt.</p>
+        </div>
+      </div>
+      <div class="stp reveal">
+        <div class="num">2</div>
+        <div>
+          <span class="verb">Gestalten</span>
+          <h3>Zukunftsperspektive entwickeln</h3>
+          <p>Aus der gewonnenen Klarheit entwickeln wir eine klare Perspektive und Geschäftsmodelle, die zu Ihnen und Ihrem Unternehmen passen – tragfähig und werteorientiert.</p>
+        </div>
+      </div>
+      <div class="stp reveal">
+        <div class="num">3</div>
+        <div>
+          <span class="verb">Umsetzen</span>
+          <h3>Wirkung in die Tat bringen</h3>
+          <p>Wir übersetzen die Perspektive in konkrete Schritte. Wo Künstliche Intelligenz wirklich entlastet, begleiten wir die Umsetzung – bis aus der Idee ein System wird, das Nutzen stiftet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STIMMEN -->
+<section style="background:linear-gradient(180deg,var(--creme),#fff)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Erfahrungen</span>
+      <h2>Das sagen andere.</h2>
+    </div>
+    <div class="g2" style="max-width:940px;margin:0 auto">
+      <div class="voice reveal">
+        <p class="quote">In den Gesprächen mit Michael habe ich wiedergefunden, warum ich Wegfinder überhaupt ins Leben gerufen habe. Er hört wirklich zu und stellt die Fragen, die man sich selbst nicht stellt. Aus dieser Klarheit ist neue Kraft und eine klare Richtung entstanden.</p>
+        <div class="who">
+          <img src="images/testimonial-birgit.jpg" alt="Birgit Nandzik, Wegfinder e.V.">
+          <div><div class="n">Birgit Nandzik</div><div class="r">Wegfinder e.V.</div></div>
+        </div>
+      </div>
+      <div class="voice reveal">
+        <p class="quote">Als Unternehmerin stand ich an einem Punkt, an dem vieles gleichzeitig wichtig war. Michael nimmt sich Zeit und schafft einen Raum, in dem sich das Wesentliche zeigt. Danach wusste ich nicht nur, was ich tue – sondern wieder, wofür. Diese Klarheit trägt bis heute.</p>
+        <div class="who">
+          <img src="images/testimonial-viktoria.jpg" alt="Viktoria Kuhlen, Chiropraktik Magdeburg">
+          <div><div class="n">Viktoria Kuhlen</div><div class="r">Chiropraktik Magdeburg</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GASTGEBER -->
+<section class="gast">
+  <div class="wrap">
+    <div class="gast-grid">
+      <div class="gast-bild reveal"><img src="images/michael-headshot.jpg" alt="Michael Deck"></div>
+      <div class="reveal">
+        <span class="eyebrow">Ihr Gastgeber</span>
+        <h2>Michael Deck</h2>
+        <ul>
+          <li>Unternehmer und Geschäftsführer der Impact4Entrepreneurship gGmbH – einer gemeinnützigen Gesellschaft für werteorientierte unternehmerische Bildung</li>
+          <li>Begleitet Unternehmerinnen und Unternehmer, die Verantwortung und Berufung zusammendenken – vertraulich und im Einzelgespräch</li>
+          <li>Ausgebildeter Geistlicher Begleiter, ausgebildet bei den Benediktinermönchen im Europakloster Gut Aich</li>
+          <li>Seine Überzeugung: Ein Unternehmen beginnt nicht bei der Idee, sondern bei der Berufung des Menschen dahinter</li>
+          <li>Sein Ziel: unternehmerische Klarheit und geistliche Tiefe zusammenbringen – bis hinein in die konkrete Umsetzung</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--creme)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Ihre Fragen.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Für wen ist die Masterclass gedacht? <span class="pl">+</span></summary>
+        <div class="a">
+          <p>Für Unternehmerinnen und Unternehmer, die schon viel aufgebaut haben und jetzt Klarheit über das Wesentliche suchen. Konkret für alle, die:</p>
+          <ul>
+            <li>ihre persönliche Berufung mit ihrer unternehmerischen Verantwortung verbinden wollen</li>
+            <li>vor einer Weichenstellung stehen – Nachfolge, Neuausrichtung, neues Geschäftsfeld</li>
+            <li>Wachstum nicht mehr als Selbstzweck betrachten</li>
+            <li>bereit sind, sich Fragen stellen zu lassen, die man sich selbst nicht stellt</li>
+          </ul>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Wie läuft die Bewerbung ab? <span class="pl">+</span></summary>
+        <div class="a"><p>Sie schreiben eine kurze Nachricht mit ein paar Sätzen zu sich und Ihrem Unternehmen. Danach folgt ein unverbindliches Unternehmergespräch, in dem wir gemeinsam klären, ob die Masterclass für Sie passt. Erst danach entscheiden beide Seiten.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Warum eine Bewerbung und keine einfache Anmeldung? <span class="pl">+</span></summary>
+        <div class="a"><p>Weil die Gruppe klein bleibt und die Arbeit sehr persönlich ist. Es geht um Vertraulichkeit und darum, dass die Menschen im Raum zueinander passen. Das lässt sich nicht über ein Anmeldeformular lösen.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Ist das ein Coaching oder eine Beratung? <span class="pl">+</span></summary>
+        <div class="a"><p>Beides in einem – und doch etwas Eigenes. Es beginnt beim Menschen wie ein Mentoring und führt bis zu konkreten unternehmerischen Ergebnissen wie eine Beratung.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Welche Rolle spielen Glaube und Spiritualität? <span class="pl">+</span></summary>
+        <div class="a">
+          <p>Die Arbeit ist geprägt von der christlichen Tradition geistlicher Begleitung, wie Michael Deck sie bei den Benediktinern im Europakloster Gut Aich gelernt hat. Diese Haltung – zuhören, unterscheiden, dem Wesentlichen Raum geben – trägt jedes Gespräch.</p>
+          <p>Sie bringen so viel oder so wenig Glaube ein, wie für Sie stimmig ist. Der Raum ist offen, wertschätzend und ohne Druck.</p>
+        </div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Wie vertraulich ist das Ganze? <span class="pl">+</span></summary>
+        <div class="a"><p>Vollständig. Alles, was Sie einbringen, bleibt im Raum. Vertrauen ist die Grundlage für die Klarheit, um die es hier geht.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ABSCHLUSS-CTA -->
+<section class="final" id="bewerben">
+  <div class="wrap">
+    <span class="eyebrow">Der erste Schritt</span>
+    <h2>Bewerben Sie sich<br>für die Masterclass.</h2>
+    <p>Schreiben Sie uns ein paar Sätze zu sich und Ihrem Unternehmen. Alles Weitere klären wir in einem unverbindlichen Gespräch.</p>
+    <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Masterclass%20September%202026%20%E2%80%93%20Bewerbung&amp;body=Guten%20Tag%20Herr%20Deck%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20die%20Masterclass%20%E2%80%9EUnternehmen%20aus%20Berufung.%20Unternehmen%20aus%20Wirkung.%E2%80%9C%20bewerben.%0A%0AKurz%20zu%20mir%20und%20meinem%20Unternehmen%3A%0A%0A%0AWas%20mich%20gerade%20besch%C3%A4ftigt%3A%0A%0A" class="btn btn-light">Jetzt bewerben <span class="ar">→</span></a>
+    <p class="klein">michael.deck@impact4entrepreneurship.de · Beginn 1. September 2026 · Begrenzte Teilnehmerzahl</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Impact4Entrepreneurship gGmbH · Michael Deck</span>
+    <span style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+      <a href="index.html">Hauptseite</a>
+      <a href="leitbild.html">Leitbild</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  // Countdown bis zum Start der Masterclass
+  (function(){
+    var ziel = new Date(2026, 8, 1, 19, 0, 0).getTime(); // 1. September 2026, 19:00 Uhr
+    var t=document.getElementById('cd-t'), s=document.getElementById('cd-s'),
+        m=document.getElementById('cd-m'), k=document.getElementById('cd-k'),
+        hinweis=document.getElementById('cd-hinweis');
+    function zwei(n){ return String(n).padStart(2,'0'); }
+    function tick(){
+      var rest = ziel - Date.now();
+      if(rest <= 0){
+        t.textContent='00'; s.textContent='00'; m.textContent='00'; k.textContent='00';
+        hinweis.textContent='Die Masterclass hat begonnen – fragen Sie nach freien Plätzen.';
+        clearInterval(uhr);
+        return;
+      }
+      var sek=Math.floor(rest/1000);
+      t.textContent=zwei(Math.floor(sek/86400));
+      s.textContent=zwei(Math.floor(sek%86400/3600));
+      m.textContent=zwei(Math.floor(sek%3600/60));
+      k.textContent=zwei(sek%60);
+    }
+    tick();
+    var uhr=setInterval(tick,1000);
+  })();
+
+  // Einblenden beim Scrollen
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+</script>
+</body>
+</html>
