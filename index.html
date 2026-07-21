@@ -661,10 +661,7 @@
 </div>
 <script>
   (function(){
-    var KEY='i4e_masterclass_2026_09', TAGE=7;
-    try{ var bis=localStorage.getItem(KEY); if(bis && Date.now()<parseInt(bis,10)) return; }catch(e){}
     var ov=document.getElementById('mcOverlay'), letzterFokus=null;
-    function merken(){ try{ localStorage.setItem(KEY, String(Date.now()+TAGE*864e5)); }catch(e){} }
     function auf(){
       letzterFokus=document.activeElement;
       ov.hidden=false;
@@ -673,7 +670,6 @@
       document.getElementById('mcClose').focus();
     }
     function zu(){
-      merken();
       ov.classList.remove('open');
       document.body.style.overflow='';
       setTimeout(function(){ ov.hidden=true; if(letzterFokus) letzterFokus.focus(); },350);
@@ -683,7 +679,6 @@
     document.getElementById('mcClose').addEventListener('click',zu);
     document.getElementById('mcLater').addEventListener('click',zu);
     ov.addEventListener('click',function(e){ if(e.target===ov) zu(); });
-    ov.querySelector('a.btn').addEventListener('click',function(){ merken(); });
     document.addEventListener('keydown',taste);
     setTimeout(auf,2500);
   })();
