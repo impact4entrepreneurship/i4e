@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter Mai 2026 – Impact4Entrepreneurship gGmbH</title>
+<meta name="description" content="I4E Newsletter Mai 2026 – Wirtschaft aus Berufung. Wirkung aus Klarheit. Einblicke in unsere Arbeit: Projekt Wegfinder, Freiburg, erste Kapitalbeteiligung und Impact Founders.">
+<style>
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/playfair-display-600-latin.woff2') format('woff2');
+    font-weight: 600; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/playfair-display-700-latin.woff2') format('woff2');
+    font-weight: 700; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/inter-400-latin.woff2') format('woff2');
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/inter-500-latin.woff2') format('woff2');
+    font-weight: 500; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/inter-600-latin.woff2') format('woff2');
+    font-weight: 600; font-style: normal; font-display: swap;
+  }
+
+  :root {
+    --lila-tief: #2f003a;
+    --lila-dunkel: #5b156d;
+    --lila-akzent: #7a2a90;
+    --flieder: #cdb6d6;
+    --flieder-hell: #ecdff0;
+    --grund: #faf5f8;
+    --weiss: #fffdff;
+    --text: #3a2f40;
+    --text-sanft: #6f6577;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--grund);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .col { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255, 253, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--flieder-hell);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
+  }
+  .nav img { height: 44px; display: block; }
+  .nav .zurueck {
+    color: var(--text-sanft); text-decoration: none;
+    font-weight: 500; font-size: 15px;
+  }
+  .nav .zurueck:hover { color: var(--lila-akzent); }
+
+  /* Auftakt */
+  .auftakt {
+    padding: 90px 0 70px; text-align: center;
+    background: linear-gradient(180deg, var(--weiss) 0%, var(--grund) 100%);
+  }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 12px;
+    text-transform: uppercase; letter-spacing: 0.22em;
+    font-size: 13px; font-weight: 600; color: var(--lila-akzent);
+    margin-bottom: 24px;
+  }
+  .kicker::before, .kicker::after {
+    content: ''; width: 36px; height: 1px; background: var(--flieder);
+  }
+  .auftakt h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700;
+    color: var(--lila-tief); line-height: 1.15;
+    max-width: 760px; margin: 0 auto 20px;
+  }
+  .auftakt p { max-width: 620px; margin: 0 auto; color: var(--text-sanft); font-size: 1.12rem; }
+
+  /* Artikel */
+  .artikel { padding: 72px 0 40px; }
+  .artikel h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 700;
+    color: var(--lila-tief); margin: 56px 0 18px;
+  }
+  .artikel h2:first-of-type { margin-top: 0; }
+  .artikel h3 { font-size: 1.15rem; font-weight: 600; color: var(--lila-dunkel); margin: 26px 0 8px; }
+  .artikel p { margin-bottom: 16px; font-size: 1.06rem; }
+  .artikel strong { font-weight: 600; color: var(--lila-tief); }
+  .artikel em { color: var(--lila-akzent); }
+
+  .zitat {
+    margin: 28px 0; padding: 26px 30px;
+    border-left: 3px solid var(--lila-akzent);
+    background: var(--weiss); border-radius: 0 12px 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--lila-tief); line-height: 1.5;
+  }
+
+  .punkte { list-style: none; margin: 18px 0 22px; }
+  .punkte li {
+    padding-left: 30px; position: relative; margin-bottom: 10px;
+  }
+  .punkte li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--lila-akzent); font-weight: 600;
+  }
+
+  .hinweis-karte {
+    background: var(--weiss); border: 1px solid var(--flieder-hell);
+    border-radius: 18px; padding: 30px 34px; margin: 28px 0;
+  }
+  .hinweis-karte p:last-child { margin-bottom: 0; }
+
+  a.link { color: var(--lila-akzent); text-decoration: none; border-bottom: 1px solid var(--flieder-hell); word-break: break-word; }
+  a.link:hover { border-color: var(--lila-akzent); }
+
+  /* Download */
+  .download {
+    text-align: center; padding: 40px 0 90px;
+  }
+  .knopf {
+    display: inline-block; padding: 16px 36px;
+    background: var(--lila-tief); color: #fff;
+    text-decoration: none; font-weight: 600; font-size: 15px;
+    border-radius: 999px; letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  .knopf:hover { background: var(--lila-akzent); }
+  .download .hinweis { color: var(--text-sanft); font-size: 0.9rem; margin-top: 12px; }
+
+  footer {
+    background: var(--lila-tief); padding: 28px 0;
+    color: var(--flieder); font-size: 0.9rem;
+  }
+  .fuss {
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px; align-items: center;
+  }
+  .fuss a { color: var(--flieder); text-decoration: none; }
+  .fuss a:hover { color: #fff; }
+  .fuss .links { display: flex; gap: 22px; flex-wrap: wrap; }
+
+  @media (max-width: 560px) { body { font-size: 16px; } .nav img { height: 34px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship Logo"></a>
+    <a href="index.html" class="zurueck">← Zurück zur Startseite</a>
+  </div>
+</header>
+
+<!-- Auftakt -->
+<div class="auftakt">
+  <div class="container">
+    <span class="kicker">Newsletter · Mai 2026</span>
+    <h1>Wirtschaft aus Berufung.<br>Wirkung aus Klarheit.</h1>
+    <p>Liebe Freundinnen und Freunde von Impact4Entrepreneurship – mit diesem Newsletter öffnen wir ein neues Kapitel und geben ihm ein sichtbares Zeichen.</p>
+  </div>
+</div>
+
+<!-- Inhalt -->
+<article class="artikel">
+  <div class="col">
+
+    <h2>Ein neues Zeichen: unser Logo</h2>
+    <p>Unser neues Logo ist mehr als Gestaltung. Es ist Ausdruck dessen, was uns trägt.</p>
+    <p><strong>Eine Bewegung. Ein Weg. Ein Mensch, der aufgerichtet ist – und zugleich unterwegs.</strong></p>
+    <p>Die Linie fließt. Sie ist nicht starr, nicht technisch, nicht kalt. Sie erinnert daran: Unternehmertum ist kein mechanischer Prozess, sondern ein lebendiger Weg.</p>
+    <p>Der Mensch im Logo steht nicht isoliert. Er ist eingebettet in Bewegung – getragen von etwas Größerem. So verstehen wir Unternehmertum: nicht als Selbstverwirklichung um ihrer selbst willen, sondern als Antwort auf einen Ruf.</p>
+    <p>Der Weg unter ihm ist kein gerader Strich. Er ist gewunden. Echt. Denn echte Berufung kennt keine Abkürzung. Sie führt durch Fragen, durch Entscheidungen, durch Vertrauen.</p>
+    <div class="zitat">„Und doch: Alles strebt nach oben. Nicht im Sinne von Wachstum um jeden Preis – sondern im Sinne von Ausrichtung. Auf das, was trägt. Auf das, was wahr ist. Auf das, was bleibt."</div>
+
+    <h2>Was sich konkret bewegt – Einblick in unsere Arbeit</h2>
+    <p>Die Vision von Impact4Entrepreneurship bleibt nicht Theorie. Sie nimmt Gestalt an – in konkreten Projekten, Begegnungen und neuen Aufbrüchen.</p>
+
+    <h3>Projekt „Wegfinder" – Hilfe zur Selbsthilfe</h3>
+    <p>In diesem Jahr begleiten wir das Projekt <em>Wegfinder</em>. Im Zentrum steht die Unterstützung von Angehörigen und Pflegebedürftigen – nicht durch Abhängigkeit, sondern durch Stärkung. Es geht um Hilfe zur Selbsthilfe. Um Würde. Um Orientierung in einer Lebensphase, die oft von Überforderung geprägt ist.</p>
+
+    <h3>Freiburg/Breisgau – Ein Ort wird vorbereitet</h3>
+    <p>Ein weiterer Schritt führte uns nach Freiburg im Breisgau. Dort entsteht in einem ehemaligen Hotel ein neuer Ort: eine Bibelschule. Dieser Ort soll mehr sein als Lehre – er soll ein Raum der Formung werden. Besonders bewegt uns, dass dort auch ein Lehrgang für <strong>Entrepreneurship</strong> geplant ist.</p>
+    <p>Hier zeigt sich, was uns antreibt:</p>
+    <ul class="punkte">
+      <li>Glaube und Unternehmertum gehören zusammen.</li>
+      <li>Berufung darf praktisch werden.</li>
+      <li>Und Orte können entstehen, an denen Menschen lernen, aus innerem Ruf heraus zu handeln.</li>
+    </ul>
+
+    <h2>Zwischen Vision und Wirklichkeit – unsere erste Kapitalbeteiligung</h2>
+    <p>Ein bedeutender Schritt liegt vor uns: <strong>die erste Kapitalbeteiligung der Impact4Entrepreneurship gGmbH.</strong></p>
+    <p>Bereits im Januar haben wir das Unternehmen besucht, um gemeinsam den Zeitplan für unsere Beteiligung zu besprechen. Die Vision ist klar – doch der Weg dorthin zeigt uns einmal mehr die Realität in Deutschland: Bürokratie.</p>
+    <p>Seither sind wir intensiv damit beschäftigt, Verträge durch Notare und Steuerberater prüfen zu lassen, Strukturen abzustimmen und die Besonderheiten einer gemeinnützigen GmbH sauber umzusetzen. Was dem Schutz dient, wird in der Praxis oft zur Bremse.</p>
+    <p>Und doch gehört auch das zu unserem Weg:</p>
+    <ul class="punkte">
+      <li>Sorgfalt statt Schnellschuss</li>
+      <li>Verantwortung statt Abkürzung</li>
+    </ul>
+    <p>Wir bleiben dran – mit Geduld und Klarheit. Und wir sind zuversichtlich, bald von <strong>der ersten Kapitalbeteiligung der I4E gGmbH</strong> berichten zu können.</p>
+    <div class="zitat">„Denn echte Wirkung entsteht nicht im Eiltempo – sondern dort, wo Substanz aufgebaut wird."</div>
+
+    <h2>Impact Founders – Das heilige Geschäftsmodell Canvas</h2>
+    <p><strong>Was wäre, wenn junge Menschen Wirtschaft nicht zuerst als Markt, sondern als Verantwortung lernen?</strong></p>
+    <p>Mit Impact Founders haben wir genau dafür einen Raum geschaffen: Ein Bildungsansatz, in dem unternehmerisches Denken, ethische Klarheit und biblische Orientierung zusammenfinden. Im Zentrum steht unser <strong>„Heiliges Geschäftsmodell Canvas"</strong> – ein Werkzeug, das nicht nur Geschäftsmodelle entwickelt, sondern Menschen in ihre Berufung führt.</p>
+    <p>Wir hatten für den 21. März 2026 ein Webinar angesetzt. Die Wahrheit ist: Es fand nicht statt. Zu wenig Interesse.</p>
+    <p>Das ist ernüchternd – aber auch aufschlussreich. Denn genau hier zeigt sich die Spannung unserer Zeit: Viele sprechen von Sinn und Werten – aber nur wenige sind bereit, sich wirklich darauf einzulassen.</p>
+    <p>Und dennoch: Wir bleiben. Nicht, weil es einfach ist – sondern weil es notwendig ist.</p>
+    <div class="hinweis-karte">
+      <p><strong>Deshalb gehen wir einen anderen Weg:</strong> Wir lösen uns vom festen Termin und öffnen das Format für alle, die wirklich suchen.</p>
+      <p>Wenn du Interesse hast, dieses Konzept kennenzulernen – sei es als Lehrkraft, Mentor, Förderer oder als jemand, der selbst auf dem Weg ist – dann melde dich direkt: <a class="link" href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
+      <p>Ich führe dieses Format auch persönlich – sogar im 1:1. Denn wenn auch nur ein Mensch beginnt, Wirtschaft als Berufung zu verstehen, dann hat es sich bereits gelohnt.</p>
+    </div>
+
+  </div>
+</article>
+
+<!-- Download -->
+<div class="download">
+  <div class="container">
+    <a href="I4E-Newsletter-Mai-2026.pdf" class="knopf" download>Newsletter als PDF herunterladen</a>
+    <p class="hinweis">PDF · ca. 7 MB</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container fuss">
+    <span>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</span>
+    <span class="links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
