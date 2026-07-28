@@ -246,6 +246,88 @@
     .hero { padding: 80px 0 72px; }
     .knopf.hell { margin-left: 0; margin-top: 12px; }
   }
+/* PODCAST-CSS */
+  /* ---------- Podcast ---------- */
+  .podcast { background: var(--weiss); }
+  .podcast-intro { max-width: 640px; color: var(--text-sanft); margin-bottom: 48px; }
+  .podcast-intro a { color: var(--lila-akzent); font-weight: 600; border-bottom: 1px solid var(--flieder); }
+  .podcast-intro a:hover { border-color: var(--lila-akzent); }
+  .folgen { display: flex; flex-direction: column; gap: 12px; }
+  .folge {
+    background: var(--grund); border: 1px solid var(--flieder-hell);
+    border-radius: 14px; overflow: hidden; transition: border-color 0.2s ease;
+  }
+  .folge[open] { border-color: var(--flieder); }
+  .folge summary {
+    list-style: none; cursor: pointer; padding: 20px 26px;
+    display: grid; grid-template-columns: auto 1fr auto auto;
+    align-items: center; gap: 18px;
+  }
+  .folge summary::-webkit-details-marker { display: none; }
+  .folge .datum {
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--lila-dunkel); background: var(--flieder-hell);
+    padding: 5px 12px; border-radius: 100px; white-space: nowrap;
+  }
+  .folge .name {
+    font-family: 'Playfair Display', serif; font-weight: 600;
+    font-size: 1.12rem; color: var(--lila-tief); line-height: 1.3;
+  }
+  .folge .laenge {
+    font-size: 0.88rem; color: var(--text-sanft);
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .folge .zeichen {
+    color: var(--lila-akzent); font-size: 1.4rem;
+    transition: transform 0.2s ease; flex: none; line-height: 1;
+  }
+  .folge[open] .zeichen { transform: rotate(45deg); }
+  .folge .inhalt { padding: 0 26px 22px; }
+  .folge .inhalt p {
+    color: var(--text-sanft); font-size: 0.98rem;
+    margin-bottom: 18px; white-space: pre-line;
+  }
+
+  /* Eigener Abspieler */
+  .spieler {
+    display: flex; align-items: center; gap: 15px;
+    background: var(--flieder-hell); border-radius: 100px; padding: 10px 20px 10px 10px;
+  }
+  .spieler-knopf {
+    width: 42px; height: 42px; border-radius: 50%; border: none;
+    background: var(--lila-dunkel); color: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex: none; transition: 0.2s ease; font-size: 15px; line-height: 1;
+  }
+  .spieler-knopf:hover { background: var(--lila-akzent); transform: scale(1.06); }
+  .spieler-knopf:focus-visible { outline: 2px solid var(--lila-tief); outline-offset: 3px; }
+  .spieler-balken {
+    flex: 1; height: 6px; background: rgba(91, 21, 109, 0.16);
+    border-radius: 100px; cursor: pointer; position: relative; min-width: 60px;
+  }
+  .spieler-fuellung {
+    height: 100%; width: 0; background: var(--lila-dunkel);
+    border-radius: 100px; transition: width 0.1s linear;
+  }
+  .spieler-balken:focus-visible { outline: 2px solid var(--lila-dunkel); outline-offset: 4px; }
+  .spieler-zeit {
+    font-size: 0.84rem; color: var(--lila-dunkel); font-weight: 600;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .spieler.laedt .spieler-knopf { opacity: 0.55; cursor: progress; }
+
+  @media (max-width: 680px) {
+    .folge summary { grid-template-columns: 1fr auto; gap: 8px 14px; padding: 18px 20px; }
+    .folge .datum { grid-row: 1; grid-column: 1; }
+    .folge .laenge { grid-row: 1; grid-column: 2; justify-self: end; }
+    .folge .name { grid-row: 2; grid-column: 1 / -1; font-size: 1.05rem; }
+    .folge .zeichen { display: none; }
+    .folge .inhalt { padding: 0 20px 20px; }
+    .spieler { gap: 11px; padding: 9px 15px 9px 9px; }
+    .spieler-zeit { font-size: 0.78rem; }
+  }
+/* /PODCAST-CSS */
+
 </style>
 </head>
 <body>
@@ -257,6 +339,7 @@
       <a href="#mission">Mission</a>
       <a href="#angebote">Angebote</a>
       <a href="#newsletter">Newsletter</a>
+      <a href="#podcast">Podcast</a>
       <a href="#ueber">Über mich</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -338,6 +421,394 @@
   </div>
 </section>
 
+<!-- PODCAST -->
+<section class="podcast" id="podcast">
+  <div class="container">
+    <span class="abschnitt-kicker">Podcast</span>
+    <h2>Menschen mit Wirkung</h2>
+    <p class="podcast-intro">Einmal im Monat sprechen wir mit Menschen, die etwas bewegen – über Berufung,
+      Verantwortung und die Frage, wie Wirtschaft dem Menschen dienen kann. Alle 21 Folgen zum Anhören,
+      auch bei <a href="https://impact4entrepreneurship.podigee.io/" target="_blank" rel="noopener">Podigee</a>
+      und über den <a href="https://impact4entrepreneurship.podigee.io/feed/mp3" target="_blank" rel="noopener">RSS-Feed</a>.</p>
+    <div class="folgen">
+      <details class="folge">
+        <summary>
+          <span class="datum">30. Juni 2026</span>
+          <span class="name">Mut.Ideen.Wirkung</span>
+          <span class="laenge">9:21</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Drei Worte, die auf den ersten Blick nach Gründung, Start-up und Businessplan klingen.
+Aber eigentlich geht es um viel mehr.
+Entrepreneurship ist nicht zuerst eine Methode.
+Es ist eine Haltung.</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2533318-m-594602f90fc3ee43d32d39291b7f6f18.mp3?source=feed" data-dauer="561">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Mut.Ideen.Wirkung">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="561" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;9:21</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">28. Mai 2026</span>
+          <span class="name">Thank God for Bitcoin</span>
+          <span class="laenge">1:34:06</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Ein Workshop beim MUT-Kongress 2024 in Scbwäbisch Gmünd.</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2506595-m-d84cd16acfd50e1c626ecebf21300994.mp3?source=feed" data-dauer="5646">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Thank God for Bitcoin">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="5646" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;1:34:06</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">30. April 2026</span>
+          <span class="name">Wenn dein Unternehmen krank ist - warum Strategie nicht reicht</span>
+          <span class="laenge">5:23</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Dein Unternehmen funktioniert – aber lebt es auch?
+Wenn innen Unordnung herrscht, hilft keine Strategie.
+Ordne dein Inneres. Dann beginnt dein Unternehmen zu leuchten.</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2477233-m-367893cef5bbdae264973ca260ff1615.mp3?source=feed" data-dauer="323">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wenn dein Unternehmen krank ist - warum Strategie nicht reicht">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="323" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;5:23</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">29. April 2026</span>
+          <span class="name">Impact beginnt mit einer brennenden Idee</span>
+          <span class="laenge">3:25</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Gründen heißt für uns nicht: einen Businessplan schreiben.
+Gründen heißt: auf einen inneren Ruf hören.</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2473816-m-bf1870f86a000429d5bb0a6bc772672a.mp3?source=feed" data-dauer="205">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Impact beginnt mit einer brennenden Idee">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:25</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">31. März 2026</span>
+          <span class="name">Unternehmertum als Gefäß: Das Heilige Geschäftsmodell des Tikkun</span>
+          <span class="laenge">16:45</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Der vorliegende Text beschreibt ein spirituelles Verständnis von Unternehmertum, das wirtschaftliches Handeln als einen schöpferischen Akt zur Heilung der Welt begreift. Anstatt Profit in das Zentrum zu stellen, dient das Unternehmen hier als Gefäß für göttliche Ordnung, wobei die Struktur eines Betriebs den zehn kabbalistischen Sefirot nachempfunden wird. Dieser Ansatz integriert spirituelle Weis</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2429926-m-5d30512b7f5f8316cced6c3142222b15.mp3?source=feed" data-dauer="1005">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Unternehmertum als Gefäß: Das Heilige Geschäftsmodell des Tikkun">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="1005" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;16:45</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">30. März 2026</span>
+          <span class="name">Warum Berufung keine Entscheidung ist</span>
+          <span class="laenge">22:21</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Der vorliegende Text untersucht den tiefgreifenden Unterschied zwischen einer bewussten Entscheidung und der wahren Berufung, die den Menschen von außen und innen gleichermaßen anspricht. Während der eigene Wille oft nach Selbstverwirklichung strebt, zeigt sich eine Berufung dadurch, dass sie den Einzelnen beharrlich verfolgt und oft ein persönliches Opfer verlangt. Die Quelle betont, dass echte B</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2428127-m-970d7d62a814f53c692f4c51be1cbb8e.mp3?source=feed" data-dauer="1341">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Warum Berufung keine Entscheidung ist">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="1341" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;22:21</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">11. Februar 2026</span>
+          <span class="name">Gott als Chef und radikale Transparenz</span>
+          <span class="laenge">16:51</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>In diesem Podcast-Transkript berichtet Michael Deck über die praktische Umsetzung einer „Kingdom Company“ am Beispiel seines Handwerksbetriebs Tiedge GmbH. Er erläutert, wie er sein Unternehmen als Wohnstätte Gottes versteht, in der christliche Werte wie Herzlichkeit und Transparenz den Arbeitsalltag spürbar prägen. Ein zentrales Element ist dabei die Abgabe von Verantwortung an die Mitarbeitenden</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2351440-m-e7ecaba24c66a7d07a47c2ed9e42c3aa.mp3?source=feed" data-dauer="1011">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Gott als Chef und radikale Transparenz">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="1011" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;16:51</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">1. Dezember 2025</span>
+          <span class="name">Wenn Gott zum Nervensystem des Unternehmens wird</span>
+          <span class="laenge">8:09</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Wenn Gott – nicht als dogmatische Figur, sondern als lebendige Quelle von Bewusstsein, Wahrheit und Verantwortung – zum Nervensystem eines Unternehmens wird, dann rührt das an den innersten Kern seiner Funktionsweise. Ein Nervensystem steuert Wahrnehmung, Reaktion, Orientierung, Koordination. Wenn dieses System nicht mehr von Angst, kurzfristigen Zielen oder Eitelkeit gespeist wird, sondern vom Ew</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2235312-m-b20ebc59e3957b5009716ff3ca069811.mp3?source=feed" data-dauer="489">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wenn Gott zum Nervensystem des Unternehmens wird">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="489" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;8:09</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">29. September 2025</span>
+          <span class="name">Wie Sie Ihre einzigartige Berufung finden</span>
+          <span class="laenge">18:37</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Dieser Quellentext ist ein Auszug aus einem YouTube-Video-Transkript von Rabbi Simon Jacobson, das die Wichtigkeit der Entdeckung der eigenen, einzigartigen Lebensbestimmung oder Berufung untersucht. Jacobson argumentiert, dass ebenso wie Unternehmen eine Mission Statement benötigen, Einzelpersonen eine persönliche Mission benötigen, um ein effizientes und erfülltes Leben zu führen. Er weist darau</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2134233-m-5062085eba4d83839250d6a796ed2e8b.mp3?source=feed" data-dauer="1117">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wie Sie Ihre einzigartige Berufung finden">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="1117" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;18:37</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">29. September 2025</span>
+          <span class="name">Unternehmensnachfolge, KI und Spiritualität: Lichtmaximierung</span>
+          <span class="laenge">20:52</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Dieser Quellentext erörtert die notwendige Verbindung von Unternehmensnachfolge, Künstlicher Intelligenz (KI) und Spiritualität angesichts des Generationswechsels der Babyboomer und der technologischen Revolution durch KI. Die Autoren argumentieren, dass die Übernahme mittelständischer Unternehmen nicht nur durch Effizienzsteigerung mittels KI, sondern vor allem durch eine spirituelle Neuausrichtu</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2134163-m-1ebc30ebd5f4ed9bc21394a0eb1f6cd2.mp3?source=feed" data-dauer="1252">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Unternehmensnachfolge, KI und Spiritualität: Lichtmaximierung">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="1252" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;20:52</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">29. September 2025</span>
+          <span class="name">Bootstrap Company: Spiritual Foundation of Entrepreneurship</span>
+          <span class="laenge">10:59</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Der gegebene Text stammt aus einer Podcast- oder Blogserie namens „Impact4Soul – Wirtschaft aus innerem Ruf“ und konzentriert sich auf das Konzept der Bootstrap Company. Es wird erklärt, dass ein solches Unternehmen ohne externe Investitionen oder Fremdkapital aufgebaut wird, allein durch Eigenleistung und Kreativität. Die Quelle betont, dass Bootstrapping nicht bloß eine Finanzstrategie, sondern</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2134139-m-b027094d6050c52508b8e9315857d11e.mp3?source=feed" data-dauer="659">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Bootstrap Company: Spiritual Foundation of Entrepreneurship">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="659" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;10:59</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">18. September 2025</span>
+          <span class="name">Vom Profit zum Licht: Unternehmertum als heiliger Raum“</span>
+          <span class="laenge">15:33</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Der vorliegende Text beschreibt die Entwicklung des unternehmerischen Handelns in vier aufeinanderfolgenden Stufen. Anfänglich lag der Fokus auf der Gewinnmaximierung, bei der Unternehmen primär als effiziente Maschinen zur Kapitalmehrung betrachtet wurden. Darauf folgte die Nutzenmaximierung, die Unternehmen als Problemlöser für spezifische Zielgruppen definierte und den Kunden in den Vordergrund</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2118578-m-a1021c5b10f502d00b5714dda3e97023.mp3?source=feed" data-dauer="933">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Vom Profit zum Licht: Unternehmertum als heiliger Raum“">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="933" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;15:33</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">8. August 2025</span>
+          <span class="name">Das Herz von I4E</span>
+          <span class="laenge">2:19</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>✨ Einladung zum Bewerbungsgespräch
+Werde Teil einer Bewegung – Gründen zur Verherrlichung Gottes
+Du spürst in Dir den Ruf, ein Unternehmen zu gründen –
+nicht für Ruhm oder Reichtum, sondern aus einem tiefen Wunsch,
+Gott zu ehren und Menschen zu dienen?
+
+Dann möchten wir Dich kennenlernen.
+
+Die Impact4Entrepreneurship gGmbH begleitet Gründerinnen und Gründer,
+die ihr Business als geistliche Berufun</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2055443-m-22bf86729e697d171c24fd99801295c1.mp3?source=feed" data-dauer="139">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Das Herz von I4E">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="139" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;2:19</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">19. Juli 2025</span>
+          <span class="name">Folge 9: Dienen durch Freie Marktwirtschaft: Eine Spirituelle Sicht</span>
+          <span class="laenge">6:45</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Diese Textausschnitte untersuchen die Bedeutung der freien Marktwirtschaft und die Rolle des Unternehmers darin. Es wird erklärt, dass unternehmerischer Erfolg nur dann eintritt, wenn Angebote den tatsächlichen Bedürfnissen der Menschen entsprechen. Die Quelle stellt einen direkten Zusammenhang zwischen dem Dienst am Menschen und dem Prinzip des Marktes her, wobei Erfolg aus der Fähigkeit resultie</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2023980-m-8e83432fe100132cd292f666b0ad22cf.mp3?source=feed" data-dauer="405">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 9: Dienen durch Freie Marktwirtschaft: Eine Spirituelle Sicht">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="405" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;6:45</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">20. Juni 2025</span>
+          <span class="name">Folge 7: Kingdom Company – Unternehmen als Wohnung Gottes</span>
+          <span class="laenge">1:48</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1980840-m-ab48cafaf9ecc51bd401a774d03504b6.mp3?source=feed" data-dauer="108">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 7: Kingdom Company – Unternehmen als Wohnung Gottes">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="108" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;1:48</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">17. Juni 2025</span>
+          <span class="name">Folge 6: Warum du kein Geld brauchst, um loszulegen – sondern Klarheit</span>
+          <span class="laenge">2:30</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1976862-m-4c2c46c22e087574f0af5a74ed23353c.mp3?source=feed" data-dauer="150">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 6: Warum du kein Geld brauchst, um loszulegen – sondern Klarheit">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;2:30</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">13. Juni 2025</span>
+          <span class="name">Folge 5: Warum die Wirtschaft Conviatoren braucht – und keine Mentoren</span>
+          <span class="laenge">3:22</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1970327-m-ee0c0febda3488dff4a2d18415af415b.mp3?source=feed" data-dauer="202">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 5: Warum die Wirtschaft Conviatoren braucht – und keine Mentoren">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="202" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:22</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">10. Juni 2025</span>
+          <span class="name">Folge 4: Das Orakel-Problem – Woher beziehst du deine Informationen?</span>
+          <span class="laenge">3:14</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1932583-m-4285e6f14388544a058715a803005f5a.mp3?source=feed" data-dauer="194">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 4: Das Orakel-Problem – Woher beziehst du deine Informationen?">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="194" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:14</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">10. Juni 2025</span>
+          <span class="name">Folge 3: Sparen oder investieren – was deine Seele mit Geld gemeinsam hat</span>
+          <span class="laenge">3:04</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1965285-m-05072d9e0cd7556902ba7ab6b186f417.mp3?source=feed" data-dauer="184">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 3: Sparen oder investieren – was deine Seele mit Geld gemeinsam hat">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="184" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:04</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">21. Mai 2025</span>
+          <span class="name">Folge 2: Erfolg – eine Frage der Perspektive</span>
+          <span class="laenge">3:54</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1937514-m-7b96f7b01d5746e20e75601c505e5140.mp3?source=feed" data-dauer="234">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 2: Erfolg – eine Frage der Perspektive">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="234" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:54</span>
+          </div>
+        </div>
+      </details>
+      <details class="folge">
+        <summary>
+          <span class="datum">19. Mai 2025</span>
+          <span class="name">Folge 1: Impact beginnt mit einer brennenden Idee</span>
+          <span class="laenge">3:25</span>
+          <span class="zeichen">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Gründen heißt für uns nicht: einen Businessplan schreiben.
+Gründen heißt: auf einen inneren Ruf hören.</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/1933789-m-9d386f815e8f73b9b7dcf958ce37731c.mp3?source=feed" data-dauer="205">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 1: Impact beginnt mit einer brennenden Idee">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:25</span>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- /PODCAST -->
+
 <!-- Über mich -->
 <section class="ueber" id="ueber">
   <div class="container">
@@ -376,6 +847,92 @@
     </span>
   </div>
 </footer>
+
+<!-- PODCAST-JS -->
+<script>
+  /* Podcast-Abspieler: ein Audio-Element fuer alle Folgen, laedt erst auf Klick */
+  (function () {
+    var lauf = null;
+    var au = new Audio();
+    au.preload = 'none';
+
+    function zeit(s) {
+      s = Math.floor(s || 0);
+      var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), r = s % 60;
+      return h ? h + ':' + String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0')
+               : m + ':' + String(r).padStart(2, '0');
+    }
+    function anzeige(sp, akt, ges) {
+      sp.querySelector('.spieler-fuellung').style.width = ges ? (akt / ges * 100) + '%' : '0%';
+      sp.querySelector('.spieler-zeit').innerHTML = zeit(akt) + '&nbsp;/&nbsp;' + zeit(ges);
+      sp.querySelector('.spieler-balken').setAttribute('aria-valuenow', Math.floor(akt));
+    }
+    function zurueck(sp) {
+      if (!sp) return;
+      sp.classList.remove('laedt');
+      sp.querySelector('.spieler-knopf').innerHTML = '&#9654;';
+      anzeige(sp, 0, +sp.dataset.dauer);
+    }
+    function starte(sp) {
+      if (lauf && lauf !== sp) zurueck(lauf);
+      if (lauf === sp && !au.paused) {
+        au.pause();
+        sp.querySelector('.spieler-knopf').innerHTML = '&#9654;';
+        return;
+      }
+      if (lauf !== sp) {
+        lauf = sp;
+        sp.classList.add('laedt');
+        au.src = sp.dataset.src;
+      }
+      au.play().then(function () {
+        sp.classList.remove('laedt');
+        sp.querySelector('.spieler-knopf').innerHTML = '&#10073;&#10073;';
+      }).catch(function () {
+        sp.classList.remove('laedt');
+        sp.querySelector('.spieler-zeit').textContent = 'Wiedergabe nicht möglich';
+      });
+    }
+
+    au.addEventListener('timeupdate', function () {
+      if (lauf) anzeige(lauf, au.currentTime, au.duration || +lauf.dataset.dauer);
+    });
+    au.addEventListener('ended', function () { zurueck(lauf); lauf = null; });
+
+    document.querySelectorAll('.spieler').forEach(function (sp) {
+      sp.querySelector('.spieler-knopf').addEventListener('click', function () { starte(sp); });
+
+      var balken = sp.querySelector('.spieler-balken');
+      function springe(anteil) {
+        var ges = (lauf === sp && au.duration) ? au.duration : +sp.dataset.dauer;
+        if (lauf !== sp) starte(sp);
+        au.currentTime = Math.max(0, Math.min(ges, anteil * ges));
+        anzeige(sp, au.currentTime, ges);
+      }
+      balken.addEventListener('click', function (ev) {
+        var r = balken.getBoundingClientRect();
+        springe((ev.clientX - r.left) / r.width);
+      });
+      balken.addEventListener('keydown', function (ev) {
+        var ges = +sp.dataset.dauer;
+        if (ev.key === 'ArrowRight') { ev.preventDefault(); springe((au.currentTime + 15) / ges); }
+        else if (ev.key === 'ArrowLeft') { ev.preventDefault(); springe((au.currentTime - 15) / ges); }
+        else if (ev.key === ' ' || ev.key === 'Enter') { ev.preventDefault(); starte(sp); }
+      });
+    });
+
+    /* Zuklappen stoppt die Wiedergabe */
+    document.querySelectorAll('.folge').forEach(function (f) {
+      f.addEventListener('toggle', function () {
+        if (!f.open) {
+          var sp = f.querySelector('.spieler');
+          if (lauf === sp) { au.pause(); zurueck(sp); lauf = null; }
+        }
+      });
+    });
+  })();
+</script>
+<!-- /PODCAST-JS -->
 
 </body>
 </html>
