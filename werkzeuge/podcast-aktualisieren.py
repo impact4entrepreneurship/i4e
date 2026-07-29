@@ -233,7 +233,7 @@ def hole_folgen():
             "datum": feld(r"<pubDate>(.*?)</pubDate>", eintrag),
             "dauer": feld(r"<itunes:duration>(.*?)</itunes:duration>", eintrag, "0"),
             "mp3": mp3,
-            "text": re.sub(r"<[^>]+>", "", feld(r"<description>(.*?)</description>", eintrag))[:400].strip(),
+            "text": re.sub(r"<[^>]+>", "", feld(r"<description>(.*?)</description>", eintrag)).strip(),
         })
     return folgen
 
@@ -242,7 +242,10 @@ def baue_html(folgen):
     karten = []
     for f in folgen:
         titel = html.escape(f["titel"], quote=True)
-        absatz = f'<p>{html.escape(f["text"], quote=True)}</p>' if f["text"] else ""
+        absatz = "\n          ".join(
+            f"<p>{html.escape(teil.strip(), quote=True)}</p>"
+            for teil in re.split(r"\n\s*\n|\n", f["text"]) if teil.strip()
+        )
         sek = int(f["dauer"] or 0)
         karten.append(f"""      <details class="folge">
         <summary>
