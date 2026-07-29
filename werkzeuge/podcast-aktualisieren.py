@@ -27,6 +27,13 @@ FEED = "https://impact4entrepreneurship.podigee.io/feed/mp3"
 SEITE = "https://impact4entrepreneurship.podigee.io/"
 ZIEL = Path(__file__).resolve().parent.parent / "index.html"
 
+# Nachtraege: Text, der in den Podigee-Shownotes fehlt, aber auf der Webseite
+# stehen soll. Aufbau:  "Anfang des Folgentitels": [(suchen, ersetzen), ...]
+# Normalerweise leer - besser direkt bei Podigee pflegen, dann stimmt es auch
+# bei Spotify und Apple. Steht der Text spaeter im Feed, Eintrag hier loeschen,
+# sonst erscheint er doppelt.
+NACHTRAEGE = {}
+
 M_HTML = ("<!-- PODCAST -->", "<!-- /PODCAST -->")
 M_CSS = ("/* PODCAST-CSS */", "/* /PODCAST-CSS */")
 M_JS = ("<!-- PODCAST-JS -->", "<!-- /PODCAST-JS -->")
@@ -235,7 +242,21 @@ def hole_folgen():
             "mp3": mp3,
             "text": re.sub(r"<[^>]+>", "", feld(r"<description>(.*?)</description>", eintrag)).strip(),
         })
+    for f in folgen:
+        for anfang, ersetzungen in NACHTRAEGE.items():
+            if f["titel"].startswith(anfang):
+                for suchen, ersetzen in ersetzungen:
+                    f["text"] = f["text"].replace(suchen, ersetzen)
     return folgen
+
+
+def verlinke(text):
+    """Macht aus bereits HTML-maskiertem Text klickbare Links."""
+    return re.sub(
+        r"(https?://[^\s<]+?)([.,;:!?)]*)(?=\s|$)",
+        r'<a href="\1" target="_blank" rel="noopener">\1</a>\2',
+        text,
+    )
 
 
 def baue_html(folgen):
@@ -243,7 +264,7 @@ def baue_html(folgen):
     for f in folgen:
         titel = html.escape(f["titel"], quote=True)
         absatz = "\n          ".join(
-            f"<p>{html.escape(teil.strip(), quote=True)}</p>"
+            f"<p>{verlinke(html.escape(teil.strip(), quote=True))}</p>"
             for teil in re.split(r"\n\s*\n|\n", f["text"]) if teil.strip()
         )
         sek = int(f["dauer"] or 0)
