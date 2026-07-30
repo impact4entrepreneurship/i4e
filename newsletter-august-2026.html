@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter August 2026 – Impact4Entrepreneurship gGmbH</title>
+<meta name="description" content="I4E Newsletter August 2026 – Wirtschaft aus Berufung. Wirksam aus Klarheit. Schulstunden in Leipzig und Berlin, zu Gast bei Niko Jilch, die neue Gäste-Reihe im Podcast und unser neuer Internetauftritt.">
+<style>
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/playfair-display-600-latin.woff2') format('woff2');
+    font-weight: 600; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/playfair-display-700-latin.woff2') format('woff2');
+    font-weight: 700; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/inter-400-latin.woff2') format('woff2');
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/inter-500-latin.woff2') format('woff2');
+    font-weight: 500; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('fonts/inter-600-latin.woff2') format('woff2');
+    font-weight: 600; font-style: normal; font-display: swap;
+  }
+
+  :root {
+    --lila-tief: #2f003a;
+    --lila-dunkel: #5b156d;
+    --lila-akzent: #7a2a90;
+    --flieder: #cdb6d6;
+    --flieder-hell: #ecdff0;
+    --grund: #faf5f8;
+    --weiss: #fffdff;
+    --text: #3a2f40;
+    --text-sanft: #6f6577;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--grund);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .col { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255, 253, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--flieder-hell);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
+  }
+  .nav img { height: 44px; display: block; }
+  .nav .zurueck {
+    color: var(--text-sanft); text-decoration: none;
+    font-weight: 500; font-size: 15px;
+  }
+  .nav .zurueck:hover { color: var(--lila-akzent); }
+
+  /* Auftakt */
+  .auftakt {
+    padding: 90px 0 70px; text-align: center;
+    background: linear-gradient(180deg, var(--weiss) 0%, var(--grund) 100%);
+  }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 12px;
+    text-transform: uppercase; letter-spacing: 0.22em;
+    font-size: 13px; font-weight: 600; color: var(--lila-akzent);
+    margin-bottom: 24px;
+  }
+  .kicker::before, .kicker::after {
+    content: ''; width: 36px; height: 1px; background: var(--flieder);
+  }
+  .auftakt h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700;
+    color: var(--lila-tief); line-height: 1.15;
+    max-width: 760px; margin: 0 auto 20px;
+  }
+  .auftakt p { max-width: 620px; margin: 0 auto; color: var(--text-sanft); font-size: 1.12rem; }
+
+  /* Artikel */
+  .artikel { padding: 72px 0 40px; }
+  .artikel h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 700;
+    color: var(--lila-tief); margin: 56px 0 18px;
+  }
+  .artikel h2:first-of-type { margin-top: 0; }
+  .artikel h3 { font-size: 1.15rem; font-weight: 600; color: var(--lila-dunkel); margin: 26px 0 8px; }
+  .artikel p { margin-bottom: 16px; font-size: 1.06rem; }
+  .artikel strong { font-weight: 600; color: var(--lila-tief); }
+  .artikel em { color: var(--lila-akzent); }
+
+  /* Trenner zwischen den Rubriken */
+  .rubrik {
+    display: block; text-align: center;
+    text-transform: uppercase; letter-spacing: 0.2em;
+    font-size: 12px; font-weight: 600; color: var(--lila-akzent);
+    margin: 76px 0 6px;
+  }
+  .rubrik::before {
+    content: ''; display: block; width: 54px; height: 1px;
+    background: var(--flieder); margin: 0 auto 26px;
+  }
+
+  /* Bilder */
+  figure { margin: 26px 0 30px; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border-radius: 16px;
+    box-shadow: 0 18px 44px rgba(47, 0, 58, 0.12);
+  }
+  figcaption {
+    margin-top: 12px; font-size: 0.9rem;
+    color: var(--text-sanft); text-align: center;
+  }
+
+  .zitat {
+    margin: 28px 0; padding: 26px 30px;
+    border-left: 3px solid var(--lila-akzent);
+    background: var(--weiss); border-radius: 0 12px 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--lila-tief); line-height: 1.5;
+  }
+
+  .punkte { list-style: none; margin: 18px 0 22px; }
+  .punkte li {
+    padding-left: 30px; position: relative; margin-bottom: 10px;
+  }
+  .punkte li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--lila-akzent); font-weight: 600;
+  }
+
+  .hinweis-karte {
+    background: var(--weiss); border: 1px solid var(--flieder-hell);
+    border-radius: 18px; padding: 30px 34px; margin: 28px 0;
+  }
+  .hinweis-karte p:last-child { margin-bottom: 0; }
+
+  a.link { color: var(--lila-akzent); text-decoration: none; border-bottom: 1px solid var(--flieder-hell); word-break: break-word; }
+  a.link:hover { border-color: var(--lila-akzent); }
+
+  /* Download */
+  .download {
+    text-align: center; padding: 40px 0 90px;
+  }
+  .knopf {
+    display: inline-block; padding: 16px 36px;
+    background: var(--lila-tief); color: #fff;
+    text-decoration: none; font-weight: 600; font-size: 15px;
+    border-radius: 999px; letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+  .knopf:hover { background: var(--lila-akzent); }
+  .download .hinweis { color: var(--text-sanft); font-size: 0.9rem; margin-top: 12px; }
+
+  footer {
+    background: var(--lila-tief); padding: 28px 0;
+    color: var(--flieder); font-size: 0.9rem;
+  }
+  .fuss {
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px; align-items: center;
+  }
+  .fuss a { color: var(--flieder); text-decoration: none; }
+  .fuss a:hover { color: #fff; }
+  .fuss .links { display: flex; gap: 22px; flex-wrap: wrap; }
+
+  @media (max-width: 560px) { body { font-size: 16px; } .nav img { height: 34px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship Logo"></a>
+    <a href="index.html" class="zurueck">← Zurück zur Startseite</a>
+  </div>
+</header>
+
+<!-- Auftakt -->
+<div class="auftakt">
+  <div class="container">
+    <span class="kicker">Newsletter · August 2026</span>
+    <h1>Wirtschaft aus Berufung.<br>Wirksam aus Klarheit.</h1>
+    <p>Liebe Freundinnen und Freunde von Impact4Entrepreneurship – die letzten drei Monate standen stark im Zeichen der Außenwirkung.</p>
+  </div>
+</div>
+
+<!-- Inhalt -->
+<article class="artikel">
+  <div class="col">
+
+    <h2>Warum Sichtbarkeit jetzt zählt</h2>
+    <p>Die letzten drei Monate standen bei Impact4Entrepreneurship stark im Zeichen der Außenwirkung. Für I4E ist das ein wichtiger Schritt, denn unsere Arbeit soll sichtbar werden – nicht um unserer selbst willen, sondern weil die Themen, für die wir stehen, gesellschaftlich immer wichtiger werden.</p>
+    <p>Wir möchten junge Menschen, Gründerinnen und Gründer sowie Unternehmerinnen und Unternehmer befähigen, wirtschaftliche Zusammenhänge besser zu verstehen und verantwortungsvoll zu handeln. Gerade in einer Zeit, in der viele Menschen spüren, dass Geld, Wirtschaft und Zukunft neu gedacht werden müssen, braucht es Orte der Orientierung, der Bildung und des ehrlichen Gesprächs.</p>
+    <p>Mit I4E wollen wir solche Räume schaffen: Räume, in denen <strong>Finanzbildung, Unternehmergeist und gesellschaftliche Verantwortung</strong> zusammenkommen. Räume, in denen junge Menschen lernen, nicht nur Konsumenten eines Systems zu sein, sondern Gestalter ihrer eigenen Zukunft.</p>
+    <p>Ich bin sehr gespannt auf Eure Reaktionen zu diesem Newsletter und freue mich über Rückmeldungen, Gedanken und Anregungen.</p>
+
+    <span class="rubrik">Was sich konkret bewegt – Einblick in unsere Arbeit</span>
+
+    <h2>Was ist Geld wert? Eine Schulstunde über Inflation und Bitcoin</h2>
+    <figure>
+      <img src="images/newsletter-08-2026-leipzig.jpg" alt="Gymnasium Neue Nikolaischule in Leipzig">
+      <figcaption>Gymnasium Neue Nikolaischule, Leipzig – 3. Juni 2026</figcaption>
+    </figure>
+    <p>Im Rahmen des Bildungsprogramms „Life Teach Us" durfte ich am 3. Juni in Leipzig eine Schulstunde in der 11. Klasse des Gymnasiums Neue Nikolaischule gestalten. Das Thema lautete: <em>„Was ist Geld eigentlich wert?"</em></p>
+    <p>Eigentlich hatte ich eine Präsentation vorbereitet. Doch sehr schnell wurde deutlich: Die Fragen der Schülerinnen und Schüler waren so wach, so konkret und so faszinierend, dass ich bewusst von meinem Plan abgewichen bin. Statt einem klassischen Vortrag entstand ein lebendiger Dialog über Geld, Wert und Zukunft.</p>
+    <p>Wir sprachen über <strong>Inflation</strong>, also darüber, warum Geld an Kaufkraft verliert. Wir behandelten <strong>Deflation</strong>, also die Frage, was passiert, wenn Preise sinken und Menschen ihr Geld zurückhalten. Und wir kamen auf <strong>Stagflation</strong> zu sprechen – eine besonders schwierige Lage, in der wirtschaftliche Schwäche und steigende Preise gleichzeitig auftreten.</p>
+    <p>Besonders intensiv wurde die Diskussion beim Thema Werterhaltung. Was bleibt wertvoll, wenn Geld an Wert verliert? Immobilien? Gold? Bildung? Fähigkeiten? Vertrauen? Oder vielleicht ein neues digitales Gut wie Bitcoin?</p>
+    <p>Überrascht hat mich, dass nahezu <strong>98 Prozent der Schülerinnen und Schüler Bitcoin kannten</strong> – sogar die betreuende Lehrerin war mit dem Thema vertraut.</p>
+    <div class="zitat">„Die junge Generation nimmt sehr genau wahr, dass sich unser Geldsystem verändert. Sie hat Fragen. Und sie verdient ehrliche, verständliche und offene Antworten."</div>
+    <p>Genau hier liegt der gesellschaftliche Wert der Arbeit von Impact4Entrepreneurship.</p>
+
+    <h2>Zu Gast bei „Was Bitcoin bringt" – Gespräch mit Niko Jilch</h2>
+    <figure>
+      <img src="images/newsletter-08-2026-niko-jilch.jpg" alt="Michael Deck zu Gast bei Niko Jilch im Studio">
+      <figcaption>Im Studio von Niko Jilch – „Was Bitcoin bringt", Mai 2026</figcaption>
+    </figure>
+    <p>Im Mai war ich zu Gast bei dem bekannten Bitcoin-Podcaster Niko Jilch. Auf seinem YouTube-Kanal <em>„Was Bitcoin bringt"</em> spricht er regelmäßig mit Menschen, die sich intensiv mit Bitcoin, Geld, Wirtschaft und Zukunftsfragen beschäftigen.</p>
+    <p>In unserem Gespräch ging es vor allem um meine Arbeit bei Impact4Entrepreneurship und um die Frage, warum Finanzbildung heute so wichtig ist – gerade für junge Menschen. Denn wer Geld nicht versteht, versteht einen wesentlichen Teil unserer Gesellschaft nicht. Inflation, Kaufkraftverlust, Sparen, Investieren, Unternehmertum und Bitcoin sind keine Randthemen mehr. Sie betreffen die Zukunftsfähigkeit einer ganzen Generation.</p>
+    <p>Besonders spannend fand Niko mein T-Shirt mit der Aufschrift <strong>„Thank God for Bitcoin"</strong>. Dieser Satz bringt für mich viel auf den Punkt: Bitcoin ist nicht nur ein technisches oder finanzielles Thema. Es berührt tiefere Fragen:</p>
+    <ul class="punkte">
+      <li>Was ist Vertrauen?</li>
+      <li>Was ist Wert?</li>
+      <li>Was ist ehrliches Geld?</li>
+      <li>Und wie können Menschen wieder mehr Verantwortung für ihre wirtschaftliche Zukunft übernehmen?</li>
+    </ul>
+    <p>Mit über 40.000 Abonnenten hat Niko Jilch eine beachtliche Reichweite im deutschsprachigen Bitcoin-Space. Umso mehr freue ich mich, dass die Arbeit von Impact4Entrepreneurship durch dieses Gespräch einem größeren Publikum vorgestellt wird.</p>
+
+    <h2>Finanzbildung beginnt mit guten Fragen</h2>
+    <figure>
+      <img src="images/newsletter-08-2026-berlin.jpg" alt="Schild der John-F.-Kennedy-Schule am Teltower Damm in Berlin">
+      <figcaption>John-F.-Kennedy-Schule, Berlin – 16. Juni 2026</figcaption>
+    </figure>
+    <p>Ein Gespräch mit der Klasse 10F über Geld, Vertrauen und Verantwortung im Finanzsystem.</p>
+    <p>Am 16. Juni war ich in Berlin an der John-F.-Kennedy-Schule, um den Schülerinnen und Schülern der Klasse 10F im Rahmen von LifeTeachUs ihre Fragen rund um unser Finanzsystem zu beantworten.</p>
+    <p>Es ging nicht nur um Geld, Banken, Inflation oder Bitcoin. Es ging vor allem um etwas Tieferes: Wie funktioniert die Welt, in der wir wirtschaftlich leben? Wer versteht, wie Geld entsteht, wie Vertrauen aufgebaut wird und warum Verantwortung wichtiger ist als bloßer Besitz, bekommt einen klareren Blick auf die eigene Zukunft.</p>
+    <p>Mich hat beeindruckt, wie offen, neugierig und direkt die Schülerinnen und Schüler gefragt haben.</p>
+    <div class="zitat">„Genau dort beginnt echte Bildung: nicht beim Auswendiglernen, sondern beim mutigen Fragen."</div>
+
+    <span class="rubrik">Menschen mit Wirkung – jetzt mit Gästen</span>
+
+    <h2>Neue Reihe. Jeden Monat ein Gespräch.</h2>
+    <p>Bisher habe ich in „Menschen mit Wirkung" meine eigenen Gedanken geteilt. Über Berufung, über Kapital, über Unternehmen als geistlichen Raum.</p>
+    <p>Das war gut. Aber es war einseitig.</p>
+    <p>Deshalb ändere ich das Format. <strong>Ab sofort lade ich jeden Monat einen Gast ein</strong> – Menschen, die etwas bewegen und die etwas zu sagen haben, das über ihre eigene Geschichte hinausreicht.</p>
+    <p>Keine Werbeinterviews. Keine geschliffenen Erfolgsgeschichten. Gespräche über das, was wirklich trägt – und über das, was nicht funktioniert.</p>
+
+    <h3>Folge 1: Ein Lehrer, der gegründet hat</h3>
+    <p>Mein erster Gast ist <strong>Jonas Schreiber</strong>.</p>
+    <p>Er unterrichtet Wirtschaft, Sport und Informatik an einer bayerischen Realschule. Und er gehört zu den wenigen Wirtschaftslehrern, die selbst gegründet haben: Neben der Schule betreibt er eine Fußballschule, davor war er sechs Jahre Nachwuchstrainer in einem Bundesliga-Leistungszentrum.</p>
+    <p>Genau diese Doppelrolle macht ihn interessant. Er lehrt Wirtschaft nicht aus dem Lehrbuch. Er kennt sie.</p>
+
+    <h3>Worüber wir gesprochen haben</h3>
+    <p>Über das, was im Bildungs-Mainstream selten offen gesagt wird: Sinkende Grundkompetenzen beim Lesen und Rechnen. Regeln, die aufgestellt, aber nicht durchgesetzt werden. Und die Frage, warum Schule so oft vor dem Konflikt kapituliert.</p>
+    <p>Aber es blieb nicht bei der Klage. Jonas Schreiber hat Hayeks „Der Weg zur Knechtschaft" in eine Neuntklass-Stunde übersetzt – mit so viel Zuspruch, dass Schüler der Parallelklasse nachmittags freiwillig dazukommen wollten.</p>
+    <p>Außerdem im Gespräch: warum Sport Werte leichter vermittelt als Unterricht. Was ihm das Gründen beigebracht hat, das im Lehramtsstudium nie vorkam. Wo Künstliche Intelligenz im Klassenzimmer am fehlenden Grundwissen scheitert.</p>
+    <p>Und die Frage, die mich seitdem nicht loslässt: <strong>Kann man Werte überhaupt unterrichten – oder muss man sie vorleben?</strong></p>
+
+    <h3>Sein Buch</h3>
+    <p>Jonas Schreiber hat aufgeschrieben, was er erlebt: <strong>„Realtalk – Lehreralltag. Ein Blick hinter die Schulkulisse"</strong>, mit einem Vorwort von Boris Palmer.</p>
+    <p>Entstanden ist es, nachdem ein Vater mit dem Anwalt vor der Schulleitung stand.</p>
+    <div class="hinweis-karte">
+      <p>👉 <strong>Buch bestellen und kostenlose Leseprobe:</strong> <a class="link" href="https://jonas-schreiber.com" target="_blank" rel="noopener">jonas-schreiber.com</a></p>
+      <p>👉 <strong>Folge anhören</strong> (40 Minuten) – auf unserer Seite, bei Podigee und über den RSS-Feed: <a class="link" href="index.html#podcast">Zum Podcast</a></p>
+    </div>
+    <p>Wenn Sie jemanden kennen, der in diese Reihe gehört: Schreiben Sie mir. Ich suche keine Prominenz. Ich suche Menschen mit Wirkung.</p>
+
+    <span class="rubrik">Unser neuer Internetauftritt ist online</span>
+
+    <h2>impact4entrepreneurship.de – Bildung, die Werte stiftet.</h2>
+    <p>Eine Adresse. Ein Ort. Alles, was I4E ausmacht.</p>
+    <p>Wir hatten unsere Inhalte lange an verschiedenen Stellen liegen: den Podcast hier, den Newsletter dort, die Angebote irgendwo dazwischen. Das war gewachsen – aber es war nicht klar.</p>
+    <p>Jetzt ist es klar.</p>
+    <p>Unter <strong>impact4entrepreneurship.de</strong> finden Sie ab sofort alles an einem Ort. Kein Suchen, kein Umweg. Eine Seite, die zeigt, wer wir sind und was wir tun.</p>
+
+    <h3>Unsere vier Angebote – zum ersten Mal vollständig beschrieben</h3>
+    <p>Bildungsangebote für Schüler, Studenten und Gründer. Stipendien für junge Menschen, die Verantwortung übernehmen wollen. Materielle Unterstützung für Studierende gemäß § 53 AO. Und Integrationsbegleitung durch die Vermittlung der Werte unseres demokratischen Staatswesens.</p>
+    <p>Vier Wege. Ein Auftrag: dass sozial verantwortliches, werteorientiertes Handeln kein Ausnahmefall bleibt.</p>
+
+    <h3>Der Podcast „Menschen mit Wirkung" – komplett zum Anhören</h3>
+    <p>Alle 22 Folgen sind direkt auf der Seite abspielbar. Vom ersten Impuls „Impact beginnt mit einer brennenden Idee" bis zur aktuellen Folge mit Jonas Schreiber über Bildung, Werte und Konsequenz. Wer lieber über seine gewohnte App hört: Podigee und RSS-Feed sind verlinkt.</p>
+
+    <h3>Das Newsletter-Archiv</h3>
+    <p>Auch diese Ausgabe hat dort ihren Platz gefunden – online zu lesen und als PDF zum Herunterladen. Was einmal geschrieben ist, bleibt auffindbar.</p>
+
+    <h3>Warum wir das gemacht haben</h3>
+    <p>Nicht, weil eine Webseite fällig war.</p>
+    <p>Sondern weil Klarheit nach außen mit Klarheit nach innen beginnt. Wer andere zu werteorientiertem Handeln einlädt, sollte selbst zeigen können, wofür er steht – in einem Satz, auf einer Seite, ohne Erklärung.</p>
+    <p>Auf der Startseite steht ein Satz, der für uns den Kern trifft:</p>
+    <div class="zitat">„Diese Verantwortung muss niemand allein tragen. Dafür gibt es I4E."</div>
+    <p>Genau dafür ist die Seite da. Nicht als Visitenkarte, sondern als offene Tür.</p>
+    <p>Und wenn Ihnen etwas fehlt, etwas auffällt oder etwas nicht stimmt: Schreiben Sie mir unter <a class="link" href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a>. Diese Seite ist nicht fertig – sie ist ein Anfang.</p>
+
+  </div>
+</article>
+
+<!-- Download -->
+<div class="download">
+  <div class="container">
+    <a href="I4E-Newsletter-August-2026.pdf" class="knopf" download>Newsletter als PDF herunterladen</a>
+    <p class="hinweis">PDF · ca. 11 MB</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container fuss">
+    <span>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</span>
+    <span class="links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
