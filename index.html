@@ -188,6 +188,37 @@
   .knopf.klein { padding: 13px 28px; font-size: 14px; text-align: center; }
   .knopf.klein.hell { margin-left: 0; }
 
+  /* ---------- Projekte ---------- */
+  .projekte { background: var(--weiss); }
+  .projekte-intro { max-width: 640px; color: var(--text-sanft); margin-bottom: 56px; }
+  .projekt-karte {
+    background: var(--grund); border: 1px solid var(--flieder-hell);
+    border-radius: 22px; overflow: hidden; max-width: 760px; margin: 0 auto;
+    transition: box-shadow 0.25s ease;
+  }
+  .projekt-karte:hover { box-shadow: 0 18px 44px rgba(47, 0, 58, 0.10); }
+  .projekt-bild { position: relative; }
+  .projekt-bild img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    object-position: center 22%; display: block;
+  }
+  .projekt-bild .bildzeile {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(47, 0, 58, 0.82), rgba(47, 0, 58, 0));
+    color: #fff; padding: 40px 32px 20px;
+    font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em;
+  }
+  .projekt-text { padding: 36px 36px 40px; }
+  .projekt-text .traeger {
+    text-transform: uppercase; letter-spacing: 0.18em;
+    font-size: 12px; font-weight: 600; color: var(--lila-akzent);
+    margin-bottom: 10px;
+  }
+  .projekt-text h3 { font-size: 1.6rem; margin-bottom: 16px; }
+  .projekt-text p { color: var(--text-sanft); font-size: 1.02rem; margin-bottom: 16px; }
+  .projekt-text p:last-child { margin-bottom: 0; }
+  .projekt-text p strong { color: var(--lila-tief); }
+
   /* ---------- Über mich ---------- */
   .ueber { background: var(--weiss); }
   .ueber-raster {
@@ -243,6 +274,8 @@
     .newsletter-karte { grid-template-columns: 1fr; padding: 32px 28px; }
     .newsletter-knoepfe { flex-direction: row; flex-wrap: wrap; }
     .ueber-raster img { max-width: 380px; margin: 0 auto; }
+    .projekt-text { padding: 28px 24px 32px; }
+    .projekt-bild .bildzeile { padding: 36px 24px 16px; }
     section { padding: 72px 0; }
     .hero { padding: 80px 0 72px; }
     .knopf.hell { margin-left: 0; margin-top: 12px; }
@@ -339,6 +372,7 @@
     <nav class="nav-links">
       <a href="#mission">Mission</a>
       <a href="#angebote">Angebote</a>
+      <a href="#projekte">Projekte</a>
       <a href="#newsletter">Newsletter</a>
       <a href="#podcast">Podcast</a>
       <a href="#ueber">Über mich</a>
@@ -399,6 +433,29 @@
         <p>Wir begleiten Integration durch die Vermittlung der Werte unseres demokratischen Staatswesens – für ein gutes Miteinander in der Gesellschaft.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Projekte -->
+<section class="projekte" id="projekte">
+  <div class="container">
+    <span class="abschnitt-kicker">Unsere Projekte</span>
+    <h2>Wo Wirkung konkret wird</h2>
+    <p class="projekte-intro">Neben unseren eigenen Angeboten begleiten wir Initiativen, die aus einer Berufung entstanden sind – mit Strategie, unternehmerischer Methodik und der Frage, wie gute Absicht tragfähig wird.</p>
+
+    <article class="projekt-karte">
+      <div class="projekt-bild">
+        <img src="images/wegfinder-birgit-nandzik.jpg" alt="Birgit Nandzik vom Projekt Wegfinder e.V.">
+        <div class="bildzeile">Birgit Nandzik · Wegfinder e.V.</div>
+      </div>
+      <div class="projekt-text">
+        <div class="traeger">Seit 2026 · Oschersleben, Sachsen-Anhalt</div>
+        <h3>Wegfinder e.V.</h3>
+        <p><strong>Birgit Nandzik</strong> schafft mit Wegfinder e.V. einen Ort, an dem pflegende Angehörige nicht allein bleiben. Im Pflegecafé in Oschersleben entstehen Begegnung, Beratung und stundenweise Entlastung – dort, wo es im ländlichen Raum bislang an wohnortnaher Unterstützung fehlt.</p>
+        <p>Im Zentrum steht die Unterstützung von Angehörigen und Pflegebedürftigen – nicht durch Abhängigkeit, sondern durch Stärkung. Es geht um Hilfe zur Selbsthilfe. Um Würde. Um Orientierung in einer Lebensphase, die oft von Überforderung geprägt ist.</p>
+        <p>Impact4Entrepreneurship begleitet Wegfinder seit 2026 mit Strategie, unternehmerischer Methodik und Bildungsanbindung. Denn Wirkung, die allein vom Spendenklima abhängt, endet irgendwann. Wirkung, die sich selbst trägt, bleibt.</p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -860,8 +917,9 @@
       <div>
         <span class="abschnitt-kicker">Über mich</span>
         <h2>Unternehmertum als Berufung</h2>
-        <p>Ich bin überzeugt: Wer gestaltet, trägt Verantwortung. Als Unternehmer habe ich erlebt, wie sehr Werte den Unterschied machen – im Geschäft, im Umgang mit Menschen, im eigenen Leben.</p>
-        <p>Mit I4E gebe ich weiter, was ich gelernt habe: Wissen und Werte im Austausch zwischen Unternehmern, Gründern und Wissenschaftlern – damit die nächste Generation sozial verantwortlich und werteorientiert handeln kann.</p>
+        <p><strong>Michael Deck</strong> ist Unternehmer, Visionär und Brückenbauer. Er gründete die Tiedge GmbH, ein Kingdompreneur-Unternehmen in Magdeburg.</p>
+        <p>Mit der Impact4Entrepreneurship gGmbH investiert er die Früchte unternehmerischen Erfolgs in Bildung, Chancengerechtigkeit und nachhaltige Entwicklungsprojekte.</p>
+        <p>Seine Überzeugung: Unternehmen können weit mehr als Gewinne erwirtschaften – sie können Hoffnung stiften und Gesellschaft gestalten.</p>
         <div class="signatur">
           <div class="name">Michael Deck</div>
           <div class="rolle">Geschäftsführer, Impact4Entrepreneurship gGmbH</div>
