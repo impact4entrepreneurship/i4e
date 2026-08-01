@@ -280,6 +280,254 @@
     .hero { padding: 80px 0 72px; }
     .knopf.hell { margin-left: 0; margin-top: 12px; }
   }
+
+  /* ================= NEU: Pitch-Struktur ================= */
+
+  /* Bewerben-Knopf in der Kopfzeile */
+  .nav-links { align-items: center; }
+  .nav-cta {
+    background: var(--lila-tief); color: #fff !important;
+    padding: 9px 20px; border-radius: 999px; font-weight: 600;
+    transition: background .2s ease;
+  }
+  .nav-cta:hover { background: var(--lila-akzent); color: #fff !important; }
+
+  /* Problem & Lösung */
+  .gegenueber { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
+  .spalte {
+    border-radius: 18px; padding: 38px 34px;
+    border: 1px solid var(--flieder-hell); background: var(--grund);
+  }
+  .spalte.loesung { background: var(--lila-tief); border-color: var(--lila-tief); }
+  .spalte .kopfzeile {
+    text-transform: uppercase; letter-spacing: .18em; font-size: 12px;
+    font-weight: 600; color: var(--lila-akzent); margin-bottom: 22px;
+  }
+  .spalte.loesung .kopfzeile { color: var(--flieder); }
+  .spalte ul { list-style: none; }
+  .spalte li { position: relative; padding-left: 26px; font-size: 1rem; color: var(--text-sanft); }
+  .spalte li + li { margin-top: 18px; }
+  .spalte li::before {
+    content: '◆'; position: absolute; left: 0; top: 1px; font-size: 9px; color: var(--lila-akzent);
+  }
+  .spalte li strong { color: var(--lila-tief); font-weight: 600; }
+  .spalte.loesung li { color: var(--flieder); }
+  .spalte.loesung li::before { color: var(--flieder); }
+  .spalte.loesung li strong { color: #fff; }
+
+  /* Ein Haus, drei Räume */
+  .raeume { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .raum {
+    background: var(--weiss); border: 1px solid var(--flieder-hell);
+    border-radius: 18px; padding: 36px 30px 34px;
+    border-top: 4px solid var(--lila-akzent);
+    transition: box-shadow .25s ease, transform .25s ease;
+  }
+  .raum:hover { box-shadow: 0 18px 44px rgba(47,0,58,.10); transform: translateY(-3px); }
+  .raum .nummer {
+    font-family: 'Playfair Display', serif; font-size: .95rem; color: var(--lila-akzent);
+    font-weight: 600; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 14px;
+  }
+  .raum h3 { font-size: 1.45rem; margin-bottom: 14px; }
+  .raum p { color: var(--text-sanft); font-size: 1rem; margin-bottom: 16px; }
+  .raum ul { list-style: none; border-top: 1px solid var(--flieder-hell); padding-top: 16px; }
+  .raum li { font-size: .95rem; color: var(--text-sanft); padding-left: 20px; position: relative; }
+  .raum li + li { margin-top: 8px; }
+  .raum li::before { content: '·'; position: absolute; left: 6px; color: var(--lila-akzent); font-weight: 700; }
+
+  /* Warum jetzt */
+  .jetzt { background: var(--lila-tief); color: var(--flieder-hell); }
+  .jetzt h2 { color: #fff; }
+  .jetzt .abschnitt-kicker { color: var(--flieder); }
+  .jetzt .abschnitt-kicker::before { background: var(--lila-akzent); }
+  .jetzt > .container > p.einleitung { color: var(--flieder); max-width: 640px; margin-bottom: 52px; }
+  .zeitachse { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .zeitfeld {
+    background: rgba(255,255,255,.055); border-radius: 16px; padding: 30px 26px;
+    border-top: 3px solid var(--lila-akzent);
+  }
+  .zeitfeld .wann {
+    text-transform: uppercase; letter-spacing: .16em; font-size: 11.5px;
+    font-weight: 600; color: var(--flieder); margin-bottom: 12px;
+  }
+  .zeitfeld h3 { color: #fff; font-size: 1.18rem; margin-bottom: 12px; line-height: 1.3; }
+  .zeitfeld p { color: var(--flieder); font-size: .95rem; }
+  .jetzt blockquote {
+    margin: 48px 0 0; padding: 30px 34px; border-left: 3px solid var(--lila-akzent);
+    background: rgba(255,255,255,.06); border-radius: 0 14px 14px 0;
+    font-family: 'Playfair Display', serif; font-size: 1.28rem; color: #fff; line-height: 1.5;
+  }
+  .jetzt blockquote cite {
+    display: block; margin-top: 14px; font-family: 'Inter', sans-serif;
+    font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--flieder); font-style: normal;
+  }
+
+  /* Masterclass */
+  .mc { background: var(--weiss); }
+  .mc-kopf { display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+  .mc-kopf p.einleitung { color: var(--text-sanft); font-size: 1.12rem; margin-bottom: 22px; }
+  .mc-fakten {
+    background: var(--grund); border: 1px solid var(--flieder-hell);
+    border-radius: 18px; padding: 30px 28px;
+  }
+  .mc-fakten dl { display: grid; gap: 18px; }
+  .mc-fakten dt {
+    text-transform: uppercase; letter-spacing: .16em; font-size: 11.5px;
+    font-weight: 600; color: var(--lila-akzent); margin-bottom: 4px;
+  }
+  .mc-fakten dd { font-size: 1rem; color: var(--text); font-weight: 500; }
+  .mc-fakten .knopf { width: 100%; text-align: center; margin-top: 26px; }
+
+  /* Canvas */
+  .canvas-block { margin-top: 72px; }
+  .canvas-block > .titel { margin-bottom: 12px; }
+  .canvas-block > .titel .marke { display: block; margin-bottom: 12px; }
+  .canvas-block h3 { font-size: 1.9rem; }
+  .canvas-block .marke {
+    text-transform: uppercase; letter-spacing: .18em; font-size: 12px;
+    font-weight: 600; color: var(--lila-akzent);
+  }
+  .canvas-block > p.einleitung { color: var(--text-sanft); max-width: 680px; margin-bottom: 36px; }
+  .canvas-raster {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  }
+  .feld {
+    background: var(--grund); border: 1px solid var(--flieder-hell);
+    border-radius: 14px; padding: 22px 20px;
+    display: flex; flex-direction: column;
+  }
+  .feld .nr {
+    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem;
+    color: var(--lila-akzent); margin-bottom: 8px;
+  }
+  .feld h4 {
+    font-family: 'Playfair Display', serif; font-size: 1.12rem; color: var(--lila-tief);
+    margin-bottom: 10px; line-height: 1.25;
+  }
+  .feld p { font-size: .92rem; color: var(--text-sanft); line-height: 1.55; }
+  .feld .block {
+    margin-top: auto; padding-top: 12px; font-size: 10.5px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--flieder); font-weight: 600;
+  }
+  .feld.mitte {
+    background: var(--lila-tief); border-color: var(--lila-tief);
+    justify-content: center; text-align: center;
+  }
+  .feld.mitte .nr { color: var(--flieder); }
+  .feld.mitte h4 { color: #fff; font-size: 1.5rem; }
+  .feld.mitte p { color: var(--flieder); }
+  .feld.mitte .block { color: var(--lila-akzent); }
+  .canvas-fuss {
+    margin-top: 22px; display: flex; gap: 26px; flex-wrap: wrap;
+    font-size: .92rem; color: var(--text-sanft);
+  }
+  .canvas-fuss span strong { color: var(--lila-tief); }
+
+  /* Bewerbung */
+  .bewerbung { background: var(--grund); }
+  .schritte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+  .schritt {
+    background: var(--weiss); border: 1px solid var(--flieder-hell);
+    border-radius: 18px; padding: 32px 28px;
+  }
+  .schritt .zahl {
+    width: 38px; height: 38px; border-radius: 50%; background: var(--lila-tief); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 18px;
+  }
+  .schritt h3 { font-size: 1.25rem; margin-bottom: 12px; }
+  .schritt p { color: var(--text-sanft); font-size: .98rem; }
+  .schritt p + p { margin-top: 12px; }
+  .schritt a.verweis {
+    color: var(--lila-akzent); font-weight: 600; text-decoration: none;
+    border-bottom: 1px solid var(--flieder);
+  }
+  .schritt a.verweis:hover { border-color: var(--lila-akzent); }
+
+  .pitch-karte {
+    background: var(--lila-tief); color: var(--flieder-hell);
+    border-radius: 20px; padding: 44px 48px;
+    display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+  }
+  .pitch-karte .marke {
+    text-transform: uppercase; letter-spacing: .18em; font-size: 12px;
+    font-weight: 600; color: var(--flieder); margin-bottom: 12px;
+  }
+  .pitch-karte h3 { color: #fff; font-size: 1.6rem; margin-bottom: 14px; }
+  .pitch-karte p { color: var(--flieder); font-size: 1rem; max-width: 560px; }
+  .pitch-karte .knopf { background: #fff; color: var(--lila-tief); white-space: nowrap; }
+  .pitch-karte .knopf:hover { background: var(--flieder-hell); }
+
+  .bewerben-abschluss { margin-top: 44px; text-align: center; }
+  .bewerben-abschluss p { color: var(--text-sanft); max-width: 620px; margin: 0 auto 28px; }
+
+  /* ---------- Hinweis beim Seitenaufruf ---------- */
+  .hinweis-hintergrund {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(47, 0, 58, .55);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px; opacity: 0; pointer-events: none;
+    transition: opacity .35s ease;
+  }
+  .hinweis-hintergrund.sichtbar { opacity: 1; pointer-events: auto; }
+  .hinweis {
+    position: relative; background: var(--weiss);
+    border-radius: 22px; max-width: 560px; width: 100%;
+    padding: 52px 52px 44px; text-align: center;
+    box-shadow: 0 40px 100px rgba(47, 0, 58, .38);
+    transform: translateY(14px) scale(.985);
+    transition: transform .35s ease;
+    max-height: 90vh; overflow-y: auto;
+  }
+  .hinweis-hintergrund.sichtbar .hinweis { transform: none; }
+  .hinweis .marke {
+    text-transform: uppercase; letter-spacing: .2em; font-size: 12px;
+    font-weight: 600; color: var(--lila-akzent); margin-bottom: 18px;
+  }
+  .hinweis h2 { font-size: 1.85rem; margin-bottom: 8px; line-height: 1.2; }
+  .hinweis .unter {
+    font-family: 'Playfair Display', serif; font-size: 1.15rem;
+    color: var(--lila-akzent); margin-bottom: 18px;
+  }
+  .hinweis p { color: var(--text-sanft); font-size: 1rem; margin-bottom: 26px; }
+  .hinweis .knoepfe { display: flex; gap: 12px; justify-content: center; align-items: stretch; flex-wrap: wrap; }
+  .hinweis .knoepfe .knopf { display: flex; align-items: center; justify-content: center; }
+  .hinweis .knopf.hell { margin-left: 0; }
+  .hinweis .zu {
+    position: absolute; top: 16px; right: 18px;
+    width: 38px; height: 38px; border: 0; border-radius: 50%;
+    background: var(--grund); color: var(--lila-tief);
+    font-size: 20px; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s ease;
+  }
+  .hinweis .zu:hover { background: var(--flieder-hell); }
+  .hinweis .datum {
+    margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--flieder-hell);
+    font-size: .88rem; color: var(--text-sanft); margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .mc-kopf { grid-template-columns: 1fr; gap: 36px; }
+    .zeitachse { grid-template-columns: repeat(2, 1fr); }
+    .raeume, .schritte { grid-template-columns: 1fr; }
+    .canvas-raster { grid-template-columns: repeat(2, 1fr); }
+    .gegenueber { grid-template-columns: 1fr; }
+    .pitch-karte { grid-template-columns: 1fr; padding: 34px 30px; gap: 26px; }
+  }
+  @media (max-width: 560px) {
+    .zeitachse, .canvas-raster { grid-template-columns: 1fr; }
+    .hinweis { padding: 46px 26px 34px; }
+    .hinweis h2 { font-size: 1.5rem; }
+    .spalte { padding: 30px 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hinweis-hintergrund, .hinweis { transition: none; }
+    .raum:hover { transform: none; }
+  }
+
 /* PODCAST-CSS */
   /* ---------- Podcast ---------- */
   .podcast { background: var(--weiss); }
@@ -371,12 +619,13 @@
     <img src="images/i4e-logo.png" alt="Impact4Entrepreneurship Logo">
     <nav class="nav-links">
       <a href="#mission">Mission</a>
-      <a href="#angebote">Angebote</a>
+      <a href="#angebote">Angebot</a>
+      <a href="#masterclass">Masterclass</a>
       <a href="#projekte">Projekte</a>
       <a href="#newsletter">Newsletter</a>
       <a href="#podcast">Podcast</a>
       <a href="#ueber">Über mich</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#bewerbung" class="nav-cta">Bewerben</a>
     </nav>
   </div>
 </header>
@@ -385,10 +634,10 @@
 <div class="hero">
   <div class="container">
     <span class="kicker">Impact4Entrepreneurship gGmbH</span>
-    <h1>Bildung, die <em>Werte</em> stiftet.</h1>
-    <p>Wir fördern Schüler, Studenten und Gründer auf ethischem, religiösem und marktwirtschaftlich-sozialem Gebiet – damit sozial verantwortliches, werteorientiertes Handeln kein Ausnahmefall bleibt.</p>
-    <a href="#angebote" class="knopf">Unsere Angebote</a>
-    <a href="#kontakt" class="knopf hell">Kontakt aufnehmen</a>
+    <h1>Wirtschaft aus <em>Berufung</em>.<br>Wirkung aus Klarheit.</h1>
+    <p>Wir befähigen junge Menschen und Gründer, ihr Unternehmen als Ausdruck ihrer Berufung zu bauen – werteorientiert, wirtschaftlich tragfähig und dem Gemeinwohl verpflichtet.</p>
+    <a href="#masterclass" class="knopf">Masterclass ab September</a>
+    <a href="#angebote" class="knopf hell">Unser Angebot</a>
   </div>
 </div>
 
@@ -396,42 +645,260 @@
 <section class="mission" id="mission">
   <div class="container">
     <div class="mission-inhalt">
-      <span class="abschnitt-kicker">Über I4E</span>
-      <h2>Warum es uns gibt</h2>
+      <span class="abschnitt-kicker">Warum es uns gibt</span>
+      <h2>Wissen gibt es genug.<br>Orientierung nicht.</h2>
       <p>Die Impact4Entrepreneurship gGmbH ist eine gemeinnützige Gesellschaft. Unser Auftrag: die Bildung von Schülern, Studenten und Gründern auf ethischem, religiösem und marktwirtschaftlich-sozialem Gebiet zu fördern – damit <strong>sozial verantwortliches, werteorientiertes Handeln</strong> kein Ausnahmefall bleibt.</p>
-      <p>Dahinter steht die Überzeugung, dass Unternehmertum eine Berufung sein kann: Wer gestaltet, trägt Verantwortung – für Menschen, für die Gesellschaft, vor Gott.</p>
+      <p>Es fehlt selten Information. Es fehlt der Ort, an dem jemand die Frage hinter der Frage stellt: Wozu tue ich das eigentlich? Wer diese Frage nicht klärt, baut ein Unternehmen, das ihn irgendwann trägt statt umgekehrt.</p>
       <blockquote>„Diese Verantwortung muss niemand allein tragen. Dafür gibt es I4E."</blockquote>
+    </div>
+
+    <div class="gegenueber">
+      <div class="spalte">
+        <div class="kopfzeile">Der Schmerz</div>
+        <ul>
+          <li><strong>Gründer</strong> finden mehr Kurse als je zuvor – aber keinen Raum für die Frage, wofür sie das alles eigentlich tun.</li>
+          <li><strong>Erfahrene Unternehmer</strong> wollen weitergeben, was sie gelernt haben – und finden dafür keinen verbindlichen Rahmen.</li>
+          <li><strong>Studierende</strong> brechen ab, weil Bildung an den Umständen scheitert und nicht am Können.</li>
+        </ul>
+      </div>
+      <div class="spalte loesung">
+        <div class="kopfzeile">Unsere Antwort</div>
+        <ul>
+          <li><strong>Die kleine Gruppe als Methode</strong> – sechs bis zwölf Menschen. Kein Engpass, sondern die Bedingung dafür, dass jeder wirklich zu Wort kommt.</li>
+          <li><strong>Ein durchgehender Weg</strong> – vom Zuhören über ein persönliches Erstgespräch in eine feste Gruppe und, wo es passt, in eine Förderung.</li>
+          <li><strong>Berufung und Bilanz nebeneinander</strong> – wir arbeiten nicht mit fertigen Antworten, sondern mit klaren Fragen, bis daraus ein tragfähiges Geschäftsmodell wird.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Angebote -->
+<!-- Angebot: Ein Haus, drei Räume -->
 <section id="angebote">
   <div class="container">
-    <span class="abschnitt-kicker">Unsere Angebote</span>
-    <h2>Was wir tun</h2>
-    <p class="angebote-intro">Vier Wege, auf denen wir Wissen und Werte weitergeben – zwischen Unternehmern, Gründern, Wissenschaftlern und den Menschen, die wir fördern.</p>
-    <div class="karten">
-      <div class="karte">
-        <span class="nummer">01</span>
-        <h3>Bildungsangebote</h3>
-        <p>Theoretische und praktische Bildung für Schüler, Studenten und Gründer – mit Lehrinhalten aus Praxis, Lehre und Forschung. Religiöse und ethische Aspekte der Bibel werden im marktwirtschaftlichen Kontext betrachtet.</p>
+    <span class="abschnitt-kicker">Unser Angebot</span>
+    <h2>Ein Haus. Drei Räume.</h2>
+    <p class="angebote-intro">Alles, was wir tun, gehört in einen dieser drei Räume. Was in keinen passt, tun wir nicht.</p>
+    <div class="raeume">
+      <div class="raum">
+        <span class="nummer">Raum I</span>
+        <h3>Bildung</h3>
+        <p>Verständliche Wirtschafts- und Wertebildung für Schüler und Studenten – mit Lehrinhalten aus Praxis, Lehre und Forschung.</p>
+        <ul>
+          <li>Theoretische und praktische Bildungsangebote</li>
+          <li>Stipendien für junge Menschen, die Verantwortung übernehmen wollen</li>
+          <li>Materielle Unterstützung Studierender nach § 53 AO</li>
+          <li>Integrationsbegleitung: Werte des demokratischen Staatswesens</li>
+        </ul>
       </div>
-      <div class="karte">
-        <span class="nummer">02</span>
-        <h3>Stipendien</h3>
-        <p>Wir vergeben Stipendien an junge Menschen, die Verantwortung übernehmen wollen – im Rahmen unserer gemeinnützigen Möglichkeiten und Anforderungen.</p>
+      <div class="raum">
+        <span class="nummer">Raum II</span>
+        <h3>Begleitung</h3>
+        <p>Feste Gruppen von sechs bis zwölf Personen, in denen Berufung und Geschäftsmodell nebeneinander liegen dürfen.</p>
+        <ul>
+          <li><a href="#masterclass" style="color:var(--lila-akzent);font-weight:600;text-decoration:none">Die Masterclass ab September 2026</a></li>
+          <li>Vertrauliche Unternehmergespräche</li>
+          <li>Arbeit mit dem Heiligen BusinessCanvas</li>
+          <li>Weiterführende Gruppen im festen Rhythmus</li>
+        </ul>
       </div>
-      <div class="karte">
-        <span class="nummer">03</span>
-        <h3>Materielle Unterstützung</h3>
-        <p>Studierende, die Unterstützung brauchen, fördern wir materiell gemäß § 53 AO – damit Bildung nicht an den Umständen scheitert.</p>
+      <div class="raum">
+        <span class="nummer">Raum III</span>
+        <h3>Weitergabe</h3>
+        <p>Was in den ersten beiden Räumen erkannt wird, bleibt nicht dort. Licht soll nicht verborgen bleiben, sondern wirken.</p>
+        <ul>
+          <li>Offene Veröffentlichung unserer Erkenntnisse</li>
+          <li>Bausteine für Lehrpläne</li>
+          <li>Austausch mit Hochschulen und Bildungsträgern</li>
+          <li>Podcast, Newsletter und Werkzeuge zum Mitnehmen</li>
+        </ul>
       </div>
-      <div class="karte">
-        <span class="nummer">04</span>
-        <h3>Integrationsbegleitung</h3>
-        <p>Wir begleiten Integration durch die Vermittlung der Werte unseres demokratischen Staatswesens – für ein gutes Miteinander in der Gesellschaft.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Warum jetzt -->
+<section class="jetzt">
+  <div class="container">
+    <span class="abschnitt-kicker">Warum jetzt</span>
+    <h2>Warum jetzt – und nicht vor fünf Jahren.</h2>
+    <p class="einleitung">Wissen ist zum Gratisgut geworden. Damit verschiebt sich der Engpass vom Können zum Wozu.</p>
+    <div class="zeitachse">
+      <div class="zeitfeld">
+        <div class="wann">Vor fünf Jahren</div>
+        <h3>Wissen war knapp</h3>
+        <p>Wer Inhalte lieferte, half. Ein Angebot wie unseres wäre als weiterer Kurs unter vielen untergegangen.</p>
       </div>
+      <div class="zeitfeld">
+        <div class="wann">Heute I</div>
+        <h3>KI nimmt die Ausführung ab</h3>
+        <p>Was ein Unternehmen tun kann, ist kaum noch die Frage. Wofür es das tut, wird zur entscheidenden – und die beantwortet keine Maschine.</p>
+      </div>
+      <div class="zeitfeld">
+        <div class="wann">Heute II</div>
+        <h3>Eine Generation sucht Sinn</h3>
+        <p>Nachfolge und Generationswechsel treffen auf junge Menschen, die nicht nur funktionieren wollen. Beide Seiten suchen denselben Raum.</p>
+      </div>
+      <div class="zeitfeld">
+        <div class="wann">In fünf Jahren</div>
+        <h3>Die Plätze sind vergeben</h3>
+        <p>Vertrauen und Beziehung lassen sich nicht nachträglich skalieren. Wer diesen Raum jetzt nicht aufbaut, baut ihn gar nicht.</p>
+      </div>
+    </div>
+    <blockquote>
+      Menschen brauchen keinen weiteren Kurs. Sie brauchen einen Raum, in dem ihre Berufung und ihre Bilanz nebeneinander liegen dürfen.
+      <cite>Michael Deck</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Masterclass -->
+<section class="mc" id="masterclass">
+  <div class="container">
+    <span class="abschnitt-kicker">Masterclass · Start 15. September 2026</span>
+    <div class="mc-kopf">
+      <div>
+        <h2>Unternehmen aus Berufung.<br>Unternehmen aus Wirkung.</h2>
+        <p class="einleitung">Für Unternehmerinnen und Unternehmer, die nicht mehr nur funktionieren wollen – sondern wissen, wofür. Sechs bis zwölf Menschen, sechs Termine, ein Werkzeug: der Heilige BusinessCanvas.</p>
+        <p class="einleitung">Wir arbeiten nicht mit fertigen Antworten. Wir arbeiten mit klaren Fragen – so lange, bis aus Ihrer Berufung ein Geschäftsmodell wird, das wirtschaftlich trägt und zu Ihren Werten passt.</p>
+        <p class="einleitung"><strong style="color:var(--lila-tief)">Was Sie mitnehmen:</strong> Ihr klares Warum. Eine tragfähige Zukunftsperspektive. Konkrete nächste Schritte, die im Alltag ankommen.</p>
+      </div>
+      <aside class="mc-fakten">
+        <dl>
+          <div><dt>Beginn</dt><dd>Dienstag, 15. September 2026, 19:00 Uhr</dd></div>
+          <div><dt>Gruppe</dt><dd>6 bis 12 Teilnehmende</dd></div>
+          <div><dt>Umfang</dt><dd>Sechs Termine, begleitet bis in die Umsetzung</dd></div>
+          <div><dt>Werkzeug</dt><dd>Der Heilige BusinessCanvas</dd></div>
+          <div><dt>Begleitung</dt><dd>Michael Deck – Unternehmer und ausgebildeter Geistlicher Begleiter</dd></div>
+          <div><dt>Aufnahme</dt><dd>Nach persönlichem Erstgespräch, kein Anmeldeformular</dd></div>
+        </dl>
+        <a href="#bewerbung" class="knopf">Jetzt bewerben</a>
+      </aside>
+    </div>
+
+    <div class="canvas-block">
+      <div class="titel">
+        <span class="marke">Der Schwerpunkt</span>
+        <h3>Der Heilige BusinessCanvas</h3>
+      </div>
+      <p class="einleitung">Dein Unternehmen beginnt nicht bei der Idee. Es beginnt bei deiner Berufung. Neun Felder, drei Blöcke – und am Ende ein Satz, der trägt. Ein Feld liegt in der Mitte und trägt alle anderen.</p>
+
+      <div class="canvas-raster">
+        <div class="feld">
+          <span class="nr">2</span>
+          <h4>Gabe</h4>
+          <p>Was fällt dir leicht, was anderen schwerfällt? Wofür bedanken sich Menschen bei dir, ohne dass du es als Leistung empfindest?</p>
+          <span class="block">Der Kern</span>
+        </div>
+        <div class="feld">
+          <span class="nr">3</span>
+          <h4>Menschen, denen du dienst</h4>
+          <p>Wen siehst du vor dir – ein Gesicht, keine Zielgruppe? Wessen Not verstehst du, weil du sie selbst kennst?</p>
+          <span class="block">Nach außen</span>
+        </div>
+        <div class="feld">
+          <span class="nr">4</span>
+          <h4>Wertfluss</h4>
+          <p>Wo entsteht Wert, wohin fließt er – und was fließt zurück? Wofür würde dieser eine Mensch freiwillig zahlen?</p>
+          <span class="block">Nach außen</span>
+        </div>
+
+        <div class="feld">
+          <span class="nr">9</span>
+          <h4>Licht</h4>
+          <p>Was von dir soll sichtbar werden – und wo versteckst du dich?</p>
+          <span class="block">Nach innen</span>
+        </div>
+        <div class="feld mitte">
+          <span class="nr">1 · Die Mitte</span>
+          <h4>Berufung</h4>
+          <p>Wofür würdest du auch dann aufstehen, wenn niemand dich dafür bezahlt? Was macht dich wütend an dieser Welt – und was zieht dich trotzdem hin?</p>
+          <span class="block">Der Kern</span>
+        </div>
+        <div class="feld">
+          <span class="nr">5</span>
+          <h4>Wirkung</h4>
+          <p>Woran würde man in drei Jahren merken, dass es dich gab? Nicht: was du getan hast. Sondern: was anders ist.</p>
+          <span class="block">Nach außen</span>
+        </div>
+
+        <div class="feld">
+          <span class="nr">8</span>
+          <h4>Verantwortung</h4>
+          <p>Wem gegenüber bist du rechenschaftspflichtig? Und was tust du, wenn niemand hinschaut?</p>
+          <span class="block">Nach innen</span>
+        </div>
+        <div class="feld">
+          <span class="nr">7</span>
+          <h4>Klarheit</h4>
+          <p>Was weißt du längst – und tust es trotzdem nicht?</p>
+          <span class="block">Nach innen</span>
+        </div>
+        <div class="feld">
+          <span class="nr">6</span>
+          <h4>Innerer Zustand</h4>
+          <p>Aus welchem Zustand heraus arbeitest du – aus Mangel oder aus Fülle? Was muss in dir stimmen, damit deine Arbeit trägt?</p>
+          <span class="block">Nach innen</span>
+        </div>
+      </div>
+
+      <div class="canvas-fuss">
+        <span><strong>Berufung</strong> statt Mission Statement</span>
+        <span><strong>Gabe</strong> statt Produkt</span>
+        <span><strong>Menschen, denen du dienst</strong> statt Zielgruppe</span>
+        <span><strong>Wertfluss</strong> statt Einnahmequelle</span>
+        <span><strong>Innerer Zustand</strong> statt Prozesse</span>
+      </div>
+    </div>
+
+    <div style="margin-top:56px">
+      <a href="masterclass.html" class="knopf">Alles zur Masterclass</a>
+      <a href="#bewerbung" class="knopf hell">Zur Bewerbung</a>
+    </div>
+  </div>
+</section>
+
+<!-- Bewerbung -->
+<section class="bewerbung" id="bewerbung">
+  <div class="container">
+    <span class="abschnitt-kicker">Bewerbung</span>
+    <h2>In drei Schritten in die Gruppe.</h2>
+    <p class="angebote-intro">Die Plätze sind bewusst begrenzt, und die Arbeit ist persönlich. Deshalb gibt es kein Anmeldeformular, sondern ein Gespräch – in dem beide Seiten prüfen, ob es passt.</p>
+
+    <div class="schritte">
+      <div class="schritt">
+        <div class="zahl">1</div>
+        <h3>Elevator Pitch ausfüllen</h3>
+        <p>Laden Sie unsere Blanko-Vorlage herunter und beantworten Sie die sieben Fragen zu Ihrem Vorhaben. Handschriftlich reicht völlig.</p>
+        <p>Das ist keine Hürde, sondern der erste Teil der Arbeit: Was nicht auf die Folie passt, ist noch nicht klar genug.</p>
+      </div>
+      <div class="schritt">
+        <div class="zahl">2</div>
+        <h3>Bewerbung senden</h3>
+        <p>Schreiben Sie uns in wenigen Sätzen, wer Sie sind, woran Sie gerade arbeiten und was Sie sich erhoffen – und hängen Sie Ihren ausgefüllten Elevator Pitch an.</p>
+        <p>Sie bekommen binnen drei Werktagen eine persönliche Antwort. Kein Formularverfahren.</p>
+      </div>
+      <div class="schritt">
+        <div class="zahl">3</div>
+        <h3>Erstgespräch führen</h3>
+        <p>In einem vertraulichen Gespräch klären wir gemeinsam, ob die Masterclass der richtige Ort für Sie ist – und ob Sie zur Gruppe passen.</p>
+        <p>Danach entscheiden Sie. Und wir auch.</p>
+      </div>
+    </div>
+
+    <div class="pitch-karte">
+      <div>
+        <div class="marke">Kostenloser Download · PDF</div>
+        <h3>Die Elevator-Pitch-Vorlage</h3>
+        <p>Sieben Folien, sieben Fragen: Was macht ihr? Wo tut es weh? Wer baut das? Warum jetzt? Wie trägt es sich? Was steht schon? Was braucht ihr? Mit Prüffragen und Platz zum Schreiben – zum Ausdrucken und Ausfüllen.</p>
+      </div>
+      <a href="I4E-Elevator-Pitch-Vorlage.pdf" download class="knopf">Vorlage herunterladen</a>
+    </div>
+
+    <div class="bewerben-abschluss">
+      <p>Bereit? Dann schreiben Sie uns. Die E-Mail ist bereits vorbereitet – Sie müssen nur noch Ihre Sätze und Ihren Pitch ergänzen.</p>
+      <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Masterclass%20September%202026%20%E2%80%93%20Bewerbung&amp;body=Guten%20Tag%20Herr%20Deck%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20die%20Masterclass%20%E2%80%9EUnternehmen%20aus%20Berufung.%20Unternehmen%20aus%20Wirkung.%22%20bewerben.%0A%0AKurz%20zu%20mir%20und%20meinem%20Unternehmen%3A%0A%0A%0AWoran%20ich%20gerade%20arbeite%3A%0A%0A%0AWas%20ich%20mir%20vom%20Heiligen%20BusinessCanvas%20erhoffe%3A%0A%0A%0AMeinen%20ausgef%C3%BCllten%20Elevator%20Pitch%20h%C3%A4nge%20ich%20an%20diese%20E-Mail%20an.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="knopf">Bewerbung schreiben</a>
+      <a href="I4E-Elevator-Pitch-Vorlage.pdf" download class="knopf hell">Erst die Vorlage laden</a>
     </div>
   </div>
 </section>
@@ -943,6 +1410,9 @@
   <div class="container fuss">
     <span>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</span>
     <span class="links">
+      <a href="masterclass.html">Masterclass</a>
+      <a href="leitbild.html">Leitbild</a>
+      <a href="I4E-Elevator-Pitch-Vorlage.pdf" download>Elevator-Pitch-Vorlage</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </span>
@@ -1034,6 +1504,71 @@
   })();
 </script>
 <!-- /PODCAST-JS -->
+
+
+<!-- Hinweis beim Seitenaufruf: Masterclass -->
+<div class="hinweis-hintergrund" id="mc-hinweis" role="dialog" aria-modal="true" aria-labelledby="mc-hinweis-titel" hidden>
+  <div class="hinweis">
+    <button class="zu" type="button" aria-label="Hinweis schließen">&times;</button>
+    <div class="marke">Masterclass · Start 15. September 2026</div>
+    <h2 id="mc-hinweis-titel">Unternehmen aus Berufung.</h2>
+    <div class="unter">Schwerpunkt: Der Heilige BusinessCanvas</div>
+    <p>Sechs bis zwölf Menschen. Neun Felder. Und am Ende ein Satz, der trägt. Die Plätze sind bewusst begrenzt – die Aufnahme läuft über ein persönliches Gespräch.</p>
+    <div class="knoepfe">
+      <a href="#masterclass" class="knopf" data-schliessen>Zur Masterclass</a>
+      <a href="#bewerbung" class="knopf hell" data-schliessen>Jetzt bewerben</a>
+    </div>
+    <p class="datum">Zur Vorbereitung: die <a href="I4E-Elevator-Pitch-Vorlage.pdf" download style="color:var(--lila-akzent);font-weight:600">Elevator-Pitch-Vorlage als PDF</a> – sieben Fragen zu Ihrem Vorhaben.</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('mc-hinweis');
+  if (!overlay) return;
+  var kasten = overlay.querySelector('.hinweis');
+  var zuKnopf = overlay.querySelector('.zu');
+  var vorher = null;
+
+  function oeffnen() {
+    vorher = document.activeElement;
+    overlay.hidden = false;
+    // Ein Bildaufbau abwarten, damit die Einblendung sichtbar wird
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { overlay.classList.add('sichtbar'); });
+    });
+    document.body.style.overflow = 'hidden';
+    zuKnopf.focus();
+  }
+
+  function schliessen() {
+    overlay.classList.remove('sichtbar');
+    document.body.style.overflow = '';
+    window.setTimeout(function () { overlay.hidden = true; }, 350);
+    if (vorher && vorher.focus) vorher.focus();
+  }
+
+  zuKnopf.addEventListener('click', schliessen);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) schliessen(); });
+  overlay.querySelectorAll('[data-schliessen]').forEach(function (a) {
+    a.addEventListener('click', schliessen);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !overlay.hidden) schliessen();
+    // Tastaturfokus im Hinweis halten
+    if (e.key === 'Tab' && !overlay.hidden) {
+      var ziele = kasten.querySelectorAll('button, a[href]');
+      if (!ziele.length) return;
+      var erste = ziele[0], letzte = ziele[ziele.length - 1];
+      if (e.shiftKey && document.activeElement === erste) { e.preventDefault(); letzte.focus(); }
+      else if (!e.shiftKey && document.activeElement === letzte) { e.preventDefault(); erste.focus(); }
+    }
+  });
+
+  // Bei jedem Seitenaufruf zeigen – bewusst ohne Speicherung
+  window.setTimeout(oeffnen, 1100);
+})();
+</script>
 
 </body>
 </html>
