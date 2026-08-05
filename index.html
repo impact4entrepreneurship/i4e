@@ -2,1573 +2,580 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impact4Entrepreneurship gGmbH – Bildung, die Werte stiftet</title>
-<meta name="description" content="Die Impact4Entrepreneurship gGmbH fördert die Bildung von Schülern, Studenten und Gründern auf ethischem, religiösem und marktwirtschaftlich-sozialem Gebiet.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impact4Entrepreneurship – Unternehmertum aus Verantwortung</title>
+<meta name="description" content="Ein kleiner, kuratierter Kreis für Gründer und unternehmerische Menschen: sechs Monate Arbeit an realen unternehmerischen Entscheidungen.">
+<link rel="icon" href="images/i4e-logo.png">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
-  /* ---------- Schriften ---------- */
-  @font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/playfair-display-600-latin.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/playfair-display-700-latin.woff2') format('woff2');
-    font-weight: 700; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-400-latin.woff2') format('woff2');
-    font-weight: 400; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-500-latin.woff2') format('woff2');
-    font-weight: 500; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-600-latin.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-  }
+:root{
+  --tief:#2f003a;
+  --lila-dunkel:#5b156d;
+  --lila:#7a2a90;
+  --flieder:#cdb6d6;
+  --flieder-hell:#ecdff0;
+  --grund:#faf5f8;
+  --weiss:#fffdff;
+  --text:#3a2f40;
+  --sanft:#6f6577;
+  --messing:#b98b4a;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --bahn:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--text);background:var(--grund);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:3px solid var(--lila);outline-offset:3px;border-radius:4px;}
 
-  /* ---------- Grundfarben ---------- */
-  :root {
-    --lila-tief: #2f003a;
-    --lila-dunkel: #5b156d;
-    --lila-akzent: #7a2a90;
-    --flieder: #cdb6d6;
-    --flieder-hell: #ecdff0;
-    --grund: #faf5f8;
-    --weiss: #fffdff;
-    --text: #3a2f40;
-    --text-sanft: #6f6577;
-  }
+.bahn{max-width:var(--bahn);margin:0 auto;padding:0 28px;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+/* ---------- Typo-Skala ---------- */
+.auge{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--lila);display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.auge::before{content:"";width:34px;height:1px;background:var(--flieder);flex:0 0 auto;}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.14;color:var(--tief);}
+h2{font-size:clamp(30px,4.1vw,46px);letter-spacing:-.015em;}
+h3{font-size:20px;line-height:1.25;}
+p{font-size:17px;}
+.gross{font-size:19px;color:var(--sanft);line-height:1.7;}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--grund);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 17px;
-  }
+/* ---------- Kopfleiste ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(250,245,248,.9);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(205,182,214,.5);}
+.kopf{display:flex;align-items:center;gap:26px;height:74px;}
+.kopf img{height:34px;width:auto;}
+nav{margin-left:auto;display:flex;align-items:center;gap:26px;}
+nav a{font-size:14.5px;font-weight:500;color:var(--sanft);text-decoration:none;transition:color .2s;}
+nav a:hover{color:var(--lila);}
+.knopf{display:inline-block;background:var(--tief);color:#fff;text-decoration:none;
+  font-size:14.5px;font-weight:600;padding:11px 22px;border-radius:100px;
+  transition:background .2s,transform .2s;}
+.knopf:hover{background:var(--lila);transform:translateY(-1px);}
+.knopf.hell{background:#fff;color:var(--tief);border:1px solid var(--flieder);}
+.knopf.hell:hover{background:var(--flieder-hell);color:var(--tief);}
+.knopf.gross{font-size:16px;padding:15px 30px;}
+.nav-schalter{display:none;background:none;border:0;font-size:24px;color:var(--tief);cursor:pointer;line-height:1;}
 
-  h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--lila-tief); }
+/* ---------- Hero ---------- */
+.hero{background:var(--tief);color:#efe6f3;padding:104px 0 96px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-14%;top:-30%;width:62%;aspect-ratio:1;
+  border-radius:50%;background:radial-gradient(circle,rgba(122,42,144,.55),transparent 66%);pointer-events:none;}
+.hero .bahn{position:relative;z-index:2;}
+.hero .auge{color:var(--flieder);}
+.hero .auge::before{background:rgba(205,182,214,.5);}
+.hero h1{font-size:clamp(36px,5.4vw,62px);color:#fff;letter-spacing:-.02em;max-width:19ch;}
+.hero h1 .traegt{color:var(--flieder);}
+.hero .unter{font-size:clamp(17px,2vw,20px);color:#c6b3ce;max-width:60ch;margin-top:26px;line-height:1.65;}
+.hero .knoepfe{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;}
+.hero .knopf{background:#fff;color:var(--tief);}
+.hero .knopf:hover{background:var(--flieder-hell);}
+.hero .knopf.rand{background:transparent;color:#efe6f3;border:1px solid rgba(205,182,214,.45);}
+.hero .knopf.rand:hover{background:rgba(255,255,255,.08);}
+.hero .fakten{display:flex;flex-wrap:wrap;gap:34px;margin-top:52px;padding-top:26px;
+  border-top:1px solid rgba(205,182,214,.22);}
+.hero .fakt b{display:block;font-family:var(--serif);font-size:26px;color:#fff;font-weight:700;line-height:1;}
+.hero .fakt span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#a893b1;
+  display:block;margin-top:8px;}
 
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+/* ---------- Abschnitte ---------- */
+section{padding:96px 0;}
+section.hell{background:var(--weiss);}
+.kopfzeile{max-width:64ch;margin-bottom:44px;}
+.kopfzeile p{margin-top:18px;}
 
-  /* ---------- Kopfzeile ---------- */
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(255, 253, 255, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--flieder-hell);
-  }
-  .nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 0;
-  }
-  .nav img { height: 44px; display: block; }
-  .nav-links { display: flex; gap: 32px; }
-  .nav-links a {
-    color: var(--lila-tief); text-decoration: none;
-    font-weight: 500; font-size: 15px; letter-spacing: 0.02em;
-  }
-  .nav-links a:hover { color: var(--lila-akzent); }
+/* ---------- Problem ---------- */
+.problem-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
+.problem-karte{background:var(--grund);border:1px solid rgba(205,182,214,.45);border-radius:16px;padding:26px;}
+section.hell .problem-karte{background:var(--grund);}
+.problem-karte h3{font-size:17.5px;margin-bottom:9px;}
+.problem-karte p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
+.pitchdeck{margin-top:26px;background:var(--tief);color:#e7d9ec;border-radius:20px;
+  padding:40px 44px;}
+.pitchdeck h3{color:#fff;font-size:23px;margin-bottom:16px;}
+.pitchdeck p{font-size:17.5px;color:#c6b3ce;max-width:72ch;}
+.pitchdeck .fragen{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+.pitchdeck .fragen span{font-size:14px;border:1px solid rgba(205,182,214,.35);border-radius:100px;
+  padding:7px 15px;color:#d8c6df;max-width:100%;}
 
-  /* ---------- Auftakt ---------- */
-  .hero {
-    padding: 110px 0 100px;
-    text-align: center;
-    background: linear-gradient(180deg, var(--weiss) 0%, var(--grund) 100%);
-  }
-  .kicker {
-    display: inline-flex; align-items: center; gap: 12px;
-    text-transform: uppercase; letter-spacing: 0.22em;
-    font-size: 13px; font-weight: 600; color: var(--lila-akzent);
-    margin-bottom: 28px;
-  }
-  .kicker::before, .kicker::after {
-    content: ''; width: 36px; height: 1px; background: var(--flieder);
-  }
-  .hero h1 {
-    font-size: clamp(2.4rem, 6vw, 4.2rem);
-    font-weight: 700; line-height: 1.15;
-    max-width: 800px; margin: 0 auto 28px;
-  }
-  .hero h1 em { font-style: italic; color: var(--lila-akzent); }
-  .hero p {
-    max-width: 640px; margin: 0 auto 40px;
-    font-size: 1.15rem; color: var(--text-sanft);
-  }
-  .knopf {
-    display: inline-block; padding: 16px 36px;
-    background: var(--lila-tief); color: #fff;
-    text-decoration: none; font-weight: 600; font-size: 15px;
-    border-radius: 999px; letter-spacing: 0.02em;
-    transition: background 0.2s ease;
-  }
-  .knopf:hover { background: var(--lila-akzent); }
-  .knopf.hell {
-    background: transparent; color: var(--lila-tief);
-    border: 1.5px solid var(--flieder); margin-left: 14px;
-  }
-  .knopf.hell:hover { border-color: var(--lila-akzent); color: var(--lila-akzent); background: transparent; }
+/* ---------- Der Kreis (Signatur) ---------- */
+.kreis-block{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
+.ring{position:relative;width:min(430px,100%);aspect-ratio:1;margin:0 auto;}
+.ring .scheibe{position:absolute;inset:11%;border-radius:50%;border:1px dashed rgba(122,42,144,.34);}
+.ring .mitte{position:absolute;inset:24%;border-radius:50%;background:var(--tief);color:#efe6f3;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:20px;box-shadow:0 20px 50px rgba(47,0,58,.28);}
+.ring .mitte em{font-family:var(--serif);font-style:normal;font-size:13px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--messing);}
+.ring .mitte strong{font-family:var(--serif);font-size:clamp(16px,2.1vw,20px);font-weight:700;
+  color:#fff;margin-top:9px;line-height:1.28;max-width:15ch;}
+.ring-unterschrift{font-family:var(--serif);font-size:19px;color:var(--lila);text-align:center;
+  margin-top:74px;max-width:34ch;margin-left:auto;margin-right:auto;line-height:1.4;}
+.knoten{position:absolute;top:50%;left:50%;width:126px;margin:-63px 0 0 -63px;
+  transform:rotate(var(--a)) translate(min(198px,42vw)) rotate(calc(-1 * var(--a)));
+  text-align:center;}
+.knoten b{display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;margin:0 auto 7px;border-radius:50%;
+  background:var(--weiss);border:1.5px solid var(--lila);color:var(--lila);
+  font-family:var(--serif);font-size:15px;font-weight:700;line-height:1;}
+.knoten span{display:block;font-size:14px;font-weight:600;color:var(--tief);line-height:1.3;}
+.knoten small{display:block;font-size:12.5px;color:var(--sanft);line-height:1.35;margin-top:3px;}
 
-  /* ---------- Abschnitte allgemein ---------- */
-  section { padding: 96px 0; }
-  .abschnitt-kicker {
-    text-transform: uppercase; letter-spacing: 0.22em;
-    font-size: 13px; font-weight: 600; color: var(--lila-akzent);
-    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
-  }
-  .abschnitt-kicker::before { content: ''; width: 36px; height: 1px; background: var(--flieder); }
-  section h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; margin-bottom: 24px; }
+.format-liste{list-style:none;}
+.format-liste li{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid rgba(205,182,214,.5);}
+.format-liste li:last-child{border-bottom:0;}
+.format-liste dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);
+  font-weight:600;flex:0 0 132px;}
+.format-liste dd{font-size:16px;}
+.ergebnis{margin-top:22px;background:var(--flieder-hell);border-radius:16px;padding:22px 24px;}
+.ergebnis p{font-size:16px;color:var(--tief);}
 
-  /* ---------- Mission ---------- */
-  .mission { background: var(--weiss); }
-  .mission-inhalt { max-width: 780px; }
-  .mission p { margin-bottom: 22px; font-size: 1.12rem; }
-  .mission p strong { color: var(--lila-akzent); }
-  .mission blockquote {
-    margin: 36px 0 0; padding: 28px 32px;
-    border-left: 3px solid var(--lila-akzent);
-    background: var(--grund); border-radius: 0 12px 12px 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem; color: var(--lila-tief); line-height: 1.5;
-  }
+/* ---------- Für wen ---------- */
+.wen{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.wen-karte{border-radius:20px;padding:34px 36px;}
+.wen-karte.ja{background:var(--tief);color:#e7d9ec;}
+.wen-karte.ja h3{color:#fff;}
+.wen-karte.nein{background:var(--weiss);border:1px solid rgba(205,182,214,.55);}
+.wen-karte h3{font-size:21px;margin-bottom:18px;}
+.wen-karte ul{list-style:none;}
+.wen-karte li{position:relative;padding-left:26px;margin-bottom:13px;font-size:16px;line-height:1.55;}
+.wen-karte.ja li{color:#cdb9d5;}
+.wen-karte.ja li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:11px;
+  border-radius:50%;border:1.5px solid var(--messing);}
+.wen-karte.nein li{color:var(--sanft);}
+.wen-karte.nein li::before{content:"";position:absolute;left:0;top:14px;width:11px;height:1.5px;
+  background:var(--flieder);}
 
-  /* ---------- Angebote ---------- */
-  .angebote-intro { max-width: 640px; color: var(--text-sanft); margin-bottom: 56px; }
-  .karten {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
-  }
-  .karte {
-    background: var(--weiss); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 40px 36px;
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
-  }
-  .karte:hover {
-    box-shadow: 0 18px 44px rgba(47, 0, 58, 0.10);
-    transform: translateY(-3px);
-  }
-  .karte .nummer {
-    font-family: 'Playfair Display', serif; font-size: 1rem;
-    color: var(--lila-akzent); font-weight: 600;
-    display: inline-block; margin-bottom: 18px;
-    border-bottom: 1px solid var(--flieder); padding-bottom: 6px;
-  }
-  .karte h3 { font-size: 1.4rem; margin-bottom: 14px; }
-  .karte p { color: var(--text-sanft); font-size: 1rem; }
+/* ---------- Wirkung ---------- */
+.wirkung{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.wirkung-karte{background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:18px;padding:30px;}
+section.hell .wirkung-karte{background:var(--grund);}
+.wirkung-karte h3{font-size:19px;margin-bottom:10px;}
+.wirkung-karte p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
+.wirkung-hinweis{margin-top:24px;font-size:15.5px;color:var(--sanft);border-left:3px solid var(--messing);
+  padding-left:18px;max-width:70ch;}
 
-  /* ---------- Newsletter ---------- */
-  .newsletter-karte {
-    background: var(--weiss); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 44px 48px;
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 32px; align-items: center;
-    transition: box-shadow 0.25s ease;
-  }
-  .newsletter-karte:hover { box-shadow: 0 18px 44px rgba(47, 0, 58, 0.10); }
-  .newsletter-karte + .newsletter-karte { margin-top: 20px; }
-  .newsletter-karte .ausgabe {
-    text-transform: uppercase; letter-spacing: 0.18em;
-    font-size: 12px; font-weight: 600; color: var(--lila-akzent);
-    margin-bottom: 10px;
-  }
-  .newsletter-karte h3 {
-    font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;
-  }
-  .newsletter-karte p { color: var(--text-sanft); font-size: 1rem; margin-bottom: 0; }
-  .newsletter-knoepfe { display: flex; flex-direction: column; gap: 12px; }
-  .knopf.klein { padding: 13px 28px; font-size: 14px; text-align: center; }
-  .knopf.klein.hell { margin-left: 0; }
+/* ---------- Weg hinein ---------- */
+.weg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;counter-reset:w;}
+.weg-schritt{position:relative;padding-top:44px;}
+.weg-schritt::before{counter-increment:w;content:counter(w);position:absolute;top:0;left:0;
+  font-family:var(--serif);font-size:34px;font-weight:700;color:var(--flieder);line-height:1;}
+.weg-schritt h3{font-size:19px;margin-bottom:9px;}
+.weg-schritt p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
 
-  /* ---------- Projekte ---------- */
-  .projekte { background: var(--weiss); }
-  .projekte-intro { max-width: 640px; color: var(--text-sanft); margin-bottom: 56px; }
-  .projekt-karte {
-    background: var(--grund); border: 1px solid var(--flieder-hell);
-    border-radius: 22px; overflow: hidden; max-width: 760px; margin: 0 auto;
-    transition: box-shadow 0.25s ease;
-  }
-  .projekt-karte:hover { box-shadow: 0 18px 44px rgba(47, 0, 58, 0.10); }
-  .projekt-bild { position: relative; }
-  .projekt-bild img {
-    width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
-    object-position: center 22%; display: block;
-  }
-  .projekt-bild .bildzeile {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to top, rgba(47, 0, 58, 0.82), rgba(47, 0, 58, 0));
-    color: #fff; padding: 40px 32px 20px;
-    font-size: 0.95rem; font-weight: 600; letter-spacing: 0.02em;
-  }
-  .projekt-text { padding: 36px 36px 40px; }
-  .projekt-text .traeger {
-    text-transform: uppercase; letter-spacing: 0.18em;
-    font-size: 12px; font-weight: 600; color: var(--lila-akzent);
-    margin-bottom: 10px;
-  }
-  .projekt-text h3 { font-size: 1.6rem; margin-bottom: 16px; }
-  .projekt-text p { color: var(--text-sanft); font-size: 1.02rem; margin-bottom: 16px; }
-  .projekt-text p:last-child { margin-bottom: 0; }
-  .projekt-text p strong { color: var(--lila-tief); }
+/* ---------- Person ---------- */
+.person{display:grid;grid-template-columns:270px 1fr;gap:48px;align-items:center;}
+.person .bild{border-radius:20px;overflow:hidden;background:var(--flieder-hell);}
+.person blockquote{font-family:var(--serif);font-size:clamp(21px,2.6vw,27px);line-height:1.4;
+  color:var(--tief);margin-bottom:20px;}
+.person .name{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);font-weight:600;}
+.person p{color:var(--sanft);font-size:16.5px;}
 
-  /* ---------- Über mich ---------- */
-  .ueber { background: var(--weiss); }
-  .ueber-raster {
-    display: grid; grid-template-columns: 380px 1fr;
-    gap: 64px; align-items: center;
-  }
-  .ueber-raster img {
-    width: 100%; border-radius: 20px; display: block;
-    box-shadow: 0 24px 60px rgba(47, 0, 58, 0.16);
-  }
-  .ueber p { margin-bottom: 20px; font-size: 1.08rem; }
-  .signatur { margin-top: 28px; }
-  .signatur .name {
-    font-family: 'Playfair Display', serif; font-weight: 700;
-    font-size: 1.25rem; color: var(--lila-tief);
-  }
-  .signatur .rolle { color: var(--lila-akzent); font-weight: 600; font-size: 0.95rem; }
+/* ---------- Randnotizen ---------- */
+.rand-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+.rand-karte{background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:16px;
+  padding:24px;text-decoration:none;display:block;transition:border-color .2s,transform .2s;}
+.rand-karte:hover{border-color:var(--lila);transform:translateY(-2px);}
+.rand-karte .art{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lila);font-weight:600;}
+.rand-karte h3{font-size:17px;margin:8px 0 7px;}
+.rand-karte p{font-size:14.5px;color:var(--sanft);line-height:1.55;}
 
-  /* ---------- Kontakt ---------- */
-  .kontakt {
-    background: var(--lila-tief); text-align: center;
-    color: var(--flieder-hell);
-  }
-  .kontakt h2 { color: #fff; }
-  .kontakt p { max-width: 560px; margin: 0 auto 40px; color: var(--flieder); font-size: 1.12rem; }
-  .kontakt .knopf { background: #fff; color: var(--lila-tief); }
-  .kontakt .knopf:hover { background: var(--flieder-hell); }
-  .kontakt .abschnitt-kicker { justify-content: center; color: var(--flieder); }
-  .kontakt .abschnitt-kicker::before, .kontakt .abschnitt-kicker::after {
-    content: ''; width: 36px; height: 1px; background: var(--lila-akzent);
-  }
+/* ---------- Schluss ---------- */
+.schluss{background:var(--tief);color:#efe6f3;text-align:center;padding:104px 0;}
+.schluss h2{color:#fff;max-width:20ch;margin:0 auto;}
+.schluss p{color:#c6b3ce;font-size:19px;max-width:56ch;margin:24px auto 0;}
+.schluss .knopf{margin-top:34px;background:#fff;color:var(--tief);}
+.schluss .knopf:hover{background:var(--flieder-hell);}
+.schluss .leise{margin-top:22px;font-size:15px;color:#a893b1;}
+.schluss .leise a{color:var(--flieder);}
 
-  /* ---------- Fußzeile ---------- */
-  footer {
-    background: var(--lila-tief); padding: 28px 0;
-    border-top: 1px solid rgba(205, 182, 214, 0.25);
-    color: var(--flieder);
-    font-size: 0.9rem;
-  }
-  .fuss {
-    display: flex; justify-content: space-between;
-    flex-wrap: wrap; gap: 14px; align-items: center;
-  }
-  .fuss a { color: var(--flieder); text-decoration: none; }
-  .fuss a:hover { color: #fff; }
-  .fuss .links { display: flex; gap: 22px; flex-wrap: wrap; }
+footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
+.fussleiste{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
+.fussleiste a{color:#c6b3ce;text-decoration:none;}
+.fussleiste a:hover{color:#fff;}
+.fuss-links{display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
+.pdf-link{display:inline-flex;align-items:baseline;gap:8px;}
+.pdf-link span{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#7c6885;
+  border:1px solid #4a3452;border-radius:100px;padding:3px 9px;}
+.pdf-link:hover span{color:var(--flieder);border-color:#6b4d76;}
 
-  /* ---------- Kleine Bildschirme ---------- */
-  @media (max-width: 820px) {
-    .nav-links { display: none; }
-    .karten { grid-template-columns: 1fr; }
-    .ueber-raster { grid-template-columns: 1fr; gap: 40px; }
-    .newsletter-karte { grid-template-columns: 1fr; padding: 32px 28px; }
-    .newsletter-knoepfe { flex-direction: row; flex-wrap: wrap; }
-    .ueber-raster img { max-width: 380px; margin: 0 auto; }
-    .projekt-text { padding: 28px 24px 32px; }
-    .projekt-bild .bildzeile { padding: 36px 24px 16px; }
-    section { padding: 72px 0; }
-    .hero { padding: 80px 0 72px; }
-    .knopf.hell { margin-left: 0; margin-top: 12px; }
-  }
+/* ---------- Bewegung ---------- */
+.auf{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.auf.da{opacity:1;transform:none;}
 
-  /* ================= NEU: Pitch-Struktur ================= */
-
-  /* Bewerben-Knopf in der Kopfzeile */
-  .nav-links { align-items: center; }
-  .nav-cta {
-    background: var(--lila-tief); color: #fff !important;
-    padding: 9px 20px; border-radius: 999px; font-weight: 600;
-    transition: background .2s ease;
-  }
-  .nav-cta:hover { background: var(--lila-akzent); color: #fff !important; }
-
-  /* Problem & Lösung */
-  .gegenueber { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
-  .spalte {
-    border-radius: 18px; padding: 38px 34px;
-    border: 1px solid var(--flieder-hell); background: var(--grund);
-  }
-  .spalte.loesung { background: var(--lila-tief); border-color: var(--lila-tief); }
-  .spalte .kopfzeile {
-    text-transform: uppercase; letter-spacing: .18em; font-size: 12px;
-    font-weight: 600; color: var(--lila-akzent); margin-bottom: 22px;
-  }
-  .spalte.loesung .kopfzeile { color: var(--flieder); }
-  .spalte ul { list-style: none; }
-  .spalte li { position: relative; padding-left: 26px; font-size: 1rem; color: var(--text-sanft); }
-  .spalte li + li { margin-top: 18px; }
-  .spalte li::before {
-    content: '◆'; position: absolute; left: 0; top: 1px; font-size: 9px; color: var(--lila-akzent);
-  }
-  .spalte li strong { color: var(--lila-tief); font-weight: 600; }
-  .spalte.loesung li { color: var(--flieder); }
-  .spalte.loesung li::before { color: var(--flieder); }
-  .spalte.loesung li strong { color: #fff; }
-
-  /* Ein Haus, drei Räume */
-  .raeume { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .raum {
-    background: var(--weiss); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 36px 30px 34px;
-    border-top: 4px solid var(--lila-akzent);
-    transition: box-shadow .25s ease, transform .25s ease;
-  }
-  .raum:hover { box-shadow: 0 18px 44px rgba(47,0,58,.10); transform: translateY(-3px); }
-  .raum .nummer {
-    font-family: 'Playfair Display', serif; font-size: .95rem; color: var(--lila-akzent);
-    font-weight: 600; letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 14px;
-  }
-  .raum h3 { font-size: 1.45rem; margin-bottom: 14px; }
-  .raum p { color: var(--text-sanft); font-size: 1rem; margin-bottom: 16px; }
-  .raum ul { list-style: none; border-top: 1px solid var(--flieder-hell); padding-top: 16px; }
-  .raum li { font-size: .95rem; color: var(--text-sanft); padding-left: 20px; position: relative; }
-  .raum li + li { margin-top: 8px; }
-  .raum li::before { content: '·'; position: absolute; left: 6px; color: var(--lila-akzent); font-weight: 700; }
-
-  /* Warum jetzt */
-  .jetzt { background: var(--lila-tief); color: var(--flieder-hell); }
-  .jetzt h2 { color: #fff; }
-  .jetzt .abschnitt-kicker { color: var(--flieder); }
-  .jetzt .abschnitt-kicker::before { background: var(--lila-akzent); }
-  .jetzt > .container > p.einleitung { color: var(--flieder); max-width: 640px; margin-bottom: 52px; }
-  .zeitachse { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-  .zeitfeld {
-    background: rgba(255,255,255,.055); border-radius: 16px; padding: 30px 26px;
-    border-top: 3px solid var(--lila-akzent);
-  }
-  .zeitfeld .wann {
-    text-transform: uppercase; letter-spacing: .16em; font-size: 11.5px;
-    font-weight: 600; color: var(--flieder); margin-bottom: 12px;
-  }
-  .zeitfeld h3 { color: #fff; font-size: 1.18rem; margin-bottom: 12px; line-height: 1.3; }
-  .zeitfeld p { color: var(--flieder); font-size: .95rem; }
-  .jetzt blockquote {
-    margin: 48px 0 0; padding: 30px 34px; border-left: 3px solid var(--lila-akzent);
-    background: rgba(255,255,255,.06); border-radius: 0 14px 14px 0;
-    font-family: 'Playfair Display', serif; font-size: 1.28rem; color: #fff; line-height: 1.5;
-  }
-  .jetzt blockquote cite {
-    display: block; margin-top: 14px; font-family: 'Inter', sans-serif;
-    font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
-    color: var(--flieder); font-style: normal;
-  }
-
-  /* Masterclass */
-  .mc { background: var(--weiss); }
-  .mc-kopf { display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
-  .mc-kopf p.einleitung { color: var(--text-sanft); font-size: 1.12rem; margin-bottom: 22px; }
-  .mc-fakten {
-    background: var(--grund); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 30px 28px;
-  }
-  .mc-fakten dl { display: grid; gap: 18px; }
-  .mc-fakten dt {
-    text-transform: uppercase; letter-spacing: .16em; font-size: 11.5px;
-    font-weight: 600; color: var(--lila-akzent); margin-bottom: 4px;
-  }
-  .mc-fakten dd { font-size: 1rem; color: var(--text); font-weight: 500; }
-  .mc-fakten .knopf { width: 100%; text-align: center; margin-top: 26px; }
-
-  /* Canvas */
-  .canvas-block { margin-top: 72px; }
-  .canvas-block > .titel { margin-bottom: 12px; }
-  .canvas-block > .titel .marke { display: block; margin-bottom: 12px; }
-  .canvas-block h3 { font-size: 1.9rem; }
-  .canvas-block .marke {
-    text-transform: uppercase; letter-spacing: .18em; font-size: 12px;
-    font-weight: 600; color: var(--lila-akzent);
-  }
-  .canvas-block > p.einleitung { color: var(--text-sanft); max-width: 680px; margin-bottom: 36px; }
-  .canvas-raster {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
-  }
-  .feld {
-    background: var(--grund); border: 1px solid var(--flieder-hell);
-    border-radius: 14px; padding: 22px 20px;
-    display: flex; flex-direction: column;
-  }
-  .feld .nr {
-    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem;
-    color: var(--lila-akzent); margin-bottom: 8px;
-  }
-  .feld h4 {
-    font-family: 'Playfair Display', serif; font-size: 1.12rem; color: var(--lila-tief);
-    margin-bottom: 10px; line-height: 1.25;
-  }
-  .feld p { font-size: .92rem; color: var(--text-sanft); line-height: 1.55; }
-  .feld .block {
-    margin-top: auto; padding-top: 12px; font-size: 10.5px; letter-spacing: .16em;
-    text-transform: uppercase; color: var(--flieder); font-weight: 600;
-  }
-  .feld.mitte {
-    background: var(--lila-tief); border-color: var(--lila-tief);
-    justify-content: center; text-align: center;
-  }
-  .feld.mitte .nr { color: var(--flieder); }
-  .feld.mitte h4 { color: #fff; font-size: 1.5rem; }
-  .feld.mitte p { color: var(--flieder); }
-  .feld.mitte .block { color: var(--lila-akzent); }
-  .canvas-fuss {
-    margin-top: 22px; display: flex; gap: 26px; flex-wrap: wrap;
-    font-size: .92rem; color: var(--text-sanft);
-  }
-  .canvas-fuss span strong { color: var(--lila-tief); }
-
-  /* Bewerbung */
-  .bewerbung { background: var(--grund); }
-  .schritte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
-  .schritt {
-    background: var(--weiss); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 32px 28px;
-  }
-  .schritt .zahl {
-    width: 38px; height: 38px; border-radius: 50%; background: var(--lila-tief); color: #fff;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 18px;
-  }
-  .schritt h3 { font-size: 1.25rem; margin-bottom: 12px; }
-  .schritt p { color: var(--text-sanft); font-size: .98rem; }
-  .schritt p + p { margin-top: 12px; }
-  .schritt a.verweis {
-    color: var(--lila-akzent); font-weight: 600; text-decoration: none;
-    border-bottom: 1px solid var(--flieder);
-  }
-  .schritt a.verweis:hover { border-color: var(--lila-akzent); }
-
-  .pitch-karte {
-    background: var(--lila-tief); color: var(--flieder-hell);
-    border-radius: 20px; padding: 44px 48px;
-    display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
-  }
-  .pitch-karte .marke {
-    text-transform: uppercase; letter-spacing: .18em; font-size: 12px;
-    font-weight: 600; color: var(--flieder); margin-bottom: 12px;
-  }
-  .pitch-karte h3 { color: #fff; font-size: 1.6rem; margin-bottom: 14px; }
-  .pitch-karte p { color: var(--flieder); font-size: 1rem; max-width: 560px; }
-  .pitch-karte .knopf { background: #fff; color: var(--lila-tief); white-space: nowrap; }
-  .pitch-karte .knopf:hover { background: var(--flieder-hell); }
-
-  .bewerben-abschluss { margin-top: 44px; text-align: center; }
-  .bewerben-abschluss p { color: var(--text-sanft); max-width: 620px; margin: 0 auto 28px; }
-
-  /* ---------- Hinweis beim Seitenaufruf ---------- */
-  .hinweis-hintergrund {
-    position: fixed; inset: 0; z-index: 100;
-    background: rgba(47, 0, 58, .55);
-    backdrop-filter: blur(4px);
-    display: flex; align-items: center; justify-content: center;
-    padding: 24px; opacity: 0; pointer-events: none;
-    transition: opacity .35s ease;
-  }
-  .hinweis-hintergrund.sichtbar { opacity: 1; pointer-events: auto; }
-  .hinweis {
-    position: relative; background: var(--weiss);
-    border-radius: 22px; max-width: 560px; width: 100%;
-    padding: 52px 52px 44px; text-align: center;
-    box-shadow: 0 40px 100px rgba(47, 0, 58, .38);
-    transform: translateY(14px) scale(.985);
-    transition: transform .35s ease;
-    max-height: 90vh; overflow-y: auto;
-  }
-  .hinweis-hintergrund.sichtbar .hinweis { transform: none; }
-  .hinweis .marke {
-    text-transform: uppercase; letter-spacing: .2em; font-size: 12px;
-    font-weight: 600; color: var(--lila-akzent); margin-bottom: 18px;
-  }
-  .hinweis h2 { font-size: 1.85rem; margin-bottom: 8px; line-height: 1.2; }
-  .hinweis .unter {
-    font-family: 'Playfair Display', serif; font-size: 1.15rem;
-    color: var(--lila-akzent); margin-bottom: 18px;
-  }
-  .hinweis p { color: var(--text-sanft); font-size: 1rem; margin-bottom: 26px; }
-  .hinweis .knoepfe { display: flex; gap: 12px; justify-content: center; align-items: stretch; flex-wrap: wrap; }
-  .hinweis .knoepfe .knopf { display: flex; align-items: center; justify-content: center; }
-  .hinweis .knopf.hell { margin-left: 0; }
-  .hinweis .zu {
-    position: absolute; top: 16px; right: 18px;
-    width: 38px; height: 38px; border: 0; border-radius: 50%;
-    background: var(--grund); color: var(--lila-tief);
-    font-size: 20px; line-height: 1; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    transition: background .2s ease;
-  }
-  .hinweis .zu:hover { background: var(--flieder-hell); }
-  .hinweis .datum {
-    margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--flieder-hell);
-    font-size: .88rem; color: var(--text-sanft); margin-bottom: 0;
-  }
-
-  @media (max-width: 900px) {
-    .mc-kopf { grid-template-columns: 1fr; gap: 36px; }
-    .zeitachse { grid-template-columns: repeat(2, 1fr); }
-    .raeume, .schritte { grid-template-columns: 1fr; }
-    .canvas-raster { grid-template-columns: repeat(2, 1fr); }
-    .gegenueber { grid-template-columns: 1fr; }
-    .pitch-karte { grid-template-columns: 1fr; padding: 34px 30px; gap: 26px; }
-  }
-  @media (max-width: 560px) {
-    .zeitachse, .canvas-raster { grid-template-columns: 1fr; }
-    .hinweis { padding: 46px 26px 34px; }
-    .hinweis h2 { font-size: 1.5rem; }
-    .spalte { padding: 30px 24px; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hinweis-hintergrund, .hinweis { transition: none; }
-    .raum:hover { transform: none; }
-  }
-
-/* PODCAST-CSS */
-  /* ---------- Podcast ---------- */
-  .podcast { background: var(--weiss); }
-  .podcast-intro { max-width: 640px; color: var(--text-sanft); margin-bottom: 48px; }
-  .podcast-intro a { color: var(--lila-akzent); font-weight: 600; border-bottom: 1px solid var(--flieder); }
-  .podcast-intro a:hover { border-color: var(--lila-akzent); }
-  .folgen { display: flex; flex-direction: column; gap: 12px; }
-  .folge {
-    background: var(--grund); border: 1px solid var(--flieder-hell);
-    border-radius: 14px; overflow: hidden; transition: border-color 0.2s ease;
-  }
-  .folge[open] { border-color: var(--flieder); }
-  .folge summary {
-    list-style: none; cursor: pointer; padding: 20px 26px;
-    display: grid; grid-template-columns: auto 1fr auto auto;
-    align-items: center; gap: 18px;
-  }
-  .folge summary::-webkit-details-marker { display: none; }
-  .folge .datum {
-    font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em;
-    color: var(--lila-dunkel); background: var(--flieder-hell);
-    padding: 5px 12px; border-radius: 100px; white-space: nowrap;
-  }
-  .folge .name {
-    font-family: 'Playfair Display', serif; font-weight: 600;
-    font-size: 1.12rem; color: var(--lila-tief); line-height: 1.3;
-  }
-  .folge .laenge {
-    font-size: 0.88rem; color: var(--text-sanft);
-    font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  .folge .zeichen {
-    color: var(--lila-akzent); font-size: 1.4rem;
-    transition: transform 0.2s ease; flex: none; line-height: 1;
-  }
-  .folge[open] .zeichen { transform: rotate(45deg); }
-  .folge .inhalt { padding: 0 26px 22px; }
-  .folge .inhalt p {
-    color: var(--text-sanft); font-size: 0.98rem;
-    margin-bottom: 18px; white-space: pre-line;
-  }
-
-  /* Eigener Abspieler */
-  .spieler {
-    display: flex; align-items: center; gap: 15px;
-    background: var(--flieder-hell); border-radius: 100px; padding: 10px 20px 10px 10px;
-  }
-  .spieler-knopf {
-    width: 42px; height: 42px; border-radius: 50%; border: none;
-    background: var(--lila-dunkel); color: #fff; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    flex: none; transition: 0.2s ease; font-size: 15px; line-height: 1;
-  }
-  .spieler-knopf:hover { background: var(--lila-akzent); transform: scale(1.06); }
-  .spieler-knopf:focus-visible { outline: 2px solid var(--lila-tief); outline-offset: 3px; }
-  .spieler-balken {
-    flex: 1; height: 6px; background: rgba(91, 21, 109, 0.16);
-    border-radius: 100px; cursor: pointer; position: relative; min-width: 60px;
-  }
-  .spieler-fuellung {
-    height: 100%; width: 0; background: var(--lila-dunkel);
-    border-radius: 100px; transition: width 0.1s linear;
-  }
-  .spieler-balken:focus-visible { outline: 2px solid var(--lila-dunkel); outline-offset: 4px; }
-  .spieler-zeit {
-    font-size: 0.84rem; color: var(--lila-dunkel); font-weight: 600;
-    font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  .spieler.laedt .spieler-knopf { opacity: 0.55; cursor: progress; }
-
-  @media (max-width: 680px) {
-    .folge summary { grid-template-columns: 1fr auto; gap: 8px 14px; padding: 18px 20px; }
-    .folge .datum { grid-row: 1; grid-column: 1; }
-    .folge .laenge { grid-row: 1; grid-column: 2; justify-self: end; }
-    .folge .name { grid-row: 2; grid-column: 1 / -1; font-size: 1.05rem; }
-    .folge .zeichen { display: none; }
-    .folge .inhalt { padding: 0 20px 20px; }
-    .spieler { gap: 11px; padding: 9px 15px 9px 9px; }
-    .spieler-zeit { font-size: 0.78rem; }
-  }
-/* /PODCAST-CSS */
-
+/* ---------- Schmal ---------- */
+@media(max-width:960px){
+  .kreis-block,.person{grid-template-columns:1fr;gap:38px;}
+  .wen{grid-template-columns:1fr;}
+  .person .bild{max-width:220px;}
+}
+@media(max-width:820px){
+  nav{position:fixed;inset:74px 0 auto;background:var(--weiss);flex-direction:column;
+    align-items:stretch;gap:0;padding:12px 22px 26px;border-bottom:1px solid var(--flieder);
+    display:none;box-shadow:0 18px 40px rgba(47,0,58,.12);}
+  nav.offen{display:flex;}
+  nav a{padding:13px 0;border-bottom:1px solid rgba(205,182,214,.4);font-size:16px;}
+  nav .knopf{text-align:center;margin-top:14px;border-bottom:0;}
+  .nav-schalter{display:block;margin-left:auto;}
+  section{padding:70px 0;}
+  .hero{padding:74px 0 66px;}
+  .pitchdeck{padding:30px 26px;}
+  /* Ring wird zur Liste */
+  .ring{aspect-ratio:auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .ring .scheibe{display:none;}
+  .ring .mitte{position:static;inset:auto;border-radius:16px;grid-column:1/-1;padding:26px;}
+  .knoten{position:static;width:auto;margin:0;transform:none;text-align:left;
+    background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:14px;padding:16px;}
+  .knoten b{margin:0 0 8px;}
+  .ring-unterschrift{margin-top:20px;}
+}
+@media(max-width:640px){
+  .format-liste li{flex-direction:column;gap:5px;}
+  .format-liste dt{flex:none;}
+  .wen-karte{padding:26px 22px;}
+  .pitchdeck .fragen span{border-radius:14px;}
+}
+@media(max-width:520px){
+  .ring{grid-template-columns:1fr;}
+  .hero .fakten{gap:22px;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .auf{opacity:1;transform:none;transition:none;}
+  .knopf:hover,.rand-karte:hover{transform:none;}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="container nav">
-    <img src="images/i4e-logo.png" alt="Impact4Entrepreneurship Logo">
-    <nav class="nav-links">
-      <a href="#mission">Mission</a>
-      <a href="#angebote">Angebot</a>
-      <a href="#masterclass">Masterclass</a>
-      <a href="#projekte">Projekte</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#podcast">Podcast</a>
-      <a href="#ueber">Über mich</a>
-      <a href="#bewerbung" class="nav-cta">Bewerben</a>
+  <div class="bahn kopf">
+    <a href="#oben" aria-label="Impact4Entrepreneurship – Startseite"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship"></a>
+    <button class="nav-schalter" aria-expanded="false" aria-controls="hauptnav" aria-label="Menü öffnen">☰</button>
+    <nav id="hauptnav">
+      <a href="#problem">Problem</a>
+      <a href="#circle">Impact Circle</a>
+      <a href="#fuerwen">Für wen</a>
+      <a href="#wirkung">Wirkung</a>
+      <a href="#weg">Der Weg hinein</a>
+      <a class="knopf" href="#vormerken">Vormerken</a>
     </nav>
   </div>
 </header>
 
-<!-- Auftakt -->
-<div class="hero">
-  <div class="container">
-    <span class="kicker">Impact4Entrepreneurship gGmbH</span>
-    <h1>Wirtschaft aus <em>Berufung</em>.<br>Wirkung aus Klarheit.</h1>
-    <p>Wir befähigen junge Menschen und Gründer, ihr Unternehmen als Ausdruck ihrer Berufung zu bauen – werteorientiert, wirtschaftlich tragfähig und dem Gemeinwohl verpflichtet.</p>
-    <a href="#masterclass" class="knopf">Masterclass ab September</a>
-    <a href="#angebote" class="knopf hell">Unser Angebot</a>
-  </div>
-</div>
+<main id="oben">
 
-<!-- Mission -->
-<section class="mission" id="mission">
-  <div class="container">
-    <div class="mission-inhalt">
-      <span class="abschnitt-kicker">Warum es uns gibt</span>
-      <h2>Wissen gibt es genug.<br>Orientierung nicht.</h2>
-      <p>Die Impact4Entrepreneurship gGmbH ist eine gemeinnützige Gesellschaft. Unser Auftrag: die Bildung von Schülern, Studenten und Gründern auf ethischem, religiösem und marktwirtschaftlich-sozialem Gebiet zu fördern – damit <strong>sozial verantwortliches, werteorientiertes Handeln</strong> kein Ausnahmefall bleibt.</p>
-      <p>Es fehlt selten Information. Es fehlt der Ort, an dem jemand die Frage hinter der Frage stellt: Wozu tue ich das eigentlich? Wer diese Frage nicht klärt, baut ein Unternehmen, das ihn irgendwann trägt statt umgekehrt.</p>
-      <blockquote>„Diese Verantwortung muss niemand allein tragen. Dafür gibt es I4E."</blockquote>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="bahn">
+    <div class="auge">Impact4Entrepreneurship gGmbH</div>
+    <h1>Baue nicht nur ein erfolgreiches Unternehmen. Baue eines, das <span class="traegt">Verantwortung trägt</span>.</h1>
+    <p class="unter">Wir begleiten Gründer und unternehmerische Menschen dabei, wirtschaftliche
+    Entscheidungen mit Sinn, Verantwortung und persönlicher Integrität zu verbinden.</p>
+    <div class="knoepfe">
+      <a class="knopf gross" href="#vormerken">Für den nächsten Impact Circle vormerken</a>
+      <a class="knopf gross rand" href="#circle">Wie das abläuft</a>
+    </div>
+    <div class="fakten">
+      <div class="fakt"><b>8–12</b><span>Menschen im Kreis</span></div>
+      <div class="fakt"><b>6</b><span>Monate</span></div>
+      <div class="fakt"><b>12</b><span>gemeinsame Termine</span></div>
+      <div class="fakt"><b>3</b><span>Einzelgespräche</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section id="problem" class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Das Problem</div>
+      <h2>Gründen kann man lernen.</h2>
+      <p class="gross">Aber wer lehrt uns, welche Menschen wir als Unternehmer werden – und
+      welche Verantwortung aus Macht, Kapital und Wachstum entsteht?</p>
     </div>
 
-    <div class="gegenueber">
-      <div class="spalte">
-        <div class="kopfzeile">Der Schmerz</div>
-        <ul>
-          <li><strong>Gründer</strong> finden mehr Kurse als je zuvor – aber keinen Raum für die Frage, wofür sie das alles eigentlich tun.</li>
-          <li><strong>Erfahrene Unternehmer</strong> wollen weitergeben, was sie gelernt haben – und finden dafür keinen verbindlichen Rahmen.</li>
-          <li><strong>Studierende</strong> brechen ab, weil Bildung an den Umständen scheitert und nicht am Können.</li>
-        </ul>
+    <div class="problem-gitter auf">
+      <div class="problem-karte">
+        <h3>Bildung ohne Existenz</h3>
+        <p>Unternehmerische Bildung ist häufig methodisch, aber nicht existenziell. Man lernt
+        Geschäftsmodelle, Finanzierung und Skalierung – aber selten, welche Art Mensch man dabei wird.</p>
       </div>
-      <div class="spalte loesung">
-        <div class="kopfzeile">Unsere Antwort</div>
-        <ul>
-          <li><strong>Die kleine Gruppe als Methode</strong> – sechs bis zwölf Menschen. Kein Engpass, sondern die Bedingung dafür, dass jeder wirklich zu Wort kommt.</li>
-          <li><strong>Ein durchgehender Weg</strong> – vom Zuhören über ein persönliches Erstgespräch in eine feste Gruppe und, wo es passt, in eine Förderung.</li>
-          <li><strong>Berufung und Bilanz nebeneinander</strong> – wir arbeiten nicht mit fertigen Antworten, sondern mit klaren Fragen, bis daraus ein tragfähiges Geschäftsmodell wird.</li>
-        </ul>
+      <div class="problem-karte">
+        <h3>Wirkung als Kennzahl</h3>
+        <p>Wirkung wird oft auf Zahlen reduziert. Selbst Impact kann zu einer weiteren
+        Optimierungslogik werden, wenn die innere Haltung nicht mitwächst.</p>
+      </div>
+      <div class="problem-karte">
+        <h3>Getrennte Welten</h3>
+        <p>Sinn und Wirtschaft werden künstlich getrennt. Entweder gilt Unternehmertum als rein
+        ökonomische Tätigkeit – oder Werte bleiben Privatsache ohne Folgen für Produkt und Kapital.</p>
+      </div>
+      <div class="problem-karte">
+        <h3>Innerlich allein</h3>
+        <p>Für Fragen nach Gewissen, Macht, Geld, Berufung und persönlicher Integrität gibt es
+        nur wenige tragfähige Räume.</p>
+      </div>
+    </div>
+
+    <div class="pitchdeck auf">
+      <h3>Die entscheidenden Fragen beginnen erst nach dem Pitchdeck</h3>
+      <p>Sie tauchen auf, wenn das Geschäftsmodell steht und niemand mehr zusieht.</p>
+      <div class="fragen">
+        <span>Was darf ich nicht tun, obwohl es profitabel wäre?</span>
+        <span>Wem gehört mein Erfolg?</span>
+        <span>Was schulde ich Mitarbeitern und Kunden?</span>
+        <span>Wann ist Wachstum gut – und wann wird es Götze?</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Angebot: Ein Haus, drei Räume -->
-<section id="angebote">
-  <div class="container">
-    <span class="abschnitt-kicker">Unser Angebot</span>
-    <h2>Ein Haus. Drei Räume.</h2>
-    <p class="angebote-intro">Alles, was wir tun, gehört in einen dieser drei Räume. Was in keinen passt, tun wir nicht.</p>
-    <div class="raeume">
-      <div class="raum">
-        <span class="nummer">Raum I</span>
-        <h3>Bildung</h3>
-        <p>Verständliche Wirtschafts- und Wertebildung für Schüler und Studenten – mit Lehrinhalten aus Praxis, Lehre und Forschung.</p>
-        <ul>
-          <li>Theoretische und praktische Bildungsangebote</li>
-          <li>Stipendien für junge Menschen, die Verantwortung übernehmen wollen</li>
-          <li>Materielle Unterstützung Studierender nach § 53 AO</li>
-          <li>Integrationsbegleitung: Werte des demokratischen Staatswesens</li>
-        </ul>
-      </div>
-      <div class="raum">
-        <span class="nummer">Raum II</span>
-        <h3>Begleitung</h3>
-        <p>Feste Gruppen von sechs bis zwölf Personen, in denen Berufung und Geschäftsmodell nebeneinander liegen dürfen.</p>
-        <ul>
-          <li><a href="#masterclass" style="color:var(--lila-akzent);font-weight:600;text-decoration:none">Die Masterclass ab September 2026</a></li>
-          <li>Vertrauliche Unternehmergespräche</li>
-          <li>Arbeit mit dem Heiligen BusinessCanvas</li>
-          <li>Weiterführende Gruppen im festen Rhythmus</li>
-        </ul>
-      </div>
-      <div class="raum">
-        <span class="nummer">Raum III</span>
-        <h3>Weitergabe</h3>
-        <p>Was in den ersten beiden Räumen erkannt wird, bleibt nicht dort. Licht soll nicht verborgen bleiben, sondern wirken.</p>
-        <ul>
-          <li>Offene Veröffentlichung unserer Erkenntnisse</li>
-          <li>Bausteine für Lehrpläne</li>
-          <li>Austausch mit Hochschulen und Bildungsträgern</li>
-          <li>Podcast, Newsletter und Werkzeuge zum Mitnehmen</li>
-        </ul>
-      </div>
+<!-- ================= DER KREIS ================= -->
+<section id="circle">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Das Angebot</div>
+      <h2>Der Impact Circle</h2>
+      <p class="gross">Ein kleiner, kuratierter Kreis. Keine Massenveranstaltung. Sechs Monate
+      gemeinsames Lernen, persönliche Begleitung und Arbeit an realen unternehmerischen
+      Entscheidungen.</p>
     </div>
-  </div>
-</section>
 
-<!-- Warum jetzt -->
-<section class="jetzt">
-  <div class="container">
-    <span class="abschnitt-kicker">Warum jetzt</span>
-    <h2>Warum jetzt – und nicht vor fünf Jahren.</h2>
-    <p class="einleitung">Wissen ist zum Gratisgut geworden. Damit verschiebt sich der Engpass vom Können zum Wozu.</p>
-    <div class="zeitachse">
-      <div class="zeitfeld">
-        <div class="wann">Vor fünf Jahren</div>
-        <h3>Wissen war knapp</h3>
-        <p>Wer Inhalte lieferte, half. Ein Angebot wie unseres wäre als weiterer Kurs unter vielen untergegangen.</p>
+    <div class="kreis-block">
+     <div>
+      <div class="ring auf" role="img"
+           aria-label="Sechs Lernbewegungen um eine Mitte: Berufung, Person, Verantwortung, Unternehmen, Entscheidung, Sendung. In der Mitte die Leitfrage: Zu welchem Menschen muss ich werden, damit das Unternehmen, das ich baue, Segen stiftet?">
+        <div class="scheibe" aria-hidden="true"></div>
+        <div class="mitte">
+          <em>Die Frage in der Mitte</em>
+          <strong>Zu welchem Menschen muss ich werden?</strong>
+        </div>
+        <div class="knoten" style="--a:-90deg"><b>1</b><span>Berufung</span><small>Warum soll dieses Unternehmen existieren?</small></div>
+        <div class="knoten" style="--a:-30deg"><b>2</b><span>Person</span><small>Wer werde ich durch Macht, Risiko und Scheitern?</small></div>
+        <div class="knoten" style="--a:30deg"><b>3</b><span>Verantwortung</span><small>Wem gegenüber bin ich rechenschaftspflichtig?</small></div>
+        <div class="knoten" style="--a:90deg"><b>4</b><span>Unternehmen</span><small>Wie werden Werte in Produkt, Kultur und Kapital konkret?</small></div>
+        <div class="knoten" style="--a:150deg"><b>5</b><span>Entscheidung</span><small>Wie erkenne ich Grenzen und notwendige Neins?</small></div>
+        <div class="knoten" style="--a:210deg"><b>6</b><span>Sendung</span><small>Welche Wirkung soll dieses Unternehmen ermöglichen?</small></div>
       </div>
-      <div class="zeitfeld">
-        <div class="wann">Heute I</div>
-        <h3>KI nimmt die Ausführung ab</h3>
-        <p>Was ein Unternehmen tun kann, ist kaum noch die Frage. Wofür es das tut, wird zur entscheidenden – und die beantwortet keine Maschine.</p>
-      </div>
-      <div class="zeitfeld">
-        <div class="wann">Heute II</div>
-        <h3>Eine Generation sucht Sinn</h3>
-        <p>Nachfolge und Generationswechsel treffen auf junge Menschen, die nicht nur funktionieren wollen. Beide Seiten suchen denselben Raum.</p>
-      </div>
-      <div class="zeitfeld">
-        <div class="wann">In fünf Jahren</div>
-        <h3>Die Plätze sind vergeben</h3>
-        <p>Vertrauen und Beziehung lassen sich nicht nachträglich skalieren. Wer diesen Raum jetzt nicht aufbaut, baut ihn gar nicht.</p>
-      </div>
-    </div>
-    <blockquote>
-      Menschen brauchen keinen weiteren Kurs. Sie brauchen einen Raum, in dem ihre Berufung und ihre Bilanz nebeneinander liegen dürfen.
-      <cite>Michael Deck</cite>
-    </blockquote>
-  </div>
-</section>
+      <p class="ring-unterschrift auf">… damit das Unternehmen, das ich baue, Segen stiftet.</p>
+     </div>
 
-<!-- Masterclass -->
-<section class="mc" id="masterclass">
-  <div class="container">
-    <span class="abschnitt-kicker">Masterclass · Start 15. September 2026</span>
-    <div class="mc-kopf">
-      <div>
-        <h2>Unternehmen aus Berufung.<br>Unternehmen aus Wirkung.</h2>
-        <p class="einleitung">Für Unternehmerinnen und Unternehmer, die nicht mehr nur funktionieren wollen – sondern wissen, wofür. Sechs bis zwölf Menschen, sechs Termine, ein Werkzeug: der Heilige BusinessCanvas.</p>
-        <p class="einleitung">Wir arbeiten nicht mit fertigen Antworten. Wir arbeiten mit klaren Fragen – so lange, bis aus Ihrer Berufung ein Geschäftsmodell wird, das wirtschaftlich trägt und zu Ihren Werten passt.</p>
-        <p class="einleitung"><strong style="color:var(--lila-tief)">Was Sie mitnehmen:</strong> Ihr klares Warum. Eine tragfähige Zukunftsperspektive. Konkrete nächste Schritte, die im Alltag ankommen.</p>
-      </div>
-      <aside class="mc-fakten">
-        <dl>
-          <div><dt>Beginn</dt><dd>Dienstag, 15. September 2026, 19:00 Uhr</dd></div>
-          <div><dt>Gruppe</dt><dd>6 bis 12 Teilnehmende</dd></div>
-          <div><dt>Umfang</dt><dd>Sechs Termine, begleitet bis in die Umsetzung</dd></div>
-          <div><dt>Werkzeug</dt><dd>Der Heilige BusinessCanvas</dd></div>
-          <div><dt>Begleitung</dt><dd>Michael Deck – Unternehmer und ausgebildeter Geistlicher Begleiter</dd></div>
-          <div><dt>Aufnahme</dt><dd>Nach persönlichem Erstgespräch, kein Anmeldeformular</dd></div>
+      <div class="auf">
+        <h3 style="margin-bottom:14px">So läuft es</h3>
+        <dl class="format-liste">
+          <li><dt>Dauer</dt><dd>Sechs Monate, zwei gemeinsame Termine im Monat</dd></li>
+          <li><dt>Größe</dt><dd>Acht bis zwölf Menschen – klein genug für echte Begleitung</dd></li>
+          <li><dt>Termine</dt><dd>Zwölf Gruppentermine à zwei Stunden, dazu drei persönliche Gespräche</dd></li>
+          <li><dt>Arbeitsweise</dt><dd>Lehre, Textarbeit, Fallbesprechung, Peer-Beratung, Stille – und konkrete Entscheidungen</dd></li>
+          <li><dt>Begleitung</dt><dd>Michael Deck, Unternehmer und ausgebildeter geistlicher Begleiter</dd></li>
         </dl>
-        <a href="#bewerbung" class="knopf">Jetzt bewerben</a>
-      </aside>
-    </div>
-
-    <div class="canvas-block">
-      <div class="titel">
-        <span class="marke">Der Schwerpunkt</span>
-        <h3>Der Heilige BusinessCanvas</h3>
-      </div>
-      <p class="einleitung">Dein Unternehmen beginnt nicht bei der Idee. Es beginnt bei deiner Berufung. Neun Felder, drei Blöcke – und am Ende ein Satz, der trägt. Ein Feld liegt in der Mitte und trägt alle anderen.</p>
-
-      <div class="canvas-raster">
-        <div class="feld">
-          <span class="nr">2</span>
-          <h4>Gabe</h4>
-          <p>Was fällt dir leicht, was anderen schwerfällt? Wofür bedanken sich Menschen bei dir, ohne dass du es als Leistung empfindest?</p>
-          <span class="block">Der Kern</span>
-        </div>
-        <div class="feld">
-          <span class="nr">3</span>
-          <h4>Menschen, denen du dienst</h4>
-          <p>Wen siehst du vor dir – ein Gesicht, keine Zielgruppe? Wessen Not verstehst du, weil du sie selbst kennst?</p>
-          <span class="block">Nach außen</span>
-        </div>
-        <div class="feld">
-          <span class="nr">4</span>
-          <h4>Wertfluss</h4>
-          <p>Wo entsteht Wert, wohin fließt er – und was fließt zurück? Wofür würde dieser eine Mensch freiwillig zahlen?</p>
-          <span class="block">Nach außen</span>
-        </div>
-
-        <div class="feld">
-          <span class="nr">9</span>
-          <h4>Licht</h4>
-          <p>Was von dir soll sichtbar werden – und wo versteckst du dich?</p>
-          <span class="block">Nach innen</span>
-        </div>
-        <div class="feld mitte">
-          <span class="nr">1 · Die Mitte</span>
-          <h4>Berufung</h4>
-          <p>Wofür würdest du auch dann aufstehen, wenn niemand dich dafür bezahlt? Was macht dich wütend an dieser Welt – und was zieht dich trotzdem hin?</p>
-          <span class="block">Der Kern</span>
-        </div>
-        <div class="feld">
-          <span class="nr">5</span>
-          <h4>Wirkung</h4>
-          <p>Woran würde man in drei Jahren merken, dass es dich gab? Nicht: was du getan hast. Sondern: was anders ist.</p>
-          <span class="block">Nach außen</span>
-        </div>
-
-        <div class="feld">
-          <span class="nr">8</span>
-          <h4>Verantwortung</h4>
-          <p>Wem gegenüber bist du rechenschaftspflichtig? Und was tust du, wenn niemand hinschaut?</p>
-          <span class="block">Nach innen</span>
-        </div>
-        <div class="feld">
-          <span class="nr">7</span>
-          <h4>Klarheit</h4>
-          <p>Was weißt du längst – und tust es trotzdem nicht?</p>
-          <span class="block">Nach innen</span>
-        </div>
-        <div class="feld">
-          <span class="nr">6</span>
-          <h4>Innerer Zustand</h4>
-          <p>Aus welchem Zustand heraus arbeitest du – aus Mangel oder aus Fülle? Was muss in dir stimmen, damit deine Arbeit trägt?</p>
-          <span class="block">Nach innen</span>
+        <div class="ergebnis">
+          <p><strong>Am Ende steht kein Zertifikat</strong>, sondern eine persönliche
+          Unternehmer-Charta und eine Unternehmens-Charta – übersetzt in reale Entscheidungen
+          für Produkt, Kultur, Kapital und Führung.</p>
         </div>
       </div>
-
-      <div class="canvas-fuss">
-        <span><strong>Berufung</strong> statt Mission Statement</span>
-        <span><strong>Gabe</strong> statt Produkt</span>
-        <span><strong>Menschen, denen du dienst</strong> statt Zielgruppe</span>
-        <span><strong>Wertfluss</strong> statt Einnahmequelle</span>
-        <span><strong>Innerer Zustand</strong> statt Prozesse</span>
-      </div>
-    </div>
-
-    <div style="margin-top:56px">
-      <a href="masterclass.html" class="knopf">Alles zur Masterclass</a>
-      <a href="#bewerbung" class="knopf hell">Zur Bewerbung</a>
     </div>
   </div>
 </section>
 
-<!-- Bewerbung -->
-<section class="bewerbung" id="bewerbung">
-  <div class="container">
-    <span class="abschnitt-kicker">Bewerbung</span>
-    <h2>In drei Schritten in die Gruppe.</h2>
-    <p class="angebote-intro">Die Plätze sind bewusst begrenzt, und die Arbeit ist persönlich. Deshalb gibt es kein Anmeldeformular, sondern ein Gespräch – in dem beide Seiten prüfen, ob es passt.</p>
-
-    <div class="schritte">
-      <div class="schritt">
-        <div class="zahl">1</div>
-        <h3>Elevator Pitch ausfüllen</h3>
-        <p>Laden Sie unsere Blanko-Vorlage herunter und beantworten Sie die sieben Fragen zu Ihrem Vorhaben. Handschriftlich reicht völlig.</p>
-        <p>Das ist keine Hürde, sondern der erste Teil der Arbeit: Was nicht auf die Folie passt, ist noch nicht klar genug.</p>
-      </div>
-      <div class="schritt">
-        <div class="zahl">2</div>
-        <h3>Bewerbung senden</h3>
-        <p>Schreiben Sie uns in wenigen Sätzen, wer Sie sind, woran Sie gerade arbeiten und was Sie sich erhoffen – und hängen Sie Ihren ausgefüllten Elevator Pitch an.</p>
-        <p>Sie bekommen binnen drei Werktagen eine persönliche Antwort. Kein Formularverfahren.</p>
-      </div>
-      <div class="schritt">
-        <div class="zahl">3</div>
-        <h3>Erstgespräch führen</h3>
-        <p>In einem vertraulichen Gespräch klären wir gemeinsam, ob die Masterclass der richtige Ort für Sie ist – und ob Sie zur Gruppe passen.</p>
-        <p>Danach entscheiden Sie. Und wir auch.</p>
-      </div>
+<!-- ================= FÜR WEN ================= -->
+<section id="fuerwen" class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Für wen</div>
+      <h2>Bewusst nicht für alle.</h2>
+      <p class="gross">Für Menschen, die ein Unternehmen gründen, aufbauen oder neu ausrichten
+      und sich nicht mit der Frage zufriedengeben, ob etwas funktioniert – sondern auch wissen
+      wollen, ob es richtig ist.</p>
     </div>
 
-    <div class="pitch-karte">
+    <div class="wen auf">
+      <div class="wen-karte ja">
+        <h3>Hier sind Sie richtig, wenn Sie …</h3>
+        <ul>
+          <li>nicht nur Wissen suchen, sondern Orientierung;</li>
+          <li>bereit sind, die eigene Person und Motivation kritisch zu prüfen;</li>
+          <li>Verantwortung nicht als Marketingbegriff verwenden wollen;</li>
+          <li>offen sind für philosophische, ethische und – je nach Format – geistliche Fragen;</li>
+          <li>eine konkrete Gründungs-, Führungs- oder Entscheidungssituation mitbringen.</li>
+        </ul>
+      </div>
+      <div class="wen-karte nein">
+        <h3>Noch nicht der richtige Ort, wenn Sie …</h3>
+        <ul>
+          <li>vor allem Methoden, Vorlagen und Checklisten suchen;</li>
+          <li>eine schnelle Antwort erwarten statt einer ehrlichen Frage;</li>
+          <li>ein Zertifikat für den Lebenslauf brauchen;</li>
+          <li>gerade keine reale unternehmerische Entscheidung vor sich haben;</li>
+          <li>lieber anonym in einer großen Gruppe bleiben möchten.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WIRKUNG ================= -->
+<section id="wirkung">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Wirkung</div>
+      <h2>Woran wir uns messen lassen.</h2>
+      <p class="gross">Am Ende steht nicht nur ein besseres Geschäftsmodell. Es steht ein
+      klareres Verständnis davon, wofür Sie Verantwortung tragen – und eine konkrete Charta
+      dafür, wie diese Verantwortung in Ihrem Unternehmen sichtbar wird.</p>
+    </div>
+
+    <div class="wirkung auf">
+      <div class="wirkung-karte">
+        <h3>Person</h3>
+        <p>Werden Teilnehmer klarer, wahrhaftiger, verantwortungsfähiger und freier in ihren
+        Entscheidungen?</p>
+      </div>
+      <div class="wirkung-karte">
+        <h3>Unternehmen</h3>
+        <p>Werden diese Haltungen in Governance, Kultur, Produkt, Kundenbeziehungen, Kapital
+        und im Umgang mit Mitarbeitern sichtbar?</p>
+      </div>
+      <div class="wirkung-karte">
+        <h3>Multiplikation</h3>
+        <p>Entstehen Menschen und Organisationen, die die Idee weitertragen – ohne dauernde
+        Abhängigkeit von uns?</p>
+      </div>
+    </div>
+    <p class="wirkung-hinweis auf">Reichweite ohne Veränderung wäre für uns kein Erfolg.</p>
+  </div>
+</section>
+
+<!-- ================= WEG HINEIN ================= -->
+<section id="weg" class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Der Weg hinein</div>
+      <h2>Ein Gespräch statt eines Formulars.</h2>
+      <p class="gross">Die Plätze sind begrenzt und die Arbeit ist persönlich. Deshalb prüfen
+      beide Seiten, ob es passt.</p>
+    </div>
+
+    <div class="weg auf">
+      <div class="weg-schritt">
+        <h3>Sie melden sich</h3>
+        <p>Schreiben Sie uns in wenigen Sätzen, wer Sie sind, woran Sie gerade arbeiten und was
+        Sie sich erhoffen. Sie bekommen binnen drei Werktagen eine persönliche Antwort.</p>
+      </div>
+      <div class="weg-schritt">
+        <h3>Wir sprechen miteinander</h3>
+        <p>In einem vertraulichen Erstgespräch klären wir gemeinsam, ob der Impact Circle der
+        richtige Ort für Sie ist – und ob Sie zur Gruppe passen.</p>
+      </div>
+      <div class="weg-schritt">
+        <h3>Beide entscheiden</h3>
+        <p>Danach entscheiden Sie. Und wir auch. Wer aufgenommen wird, beginnt mit einem
+        persönlichen Aufnahmegespräch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERSON ================= -->
+<section>
+  <div class="bahn">
+    <div class="person auf">
+      <div class="bild"><img src="images/michael-headshot.jpg" alt="Michael Deck"></div>
       <div>
-        <div class="marke">Kostenloser Download · PDF</div>
-        <h3>Die Elevator-Pitch-Vorlage</h3>
-        <p>Sieben Folien, sieben Fragen: Was macht ihr? Wo tut es weh? Wer baut das? Warum jetzt? Wie trägt es sich? Was steht schon? Was braucht ihr? Mit Prüffragen und Platz zum Schreiben – zum Ausdrucken und Ausfüllen.</p>
+        <blockquote>„Menschen brauchen keinen weiteren Kurs. Sie brauchen einen Raum, in dem
+        ihre Berufung und ihre Bilanz nebeneinander liegen dürfen."</blockquote>
+        <div class="name">Michael Deck · Geschäftsführer</div>
+        <p style="margin-top:16px">Unternehmer, Gesellschafter eines Familienbetriebes und
+        ausgebildeter geistlicher Begleiter. Er führt den Impact Circle und verantwortet Lehre,
+        Begleitung und die Auswahl der Gruppe.</p>
       </div>
-      <a href="I4E-Elevator-Pitch-Vorlage.pdf" download class="knopf">Vorlage herunterladen</a>
-    </div>
-
-    <div class="bewerben-abschluss">
-      <p>Bereit? Dann schreiben Sie uns. Die E-Mail ist bereits vorbereitet – Sie müssen nur noch Ihre Sätze und Ihren Pitch ergänzen.</p>
-      <a href="mailto:michael.deck@impact4entrepreneurship.de?subject=Masterclass%20September%202026%20%E2%80%93%20Bewerbung&amp;body=Guten%20Tag%20Herr%20Deck%2C%0A%0Aich%20m%C3%B6chte%20mich%20f%C3%BCr%20die%20Masterclass%20%E2%80%9EUnternehmen%20aus%20Berufung.%20Unternehmen%20aus%20Wirkung.%22%20bewerben.%0A%0AKurz%20zu%20mir%20und%20meinem%20Unternehmen%3A%0A%0A%0AWoran%20ich%20gerade%20arbeite%3A%0A%0A%0AWas%20ich%20mir%20vom%20Heiligen%20BusinessCanvas%20erhoffe%3A%0A%0A%0AMeinen%20ausgef%C3%BCllten%20Elevator%20Pitch%20h%C3%A4nge%20ich%20an%20diese%20E-Mail%20an.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A" class="knopf">Bewerbung schreiben</a>
-      <a href="I4E-Elevator-Pitch-Vorlage.pdf" download class="knopf hell">Erst die Vorlage laden</a>
     </div>
   </div>
 </section>
 
-<!-- Projekte -->
-<section class="projekte" id="projekte">
-  <div class="container">
-    <span class="abschnitt-kicker">Unsere Projekte</span>
-    <h2>Wo Wirkung konkret wird</h2>
-    <p class="projekte-intro">Neben unseren eigenen Angeboten begleiten wir Initiativen, die aus einer Berufung entstanden sind – mit Strategie, unternehmerischer Methodik und der Frage, wie gute Absicht tragfähig wird.</p>
-
-    <article class="projekt-karte">
-      <div class="projekt-bild">
-        <img src="images/wegfinder-birgit-nandzik.jpg" alt="Birgit Nandzik vom Projekt Wegfinder e.V.">
-        <div class="bildzeile">Birgit Nandzik · Wegfinder e.V.</div>
-      </div>
-      <div class="projekt-text">
-        <div class="traeger">Seit 2026 · Oschersleben, Sachsen-Anhalt</div>
+<!-- ================= RANDNOTIZEN ================= -->
+<section class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Auch von uns</div>
+      <h2>Wenn Sie erst einmal zuhören wollen.</h2>
+    </div>
+    <div class="rand-gitter auf">
+      <a class="rand-karte" href="podcast.html">
+        <div class="art">Podcast</div>
+        <h3>Menschen mit Wirkung</h3>
+        <p>Einmal im Monat ein Gespräch über Berufung, Verantwortung und die Frage, wie
+        Wirtschaft dem Menschen dienen kann.</p>
+      </a>
+      <a class="rand-karte" href="newsletter.html">
+        <div class="art">Newsletter</div>
+        <h3>Aus unserer Arbeit</h3>
+        <p>Regelmäßige Einblicke in das, was sich bei uns bewegt – ehrlich, persönlich und
+        konkret.</p>
+      </a>
+      <a class="rand-karte" href="projekte.html">
+        <div class="art">Projekt</div>
         <h3>Wegfinder e.V.</h3>
-        <p><strong>Birgit Nandzik</strong> schafft mit Wegfinder e.V. einen Ort, an dem pflegende Angehörige nicht allein bleiben. Im Pflegecafé in Oschersleben entstehen Begegnung, Beratung und stundenweise Entlastung – dort, wo es im ländlichen Raum bislang an wohnortnaher Unterstützung fehlt.</p>
-        <p>Im Zentrum steht die Unterstützung von Angehörigen und Pflegebedürftigen – nicht durch Abhängigkeit, sondern durch Stärkung. Es geht um Hilfe zur Selbsthilfe. Um Würde. Um Orientierung in einer Lebensphase, die oft von Überforderung geprägt ist.</p>
-        <p>Impact4Entrepreneurship begleitet Wegfinder seit 2026 mit Strategie, unternehmerischer Methodik und Bildungsanbindung. Denn Wirkung, die allein vom Spendenklima abhängt, endet irgendwann. Wirkung, die sich selbst trägt, bleibt.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- Newsletter -->
-<section id="newsletter">
-  <div class="container">
-    <span class="abschnitt-kicker">Newsletter</span>
-    <h2>Aus unserer Arbeit</h2>
-    <p class="angebote-intro">Regelmäßige Einblicke in das, was sich bei I4E bewegt – ehrlich, persönlich und konkret.</p>
-    <div class="newsletter-karte">
-      <div>
-        <div class="ausgabe">Ausgabe August 2026 · neu</div>
-        <h3>Wirtschaft aus Berufung. Wirksam aus Klarheit.</h3>
-        <p>Eine Schulstunde über Inflation und Bitcoin in Leipzig · Zu Gast bei Niko Jilch „Was Bitcoin bringt" · Finanzbildung an der John-F.-Kennedy-Schule Berlin · „Menschen mit Wirkung" jetzt mit Gästen · Unser neuer Internetauftritt</p>
-      </div>
-      <div class="newsletter-knoepfe">
-        <a href="newsletter-august-2026.html" class="knopf klein">Online lesen</a>
-        <a href="I4E-Newsletter-August-2026.pdf" class="knopf klein hell" download>PDF herunterladen</a>
-      </div>
-    </div>
-    <div class="newsletter-karte">
-      <div>
-        <div class="ausgabe">Ausgabe Mai 2026</div>
-        <h3>Wirtschaft aus Berufung. Wirkung aus Klarheit.</h3>
-        <p>Unser neues Logo und was es bedeutet · Projekt „Wegfinder" · Eine Bibelschule in Freiburg · Unsere erste Kapitalbeteiligung · Impact Founders und das heilige Geschäftsmodell Canvas</p>
-      </div>
-      <div class="newsletter-knoepfe">
-        <a href="newsletter.html" class="knopf klein">Online lesen</a>
-        <a href="I4E-Newsletter-Mai-2026.pdf" class="knopf klein hell" download>PDF herunterladen</a>
-      </div>
+        <p>Ein Ort, an dem pflegende Angehörige nicht allein bleiben. Wir begleiten den Verein
+        mit Strategie und unternehmerischer Methodik.</p>
+      </a>
+      <a class="rand-karte" href="manifest.html">
+        <div class="art">Manifest</div>
+        <h3>Vor Gott verantwortet</h3>
+        <p>Die geistliche Quelle unserer Arbeit – und die sieben Selbstbindungen, an denen wir
+        uns messen lassen.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- PODCAST -->
-<section class="podcast" id="podcast">
-  <div class="container">
-    <span class="abschnitt-kicker">Podcast</span>
-    <h2>Menschen mit Wirkung</h2>
-    <p class="podcast-intro">Einmal im Monat sprechen wir mit Menschen, die etwas bewegen – über Berufung,
-      Verantwortung und die Frage, wie Wirtschaft dem Menschen dienen kann. Alle 22 Folgen zum Anhören,
-      auch bei <a href="https://impact4entrepreneurship.podigee.io/" target="_blank" rel="noopener">Podigee</a>
-      und über den <a href="https://impact4entrepreneurship.podigee.io/feed/mp3" target="_blank" rel="noopener">RSS-Feed</a>.</p>
-    <div class="folgen">
-      <details class="folge">
-        <summary>
-          <span class="datum">29. Juli 2026</span>
-          <span class="name">Realtalk Schule: Warum Bildung Werte braucht – und Konsequenz</span>
-          <span class="laenge">40:38</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Jonas Schreiber unterrichtet Wirtschaft und Informatik an einer bayerischen Realschule – und gehört zu den wenigen Wirtschaftslehrern, die selbst gegründet haben. Neben der Schule betreibt er eine Fußballschule, davor war er sechs Jahre Nachwuchstrainer in einem Bundesliga-Leistungszentrum. Sein Buch „Realtalk – Lehreralltag. Ein Blick hinter die Schulkulisse&quot; (Vorwort: Boris Palmer) entstand, nachdem ein Vater mit dem Anwalt vor der Schulleitung stand.</p>
-          <p>Link zum Buch:  <a href="https://jonas-schreiber.com" target="_blank" rel="noopener">https://jonas-schreiber.com</a></p>
-          <p>Im Gespräch mit Michael Deck geht es um das, was im Bildungs-Mainstream nicht gesagt wird: sinkende Grundkompetenzen beim Lesen und Rechnen, Regeln, die nicht durchgesetzt werden, und die Frage, warum Schule vor dem Konflikt kapituliert. Schreiber erzählt, wie er Hayeks „Der Weg zur Knechtschaft&quot; in eine Neuntklass-Stunde übersetzt hat – mit so viel Zuspruch, dass Schüler der Parallelklasse nachmittags dazukommen wollten. Außerdem: warum Sport Werte leichter vermittelt als Unterricht, was ihm das Gründen beigebracht hat, das im Lehramtsstudium nie vorkam, wo KI im Klassenzimmer an fehlendem Grundwissen scheitert – und ob man Werte überhaupt unterrichten kann oder nur vorleben muss.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2558661-m-87e82386d4e53508ab2b78b0c107ed31.mp3?source=feed" data-dauer="2438">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Realtalk Schule: Warum Bildung Werte braucht – und Konsequenz">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="2438" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;40:38</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">30. Juni 2026</span>
-          <span class="name">Mut.Ideen.Wirkung</span>
-          <span class="laenge">9:21</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Drei Worte, die auf den ersten Blick nach Gründung, Start-up und Businessplan klingen.</p>
-          <p>Aber eigentlich geht es um viel mehr.</p>
-          <p>Entrepreneurship ist nicht zuerst eine Methode.</p>
-          <p>Es ist eine Haltung.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2533318-m-594602f90fc3ee43d32d39291b7f6f18.mp3?source=feed" data-dauer="561">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Mut.Ideen.Wirkung">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="561" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;9:21</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">28. Mai 2026</span>
-          <span class="name">Thank God for Bitcoin</span>
-          <span class="laenge">1:34:06</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Ein Workshop beim MUT-Kongress 2024 in Scbwäbisch Gmünd.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2506595-m-d84cd16acfd50e1c626ecebf21300994.mp3?source=feed" data-dauer="5646">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Thank God for Bitcoin">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="5646" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;1:34:06</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">30. April 2026</span>
-          <span class="name">Wenn dein Unternehmen krank ist - warum Strategie nicht reicht</span>
-          <span class="laenge">5:23</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Dein Unternehmen funktioniert – aber lebt es auch?</p>
-          <p>Wenn innen Unordnung herrscht, hilft keine Strategie.</p>
-          <p>Ordne dein Inneres. Dann beginnt dein Unternehmen zu leuchten.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2477233-m-367893cef5bbdae264973ca260ff1615.mp3?source=feed" data-dauer="323">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wenn dein Unternehmen krank ist - warum Strategie nicht reicht">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="323" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;5:23</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">29. April 2026</span>
-          <span class="name">Impact beginnt mit einer brennenden Idee</span>
-          <span class="laenge">3:25</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Gründen heißt für uns nicht: einen Businessplan schreiben.</p>
-          <p>Gründen heißt: auf einen inneren Ruf hören.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2473816-m-bf1870f86a000429d5bb0a6bc772672a.mp3?source=feed" data-dauer="205">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Impact beginnt mit einer brennenden Idee">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:25</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">31. März 2026</span>
-          <span class="name">Unternehmertum als Gefäß: Das Heilige Geschäftsmodell des Tikkun</span>
-          <span class="laenge">16:45</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Der vorliegende Text beschreibt ein spirituelles Verständnis von Unternehmertum, das wirtschaftliches Handeln als einen schöpferischen Akt zur Heilung der Welt begreift. Anstatt Profit in das Zentrum zu stellen, dient das Unternehmen hier als Gefäß für göttliche Ordnung, wobei die Struktur eines Betriebs den zehn kabbalistischen Sefirot nachempfunden wird. Dieser Ansatz integriert spirituelle Weisheit und ökonomisches Wissen, sodass geschäftliche Prozesse wie Marketing oder Controlling zu Ausdrucksformen von Güte und Klarheit werden. Der Unternehmer agiert dabei nicht als rein profitorientierter Akteur, sondern als Dienender einer tieferen Bestimmung, der auf existenzielle Mängel mit Verantwortung reagiert. Letztlich wird das Ziel verfolgt, durch ethisches und sinnhaftes Wirtschaften eine harmonische Verbindung zwischen innerer Erkenntnis und äußeren Marktergebnissen herzustellen.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2429926-m-5d30512b7f5f8316cced6c3142222b15.mp3?source=feed" data-dauer="1005">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Unternehmertum als Gefäß: Das Heilige Geschäftsmodell des Tikkun">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1005" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;16:45</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">30. März 2026</span>
-          <span class="name">Warum Berufung keine Entscheidung ist</span>
-          <span class="laenge">22:21</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Der vorliegende Text untersucht den tiefgreifenden Unterschied zwischen einer bewussten Entscheidung und der wahren Berufung, die den Menschen von außen und innen gleichermaßen anspricht. Während der eigene Wille oft nach Selbstverwirklichung strebt, zeigt sich eine Berufung dadurch, dass sie den Einzelnen beharrlich verfolgt und oft ein persönliches Opfer verlangt. Die Quelle betont, dass echte Bestimmung dort beginnt, wo das Ego zurücktritt und man eine Verantwortung übernimmt, die über die eigenen Bedürfnisse hinausgeht. Ein zentrales Merkmal ist dabei die innere Unruhe, die erst schwindet, wenn man der Aufgabe nachkommt, der man sich nicht entziehen kann. Letztlich fordert der Text dazu auf, nicht nach neuen Zielen zu suchen, sondern die bereits erkannten Wahrheiten mutig in die Tat umzusetzen. Somit dient das Werk als spiritueller Leitfaden zur Selbstprüfung und zur Entdeckung des eigentlichen Lebenssinns.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2428127-m-970d7d62a814f53c692f4c51be1cbb8e.mp3?source=feed" data-dauer="1341">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Warum Berufung keine Entscheidung ist">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1341" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;22:21</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">11. Februar 2026</span>
-          <span class="name">Gott als Chef und radikale Transparenz</span>
-          <span class="laenge">16:51</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>In diesem Podcast-Transkript berichtet Michael Deck über die praktische Umsetzung einer „Kingdom Company“ am Beispiel seines Handwerksbetriebs Tiedge GmbH. Er erläutert, wie er sein Unternehmen als Wohnstätte Gottes versteht, in der christliche Werte wie Herzlichkeit und Transparenz den Arbeitsalltag spürbar prägen. Ein zentrales Element ist dabei die Abgabe von Verantwortung an die Mitarbeitenden, die Deck als seine „geistlichen Kinder“ betrachtet und denen er lebenslange Arbeitsplätze zusichert. Durch eine bewusste Umdeutung betriebswirtschaftlicher Begriffe, etwa von Personalkosten in Mitarbeitereinkommen, rückt er den Menschen in das Zentrum der Wertschöpfung. Das Gespräch betont zudem, dass unternehmerischer Erfolg primär darin besteht, Gott zu verherrlichen und den Mut zu haben, auch wirtschaftlich unkonventionelle Wege zu gehen. Letztlich dient der Beitrag als Inspiration für Führungskräfte, ihr Business als Berufung wahrzunehmen und persönliche Glaubensprinzipien authentisch in die Praxis zu übersetzen.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2351440-m-e7ecaba24c66a7d07a47c2ed9e42c3aa.mp3?source=feed" data-dauer="1011">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Gott als Chef und radikale Transparenz">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1011" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;16:51</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">1. Dezember 2025</span>
-          <span class="name">Wenn Gott zum Nervensystem des Unternehmens wird</span>
-          <span class="laenge">8:09</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Wenn Gott – nicht als dogmatische Figur, sondern als lebendige Quelle von Bewusstsein, Wahrheit und Verantwortung – zum Nervensystem eines Unternehmens wird, dann rührt das an den innersten Kern seiner Funktionsweise. Ein Nervensystem steuert Wahrnehmung, Reaktion, Orientierung, Koordination. Wenn dieses System nicht mehr von Angst, kurzfristigen Zielen oder Eitelkeit gespeist wird, sondern vom Ewigen, verändert sich alles – von innen nach außen.</p>
-          <p>Ich sage es dir klar, wie es ein chassidischer Rabbi sagen würde:</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2235312-m-b20ebc59e3957b5009716ff3ca069811.mp3?source=feed" data-dauer="489">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wenn Gott zum Nervensystem des Unternehmens wird">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="489" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;8:09</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">29. September 2025</span>
-          <span class="name">Wie Sie Ihre einzigartige Berufung finden</span>
-          <span class="laenge">18:37</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Dieser Quellentext ist ein Auszug aus einem YouTube-Video-Transkript von Rabbi Simon Jacobson, das die Wichtigkeit der Entdeckung der eigenen, einzigartigen Lebensbestimmung oder Berufung untersucht. Jacobson argumentiert, dass ebenso wie Unternehmen eine Mission Statement benötigen, Einzelpersonen eine persönliche Mission benötigen, um ein effizientes und erfülltes Leben zu führen. Er weist darauf hin, dass viele Menschen ihre Bestimmung nie hinterfragen und oft das, was sie tun, mit dem verwechseln, wer sie sind. Der Rabbiner stellt eine Formel zur Entdeckung der persönlichen Mission vor: POP (Persönlichkeit, Gelegenheiten, Menschen, Orte) + Leidenschaft + Höhere Berufung = Mission, und betont, dass dieser Prozess eine schrittweise Selbstentdeckung und proaktive Initiative erfordert.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2134233-m-5062085eba4d83839250d6a796ed2e8b.mp3?source=feed" data-dauer="1117">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wie Sie Ihre einzigartige Berufung finden">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1117" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;18:37</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">29. September 2025</span>
-          <span class="name">Unternehmensnachfolge, KI und Spiritualität: Lichtmaximierung</span>
-          <span class="laenge">20:52</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Dieser Quellentext erörtert die notwendige Verbindung von Unternehmensnachfolge, Künstlicher Intelligenz (KI) und Spiritualität angesichts des Generationswechsels der Babyboomer und der technologischen Revolution durch KI. Die Autoren argumentieren, dass die Übernahme mittelständischer Unternehmen nicht nur durch Effizienzsteigerung mittels KI, sondern vor allem durch eine spirituelle Neuausrichtung erfolgen sollte. Im Gegensatz zur üblichen Gewinnmaximierung (&quot;Value Creation&quot; oder &quot;Exitmaximierung&quot;) wird das Konzept der Lichtmaximierung als höchste Form der Wertgenerierung vorgestellt, welche Bedeutung und Sinn über bloßen Profit stellt. Das Ziel ist es, jedes übernommene Unternehmen zu einem „spirituellen Raum“ zu machen, in dem Berufung und Verantwortung im Alltag gelebt werden können. Daher soll der Nachfolgeprozess als ein geistlicher Akt betrachtet werden, bei dem Technologie dazu dient, zu segnen und zu befreien, anstatt nur zu konsolidieren (&quot;Buy &amp; Bless&quot; statt &quot;Buy &amp; Build&quot;).</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2134163-m-1ebc30ebd5f4ed9bc21394a0eb1f6cd2.mp3?source=feed" data-dauer="1252">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Unternehmensnachfolge, KI und Spiritualität: Lichtmaximierung">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1252" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;20:52</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">29. September 2025</span>
-          <span class="name">Bootstrap Company: Spiritual Foundation of Entrepreneurship</span>
-          <span class="laenge">10:59</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Der gegebene Text stammt aus einer Podcast- oder Blogserie namens „Impact4Soul – Wirtschaft aus innerem Ruf“ und konzentriert sich auf das Konzept der Bootstrap Company. Es wird erklärt, dass ein solches Unternehmen ohne externe Investitionen oder Fremdkapital aufgebaut wird, allein durch Eigenleistung und Kreativität. Die Quelle betont, dass Bootstrapping nicht bloß eine Finanzstrategie, sondern eine spirituelle Haltung ist, die auf Vertrauen, Verantwortung und Demut basiert. Weiterhin wird Bootstrapping mit einer chassidischen Sichtweise verglichen, die das Vertrauen in die göttliche Versorgung betont, ähnlich dem jüdischen Volk in der Wüste. Abschließend wird die Bootstrap Company als „Kingdom Company“ definiert, die Reinheit und inneren Ruf über materielle Ressourcen stellt und dazu aufruft, mit dem zu beginnen, was man bereits hat.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2134139-m-b027094d6050c52508b8e9315857d11e.mp3?source=feed" data-dauer="659">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Bootstrap Company: Spiritual Foundation of Entrepreneurship">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="659" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;10:59</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">18. September 2025</span>
-          <span class="name">Vom Profit zum Licht: Unternehmertum als heiliger Raum“</span>
-          <span class="laenge">15:33</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Der vorliegende Text beschreibt die Entwicklung des unternehmerischen Handelns in vier aufeinanderfolgenden Stufen. Anfänglich lag der Fokus auf der Gewinnmaximierung, bei der Unternehmen primär als effiziente Maschinen zur Kapitalmehrung betrachtet wurden. Darauf folgte die Nutzenmaximierung, die Unternehmen als Problemlöser für spezifische Zielgruppen definierte und den Kunden in den Vordergrund rückte. Die dritte Stufe, die Wertemaximierung, betonte die ethische und soziale Verantwortung von Unternehmen als Kulturträger. Abschließend stellt der Text die Lichtmaximierung als höchstes Ziel vor, bei dem Unternehmen als „heilige Räume“ dienen sollen, die nicht nur Werte leben, sondern „Wahrheit offenbaren“ und „Gottes Gegenwart“ erfahrbar machen, indem sie den Menschen als Ganzes ins Zentrum stellen und über rein funktionale oder materielle Ziele hinausgehen.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2118578-m-a1021c5b10f502d00b5714dda3e97023.mp3?source=feed" data-dauer="933">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Vom Profit zum Licht: Unternehmertum als heiliger Raum“">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="933" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;15:33</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">8. August 2025</span>
-          <span class="name">Das Herz von I4E</span>
-          <span class="laenge">2:19</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>✨ Einladung zum Bewerbungsgespräch</p>
-          <p>Werde Teil einer Bewegung – Gründen zur Verherrlichung Gottes</p>
-          <p>Du spürst in Dir den Ruf, ein Unternehmen zu gründen –</p>
-          <p>nicht für Ruhm oder Reichtum, sondern aus einem tiefen Wunsch,</p>
-          <p>Gott zu ehren und Menschen zu dienen?</p>
-          <p>Dann möchten wir Dich kennenlernen.</p>
-          <p>Die Impact4Entrepreneurship gGmbH begleitet Gründerinnen und Gründer,</p>
-          <p>die ihr Business als geistliche Berufung verstehen –</p>
-          <p>und die bereit sind, sich in den Dienst einer größeren Vision zu stellen.</p>
-          <p>Wenn Du ein drängendes Problem lösen willst,</p>
-          <p>wenn Dein Herz brennt für heilsame Innovation,</p>
-          <p>und wenn Du bereit bist, die ersten Schritte im Vertrauen zu gehen –</p>
-          <p>dann laden wir Dich herzlich zu einem persönlichen Gespräch ein.</p>
-          <p>🎙 Bewerbungsgespräch – was erwartet Dich?</p>
-          <p>Ein ehrliches, geistlich inspiriertes Kennenlernen.</p>
-          <p>Kein klassisches Interview, sondern ein Gespräch über Deine Berufung,</p>
-          <p>Deine Vision – und darüber, was Gott mit Deinem Weg vorhat.</p>
-          <p>📩 Jetzt bewerben</p>
-          <p>Schick uns ein paar Zeilen zu Dir, Deiner Idee und Deinem Herzensanliegen.</p>
-          <p>Wir melden uns, um gemeinsam herauszufinden,</p>
-          <p>ob wir diesen Weg miteinander gehen sollen.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2055443-m-22bf86729e697d171c24fd99801295c1.mp3?source=feed" data-dauer="139">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Das Herz von I4E">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="139" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;2:19</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">19. Juli 2025</span>
-          <span class="name">Folge 9: Dienen durch Freie Marktwirtschaft: Eine Spirituelle Sicht</span>
-          <span class="laenge">6:45</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Diese Textausschnitte untersuchen die Bedeutung der freien Marktwirtschaft und die Rolle des Unternehmers darin. Es wird erklärt, dass unternehmerischer Erfolg nur dann eintritt, wenn Angebote den tatsächlichen Bedürfnissen der Menschen entsprechen. Die Quelle stellt einen direkten Zusammenhang zwischen dem Dienst am Menschen und dem Prinzip des Marktes her, wobei Erfolg aus der Fähigkeit resultiert, reale Wünsche und Notwendigkeiten zu erfüllen. Das Konzept wird durch die Analogie eines Kaufmanns vertieft, der nicht nur auf Profit aus ist, sondern wirklich dient, indem er die Bedürfnisse seiner Mitmenschen erkennt. Abschließend wird die Marktwirtschaft als Prüfstein des Charakters beschrieben, da nur jene erfolgreich sind, die an den Wert ihres Angebots glauben und es als Segen verstehen.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/2023980-m-8e83432fe100132cd292f666b0ad22cf.mp3?source=feed" data-dauer="405">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 9: Dienen durch Freie Marktwirtschaft: Eine Spirituelle Sicht">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="405" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;6:45</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">20. Juni 2025</span>
-          <span class="name">Folge 7: Kingdom Company – Unternehmen als Wohnung Gottes</span>
-          <span class="laenge">1:48</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1980840-m-ab48cafaf9ecc51bd401a774d03504b6.mp3?source=feed" data-dauer="108">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 7: Kingdom Company – Unternehmen als Wohnung Gottes">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="108" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;1:48</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">17. Juni 2025</span>
-          <span class="name">Folge 6: Warum du kein Geld brauchst, um loszulegen – sondern Klarheit</span>
-          <span class="laenge">2:30</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1976862-m-4c2c46c22e087574f0af5a74ed23353c.mp3?source=feed" data-dauer="150">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 6: Warum du kein Geld brauchst, um loszulegen – sondern Klarheit">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;2:30</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">13. Juni 2025</span>
-          <span class="name">Folge 5: Warum die Wirtschaft Conviatoren braucht – und keine Mentoren</span>
-          <span class="laenge">3:22</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1970327-m-ee0c0febda3488dff4a2d18415af415b.mp3?source=feed" data-dauer="202">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 5: Warum die Wirtschaft Conviatoren braucht – und keine Mentoren">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="202" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:22</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">10. Juni 2025</span>
-          <span class="name">Folge 4: Das Orakel-Problem – Woher beziehst du deine Informationen?</span>
-          <span class="laenge">3:14</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1932583-m-4285e6f14388544a058715a803005f5a.mp3?source=feed" data-dauer="194">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 4: Das Orakel-Problem – Woher beziehst du deine Informationen?">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="194" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:14</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">10. Juni 2025</span>
-          <span class="name">Folge 3: Sparen oder investieren – was deine Seele mit Geld gemeinsam hat</span>
-          <span class="laenge">3:04</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1965285-m-05072d9e0cd7556902ba7ab6b186f417.mp3?source=feed" data-dauer="184">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 3: Sparen oder investieren – was deine Seele mit Geld gemeinsam hat">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="184" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:04</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">21. Mai 2025</span>
-          <span class="name">Folge 2: Erfolg – eine Frage der Perspektive</span>
-          <span class="laenge">3:54</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1937514-m-7b96f7b01d5746e20e75601c505e5140.mp3?source=feed" data-dauer="234">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 2: Erfolg – eine Frage der Perspektive">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="234" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:54</span>
-          </div>
-        </div>
-      </details>
-      <details class="folge">
-        <summary>
-          <span class="datum">19. Mai 2025</span>
-          <span class="name">Folge 1: Impact beginnt mit einer brennenden Idee</span>
-          <span class="laenge">3:25</span>
-          <span class="zeichen">+</span>
-        </summary>
-        <div class="inhalt">
-          <p>Gründen heißt für uns nicht: einen Businessplan schreiben.</p>
-          <p>Gründen heißt: auf einen inneren Ruf hören.</p>
-          <div class="spieler" data-src="https://audio.podigee-cdn.net/1933789-m-9d386f815e8f73b9b7dcf958ce37731c.mp3?source=feed" data-dauer="205">
-            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 1: Impact beginnt mit einer brennenden Idee">&#9654;</button>
-            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
-            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:25</span>
-          </div>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-<!-- /PODCAST -->
-
-<!-- Über mich -->
-<section class="ueber" id="ueber">
-  <div class="container">
-    <div class="ueber-raster">
-      <img src="images/michael-deck.jpg" alt="Michael Deck, Geschäftsführer der Impact4Entrepreneurship gGmbH">
-      <div>
-        <span class="abschnitt-kicker">Über mich</span>
-        <h2>Unternehmertum als Berufung</h2>
-        <p><strong>Michael Deck</strong> ist Unternehmer, Visionär und Brückenbauer. Er gründete die Tiedge GmbH, ein Kingdompreneur-Unternehmen in Magdeburg.</p>
-        <p>Mit der Impact4Entrepreneurship gGmbH investiert er die Früchte unternehmerischen Erfolgs in Bildung, Chancengerechtigkeit und nachhaltige Entwicklungsprojekte.</p>
-        <p>Seine Überzeugung: Unternehmen können weit mehr als Gewinne erwirtschaften – sie können Hoffnung stiften und Gesellschaft gestalten.</p>
-        <div class="signatur">
-          <div class="name">Michael Deck</div>
-          <div class="rolle">Geschäftsführer, Impact4Entrepreneurship gGmbH</div>
-        </div>
-      </div>
-    </div>
+<!-- ================= SCHLUSS ================= -->
+<section id="vormerken" class="schluss">
+  <div class="bahn">
+    <div class="auge" style="color:var(--flieder);justify-content:center">Nächster Schritt</div>
+    <h2>Sie müssen nicht schon alle Antworten haben.</h2>
+    <p>Aber Sie sollten bereit sein, die richtigen Fragen ernst zu nehmen.
+    Schreiben Sie uns in wenigen Sätzen, woran Sie arbeiten – wir melden uns persönlich.</p>
+    <a class="knopf gross" href="mailto:michael.deck@impact4entrepreneurship.de?subject=Impact%20Circle%20%E2%80%93%20Interesse&amp;body=Guten%20Tag%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20den%20n%C3%A4chsten%20Impact%20Circle.%0A%0AWer%20ich%20bin%3A%0A%0AWoran%20ich%20gerade%20arbeite%3A%0A%0AWas%20ich%20mir%20erhoffe%3A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">Für den nächsten Impact Circle vormerken</a>
+    <p class="leise">Oder direkt: <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
   </div>
 </section>
 
-<!-- Kontakt -->
-<section class="kontakt" id="kontakt">
-  <div class="container">
-    <span class="abschnitt-kicker">Kontakt</span>
-    <h2>Lassen Sie uns ins Gespräch kommen</h2>
-    <p>Ob als Schüler, Student, Gründer, Unternehmer oder Förderer – wenn Sie werteorientiertes Unternehmertum mitgestalten möchten, freue ich mich auf Ihre Nachricht.</p>
-    <a href="mailto:michael.deck@impact4entrepreneurship.de" class="knopf">E-Mail schreiben</a>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="container fuss">
-    <span>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</span>
-    <span class="links">
-      <a href="masterclass.html">Masterclass</a>
-      <a href="leitbild.html">Leitbild</a>
-      <a href="I4E-Elevator-Pitch-Vorlage.pdf" download>Elevator-Pitch-Vorlage</a>
+  <div class="bahn fussleiste">
+    <div>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</div>
+    <div class="fuss-links">
+      <a href="Impact4Entrepreneurship-10-Jahres-Vision.pdf" class="pdf-link">10-Jahres-Vision <span>PDF · passwortgeschützt</span></a>
+      <a href="manifest.html">Manifest</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
-    </span>
+    </div>
   </div>
 </footer>
 
-<!-- PODCAST-JS -->
 <script>
-  /* Podcast-Abspieler: ein Audio-Element fuer alle Folgen, laedt erst auf Klick */
-  (function () {
-    var lauf = null;
-    var au = new Audio();
-    au.preload = 'none';
+// Menü
+const schalter=document.querySelector('.nav-schalter');
+const navi=document.getElementById('hauptnav');
+schalter.addEventListener('click',()=>{
+  const offen=navi.classList.toggle('offen');
+  schalter.setAttribute('aria-expanded',offen);
+  schalter.setAttribute('aria-label',offen?'Menü schließen':'Menü öffnen');
+});
+navi.addEventListener('click',e=>{if(e.target.tagName==='A')navi.classList.remove('offen');});
 
-    function zeit(s) {
-      s = Math.floor(s || 0);
-      var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), r = s % 60;
-      return h ? h + ':' + String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0')
-               : m + ':' + String(r).padStart(2, '0');
-    }
-    function anzeige(sp, akt, ges) {
-      sp.querySelector('.spieler-fuellung').style.width = ges ? (akt / ges * 100) + '%' : '0%';
-      sp.querySelector('.spieler-zeit').innerHTML = zeit(akt) + '&nbsp;/&nbsp;' + zeit(ges);
-      sp.querySelector('.spieler-balken').setAttribute('aria-valuenow', Math.floor(akt));
-    }
-    function zurueck(sp) {
-      if (!sp) return;
-      sp.classList.remove('laedt');
-      sp.querySelector('.spieler-knopf').innerHTML = '&#9654;';
-      anzeige(sp, 0, +sp.dataset.dauer);
-    }
-    function starte(sp) {
-      if (lauf && lauf !== sp) zurueck(lauf);
-      if (lauf === sp && !au.paused) {
-        au.pause();
-        sp.querySelector('.spieler-knopf').innerHTML = '&#9654;';
-        return;
-      }
-      if (lauf !== sp) {
-        lauf = sp;
-        sp.classList.add('laedt');
-        au.src = sp.dataset.src;
-      }
-      au.play().then(function () {
-        sp.classList.remove('laedt');
-        sp.querySelector('.spieler-knopf').innerHTML = '&#10073;&#10073;';
-      }).catch(function () {
-        sp.classList.remove('laedt');
-        sp.querySelector('.spieler-zeit').textContent = 'Wiedergabe nicht möglich';
-      });
-    }
-
-    au.addEventListener('timeupdate', function () {
-      if (lauf) anzeige(lauf, au.currentTime, au.duration || +lauf.dataset.dauer);
-    });
-    au.addEventListener('ended', function () { zurueck(lauf); lauf = null; });
-
-    document.querySelectorAll('.spieler').forEach(function (sp) {
-      sp.querySelector('.spieler-knopf').addEventListener('click', function () { starte(sp); });
-
-      var balken = sp.querySelector('.spieler-balken');
-      function springe(anteil) {
-        var ges = (lauf === sp && au.duration) ? au.duration : +sp.dataset.dauer;
-        if (lauf !== sp) starte(sp);
-        au.currentTime = Math.max(0, Math.min(ges, anteil * ges));
-        anzeige(sp, au.currentTime, ges);
-      }
-      balken.addEventListener('click', function (ev) {
-        var r = balken.getBoundingClientRect();
-        springe((ev.clientX - r.left) / r.width);
-      });
-      balken.addEventListener('keydown', function (ev) {
-        var ges = +sp.dataset.dauer;
-        if (ev.key === 'ArrowRight') { ev.preventDefault(); springe((au.currentTime + 15) / ges); }
-        else if (ev.key === 'ArrowLeft') { ev.preventDefault(); springe((au.currentTime - 15) / ges); }
-        else if (ev.key === ' ' || ev.key === 'Enter') { ev.preventDefault(); starte(sp); }
-      });
-    });
-
-    /* Zuklappen stoppt die Wiedergabe */
-    document.querySelectorAll('.folge').forEach(function (f) {
-      f.addEventListener('toggle', function () {
-        if (!f.open) {
-          var sp = f.querySelector('.spieler');
-          if (lauf === sp) { au.pause(); zurueck(sp); lauf = null; }
-        }
-      });
-    });
-  })();
+// Einblenden beim Scrollen
+const beobachter=new IntersectionObserver(eintraege=>{
+  eintraege.forEach(e=>{if(e.isIntersecting){e.target.classList.add('da');beobachter.unobserve(e.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.auf').forEach(el=>beobachter.observe(el));
 </script>
-<!-- /PODCAST-JS -->
-
-
-<!-- Hinweis beim Seitenaufruf: Masterclass -->
-<div class="hinweis-hintergrund" id="mc-hinweis" role="dialog" aria-modal="true" aria-labelledby="mc-hinweis-titel" hidden>
-  <div class="hinweis">
-    <button class="zu" type="button" aria-label="Hinweis schließen">&times;</button>
-    <div class="marke">Masterclass · Start 15. September 2026</div>
-    <h2 id="mc-hinweis-titel">Unternehmen aus Berufung.</h2>
-    <div class="unter">Schwerpunkt: Der Heilige BusinessCanvas</div>
-    <p>Sechs bis zwölf Menschen. Neun Felder. Und am Ende ein Satz, der trägt. Die Plätze sind bewusst begrenzt – die Aufnahme läuft über ein persönliches Gespräch.</p>
-    <div class="knoepfe">
-      <a href="#masterclass" class="knopf" data-schliessen>Zur Masterclass</a>
-      <a href="#bewerbung" class="knopf hell" data-schliessen>Jetzt bewerben</a>
-    </div>
-    <p class="datum">Zur Vorbereitung: die <a href="I4E-Elevator-Pitch-Vorlage.pdf" download style="color:var(--lila-akzent);font-weight:600">Elevator-Pitch-Vorlage als PDF</a> – sieben Fragen zu Ihrem Vorhaben.</p>
-  </div>
-</div>
-
-<script>
-(function () {
-  var overlay = document.getElementById('mc-hinweis');
-  if (!overlay) return;
-  var kasten = overlay.querySelector('.hinweis');
-  var zuKnopf = overlay.querySelector('.zu');
-  var vorher = null;
-
-  function oeffnen() {
-    vorher = document.activeElement;
-    overlay.hidden = false;
-    // Ein Bildaufbau abwarten, damit die Einblendung sichtbar wird
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () { overlay.classList.add('sichtbar'); });
-    });
-    document.body.style.overflow = 'hidden';
-    zuKnopf.focus();
-  }
-
-  function schliessen() {
-    overlay.classList.remove('sichtbar');
-    document.body.style.overflow = '';
-    window.setTimeout(function () { overlay.hidden = true; }, 350);
-    if (vorher && vorher.focus) vorher.focus();
-  }
-
-  zuKnopf.addEventListener('click', schliessen);
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) schliessen(); });
-  overlay.querySelectorAll('[data-schliessen]').forEach(function (a) {
-    a.addEventListener('click', schliessen);
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !overlay.hidden) schliessen();
-    // Tastaturfokus im Hinweis halten
-    if (e.key === 'Tab' && !overlay.hidden) {
-      var ziele = kasten.querySelectorAll('button, a[href]');
-      if (!ziele.length) return;
-      var erste = ziele[0], letzte = ziele[ziele.length - 1];
-      if (e.shiftKey && document.activeElement === erste) { e.preventDefault(); letzte.focus(); }
-      else if (!e.shiftKey && document.activeElement === letzte) { e.preventDefault(); erste.focus(); }
-    }
-  });
-
-  // Bei jedem Seitenaufruf zeigen – bewusst ohne Speicherung
-  window.setTimeout(oeffnen, 1100);
-})();
-</script>
-
 </body>
 </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vor Gott verantwortet – Manifest und Gründungs-Charta | Impact4Entrepreneurship</title>
+<meta name="description" content="Die geistliche Quelle unserer Arbeit und die sieben Selbstbindungen, an denen wir uns messen lassen.">
+<link rel="icon" href="images/i4e-logo.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --tief:#2f003a;
+  --lila:#7a2a90;
+  --flieder:#cdb6d6;
+  --flieder-hell:#ecdff0;
+  --grund:#faf5f8;
+  --weiss:#fffdff;
+  --text:#3a2f40;
+  --sanft:#6f6577;
+  --messing:#b98b4a;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--text);background:var(--grund);
+  line-height:1.7;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:3px solid var(--lila);outline-offset:3px;border-radius:4px;}
+
+.bahn{max-width:1180px;margin:0 auto;padding:0 28px;}
+.spalte{max-width:700px;margin:0 auto;padding:0 28px;}
+
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.16;color:var(--tief);}
+p{font-size:17.5px;}
+.auge{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--lila);display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.auge::before{content:"";width:34px;height:1px;background:var(--flieder);flex:0 0 auto;}
+
+header{position:sticky;top:0;z-index:60;background:rgba(250,245,248,.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(205,182,214,.5);}
+.kopf{display:flex;align-items:center;gap:26px;height:74px;}
+.kopf img{height:34px;width:auto;}
+.zurueck{margin-left:auto;font-size:14.5px;font-weight:500;color:var(--sanft);text-decoration:none;}
+.zurueck:hover{color:var(--lila);}
+
+/* Hero */
+.hero{background:var(--tief);color:#efe6f3;padding:96px 0 88px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;left:-10%;bottom:-40%;width:52%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(185,139,74,.24),transparent 68%);pointer-events:none;}
+.hero .spalte{position:relative;z-index:2;}
+.hero .auge{color:var(--messing);}
+.hero .auge::before{background:rgba(185,139,74,.5);}
+.hero h1{font-size:clamp(32px,4.6vw,50px);color:#fff;letter-spacing:-.015em;}
+.hero p{color:#c6b3ce;margin-top:24px;font-size:19px;}
+
+section{padding:82px 0;}
+section.hell{background:var(--weiss);}
+.abschnitt{margin-bottom:44px;}
+.abschnitt:last-child{margin-bottom:0;}
+.abschnitt h2{font-size:clamp(24px,3vw,32px);margin-bottom:14px;}
+.abschnitt p{color:var(--text);}
+.abschnitt p+p{margin-top:14px;}
+
+.merksatz{font-family:var(--serif);font-size:clamp(21px,2.8vw,27px);line-height:1.42;color:var(--tief);
+  border-left:3px solid var(--messing);padding-left:24px;margin:34px 0;}
+
+/* Charta */
+.charta-kopf{text-align:center;max-width:620px;margin:0 auto 48px;}
+.charta-kopf h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px;}
+.charta-kopf p{color:var(--sanft);}
+.charta{max-width:760px;margin:0 auto;counter-reset:c;}
+.satz{position:relative;padding:26px 0 26px 74px;border-bottom:1px solid rgba(205,182,214,.55);}
+.satz:last-child{border-bottom:0;}
+.satz::before{counter-increment:c;content:counter(c);position:absolute;left:0;top:26px;
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--messing);color:var(--messing);
+  font-family:var(--serif);font-size:18px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;}
+.satz h3{font-size:20px;margin-bottom:7px;}
+.satz p{font-size:16.5px;color:var(--sanft);line-height:1.65;}
+
+/* Schluss */
+.schluss{background:var(--tief);color:#efe6f3;text-align:center;padding:92px 0;}
+.schluss h2{color:#fff;font-size:clamp(26px,3.4vw,38px);max-width:22ch;margin:0 auto;}
+.schluss p{color:#c6b3ce;max-width:56ch;margin:22px auto 0;}
+.knopf{display:inline-block;background:#fff;color:var(--tief);text-decoration:none;
+  font-size:16px;font-weight:600;padding:15px 30px;border-radius:100px;margin-top:32px;
+  transition:background .2s,transform .2s;}
+.knopf:hover{background:var(--flieder-hell);transform:translateY(-1px);}
+
+footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
+.fussleiste{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
+.fussleiste a{color:#c6b3ce;text-decoration:none;}
+.fussleiste a:hover{color:#fff;}
+.fuss-links{display:flex;flex-wrap:wrap;gap:20px;}
+
+@media(max-width:640px){
+  section{padding:60px 0;}
+  .hero{padding:66px 0 60px;}
+  .satz{padding-left:60px;}
+  .satz::before{width:36px;height:36px;font-size:16px;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .knopf:hover{transform:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bahn kopf">
+    <a href="index.html" aria-label="Impact4Entrepreneurship – Startseite"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship"></a>
+    <a class="zurueck" href="index.html">← Zurück zur Startseite</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="spalte">
+    <div class="auge">Manifest</div>
+    <h1>Unternehmen können mehr sein als Maschinen für Wachstum. Sie können Orte des Segens werden.</h1>
+    <p>Wir begleiten Menschen, die ihr Unternehmertum vor Gott verantworten und Unternehmen
+    bauen wollen, die in ihrem Wesen – nicht nur durch Spenden oder Worte – dem Guten dienen.</p>
+  </div>
+</section>
+
+<section>
+  <div class="spalte">
+    <div class="abschnitt">
+      <h2>Die geistliche These</h2>
+      <p>Gott wird nicht erst dann relevant, wenn ein Teil des Gewinns gespendet wird.
+      Die tiefere Frage lautet: Was bedeutet Gottes Gegenwart für das Produkt, die
+      Eigentumsordnung, den Umgang mit Mitarbeitern, die Wahrheit im Verkauf, den Einsatz
+      von Kapital und die Grenzen des Wachstums?</p>
+    </div>
+
+    <div class="abschnitt">
+      <h2>Der Mensch vor dem Unternehmen</h2>
+      <p>Ein Unternehmen trägt Spuren seines Gründers. Darum beginnt verantwortetes
+      Unternehmertum mit der Arbeit am Menschen: an Motivation, Angst, Ehrgeiz, Macht,
+      Freiheit, Demut, Mut und Treue.</p>
+    </div>
+
+    <p class="merksatz">Nicht zuerst: Wie gründe ich ein Unternehmen? Sondern: Zu welchem
+    Menschen muss ich werden, damit das Unternehmen, das ich baue, Segen stiftet?</p>
+
+    <div class="abschnitt">
+      <h2>Der Kreis</h2>
+      <p>Der Impact Circle ist ein geschützter Lern- und Entscheidungsraum für Menschen, die
+      nicht nur fragen: Was kann ich bauen? – sondern: Was soll durch mich in die Welt kommen?</p>
+    </div>
+
+    <div class="abschnitt">
+      <h2>Die Frucht</h2>
+      <p>Ziel ist nicht religiöse Dekoration eines gewöhnlichen Unternehmens. Ziel ist, dass
+      das Gute in der Substanz erkennbar wird: in dem, was geschaffen wird, wie Menschen
+      behandelt werden, wie Macht begrenzt wird und wofür wirtschaftliche Freiheit
+      eingesetzt wird.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hell">
+  <div class="bahn">
+    <div class="charta-kopf">
+      <div class="auge" style="justify-content:center">Gründungs-Charta</div>
+      <h2>Sieben Selbstbindungen</h2>
+      <p>Diese Charta ist keine Behauptung, Gottes Willen vollständig zu kennen.
+      Sie ist eine Selbstbindung an Prüfung, Demut und Verantwortung.</p>
+    </div>
+
+    <div class="charta">
+      <div class="satz">
+        <h3>Der Mensch ist nicht Mittel zum Zweck.</h3>
+        <p>Mitarbeiter, Kunden, Gründer und Partner besitzen Würde, die keinem wirtschaftlichen
+        Ziel untergeordnet werden darf.</p>
+      </div>
+      <div class="satz">
+        <h3>Eigentum bedeutet Verantwortung.</h3>
+        <p>Eigentum gibt Gestaltungsmacht. Gerade deshalb verlangt es Rechenschaft und die
+        Frage, wem durch diese Macht gedient wird.</p>
+      </div>
+      <div class="satz">
+        <h3>Gewinn ist notwendig, aber nicht Gott.</h3>
+        <p>Wirtschaftliche Tragfähigkeit ermöglicht Wirkung. Sie ist ein Mittel und ein
+        Prüfstein – nicht der letzte Sinn des Unternehmens.</p>
+      </div>
+      <div class="satz">
+        <h3>Wahrheit ist nicht verhandelbar.</h3>
+        <p>Ein Unternehmen, das Wirkung behauptet und zugleich durch Täuschung, Ausbeutung
+        oder Selbstbetrug lebt, widerspricht seiner eigenen Sendung.</p>
+      </div>
+      <div class="satz">
+        <h3>Wachstum braucht Grenzen.</h3>
+        <p>Nicht alles, was skalierbar ist, soll skaliert werden. Reife zeigt sich auch in der
+        Fähigkeit, auf Möglichkeiten zu verzichten.</p>
+      </div>
+      <div class="satz">
+        <h3>Arbeit kann Dienst werden.</h3>
+        <p>Unternehmertum kann ein Ort sein, an dem Begabungen, Verantwortung und
+        Schöpfungskraft dem Leben dienen. Das macht wirtschaftliche Arbeit nicht automatisch
+        heilig – aber es eröffnet die Möglichkeit, sie zu heiligen.</p>
+      </div>
+      <div class="satz">
+        <h3>Die Frucht entscheidet.</h3>
+        <p>Die Glaubwürdigkeit dieser Vision zeigt sich nicht in religiöser Sprache, sondern
+        an den Früchten: mehr Würde, Wahrheit, Verantwortung, Gerechtigkeit, Freiheit und Segen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="schluss">
+  <div class="bahn">
+    <div class="auge" style="color:var(--messing);justify-content:center">Den Weg kennenlernen</div>
+    <h2>Wenn Sie das anspricht, sprechen wir darüber.</h2>
+    <p>Der Impact Circle ist der Ort, an dem aus diesen Sätzen konkrete Entscheidungen werden.</p>
+    <a class="knopf" href="index.html#vormerken">Zum Impact Circle</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="bahn fussleiste">
+    <div>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</div>
+    <div class="fuss-links">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
