@@ -247,6 +247,39 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
   .auf{opacity:1;transform:none;transition:none;}
   .knopf:hover,.rand-karte:hover{transform:none;}
 }
+
+/* ---------- Pop-up: Workshop-Einladung ---------- */
+.pop{position:fixed;inset:0;z-index:200;display:none;align-items:center;
+  justify-content:center;padding:22px;background:rgba(28,0,36,.74);
+  backdrop-filter:blur(5px);}
+.pop.offen{display:flex;}
+.pop-fenster{background:var(--grund);border-radius:22px;max-width:660px;width:100%;
+  max-height:92vh;overflow-y:auto;position:relative;
+  box-shadow:0 30px 76px rgba(28,0,36,.46);animation:popauf .32s ease both;}
+@keyframes popauf{from{opacity:0;transform:translateY(16px) scale(.985);}to{opacity:1;}}
+.pop-fenster video{width:100%;height:auto;aspect-ratio:16/9;display:block;
+  border-radius:22px 22px 0 0;background:#000;}
+.pop-text{padding:26px 30px 30px;}
+.pop-text .auge{justify-content:flex-start;margin-bottom:12px;}
+.pop-text h3{font-family:var(--serif);font-weight:700;font-size:27px;line-height:1.18;
+  color:var(--tief);margin-bottom:10px;}
+.pop-text p{font-size:16px;color:var(--sanft);line-height:1.62;margin:0;}
+.pop-fakten{display:flex;flex-wrap:wrap;gap:8px;margin:17px 0 21px;}
+.pop-fakten span{background:var(--weiss);border:1px solid var(--flieder);border-radius:100px;
+  padding:6px 15px;font-size:14px;color:var(--tief);}
+.pop-knoepfe{display:flex;flex-wrap:wrap;gap:13px;align-items:center;}
+.pop-spaeter{background:none;border:0;color:var(--sanft);font-size:15px;cursor:pointer;
+  text-decoration:underline;padding:8px 4px;font-family:inherit;}
+.pop-spaeter:hover{color:var(--tief);}
+.pop-zu{position:absolute;top:12px;right:12px;width:38px;height:38px;border:0;
+  border-radius:50%;background:rgba(47,0,58,.66);color:#fff;font-size:21px;line-height:1;
+  cursor:pointer;z-index:2;}
+.pop-zu:hover{background:rgba(47,0,58,.88);}
+@media(prefers-reduced-motion:reduce){.pop-fenster{animation:none;}}
+@media(max-width:760px){
+  .pop-text{padding:22px 22px 26px;}
+  .pop-text h3{font-size:22px;}
+}
 </style>
 </head>
 <body>
@@ -576,6 +609,77 @@ const beobachter=new IntersectionObserver(eintraege=>{
   eintraege.forEach(e=>{if(e.isIntersecting){e.target.classList.add('da');beobachter.unobserve(e.target);}});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.auf').forEach(el=>beobachter.observe(el));
+</script>
+
+<!-- ================= POP-UP: EINLADUNG ================= -->
+<!-- Hinweis: Für den Workshop "Bitcoin im Unternehmeralltag" (Kingdompreneurship
+     Summit, 30./31. Oktober 2026, Anmeldung über www.cks-summit.com) liegen Video und
+     Vorschaubild bereits unter video/bitcoin-workshop.mp4 bzw. -poster.jpg bereit.
+     Zum Umschalten genügt es, oben die beiden Dateinamen sowie Titel, Text, Fakten
+     und das Ziel des Knopfes auszutauschen. -->
+<div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pop-titel" hidden>
+  <div class="pop-fenster">
+    <button class="pop-zu" id="pop-zu" type="button" aria-label="Einladung schließen">&times;</button>
+    <video id="pop-video" controls preload="none" playsinline
+           poster="video/reise-sehnsucht-poster.jpg" width="1280" height="720">
+      <source src="video/reise-sehnsucht.mp4" type="video/mp4">
+    </video>
+    <div class="pop-text">
+      <div class="auge">Einladung</div>
+      <h3 id="pop-titel">Reise ins Land der Sehnsucht</h3>
+      <p>Jeder von uns trägt eine Sehnsucht in sich – nach Liebe, nach Freiheit, nach
+        Glück. Michael Deck und Birgit Nandzik laden Sie zu einem Kurs in kleiner Runde
+        ein. Wir beginnen mit einem Schnuppertag.</p>
+      <div class="pop-fakten">
+        <span>Samstag, 21. November 2026</span>
+        <span>9 Uhr</span>
+        <span>Groß Ammensleben</span>
+      </div>
+      <div class="pop-knoepfe">
+        <a class="knopf gross"
+           href="mailto:michael.deck@impact4entrepreneurship.de?subject=Anmeldung%20Schnuppertag%20%E2%80%93%20Reise%20ins%20Land%20der%20Sehnsucht&body=Guten%20Tag%2C%0A%0Aich%20m%C3%B6chte%20zum%20Schnuppertag%20am%20Samstag%2C%2021.%20November%202026%2C%20um%209%20Uhr%20in%20Gro%C3%9F%20Ammensleben%20kommen.%0A%0AName%3A%0ATelefon%3A%0AIch%20komme%20mit%20%28Anzahl%20Personen%29%3A%0A%0ADas%20besch%C3%A4ftigt%20mich%20gerade%3A%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">
+          Zum Schnuppertag anmelden</a>
+        <button class="pop-spaeter" id="pop-spaeter" type="button">Vielleicht später</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var WARTEN = 2000;   // Verzögerung in Millisekunden
+
+  var pop = document.getElementById("pop");
+  if (!pop) return;
+  var video = document.getElementById("pop-video");
+  var vorher = null;
+
+  function auf() {
+    vorher = document.activeElement;
+    pop.hidden = false;
+    pop.classList.add("offen");
+    document.body.style.overflow = "hidden";
+    document.getElementById("pop-zu").focus();
+  }
+
+  function schliessen() {
+    pop.classList.remove("offen");
+    pop.hidden = true;
+    document.body.style.overflow = "";
+    if (video && !video.paused) video.pause();
+    if (vorher && vorher.focus) vorher.focus();
+  }
+
+  document.getElementById("pop-zu").addEventListener("click", schliessen);
+  document.getElementById("pop-spaeter").addEventListener("click", schliessen);
+  pop.addEventListener("click", function (e) { if (e.target === pop) schliessen(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && pop.classList.contains("offen")) schliessen();
+  });
+
+  // Erscheint bei jedem Aufruf der Seite
+  window.setTimeout(auf, WARTEN);
+})();
 </script>
 </body>
 </html>
