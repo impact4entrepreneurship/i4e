@@ -612,33 +612,32 @@ document.querySelectorAll('.auf').forEach(el=>beobachter.observe(el));
 </script>
 
 <!-- ================= POP-UP: EINLADUNG ================= -->
-<!-- Hinweis: Für den Workshop "Bitcoin im Unternehmeralltag" (Kingdompreneurship
-     Summit, 30./31. Oktober 2026, Anmeldung über www.cks-summit.com) liegen Video und
-     Vorschaubild bereits unter video/bitcoin-workshop.mp4 bzw. -poster.jpg bereit.
-     Zum Umschalten genügt es, oben die beiden Dateinamen sowie Titel, Text, Fakten
-     und das Ziel des Knopfes auszutauschen. -->
+<!-- Hinweis: Die Einladung zum Schnuppertag "Reise ins Land der Sehnsucht"
+     (21.11.2026, Groß Ammensleben) liegt als video/reise-sehnsucht.mp4 bzw. -poster.jpg
+     bereit und läuft unverändert auf michaeldeck.de weiter. Zum Umschalten genügt es,
+     unten die beiden Dateinamen sowie Titel, Text, Fakten und das Ziel des Knopfes
+     auszutauschen. -->
 <div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pop-titel" hidden>
   <div class="pop-fenster">
     <button class="pop-zu" id="pop-zu" type="button" aria-label="Einladung schließen">&times;</button>
     <video id="pop-video" controls preload="none" playsinline
-           poster="video/reise-sehnsucht-poster.jpg" width="1280" height="720">
-      <source src="video/reise-sehnsucht.mp4" type="video/mp4">
+           poster="video/bitcoin-workshop-poster.jpg" width="1280" height="720">
+      <source src="video/bitcoin-workshop.mp4" type="video/mp4">
     </video>
     <div class="pop-text">
-      <div class="auge">Einladung</div>
-      <h3 id="pop-titel">Reise ins Land der Sehnsucht</h3>
-      <p>Jeder von uns trägt eine Sehnsucht in sich – nach Liebe, nach Freiheit, nach
-        Glück. Michael Deck und Birgit Nandzik laden Sie zu einem Kurs in kleiner Runde
-        ein. Wir beginnen mit einem Schnuppertag.</p>
+      <div class="auge">Workshop</div>
+      <h3 id="pop-titel">Bitcoin im Unternehmeralltag</h3>
+      <p>Nicht als Spekulation, sondern als Frage an die eigene Bilanz: Was bedeutet
+        knappes Geld für Denken, Vorsorge und Verantwortung im Unternehmen? Michael Deck
+        hält den Workshop beim Kingdompreneurship Summit.</p>
       <div class="pop-fakten">
-        <span>Samstag, 21. November 2026</span>
-        <span>9 Uhr</span>
-        <span>Groß Ammensleben</span>
+        <span>30. / 31. Oktober 2026</span>
+        <span>Frankenthal</span>
+        <span>Kingdompreneurship Summit</span>
       </div>
       <div class="pop-knoepfe">
-        <a class="knopf gross"
-           href="mailto:michael.deck@impact4entrepreneurship.de?subject=Anmeldung%20Schnuppertag%20%E2%80%93%20Reise%20ins%20Land%20der%20Sehnsucht&body=Guten%20Tag%2C%0A%0Aich%20m%C3%B6chte%20zum%20Schnuppertag%20am%20Samstag%2C%2021.%20November%202026%2C%20um%209%20Uhr%20in%20Gro%C3%9F%20Ammensleben%20kommen.%0A%0AName%3A%0ATelefon%3A%0AIch%20komme%20mit%20%28Anzahl%20Personen%29%3A%0A%0ADas%20besch%C3%A4ftigt%20mich%20gerade%3A%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">
-          Zum Schnuppertag anmelden</a>
+        <a class="knopf gross" href="https://www.cks-summit.com/"
+           target="_blank" rel="noopener">Zum Summit anmelden</a>
         <button class="pop-spaeter" id="pop-spaeter" type="button">Vielleicht später</button>
       </div>
     </div>
