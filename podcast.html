@@ -67,6 +67,7 @@ section.hell{background:var(--weiss);}
 .folge .inhalt p{font-size:16px;color:var(--sanft);margin-bottom:12px;}
 .folge .inhalt a{color:var(--lila);}
 .folge audio{width:100%;max-width:520px;margin-top:8px;}
+/* PODCAST-CSS */
 /* Abspieler */
 .spieler {
     display: flex; align-items: center; gap: 15px;
@@ -94,6 +95,7 @@ section.hell{background:var(--weiss);}
     font-variant-numeric: tabular-nums; white-space: nowrap;
   }
 .spieler.laedt .spieler-knopf { opacity: 0.55; cursor: progress; }
+/* /PODCAST-CSS */
 
 
 /* Newsletter */
@@ -172,6 +174,7 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
 
 <section class="hell">
   <div class="bahn">
+<!-- PODCAST -->
     <div class="folgen">
       <details class="folge">
         <summary>
@@ -596,6 +599,7 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
         </div>
       </details>
     </div>
+<!-- /PODCAST -->
     </div>
   </div>
 </section>
@@ -624,6 +628,7 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
   </div>
 </footer>
 
+<!-- PODCAST-JS -->
 <script>
   /* Podcast-Abspieler: ein Audio-Element fuer alle Folgen, laedt erst auf Klick */
   (function () {
@@ -707,5 +712,6 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
     });
   })();
 </script>
+<!-- /PODCAST-JS -->
 </body>
 </html>

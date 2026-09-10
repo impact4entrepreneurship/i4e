@@ -2,9 +2,12 @@
 
 ## Podcast-Folgen aktualisieren
 
-Auf der Startseite gibt es den Abschnitt **„Menschen mit Wirkung"** mit allen
-Podcast-Folgen zum Aufklappen. Die Seite ist statisch – neue Folgen erscheinen
+Die Podcast-Seite **`podcast.html`** listet alle Folgen von „Menschen mit
+Wirkung" zum Aufklappen. Die Seite ist statisch – neue Folgen erscheinen
 also **nicht von selbst**, wenn du sie bei Podigee veröffentlichst.
+
+> Seit dem 10.09.2026 pflegt das Skript `podcast.html` (vorher `index.html`,
+> wo der Podcast früher auf der Startseite stand).
 
 ### Wenn eine neue Folge online ist
 
@@ -16,15 +19,32 @@ git pull
 python3 werkzeuge/podcast-aktualisieren.py
 ```
 
-Das Skript holt die Folgen vom Podigee-Feed und schreibt die Liste neu.
-Danach veröffentlichen:
+Das Skript holt die Folgen vom Podigee-Feed und schreibt drei Dinge neu:
+die **Folgenliste**, das **JavaScript des Abspielers** und die **Anzahl der
+Folgen** im Einleitungstext. Danach veröffentlichen:
 
 ```bash
 git add -A && git commit -m "Podcast: neue Folge ergänzt" && git push
 ```
 
 Nach ein bis zwei Minuten ist es live unter
-https://impact4entrepreneurship.github.io/i4e/
+https://impact4entrepreneurship.de/podcast.html
+
+### Was das Skript nicht anfasst
+
+Überschrift, Einleitung und Gestaltung der Seite stehen fest in
+`podcast.html`. Das Skript ersetzt nur, was zwischen diesen Markern steht:
+
+| Marker | Inhalt |
+|---|---|
+| `<!-- PODCAST -->` … `<!-- /PODCAST -->` | die Folgenliste |
+| `/* PODCAST-CSS */` … `/* /PODCAST-CSS */` | das Aussehen des Abspielers |
+| `<!-- PODCAST-JS -->` … `<!-- /PODCAST-JS -->` | der Abspieler selbst |
+
+**Diese sechs Marker müssen stehen bleiben.** Gehen sie verloren – etwa beim
+Umbau der Seite –, findet das Skript seinen Platz nicht mehr. Genau das ist
+im Sommer 2026 zweimal passiert: Danach fehlten Abspieler und JavaScript,
+und die Folgen mussten von Hand nachgetragen werden.
 
 > **Das `git pull` am Anfang ist wichtig.** Wird an der Seite auch von anderer
 > Stelle gearbeitet, ist der lokale Ordner sonst veraltet – und ein Push würde

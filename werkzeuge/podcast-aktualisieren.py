@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Traegt die Folgen des Podcasts "Menschen mit Wirkung" in index.html ein.
+Traegt die Folgen des Podcasts "Menschen mit Wirkung" in podcast.html ein.
 
 Holt den Podigee-Feed und schreibt daraus die aufklappbare Folgenliste.
 Setzt beim ersten Lauf ausserdem das noetige CSS und JavaScript ein.
@@ -25,7 +25,7 @@ from pathlib import Path
 
 FEED = "https://impact4entrepreneurship.podigee.io/feed/mp3"
 SEITE = "https://impact4entrepreneurship.podigee.io/"
-ZIEL = Path(__file__).resolve().parent.parent / "index.html"
+ZIEL = Path(__file__).resolve().parent.parent / "podcast.html"
 
 # Nachtraege: Text, der in den Podigee-Shownotes fehlt, aber auf der Webseite
 # stehen soll. Aufbau:  "Anfang des Folgentitels": [(suchen, ersetzen), ...]
@@ -42,86 +42,34 @@ MONATE = {"Jan": "Januar", "Feb": "Februar", "Mar": "März", "Apr": "April",
           "May": "Mai", "Jun": "Juni", "Jul": "Juli", "Aug": "August",
           "Sep": "September", "Oct": "Oktober", "Nov": "November", "Dec": "Dezember"}
 
-CSS = """  /* ---------- Podcast ---------- */
-  .podcast { background: var(--weiss); }
-  .podcast-intro { max-width: 640px; color: var(--text-sanft); margin-bottom: 48px; }
-  .podcast-intro a { color: var(--lila-akzent); font-weight: 600; border-bottom: 1px solid var(--flieder); }
-  .podcast-intro a:hover { border-color: var(--lila-akzent); }
-  .folgen { display: flex; flex-direction: column; gap: 12px; }
-  .folge {
-    background: var(--grund); border: 1px solid var(--flieder-hell);
-    border-radius: 14px; overflow: hidden; transition: border-color 0.2s ease;
-  }
-  .folge[open] { border-color: var(--flieder); }
-  .folge summary {
-    list-style: none; cursor: pointer; padding: 20px 26px;
-    display: grid; grid-template-columns: auto 1fr auto auto;
-    align-items: center; gap: 18px;
-  }
-  .folge summary::-webkit-details-marker { display: none; }
-  .folge .datum {
-    font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em;
-    color: var(--lila-dunkel); background: var(--flieder-hell);
-    padding: 5px 12px; border-radius: 100px; white-space: nowrap;
-  }
-  .folge .name {
-    font-family: 'Playfair Display', serif; font-weight: 600;
-    font-size: 1.12rem; color: var(--lila-tief); line-height: 1.3;
-  }
-  .folge .laenge {
-    font-size: 0.88rem; color: var(--text-sanft);
-    font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  .folge .zeichen {
-    color: var(--lila-akzent); font-size: 1.4rem;
-    transition: transform 0.2s ease; flex: none; line-height: 1;
-  }
-  .folge[open] .zeichen { transform: rotate(45deg); }
-  .folge .inhalt { padding: 0 26px 22px; }
-  .folge .inhalt p {
-    color: var(--text-sanft); font-size: 0.98rem;
-    margin-bottom: 18px; white-space: pre-line;
-  }
-
-  /* Eigener Abspieler */
-  .spieler {
+# Nur der Abspieler. Das uebrige Aussehen der Folgenliste steht fest in podcast.html.
+CSS = """/* Abspieler */
+.spieler {
     display: flex; align-items: center; gap: 15px;
     background: var(--flieder-hell); border-radius: 100px; padding: 10px 20px 10px 10px;
   }
-  .spieler-knopf {
+.spieler-knopf {
     width: 42px; height: 42px; border-radius: 50%; border: none;
-    background: var(--lila-dunkel); color: #fff; cursor: pointer;
+    background: var(--lila); color: #fff; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     flex: none; transition: 0.2s ease; font-size: 15px; line-height: 1;
   }
-  .spieler-knopf:hover { background: var(--lila-akzent); transform: scale(1.06); }
-  .spieler-knopf:focus-visible { outline: 2px solid var(--lila-tief); outline-offset: 3px; }
-  .spieler-balken {
+.spieler-knopf:hover { background: var(--tief); transform: scale(1.06); }
+.spieler-knopf:focus-visible { outline: 2px solid var(--tief); outline-offset: 3px; }
+.spieler-balken {
     flex: 1; height: 6px; background: rgba(91, 21, 109, 0.16);
     border-radius: 100px; cursor: pointer; position: relative; min-width: 60px;
   }
-  .spieler-fuellung {
-    height: 100%; width: 0; background: var(--lila-dunkel);
+.spieler-fuellung {
+    height: 100%; width: 0; background: var(--lila);
     border-radius: 100px; transition: width 0.1s linear;
   }
-  .spieler-balken:focus-visible { outline: 2px solid var(--lila-dunkel); outline-offset: 4px; }
-  .spieler-zeit {
-    font-size: 0.84rem; color: var(--lila-dunkel); font-weight: 600;
+.spieler-balken:focus-visible { outline: 2px solid var(--lila); outline-offset: 4px; }
+.spieler-zeit {
+    font-size: 0.84rem; color: var(--lila); font-weight: 600;
     font-variant-numeric: tabular-nums; white-space: nowrap;
   }
-  .spieler.laedt .spieler-knopf { opacity: 0.55; cursor: progress; }
-
-  @media (max-width: 680px) {
-    .folge summary { grid-template-columns: 1fr auto; gap: 8px 14px; padding: 18px 20px; }
-    .folge .datum { grid-row: 1; grid-column: 1; }
-    .folge .laenge { grid-row: 1; grid-column: 2; justify-self: end; }
-    .folge .name { grid-row: 2; grid-column: 1 / -1; font-size: 1.05rem; }
-    .folge .zeichen { display: none; }
-    .folge .inhalt { padding: 0 20px 20px; }
-    .spieler { gap: 11px; padding: 9px 15px 9px 9px; }
-    .spieler-zeit { font-size: 0.78rem; }
-  }
-"""
+.spieler.laedt .spieler-knopf { opacity: 0.55; cursor: progress; }"""
 
 JS = """<script>
   /* Podcast-Abspieler: ein Audio-Element fuer alle Folgen, laedt erst auf Klick */
@@ -273,7 +221,7 @@ def baue_html(folgen):
           <span class="datum">{html.escape(datum_de(f['datum']))}</span>
           <span class="name">{titel}</span>
           <span class="laenge">{dauer_txt(sek)}</span>
-          <span class="zeichen">+</span>
+          <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
           {absatz}
@@ -286,20 +234,11 @@ def baue_html(folgen):
         </div>
       </details>""")
 
+    # Ueberschrift und Einleitung stehen fest in podcast.html - hier nur die Liste.
     return f"""{M_HTML[0]}
-<section class="podcast" id="podcast">
-  <div class="container">
-    <span class="abschnitt-kicker">Podcast</span>
-    <h2>Menschen mit Wirkung</h2>
-    <p class="podcast-intro">Einmal im Monat sprechen wir mit Menschen, die etwas bewegen – über Berufung,
-      Verantwortung und die Frage, wie Wirtschaft dem Menschen dienen kann. Alle {len(folgen)} Folgen zum Anhören,
-      auch bei <a href="{SEITE}" target="_blank" rel="noopener">Podigee</a>
-      und über den <a href="{FEED}" target="_blank" rel="noopener">RSS-Feed</a>.</p>
     <div class="folgen">
 {chr(10).join(karten)}
     </div>
-  </div>
-</section>
 {M_HTML[1]}"""
 
 
@@ -331,27 +270,28 @@ def main():
     schritte = []
 
     # 1) CSS vor dem Media-Query-Block bzw. vor dem Ende des <style>
-    neu, was = setze_block(neu, M_CSS, CSS.rstrip(), "  /* ---------- Fusszeile ---------- */"
-                           if "  /* ---------- Fusszeile ---------- */" in neu else "</style>")
+    anker_css = ".folge audio{width:100%;max-width:520px;margin-top:8px;}"
+    neu, was = setze_block(neu, M_CSS, CSS.rstrip(),
+                           anker_css if anker_css in neu else "</style>", davor=False)
     schritte.append(f"CSS {was}")
 
-    # 2) HTML vor dem Abschnitt "Über mich"
+    # 2) Folgenliste zwischen die Marker
     html_block = baue_html(folgen)
-    neu, was = setze_block(neu, M_HTML, html_block, "<!-- Über mich -->")
+    neu, was = setze_block(neu, M_HTML, html_block, '    <div class="folgen">')
     schritte.append(f"Folgenliste {was} ({len(folgen)} Folgen)")
 
     # 3) JavaScript vor </body>
     neu, was = setze_block(neu, M_JS, JS, "</body>")
     schritte.append(f"JavaScript {was}")
 
-    # 4) Navigationspunkt
-    nav_alt = '<a href="#newsletter">Newsletter</a>'
-    if 'href="#podcast"' not in neu and nav_alt in neu:
-        neu = neu.replace(nav_alt, nav_alt + '\n      <a href="#podcast">Podcast</a>', 1)
-        schritte.append("Navigationspunkt ergaenzt")
+    # 4) Anzahl der Folgen im Einleitungstext und in der Seitenbeschreibung
+    anzahl_neu, treffer = re.subn(r"(?<=Alle )\d+(?= Folgen)", str(len(folgen)), neu)
+    if treffer and anzahl_neu != neu:
+        neu = anzahl_neu
+        schritte.append(f"Anzahl der Folgen auf {len(folgen)} gesetzt ({treffer} Stellen)")
 
     if neu == quelle:
-        print("Keine Aenderung noetig - index.html ist bereits aktuell.")
+        print("Keine Aenderung noetig - podcast.html ist bereits aktuell.")
         return
 
     if nur_probe:
