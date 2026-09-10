@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Menschen mit Wirkung – Podcast | Impact4Entrepreneurship</title>
-<meta name="description" content="Alle 22 Folgen des Podcasts „Menschen mit Wirkung" zum Anhören.">
+<meta name="description" content="Alle 23 Folgen des Podcasts „Menschen mit Wirkung" zum Anhören.">
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="images/i4e-logo.png">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -67,6 +67,34 @@ section.hell{background:var(--weiss);}
 .folge .inhalt p{font-size:16px;color:var(--sanft);margin-bottom:12px;}
 .folge .inhalt a{color:var(--lila);}
 .folge audio{width:100%;max-width:520px;margin-top:8px;}
+/* Abspieler */
+.spieler {
+    display: flex; align-items: center; gap: 15px;
+    background: var(--flieder-hell); border-radius: 100px; padding: 10px 20px 10px 10px;
+  }
+.spieler-knopf {
+    width: 42px; height: 42px; border-radius: 50%; border: none;
+    background: var(--lila); color: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex: none; transition: 0.2s ease; font-size: 15px; line-height: 1;
+  }
+.spieler-knopf:hover { background: var(--tief); transform: scale(1.06); }
+.spieler-knopf:focus-visible { outline: 2px solid var(--tief); outline-offset: 3px; }
+.spieler-balken {
+    flex: 1; height: 6px; background: rgba(91, 21, 109, 0.16);
+    border-radius: 100px; cursor: pointer; position: relative; min-width: 60px;
+  }
+.spieler-fuellung {
+    height: 100%; width: 0; background: var(--lila);
+    border-radius: 100px; transition: width 0.1s linear;
+  }
+.spieler-balken:focus-visible { outline: 2px solid var(--lila); outline-offset: 4px; }
+.spieler-zeit {
+    font-size: 0.84rem; color: var(--lila); font-weight: 600;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+.spieler.laedt .spieler-knopf { opacity: 0.55; cursor: progress; }
+
 
 /* Newsletter */
 .ausgaben{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;}
@@ -135,7 +163,7 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
     <h1>Menschen mit Wirkung</h1>
     <p>Einmal im Monat sprechen wir mit Menschen, die etwas bewegen – über Berufung,
     Verantwortung und die Frage, wie Wirtschaft dem Menschen dienen kann. Alle
-    22 Folgen zum Anhören, auch bei
+    23 Folgen zum Anhören, auch bei
     <a href="https://impact4entrepreneurship.podigee.io/" target="_blank" rel="noopener">Podigee</a>
     und über den
     <a href="https://impact4entrepreneurship.podigee.io/feed/mp3" target="_blank" rel="noopener">RSS-Feed</a>.</p>
@@ -145,6 +173,24 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
 <section class="hell">
   <div class="bahn">
     <div class="folgen">
+      <details class="folge">
+        <summary>
+          <span class="datum">10. September 2026</span>
+          <span class="name">Isar Valley - Gründen mit Werten</span>
+          <span class="laenge">55:34</span>
+          <span class="zeichen" aria-hidden="true">+</span>
+        </summary>
+        <div class="inhalt">
+          <p>Florian Küster: in Ostdeutschland geboren, als Kind mit den Eltern in die Freiheit geflohen. Studium in Reutlingen, London, Paris und Berlin. Drei Startups gegründet – zwei erfolgreich, eines gescheitert, dazwischen ein Burnout. Fünf Jahre bei UnternehmerTUM, Europas führendem Startup-Hub, zuletzt im Leitungsteam, wo er den MakerSpace mitgeprägt hat. Heute begleitet er Gründer, die mehr wollen als Rendite.</p>
+          <p>Sein Debütroman „Isar Valley – Gründen mit Werten&quot; erschien am 15. Mai 2026 – die Geschichte einer jungen Frau, die ihren Weg durch die Münchner Startup-Szene sucht und dabei auf klare Werte, neuen Mut und Menschen trifft, die ihr Hoffnung geben.</p>
+          <div class="spieler" data-src="https://audio.podigee-cdn.net/2591379-m-8464249090559eac4c96d1a264d6e823.mp3?source=feed" data-dauer="3334">
+            <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Isar Valley - Gründen mit Werten">&#9654;</button>
+            <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
+                 aria-valuemin="0" aria-valuemax="3334" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;55:34</span>
+          </div>
+        </div>
+      </details>
       <details class="folge">
         <summary>
           <span class="datum">29. Juli 2026</span>
@@ -159,8 +205,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2558661-m-87e82386d4e53508ab2b78b0c107ed31.mp3?source=feed" data-dauer="2438">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Realtalk Schule: Warum Bildung Werte braucht – und Konsequenz">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="2438" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2558661-m-87e82386d4e53508ab2b78b0c107ed31.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2558661-m-87e82386d4e53508ab2b78b0c107ed31.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="2438" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;40:38</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -178,8 +225,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2533318-m-594602f90fc3ee43d32d39291b7f6f18.mp3?source=feed" data-dauer="561">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Mut.Ideen.Wirkung">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="561" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2533318-m-594602f90fc3ee43d32d39291b7f6f18.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2533318-m-594602f90fc3ee43d32d39291b7f6f18.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="561" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;9:21</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -194,8 +242,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2506595-m-d84cd16acfd50e1c626ecebf21300994.mp3?source=feed" data-dauer="5646">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Thank God for Bitcoin">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="5646" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2506595-m-d84cd16acfd50e1c626ecebf21300994.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2506595-m-d84cd16acfd50e1c626ecebf21300994.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="5646" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;1:34:06</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -212,8 +261,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2477233-m-367893cef5bbdae264973ca260ff1615.mp3?source=feed" data-dauer="323">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wenn dein Unternehmen krank ist - warum Strategie nicht reicht">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="323" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2477233-m-367893cef5bbdae264973ca260ff1615.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2477233-m-367893cef5bbdae264973ca260ff1615.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="323" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;5:23</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -229,8 +279,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2473816-m-bf1870f86a000429d5bb0a6bc772672a.mp3?source=feed" data-dauer="205">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Impact beginnt mit einer brennenden Idee">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2473816-m-bf1870f86a000429d5bb0a6bc772672a.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2473816-m-bf1870f86a000429d5bb0a6bc772672a.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:25</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -245,8 +296,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2429926-m-5d30512b7f5f8316cced6c3142222b15.mp3?source=feed" data-dauer="1005">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Unternehmertum als Gefäß: Das Heilige Geschäftsmodell des Tikkun">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1005" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2429926-m-5d30512b7f5f8316cced6c3142222b15.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2429926-m-5d30512b7f5f8316cced6c3142222b15.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="1005" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;16:45</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -261,8 +313,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2428127-m-970d7d62a814f53c692f4c51be1cbb8e.mp3?source=feed" data-dauer="1341">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Warum Berufung keine Entscheidung ist">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1341" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2428127-m-970d7d62a814f53c692f4c51be1cbb8e.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2428127-m-970d7d62a814f53c692f4c51be1cbb8e.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="1341" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;22:21</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -277,8 +330,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2351440-m-e7ecaba24c66a7d07a47c2ed9e42c3aa.mp3?source=feed" data-dauer="1011">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Gott als Chef und radikale Transparenz">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1011" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2351440-m-e7ecaba24c66a7d07a47c2ed9e42c3aa.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2351440-m-e7ecaba24c66a7d07a47c2ed9e42c3aa.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="1011" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;16:51</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -294,8 +348,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2235312-m-b20ebc59e3957b5009716ff3ca069811.mp3?source=feed" data-dauer="489">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wenn Gott zum Nervensystem des Unternehmens wird">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="489" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2235312-m-b20ebc59e3957b5009716ff3ca069811.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2235312-m-b20ebc59e3957b5009716ff3ca069811.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="489" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;8:09</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -310,8 +365,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2134233-m-5062085eba4d83839250d6a796ed2e8b.mp3?source=feed" data-dauer="1117">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Wie Sie Ihre einzigartige Berufung finden">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1117" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2134233-m-5062085eba4d83839250d6a796ed2e8b.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2134233-m-5062085eba4d83839250d6a796ed2e8b.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="1117" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;18:37</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -326,8 +382,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2134163-m-1ebc30ebd5f4ed9bc21394a0eb1f6cd2.mp3?source=feed" data-dauer="1252">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Unternehmensnachfolge, KI und Spiritualität: Lichtmaximierung">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="1252" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2134163-m-1ebc30ebd5f4ed9bc21394a0eb1f6cd2.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2134163-m-1ebc30ebd5f4ed9bc21394a0eb1f6cd2.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="1252" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;20:52</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -342,8 +399,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2134139-m-b027094d6050c52508b8e9315857d11e.mp3?source=feed" data-dauer="659">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Bootstrap Company: Spiritual Foundation of Entrepreneurship">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="659" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2134139-m-b027094d6050c52508b8e9315857d11e.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2134139-m-b027094d6050c52508b8e9315857d11e.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="659" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;10:59</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -358,8 +416,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2118578-m-a1021c5b10f502d00b5714dda3e97023.mp3?source=feed" data-dauer="933">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Vom Profit zum Licht: Unternehmertum als heiliger Raum“">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="933" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2118578-m-a1021c5b10f502d00b5714dda3e97023.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2118578-m-a1021c5b10f502d00b5714dda3e97023.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="933" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;15:33</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -394,8 +453,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2055443-m-22bf86729e697d171c24fd99801295c1.mp3?source=feed" data-dauer="139">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Das Herz von I4E">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="139" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2055443-m-22bf86729e697d171c24fd99801295c1.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2055443-m-22bf86729e697d171c24fd99801295c1.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="139" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;2:19</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -410,8 +470,9 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/2023980-m-8e83432fe100132cd292f666b0ad22cf.mp3?source=feed" data-dauer="405">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 9: Dienen durch Freie Marktwirtschaft: Eine Spirituelle Sicht">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="405" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/2023980-m-8e83432fe100132cd292f666b0ad22cf.mp3?source=feed"><a href="https://audio.podigee-cdn.net/2023980-m-8e83432fe100132cd292f666b0ad22cf.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="405" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;6:45</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -422,11 +483,13 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
+          
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1980840-m-ab48cafaf9ecc51bd401a774d03504b6.mp3?source=feed" data-dauer="108">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 7: Kingdom Company – Unternehmen als Wohnung Gottes">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="108" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1980840-m-ab48cafaf9ecc51bd401a774d03504b6.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1980840-m-ab48cafaf9ecc51bd401a774d03504b6.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="108" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;1:48</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -437,11 +500,13 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
+          
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1976862-m-4c2c46c22e087574f0af5a74ed23353c.mp3?source=feed" data-dauer="150">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 6: Warum du kein Geld brauchst, um loszulegen – sondern Klarheit">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1976862-m-4c2c46c22e087574f0af5a74ed23353c.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1976862-m-4c2c46c22e087574f0af5a74ed23353c.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;2:30</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -452,11 +517,13 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
+          
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1970327-m-ee0c0febda3488dff4a2d18415af415b.mp3?source=feed" data-dauer="202">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 5: Warum die Wirtschaft Conviatoren braucht – und keine Mentoren">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="202" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1970327-m-ee0c0febda3488dff4a2d18415af415b.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1970327-m-ee0c0febda3488dff4a2d18415af415b.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="202" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:22</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -467,11 +534,13 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
+          
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1932583-m-4285e6f14388544a058715a803005f5a.mp3?source=feed" data-dauer="194">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 4: Das Orakel-Problem – Woher beziehst du deine Informationen?">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="194" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1932583-m-4285e6f14388544a058715a803005f5a.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1932583-m-4285e6f14388544a058715a803005f5a.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="194" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:14</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -482,11 +551,13 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
+          
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1965285-m-05072d9e0cd7556902ba7ab6b186f417.mp3?source=feed" data-dauer="184">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 3: Sparen oder investieren – was deine Seele mit Geld gemeinsam hat">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="184" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1965285-m-05072d9e0cd7556902ba7ab6b186f417.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1965285-m-05072d9e0cd7556902ba7ab6b186f417.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="184" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:04</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -497,11 +568,13 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <span class="zeichen" aria-hidden="true">+</span>
         </summary>
         <div class="inhalt">
+          
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1937514-m-7b96f7b01d5746e20e75601c505e5140.mp3?source=feed" data-dauer="234">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 2: Erfolg – eine Frage der Perspektive">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="234" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1937514-m-7b96f7b01d5746e20e75601c505e5140.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1937514-m-7b96f7b01d5746e20e75601c505e5140.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="234" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:54</span>
+          </div>
         </div>
       </details>
       <details class="folge">
@@ -517,10 +590,12 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
           <div class="spieler" data-src="https://audio.podigee-cdn.net/1933789-m-9d386f815e8f73b9b7dcf958ce37731c.mp3?source=feed" data-dauer="205">
             <button class="spieler-knopf" type="button" aria-label="Folge abspielen: Folge 1: Impact beginnt mit einer brennenden Idee">&#9654;</button>
             <div class="spieler-balken" role="slider" tabindex="0" aria-label="Position in der Folge"
-                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung">
-          <audio controls preload="none" src="https://audio.podigee-cdn.net/1933789-m-9d386f815e8f73b9b7dcf958ce37731c.mp3?source=feed"><a href="https://audio.podigee-cdn.net/1933789-m-9d386f815e8f73b9b7dcf958ce37731c.mp3?source=feed">Folge anhören</a></audio>
+                 aria-valuemin="0" aria-valuemax="205" aria-valuenow="0"><div class="spieler-fuellung"></div></div>
+            <span class="spieler-zeit">0:00&nbsp;/&nbsp;3:25</span>
+          </div>
         </div>
       </details>
+    </div>
     </div>
   </div>
 </section>
@@ -549,5 +624,88 @@ footer{background:#1f0027;color:#9b87a4;padding:44px 0;font-size:14.5px;}
   </div>
 </footer>
 
+<script>
+  /* Podcast-Abspieler: ein Audio-Element fuer alle Folgen, laedt erst auf Klick */
+  (function () {
+    var lauf = null;
+    var au = new Audio();
+    au.preload = 'none';
+
+    function zeit(s) {
+      s = Math.floor(s || 0);
+      var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), r = s % 60;
+      return h ? h + ':' + String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0')
+               : m + ':' + String(r).padStart(2, '0');
+    }
+    function anzeige(sp, akt, ges) {
+      sp.querySelector('.spieler-fuellung').style.width = ges ? (akt / ges * 100) + '%' : '0%';
+      sp.querySelector('.spieler-zeit').innerHTML = zeit(akt) + '&nbsp;/&nbsp;' + zeit(ges);
+      sp.querySelector('.spieler-balken').setAttribute('aria-valuenow', Math.floor(akt));
+    }
+    function zurueck(sp) {
+      if (!sp) return;
+      sp.classList.remove('laedt');
+      sp.querySelector('.spieler-knopf').innerHTML = '&#9654;';
+      anzeige(sp, 0, +sp.dataset.dauer);
+    }
+    function starte(sp) {
+      if (lauf && lauf !== sp) zurueck(lauf);
+      if (lauf === sp && !au.paused) {
+        au.pause();
+        sp.querySelector('.spieler-knopf').innerHTML = '&#9654;';
+        return;
+      }
+      if (lauf !== sp) {
+        lauf = sp;
+        sp.classList.add('laedt');
+        au.src = sp.dataset.src;
+      }
+      au.play().then(function () {
+        sp.classList.remove('laedt');
+        sp.querySelector('.spieler-knopf').innerHTML = '&#10073;&#10073;';
+      }).catch(function () {
+        sp.classList.remove('laedt');
+        sp.querySelector('.spieler-zeit').textContent = 'Wiedergabe nicht möglich';
+      });
+    }
+
+    au.addEventListener('timeupdate', function () {
+      if (lauf) anzeige(lauf, au.currentTime, au.duration || +lauf.dataset.dauer);
+    });
+    au.addEventListener('ended', function () { zurueck(lauf); lauf = null; });
+
+    document.querySelectorAll('.spieler').forEach(function (sp) {
+      sp.querySelector('.spieler-knopf').addEventListener('click', function () { starte(sp); });
+
+      var balken = sp.querySelector('.spieler-balken');
+      function springe(anteil) {
+        var ges = (lauf === sp && au.duration) ? au.duration : +sp.dataset.dauer;
+        if (lauf !== sp) starte(sp);
+        au.currentTime = Math.max(0, Math.min(ges, anteil * ges));
+        anzeige(sp, au.currentTime, ges);
+      }
+      balken.addEventListener('click', function (ev) {
+        var r = balken.getBoundingClientRect();
+        springe((ev.clientX - r.left) / r.width);
+      });
+      balken.addEventListener('keydown', function (ev) {
+        var ges = +sp.dataset.dauer;
+        if (ev.key === 'ArrowRight') { ev.preventDefault(); springe((au.currentTime + 15) / ges); }
+        else if (ev.key === 'ArrowLeft') { ev.preventDefault(); springe((au.currentTime - 15) / ges); }
+        else if (ev.key === ' ' || ev.key === 'Enter') { ev.preventDefault(); starte(sp); }
+      });
+    });
+
+    /* Zuklappen stoppt die Wiedergabe */
+    document.querySelectorAll('.folge').forEach(function (f) {
+      f.addEventListener('toggle', function () {
+        if (!f.open) {
+          var sp = f.querySelector('.spieler');
+          if (lauf === sp) { au.pause(); zurueck(sp); lauf = null; }
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>
