@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Impact4Entrepreneurship – Unternehmertum aus Verantwortung</title>
-<meta name="description" content="Ein kleiner, kuratierter Kreis für Gründer und unternehmerische Menschen: sechs Monate Arbeit an realen unternehmerischen Entscheidungen.">
+<title>Impact4Entrepreneurship – Bildung ermöglichen. Verantwortung fördern. Wirkung sichtbar machen.</title>
+<meta name="description" content="Impact4Entrepreneurship gGmbH fördert Menschen und Organisationen auf drei Wegen: Stipendien, Beteiligungen und Begleitung – mit dem Ziel sozial verantwortlichen, werteorientierten Handelns.">
 <link rel="icon" href="images/i4e-logo.png">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
@@ -48,8 +48,8 @@ header{position:sticky;top:0;z-index:60;background:rgba(250,245,248,.9);
   backdrop-filter:blur(14px);border-bottom:1px solid rgba(205,182,214,.5);}
 .kopf{display:flex;align-items:center;gap:26px;height:74px;}
 .kopf img{height:34px;width:auto;}
-nav{margin-left:auto;display:flex;align-items:center;gap:26px;}
-nav a{font-size:14.5px;font-weight:500;color:var(--sanft);text-decoration:none;transition:color .2s;}
+nav{margin-left:auto;display:flex;align-items:center;gap:24px;}
+nav a{font-size:14.5px;font-weight:500;color:var(--sanft);text-decoration:none;transition:color .2s;white-space:nowrap;}
 nav a:hover{color:var(--lila);}
 .knopf{display:inline-block;background:var(--tief);color:#fff;text-decoration:none;
   font-size:14.5px;font-weight:600;padding:11px 22px;border-radius:100px;
@@ -67,9 +67,9 @@ nav a:hover{color:var(--lila);}
 .hero .bahn{position:relative;z-index:2;}
 .hero .auge{color:var(--flieder);}
 .hero .auge::before{background:rgba(205,182,214,.5);}
-.hero h1{font-size:clamp(36px,5.4vw,62px);color:#fff;letter-spacing:-.02em;max-width:19ch;}
+.hero h1{font-size:clamp(36px,5.4vw,58px);color:#fff;letter-spacing:-.02em;max-width:20ch;}
 .hero h1 .traegt{color:var(--flieder);}
-.hero .unter{font-size:clamp(17px,2vw,20px);color:#c6b3ce;max-width:60ch;margin-top:26px;line-height:1.65;}
+.hero .unter{font-size:clamp(17px,2vw,20px);color:#c6b3ce;max-width:62ch;margin-top:26px;line-height:1.65;}
 .hero .knoepfe{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;}
 .hero .knopf{background:#fff;color:var(--tief);}
 .hero .knopf:hover{background:var(--flieder-hell);}
@@ -77,115 +77,125 @@ nav a:hover{color:var(--lila);}
 .hero .knopf.rand:hover{background:rgba(255,255,255,.08);}
 .hero .fakten{display:flex;flex-wrap:wrap;gap:34px;margin-top:52px;padding-top:26px;
   border-top:1px solid rgba(205,182,214,.22);}
-.hero .fakt b{display:block;font-family:var(--serif);font-size:26px;color:#fff;font-weight:700;line-height:1;}
+.hero .fakt b{display:block;font-family:var(--serif);font-size:22px;color:#fff;font-weight:700;line-height:1;}
 .hero .fakt span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#a893b1;
   display:block;margin-top:8px;}
 
 /* ---------- Abschnitte ---------- */
 section{padding:96px 0;}
 section.hell{background:var(--weiss);}
-.kopfzeile{max-width:64ch;margin-bottom:44px;}
+.kopfzeile{max-width:68ch;margin-bottom:44px;}
 .kopfzeile p{margin-top:18px;}
+.kopfzeile.mitte{margin-left:auto;margin-right:auto;text-align:center;}
+.kopfzeile.mitte .auge{justify-content:center;}
+.kopfzeile.mitte .auge::before{display:none;}
 
-/* ---------- Problem ---------- */
-.problem-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
-.problem-karte{background:var(--grund);border:1px solid rgba(205,182,214,.45);border-radius:16px;padding:26px;}
-section.hell .problem-karte{background:var(--grund);}
-.problem-karte h3{font-size:17.5px;margin-bottom:9px;}
-.problem-karte p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
-.pitchdeck{margin-top:26px;background:var(--tief);color:#e7d9ec;border-radius:20px;
+/* ---------- Auftrag / Zitat-Block ---------- */
+.zielzitat{margin-top:30px;background:var(--tief);color:#e7d9ec;border-radius:20px;
   padding:40px 44px;}
-.pitchdeck h3{color:#fff;font-size:23px;margin-bottom:16px;}
-.pitchdeck p{font-size:17.5px;color:#c6b3ce;max-width:72ch;}
-.pitchdeck .fragen{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
-.pitchdeck .fragen span{font-size:14px;border:1px solid rgba(205,182,214,.35);border-radius:100px;
-  padding:7px 15px;color:#d8c6df;max-width:100%;}
+.zielzitat p{font-family:var(--serif);font-size:clamp(21px,2.6vw,28px);line-height:1.4;color:#fff;font-weight:700;}
+.zielzitat span{display:block;margin-top:14px;font-family:var(--sans);font-size:15px;font-weight:500;color:#c6b3ce;}
 
-/* ---------- Der Kreis (Signatur) ---------- */
-.kreis-block{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
-.ring{position:relative;width:min(430px,100%);aspect-ratio:1;margin:0 auto;}
-.ring .scheibe{position:absolute;inset:11%;border-radius:50%;border:1px dashed rgba(122,42,144,.34);}
-.ring .mitte{position:absolute;inset:24%;border-radius:50%;background:var(--tief);color:#efe6f3;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  padding:20px;box-shadow:0 20px 50px rgba(47,0,58,.28);}
-.ring .mitte em{font-family:var(--serif);font-style:normal;font-size:13px;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--messing);}
-.ring .mitte strong{font-family:var(--serif);font-size:clamp(16px,2.1vw,20px);font-weight:700;
-  color:#fff;margin-top:9px;line-height:1.28;max-width:15ch;}
-.ring-unterschrift{font-family:var(--serif);font-size:19px;color:var(--lila);text-align:center;
-  margin-top:74px;max-width:34ch;margin-left:auto;margin-right:auto;line-height:1.4;}
-.knoten{position:absolute;top:50%;left:50%;width:126px;margin:-63px 0 0 -63px;
-  transform:rotate(var(--a)) translate(min(198px,42vw)) rotate(calc(-1 * var(--a)));
-  text-align:center;}
-.knoten b{display:flex;align-items:center;justify-content:center;
-  width:34px;height:34px;margin:0 auto 7px;border-radius:50%;
-  background:var(--weiss);border:1.5px solid var(--lila);color:var(--lila);
-  font-family:var(--serif);font-size:15px;font-weight:700;line-height:1;}
-.knoten span{display:block;font-size:14px;font-weight:600;color:var(--tief);line-height:1.3;}
-.knoten small{display:block;font-size:12.5px;color:var(--sanft);line-height:1.35;margin-top:3px;}
+.erlaubt-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:36px;}
+.erlaubt-karte{background:var(--grund);border:1px solid rgba(205,182,214,.45);border-radius:16px;padding:24px;}
+section.hell .erlaubt-karte{background:var(--grund);}
+.erlaubt-karte h3{font-size:16.5px;margin-bottom:8px;}
+.erlaubt-karte p{font-size:15px;color:var(--sanft);line-height:1.6;}
 
-.format-liste{list-style:none;}
-.format-liste li{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid rgba(205,182,214,.5);}
-.format-liste li:last-child{border-bottom:0;}
-.format-liste dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);
-  font-weight:600;flex:0 0 132px;}
-.format-liste dd{font-size:16px;}
-.ergebnis{margin-top:22px;background:var(--flieder-hell);border-radius:16px;padding:22px 24px;}
-.ergebnis p{font-size:16px;color:var(--tief);}
+/* ---------- Drei Wege Übersicht ---------- */
+.wege-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.weg-karte{background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:20px;
+  padding:34px 32px;text-decoration:none;display:block;transition:border-color .2s,transform .2s;}
+section.hell .weg-karte{background:var(--grund);}
+.weg-karte:hover{border-color:var(--lila);transform:translateY(-3px);}
+.weg-karte .nr{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--messing);
+  letter-spacing:.08em;}
+.weg-karte h3{margin:14px 0 10px;font-size:22px;}
+.weg-karte p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
+.weg-karte .pfeil{margin-top:16px;font-size:14px;font-weight:600;color:var(--lila);}
 
-/* ---------- Für wen ---------- */
-.wen{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.wen-karte{border-radius:20px;padding:34px 36px;}
-.wen-karte.ja{background:var(--tief);color:#e7d9ec;}
-.wen-karte.ja h3{color:#fff;}
-.wen-karte.nein{background:var(--weiss);border:1px solid rgba(205,182,214,.55);}
-.wen-karte h3{font-size:21px;margin-bottom:18px;}
-.wen-karte ul{list-style:none;}
-.wen-karte li{position:relative;padding-left:26px;margin-bottom:13px;font-size:16px;line-height:1.55;}
-.wen-karte.ja li{color:#cdb9d5;}
-.wen-karte.ja li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:11px;
+/* ---------- Karten-Raster generisch (Zielfoto, Fragen, Ressourcen) ---------- */
+.karten-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+.info-karte{background:var(--grund);border:1px solid rgba(205,182,214,.45);border-radius:16px;padding:26px;}
+section.hell .info-karte{background:var(--weiss);}
+.info-karte h3{font-size:17.5px;margin-bottom:9px;}
+.info-karte p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
+
+.haken-liste{list-style:none;}
+.haken-liste li{position:relative;padding-left:26px;margin-bottom:13px;font-size:16px;line-height:1.55;color:var(--sanft);}
+.haken-liste li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:11px;
   border-radius:50%;border:1.5px solid var(--messing);}
-.wen-karte.nein li{color:var(--sanft);}
-.wen-karte.nein li::before{content:"";position:absolute;left:0;top:14px;width:11px;height:1.5px;
-  background:var(--flieder);}
 
-/* ---------- Wirkung ---------- */
-.wirkung{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
-.wirkung-karte{background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:18px;padding:30px;}
-section.hell .wirkung-karte{background:var(--grund);}
-.wirkung-karte h3{font-size:19px;margin-bottom:10px;}
-.wirkung-karte p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
-.wirkung-hinweis{margin-top:24px;font-size:15.5px;color:var(--sanft);border-left:3px solid var(--messing);
-  padding-left:18px;max-width:70ch;}
+.frage-liste{list-style:none;}
+.frage-liste li{position:relative;padding:14px 0 14px 30px;border-bottom:1px solid rgba(205,182,214,.5);
+  font-size:16.5px;color:var(--tief);}
+.frage-liste li:last-child{border-bottom:0;}
+.frage-liste li::before{content:"?";position:absolute;left:0;top:14px;font-family:var(--serif);
+  font-weight:700;color:var(--lila);font-size:17px;}
 
-/* ---------- Weg hinein ---------- */
-.weg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;counter-reset:w;}
-.weg-schritt{position:relative;padding-top:44px;}
-.weg-schritt::before{counter-increment:w;content:counter(w);position:absolute;top:0;left:0;
+/* ---------- Highlight-Box (THWS / p3 / LifeTeachUS) ---------- */
+.beispiel{margin-top:8px;background:var(--flieder-hell);border-radius:16px;padding:26px 28px;}
+.beispiel .auge{margin-bottom:10px;}
+.beispiel p{font-size:16px;color:var(--tief);line-height:1.6;}
+.beispiel p+p{margin-top:12px;}
+
+/* ---------- Prozess-Kette (Kreislauf / Fluss) ---------- */
+.kette{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:30px;}
+.kette .glied{background:var(--weiss);border:1px solid rgba(205,182,214,.55);border-radius:100px;
+  padding:11px 20px;font-size:14.5px;font-weight:600;color:var(--tief);}
+section.hell .kette .glied{background:var(--grund);}
+.kette .pfeil-icon{color:var(--flieder);font-size:18px;}
+
+/* ---------- Nummerierte Schritte (Weg hinein / Kreislauf) ---------- */
+.schritte{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;counter-reset:w;margin-top:10px;}
+.schritt{position:relative;padding-top:44px;}
+.schritt::before{counter-increment:w;content:counter(w);position:absolute;top:0;left:0;
   font-family:var(--serif);font-size:34px;font-weight:700;color:var(--flieder);line-height:1;}
-.weg-schritt h3{font-size:19px;margin-bottom:9px;}
-.weg-schritt p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
+.schritt h3{font-size:18px;margin-bottom:8px;}
+.schritt p{font-size:15.5px;color:var(--sanft);line-height:1.6;}
 
-/* ---------- Person ---------- */
-.person{display:grid;grid-template-columns:270px 1fr;gap:48px;align-items:center;}
-.person .bild{border-radius:20px;overflow:hidden;background:var(--flieder-hell);}
-.person blockquote{font-family:var(--serif);font-size:clamp(21px,2.6vw,27px);line-height:1.4;
-  color:var(--tief);margin-bottom:20px;}
-.person .name{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);font-weight:600;}
-.person p{color:var(--sanft);font-size:16.5px;}
+/* ---------- Ressourcen (Bildung / Kapital / Erfahrung) ---------- */
+.ressourcen{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+.ressource-karte{background:var(--tief);color:#e7d9ec;border-radius:18px;padding:30px;}
+.ressource-karte h3{color:#fff;font-size:19px;margin-bottom:10px;}
+.ressource-karte p{font-size:15.5px;color:#c6b3ce;line-height:1.6;}
 
-/* ---------- Randnotizen ---------- */
-.rand-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+/* ---------- SDG-Pillen ---------- */
+.sdg-reihe{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.sdg-reihe span{font-size:13.5px;font-weight:600;border:1px solid var(--flieder);border-radius:100px;
+  padding:8px 16px;color:var(--tief);background:var(--weiss);}
+section.hell .sdg-reihe span{background:var(--grund);}
+
+/* ---------- Auch von uns (Podcast / Newsletter) ---------- */
+.rand-gitter{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
 .rand-karte{background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:16px;
-  padding:24px;text-decoration:none;display:block;transition:border-color .2s,transform .2s;}
+  padding:26px;text-decoration:none;display:block;transition:border-color .2s,transform .2s;}
 .rand-karte:hover{border-color:var(--lila);transform:translateY(-2px);}
 .rand-karte .art{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lila);font-weight:600;}
-.rand-karte h3{font-size:17px;margin:8px 0 7px;}
-.rand-karte p{font-size:14.5px;color:var(--sanft);line-height:1.55;}
+.rand-karte h3{font-size:18px;margin:9px 0 8px;}
+.rand-karte p{font-size:15px;color:var(--sanft);line-height:1.6;}
+.rand-karte .pfeil{margin-top:14px;font-size:14px;font-weight:600;color:var(--lila);}
+
+/* ---------- Grundsatz ---------- */
+.grundsatz{background:var(--tief);color:#efe6f3;border-radius:24px;padding:56px 50px;text-align:center;}
+.grundsatz p{font-family:var(--serif);font-size:clamp(19px,2.4vw,24px);line-height:1.55;color:#f1e6f4;max-width:60ch;margin:0 auto 14px;}
+.grundsatz .claim{margin-top:26px;font-family:var(--sans);font-size:15px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--flieder);}
+
+/* ---------- Person / Über uns ---------- */
+.person{display:grid;grid-template-columns:230px 1fr;gap:48px;align-items:center;}
+.person .bild{border-radius:20px;overflow:hidden;background:var(--flieder-hell);}
+.person blockquote{font-family:var(--serif);font-size:clamp(20px,2.4vw,25px);line-height:1.4;
+  color:var(--tief);margin-bottom:18px;}
+.person .name{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);font-weight:600;}
+.person p.rolle{color:var(--sanft);font-size:16px;margin-top:14px;}
+.stammdaten{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px 30px;}
+.stammdaten dt{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lila);font-weight:600;margin-bottom:4px;}
+.stammdaten dd{font-size:15.5px;color:var(--text);}
 
 /* ---------- Schluss ---------- */
 .schluss{background:var(--tief);color:#efe6f3;text-align:center;padding:104px 0;}
-.schluss h2{color:#fff;max-width:20ch;margin:0 auto;}
+.schluss h2{color:#fff;max-width:22ch;margin:0 auto;}
 .schluss p{color:#c6b3ce;font-size:19px;max-width:56ch;margin:24px auto 0;}
 .schluss .knopf{margin-top:34px;background:#fff;color:var(--tief);}
 .schluss .knopf:hover{background:var(--flieder-hell);}
@@ -197,10 +207,6 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
 .fussleiste a{color:#c6b3ce;text-decoration:none;}
 .fussleiste a:hover{color:#fff;}
 .fuss-links{display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
-.pdf-link{display:inline-flex;align-items:baseline;gap:8px;}
-.pdf-link span{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#7c6885;
-  border:1px solid #4a3452;border-radius:100px;padding:3px 9px;}
-.pdf-link:hover span{color:var(--flieder);border-color:#6b4d76;}
 
 /* ---------- Bewegung ---------- */
 .auf{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
@@ -208,9 +214,9 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
 
 /* ---------- Schmal ---------- */
 @media(max-width:960px){
-  .kreis-block,.person{grid-template-columns:1fr;gap:38px;}
-  .wen{grid-template-columns:1fr;}
-  .person .bild{max-width:220px;}
+  .person{grid-template-columns:1fr;gap:32px;}
+  .person .bild{max-width:200px;}
+  .grundsatz{padding:44px 30px;}
 }
 @media(max-width:820px){
   nav{position:fixed;inset:74px 0 auto;background:var(--weiss);flex-direction:column;
@@ -222,30 +228,16 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
   .nav-schalter{display:block;margin-left:auto;}
   section{padding:70px 0;}
   .hero{padding:74px 0 66px;}
-  .pitchdeck{padding:30px 26px;}
-  /* Ring wird zur Liste */
-  .ring{aspect-ratio:auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .ring .scheibe{display:none;}
-  .ring .mitte{position:static;inset:auto;border-radius:16px;grid-column:1/-1;padding:26px;}
-  .knoten{position:static;width:auto;margin:0;transform:none;text-align:left;
-    background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:14px;padding:16px;}
-  .knoten b{margin:0 0 8px;}
-  .ring-unterschrift{margin-top:20px;}
+  .zielzitat{padding:30px 26px;}
 }
 @media(max-width:640px){
-  .format-liste li{flex-direction:column;gap:5px;}
-  .format-liste dt{flex:none;}
-  .wen-karte{padding:26px 22px;}
-  .pitchdeck .fragen span{border-radius:14px;}
-}
-@media(max-width:520px){
-  .ring{grid-template-columns:1fr;}
-  .hero .fakten{gap:22px;}
+  .kette{flex-direction:column;align-items:flex-start;}
+  .kette .pfeil-icon{transform:rotate(90deg);}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   .auf{opacity:1;transform:none;transition:none;}
-  .knopf:hover,.rand-karte:hover{transform:none;}
+  .knopf:hover,.weg-karte:hover{transform:none;}
 }
 
 /* ---------- Pop-up: Workshop-Einladung ---------- */
@@ -289,12 +281,13 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
     <a href="#oben" aria-label="Impact4Entrepreneurship – Startseite"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship"></a>
     <button class="nav-schalter" aria-expanded="false" aria-controls="hauptnav" aria-label="Menü öffnen">☰</button>
     <nav id="hauptnav">
-      <a href="#problem">Problem</a>
-      <a href="#circle">Impact Circle</a>
-      <a href="#fuerwen">Für wen</a>
+      <a href="#auftrag">Unser Auftrag</a>
+      <a href="#stipendien">Stipendien</a>
+      <a href="#beteiligungen">Beteiligungen</a>
+      <a href="#begleitung">Begleitung</a>
       <a href="#wirkung">Wirkung</a>
-      <a href="#weg">Der Weg hinein</a>
-      <a class="knopf" href="#vormerken">Vormerken</a>
+      <a href="#auch-von-uns">Über uns</a>
+      <a class="knopf" href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
@@ -305,238 +298,360 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
 <section class="hero">
   <div class="bahn">
     <div class="auge">Impact4Entrepreneurship gGmbH</div>
-    <h1>Baue nicht nur ein erfolgreiches Unternehmen. Baue eines, das <span class="traegt">Verantwortung trägt</span>.</h1>
-    <p class="unter">Wir begleiten Gründer und unternehmerische Menschen dabei, wirtschaftliche
-    Entscheidungen mit Sinn, Verantwortung und persönlicher Integrität zu verbinden.</p>
+    <h1>Wirtschaft aus Berufung. <span class="traegt">Wirkung aus Klarheit.</span></h1>
+    <p class="unter">Wir glauben, dass Wirtschaft mehr sein kann als das Streben nach Gewinn.
+    Menschen können lernen, wirtschaftliche Zusammenhänge zu verstehen, Verantwortung zu
+    übernehmen und mit ihrem Handeln Wirkung zu entfalten. Impact4Entrepreneurship fördert
+    deshalb Menschen und Organisationen, die Verantwortung übernehmen wollen.</p>
     <div class="knoepfe">
-      <a class="knopf gross" href="#vormerken">Für den nächsten Impact Circle vormerken</a>
-      <a class="knopf gross rand" href="#circle">Wie das abläuft</a>
+      <a class="knopf gross" href="#auftrag">Unser Auftrag</a>
+      <a class="knopf gross rand" href="#wege">Drei Wege zur Wirkung</a>
     </div>
     <div class="fakten">
-      <div class="fakt"><b>8–12</b><span>Menschen im Kreis</span></div>
-      <div class="fakt"><b>6</b><span>Monate</span></div>
-      <div class="fakt"><b>12</b><span>gemeinsame Termine</span></div>
-      <div class="fakt"><b>3</b><span>Einzelgespräche</span></div>
+      <div class="fakt"><b>Bildung</b><span>Wissen verändern</span></div>
+      <div class="fakt"><b>Kapital</b><span>Strukturen stärken</span></div>
+      <div class="fakt"><b>Erfahrung</b><span>Menschen begleiten</span></div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROBLEM ================= -->
-<section id="problem" class="hell">
+<!-- ================= AUFTRAG ================= -->
+<section id="auftrag" class="hell">
   <div class="bahn">
     <div class="kopfzeile auf">
-      <div class="auge">Das Problem</div>
-      <h2>Gründen kann man lernen.</h2>
-      <p class="gross">Aber wer lehrt uns, welche Menschen wir als Unternehmer werden – und
-      welche Verantwortung aus Macht, Kapital und Wachstum entsteht?</p>
+      <div class="auge">Der Satzungszweck</div>
+      <h2>Bildung, die zu Handeln führt.</h2>
+      <p class="gross">Die Förderung der Bildung von Schülern und Studenten auf ethischem,
+      religiösem und marktwirtschaftlich-sozialem Gebiet – durch theoretische und praktische
+      Bildungsangebote. Wissen und Werte werden zwischen Unternehmern, Gründern,
+      Wissenschaftlern und den Geförderten ausgetauscht, mit dem Ziel, sozial verantwortliches
+      und werteorientiertes Handeln zu vermitteln. Religiöse und ethische Aspekte der Bibel
+      werden dabei in ihrem marktwirtschaftlichen Kontext betrachtet und auf die Gesellschaft
+      angewandt.</p>
     </div>
 
-    <div class="problem-gitter auf">
-      <div class="problem-karte">
-        <h3>Bildung ohne Existenz</h3>
-        <p>Unternehmerische Bildung ist häufig methodisch, aber nicht existenziell. Man lernt
-        Geschäftsmodelle, Finanzierung und Skalierung – aber selten, welche Art Mensch man dabei wird.</p>
-      </div>
-      <div class="problem-karte">
-        <h3>Wirkung als Kennzahl</h3>
-        <p>Wirkung wird oft auf Zahlen reduziert. Selbst Impact kann zu einer weiteren
-        Optimierungslogik werden, wenn die innere Haltung nicht mitwächst.</p>
-      </div>
-      <div class="problem-karte">
-        <h3>Getrennte Welten</h3>
-        <p>Sinn und Wirtschaft werden künstlich getrennt. Entweder gilt Unternehmertum als rein
-        ökonomische Tätigkeit – oder Werte bleiben Privatsache ohne Folgen für Produkt und Kapital.</p>
-      </div>
-      <div class="problem-karte">
-        <h3>Innerlich allein</h3>
-        <p>Für Fragen nach Gewissen, Macht, Geld, Berufung und persönlicher Integrität gibt es
-        nur wenige tragfähige Räume.</p>
-      </div>
+    <div class="zielzitat auf">
+      <p>„Unser Ziel ist nicht Wissen allein. Unser Ziel ist sozial verantwortliches und
+      werteorientiertes Handeln."</p>
+      <span>Der normative Kern unseres Satzungszwecks</span>
     </div>
 
-    <div class="pitchdeck auf">
-      <h3>Die entscheidenden Fragen beginnen erst nach dem Pitchdeck</h3>
-      <p>Sie tauchen auf, wenn das Geschäftsmodell steht und niemand mehr zusieht.</p>
-      <div class="fragen">
-        <span>Was darf ich nicht tun, obwohl es profitabel wäre?</span>
-        <span>Wem gehört mein Erfolg?</span>
-        <span>Was schulde ich Mitarbeitern und Kunden?</span>
-        <span>Wann ist Wachstum gut – und wann wird es Götze?</span>
+    <div class="erlaubt-gitter auf">
+      <div class="erlaubt-karte">
+        <h3>Beteiligungen</h3>
+        <p>An anderen Unternehmen, wenn diese ebenfalls ausschließlich und unmittelbar
+        gemeinnützige Zwecke verfolgen.</p>
+      </div>
+      <div class="erlaubt-karte">
+        <h3>Stipendien</h3>
+        <p>Vergabe von Stipendien und materielle Unterstützung von Studierenden gemäß
+        § 53 AO.</p>
+      </div>
+      <div class="erlaubt-karte">
+        <h3>Integration</h3>
+        <p>Begleitung von Integration durch Vermittlung der Werte eines demokratischen
+        Staatswesens.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= DER KREIS ================= -->
-<section id="circle">
+<!-- ================= DREI WEGE ÜBERSICHT ================= -->
+<section id="wege">
   <div class="bahn">
-    <div class="kopfzeile auf">
-      <div class="auge">Das Angebot</div>
-      <h2>Der Impact Circle</h2>
-      <p class="gross">Ein kleiner, kuratierter Kreis. Keine Massenveranstaltung. Sechs Monate
-      gemeinsames Lernen, persönliche Begleitung und Arbeit an realen unternehmerischen
-      Entscheidungen.</p>
+    <div class="kopfzeile mitte auf" style="max-width:56ch">
+      <div class="auge">Unser Wirkungsmodell</div>
+      <h2>Drei Wege zur Wirkung</h2>
+      <p class="gross">Wir fördern Menschen. Wir beteiligen uns an Organisationen. Wir begleiten
+      Menschen auf ihrem Weg in Verantwortung. Über allen drei Wegen steht dasselbe Zielfoto:
+      aus Bildung und Unterstützung soll sozial verantwortliches, werteorientiertes Handeln
+      entstehen.</p>
     </div>
 
-    <div class="kreis-block">
-     <div>
-      <div class="ring auf" role="img"
-           aria-label="Sechs Lernbewegungen um eine Mitte: Berufung, Person, Verantwortung, Unternehmen, Entscheidung, Sendung. In der Mitte die Leitfrage: Zu welchem Menschen muss ich werden, damit das Unternehmen, das ich baue, Segen stiftet?">
-        <div class="scheibe" aria-hidden="true"></div>
-        <div class="mitte">
-          <em>Die Frage in der Mitte</em>
-          <strong>Zu welchem Menschen muss ich werden?</strong>
-        </div>
-        <div class="knoten" style="--a:-90deg"><b>1</b><span>Berufung</span><small>Warum soll dieses Unternehmen existieren?</small></div>
-        <div class="knoten" style="--a:-30deg"><b>2</b><span>Person</span><small>Wer werde ich durch Macht, Risiko und Scheitern?</small></div>
-        <div class="knoten" style="--a:30deg"><b>3</b><span>Verantwortung</span><small>Wem gegenüber bin ich rechenschaftspflichtig?</small></div>
-        <div class="knoten" style="--a:90deg"><b>4</b><span>Unternehmen</span><small>Wie werden Werte in Produkt, Kultur und Kapital konkret?</small></div>
-        <div class="knoten" style="--a:150deg"><b>5</b><span>Entscheidung</span><small>Wie erkenne ich Grenzen und notwendige Neins?</small></div>
-        <div class="knoten" style="--a:210deg"><b>6</b><span>Sendung</span><small>Welche Wirkung soll dieses Unternehmen ermöglichen?</small></div>
-      </div>
-      <p class="ring-unterschrift auf">… damit das Unternehmen, das ich baue, Segen stiftet.</p>
-     </div>
+    <div class="wege-gitter auf">
+      <a class="weg-karte" href="#stipendien">
+        <div class="nr">WEG 1</div>
+        <h3>Stipendien</h3>
+        <p>Wir fördern Menschen, die sich fachlich und persönlich weiterentwickeln und ihre
+        Fähigkeiten in den Dienst anderer stellen wollen.</p>
+        <div class="pfeil">Mehr erfahren →</div>
+      </a>
+      <a class="weg-karte" href="#beteiligungen">
+        <div class="nr">WEG 2</div>
+        <h3>Beteiligungen</h3>
+        <p>Wir geben Kapital dort, wo gesellschaftliche Wirkung entstehen kann – als Werkzeug,
+        nicht als Selbstzweck.</p>
+        <div class="pfeil">Mehr erfahren →</div>
+      </a>
+      <a class="weg-karte" href="#begleitung">
+        <div class="nr">WEG 3</div>
+        <h3>Begleitung</h3>
+        <p>Wir begleiten Menschen an Wendepunkten – von der Idee zu echtem, verantwortlichem
+        Handeln.</p>
+        <div class="pfeil">Mehr erfahren →</div>
+      </a>
+    </div>
+  </div>
+</section>
 
-      <div class="auf">
-        <h3 style="margin-bottom:14px">So läuft es</h3>
-        <dl class="format-liste">
-          <li><dt>Dauer</dt><dd>Sechs Monate, zwei gemeinsame Termine im Monat</dd></li>
-          <li><dt>Größe</dt><dd>Acht bis zwölf Menschen – klein genug für echte Begleitung</dd></li>
-          <li><dt>Termine</dt><dd>Zwölf Gruppentermine à zwei Stunden, dazu drei persönliche Gespräche</dd></li>
-          <li><dt>Arbeitsweise</dt><dd>Lehre, Textarbeit, Fallbesprechung, Peer-Beratung, Stille – und konkrete Entscheidungen</dd></li>
-          <li><dt>Begleitung</dt><dd>Michael Deck, Unternehmer und ausgebildeter geistlicher Begleiter</dd></li>
-        </dl>
-        <div class="ergebnis">
-          <p><strong>Am Ende steht kein Zertifikat</strong>, sondern eine persönliche
-          Unternehmer-Charta und eine Unternehmens-Charta – übersetzt in reale Entscheidungen
-          für Produkt, Kultur, Kapital und Führung.</p>
-        </div>
+<!-- ================= 1. STIPENDIEN ================= -->
+<section id="stipendien" class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Weg 1 — Stipendien</div>
+      <h2>Wir fördern Menschen, die Verantwortung übernehmen wollen.</h2>
+      <p class="gross">Bildung verändert nicht nur Wissen. Bildung kann den Blick auf die
+      eigene Verantwortung verändern. Impact4Entrepreneurship vergibt Stipendien an Menschen,
+      die sich fachlich und persönlich weiterentwickeln und ihre Fähigkeiten später in den
+      Dienst anderer Menschen stellen wollen. Uns interessiert dabei nicht allein die
+      akademische Leistung, sondern die Frage: Was will ein Mensch mit dem, was er lernt,
+      bewirken?</p>
+    </div>
+
+    <div class="beispiel auf">
+      <div class="auge" style="color:var(--lila)">Schwerpunkt</div>
+      <p><strong>Managing Global Dynamics – THWS Business School.</strong> Der Masterstudiengang
+      verbindet wirtschaftliches Denken mit globalen Herausforderungen, Digitalisierung,
+      Transformation, Innovation und unternehmerischer Verantwortung.</p>
+      <p>Das passt zu einer zentralen Überzeugung von Impact4Entrepreneurship: Zukunft braucht
+      Menschen, die komplexe Zusammenhänge verstehen und bereit sind, daraus Verantwortung
+      abzuleiten. Wir können Studiengebühren, Weiterbildungskosten oder andere förderfähige
+      Bildungsmaßnahmen unterstützen, soweit dies mit unserem gemeinnützigen Auftrag vereinbar
+      ist. Entscheidend ist nicht allein das Studium – entscheidend ist die Wirkung, die daraus
+      entstehen soll.</p>
+    </div>
+
+    <div class="karten-gitter auf" style="margin-top:36px">
+      <div class="info-karte">
+        <h3>Unser Zielfoto</h3>
+        <p>Ein geförderter Mensch verfügt nach seiner Ausbildung nicht nur über zusätzliches
+        Wissen. Er versteht wirtschaftliche und gesellschaftliche Zusammenhänge besser, trifft
+        verantwortungsvolle Entscheidungen, entwickelt eigene Ideen, bezieht andere Menschen
+        ein – und übersetzt sein Wissen in konkretes Handeln.</p>
+      </div>
+      <div class="info-karte">
+        <h3>Wirkung messen</h3>
+        <p>Ein Stipendium endet für uns nicht mit der Auszahlung der Förderung. Wir wollen
+        verstehen: Welche Entwicklung hat stattgefunden? Welche Verantwortung wurde übernommen?
+        Welche Projekte oder Unternehmen sind entstanden? Welche Menschen wurden erreicht?</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FÜR WEN ================= -->
-<section id="fuerwen" class="hell">
+<!-- ================= 2. BETEILIGUNGEN ================= -->
+<section id="beteiligungen">
   <div class="bahn">
     <div class="kopfzeile auf">
-      <div class="auge">Für wen</div>
-      <h2>Bewusst nicht für alle.</h2>
-      <p class="gross">Für Menschen, die ein Unternehmen gründen, aufbauen oder neu ausrichten
-      und sich nicht mit der Frage zufriedengeben, ob etwas funktioniert – sondern auch wissen
-      wollen, ob es richtig ist.</p>
+      <div class="auge">Weg 2 — Beteiligungen</div>
+      <h2>Wir geben Kapital dort, wo gesellschaftliche Wirkung entstehen kann.</h2>
+      <p class="gross">Manchmal braucht eine gute Idee nicht noch ein Seminar. Sie braucht
+      Kapital. Impact4Entrepreneurship kann sich deshalb an anderen gemeinnützigen
+      Organisationen und Unternehmen beteiligen, soweit dies unserem Satzungszweck und den
+      gemeinnützigkeitsrechtlichen Voraussetzungen entspricht. Kapital ist für uns kein
+      Selbstzweck, sondern ein Werkzeug. Die entscheidende Frage lautet nicht: Wie hoch ist die
+      Rendite? Sondern: Welche Wirkung wird mit diesem Kapital möglich?</p>
     </div>
 
-    <div class="wen auf">
-      <div class="wen-karte ja">
-        <h3>Hier sind Sie richtig, wenn Sie …</h3>
-        <ul>
-          <li>nicht nur Wissen suchen, sondern Orientierung;</li>
-          <li>bereit sind, die eigene Person und Motivation kritisch zu prüfen;</li>
-          <li>Verantwortung nicht als Marketingbegriff verwenden wollen;</li>
-          <li>offen sind für philosophische, ethische und – je nach Format – geistliche Fragen;</li>
-          <li>eine konkrete Gründungs-, Führungs- oder Entscheidungssituation mitbringen.</li>
+    <div class="beispiel auf">
+      <div class="auge" style="color:var(--lila)">Beispiel</div>
+      <p><strong>[p3] Werkstatt gGmbH.</strong> Die [p3] Werkstatt verbindet Bildung,
+      Ausbildung, Integration, Wertevermittlung und praktisches unternehmerisches Handeln. Mit
+      einer förderorientierten Beteiligung trägt I4E dazu bei, wirtschaftliche Strukturen
+      aufzubauen, die wiederum die gemeinnützige Arbeit dauerhaft stärken.</p>
+    </div>
+
+    <h3 class="auf" style="margin-top:40px;margin-bottom:6px">So entsteht ein Kreislauf</h3>
+    <div class="kette auf">
+      <span class="glied">Kapital</span><span class="pfeil-icon">→</span>
+      <span class="glied">Wirtschaftliche Tätigkeit</span><span class="pfeil-icon">→</span>
+      <span class="glied">Ausbildung &amp; Integration</span><span class="pfeil-icon">→</span>
+      <span class="glied">Persönliche Entwicklung</span><span class="pfeil-icon">→</span>
+      <span class="glied">Gesellschaftliche Wirkung</span>
+    </div>
+
+    <div class="karten-gitter auf" style="margin-top:44px">
+      <div class="info-karte">
+        <h3>Unser Verständnis von Impact Investment</h3>
+        <ul class="haken-liste" style="margin-top:10px">
+          <li>Welches gesellschaftliche Problem wird gelöst?</li>
+          <li>Welche Menschen profitieren davon?</li>
+          <li>Wie wird die Wirkung messbar?</li>
+          <li>Wie kann sich die Organisation langfristig selbst tragen?</li>
         </ul>
       </div>
-      <div class="wen-karte nein">
-        <h3>Noch nicht der richtige Ort, wenn Sie …</h3>
-        <ul>
-          <li>vor allem Methoden, Vorlagen und Checklisten suchen;</li>
-          <li>eine schnelle Antwort erwarten statt einer ehrlichen Frage;</li>
-          <li>ein Zertifikat für den Lebenslauf brauchen;</li>
-          <li>gerade keine reale unternehmerische Entscheidung vor sich haben;</li>
-          <li>lieber anonym in einer großen Gruppe bleiben möchten.</li>
-        </ul>
+      <div class="info-karte">
+        <h3>Unser Zielfoto</h3>
+        <p>Eine Beteiligung von I4E soll dazu beitragen, dass eine Organisation nach einigen
+        Jahren stärker ist als zuvor – nicht nur finanziell, sondern auch hinsichtlich
+        Ausbildungsplätzen, Integration, Beschäftigung, persönlicher Entwicklung,
+        gesellschaftlicher Teilhabe und wirtschaftlicher Selbstständigkeit. Kapital wird so zu
+        einem Instrument der Befähigung.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= WIRKUNG ================= -->
-<section id="wirkung">
+<!-- ================= 3. BEGLEITUNG ================= -->
+<section id="begleitung" class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Weg 3 — Begleitung</div>
+      <h2>Wirkung beginnt beim Menschen.</h2>
+      <p class="gross">Nicht jede Veränderung beginnt mit Kapital. Oft beginnt sie mit einem
+      Gespräch. Menschen stehen an Wendepunkten ihres Lebens, haben Ideen, spüren
+      Verantwortung und möchten etwas verändern. Aber zwischen einer Idee und wirklichem
+      Handeln liegt häufig ein weiter Weg. Impact4Entrepreneurship begleitet Menschen dabei,
+      diesen Weg zu gehen.</p>
+    </div>
+
+    <div class="beispiel auf">
+      <div class="auge" style="color:var(--lila)">Beispiel</div>
+      <p><strong>LifeTeachUS.</strong> Menschen begegnen Unternehmern, Persönlichkeiten und
+      Praktikern, die ihre Erfahrungen weitergeben – nicht als theoretisches Wissen, sondern
+      als gelebte Erfahrung. Wir schaffen Räume, in denen Menschen Fragen stellen dürfen: Was
+      kann ich? Was will ich? Welche Verantwortung habe ich? Welches Problem möchte ich lösen?
+      Was hindert mich daran, zu handeln? Und: Was ist jetzt mein nächster Schritt?</p>
+    </div>
+
+    <a class="rand-karte auf" href="podcast.html" style="margin-top:20px;max-width:70ch">
+      <div class="art">Podcast · Menschen mit Wirkung</div>
+      <h3>Begleitung zum Hineinhören, bevor sie zum Gespräch wird</h3>
+      <p>Einmal im Monat sprechen wir mit Menschen, die etwas bewegen – über Berufung,
+      Verantwortung und die Frage, wie Wirtschaft dem Menschen dienen kann. So wirkt
+      Begleitung schon, bevor ein persönlicher Weg beginnt.</p>
+      <div class="pfeil">Alle Folgen hören →</div>
+    </a>
+
+    <h3 class="auf" style="margin-top:40px;margin-bottom:6px">Von Inspiration zu Handlung</h3>
+    <p class="auf" style="color:var(--sanft);max-width:70ch">Eine Veranstaltung ist für uns
+    nicht erfolgreich, weil hundert Menschen im Raum waren. Sie ist erfolgreich, wenn Menschen
+    anschließend anders handeln. Deshalb verstehen wir Begleitung zunehmend als
+    Entwicklungsprozess:</p>
+    <div class="kette auf" style="margin-top:20px">
+      <span class="glied">Begegnung</span><span class="pfeil-icon">→</span>
+      <span class="glied">Reflexion</span><span class="pfeil-icon">→</span>
+      <span class="glied">Klarheit</span><span class="pfeil-icon">→</span>
+      <span class="glied">Entscheidung</span><span class="pfeil-icon">→</span>
+      <span class="glied">Handlung</span><span class="pfeil-icon">→</span>
+      <span class="glied">Wirkung</span>
+    </div>
+
+    <div class="info-karte auf" style="margin-top:40px;max-width:70ch">
+      <h3>Unser Zielfoto</h3>
+      <p>Ein Mensch verlässt unsere Begleitung nicht nur motiviert. Er weiß klarer: welches
+      Problem er lösen möchte, welche Verantwortung er übernehmen kann, welchen nächsten
+      Schritt er gehen wird – und woran er erkennt, ob daraus Wirkung entsteht. Begleitung
+      bedeutet deshalb für uns: Menschen nicht abhängig zu machen, sondern handlungsfähig.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WIRKUNGSMODELL ================= -->
+<section>
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Wie die drei Wege zusammenwirken</div>
+      <h2>Unser Wirkungsmodell</h2>
+      <p class="gross">Impact4Entrepreneurship verbindet drei Ressourcen. Denn häufig braucht
+      ein Mensch zunächst Bildung, dann Begleitung – und manchmal braucht seine Idee
+      anschließend Kapital.</p>
+    </div>
+
+    <div class="ressourcen auf">
+      <div class="ressource-karte">
+        <h3>Bildung</h3>
+        <p>Wir ermöglichen Menschen Zugang zu Wissen, Perspektiven und persönlicher
+        Entwicklung.</p>
+      </div>
+      <div class="ressource-karte">
+        <h3>Kapital</h3>
+        <p>Wir stellen Mittel dort zur Verfügung, wo daraus nachhaltige gesellschaftliche
+        Wirkung entstehen kann.</p>
+      </div>
+      <div class="ressource-karte">
+        <h3>Erfahrung</h3>
+        <p>Wir bringen Menschen mit Unternehmern, Lehrenden, Mentoren und Praktikern
+        zusammen.</p>
+      </div>
+    </div>
+
+    <div class="kette auf" style="margin-top:40px;justify-content:center">
+      <span class="glied">Lernen</span><span class="pfeil-icon">→</span>
+      <span class="glied">Klarheit</span><span class="pfeil-icon">→</span>
+      <span class="glied">Verantwortung</span><span class="pfeil-icon">→</span>
+      <span class="glied">Handlung</span><span class="pfeil-icon">→</span>
+      <span class="glied">Unternehmertum</span><span class="pfeil-icon">→</span>
+      <span class="glied">Wirkung</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WIRKUNG SICHTBAR MACHEN ================= -->
+<section id="wirkung" class="hell">
   <div class="bahn">
     <div class="kopfzeile auf">
       <div class="auge">Wirkung</div>
-      <h2>Woran wir uns messen lassen.</h2>
-      <p class="gross">Am Ende steht nicht nur ein besseres Geschäftsmodell. Es steht ein
-      klareres Verständnis davon, wofür Sie Verantwortung tragen – und eine konkrete Charta
-      dafür, wie diese Verantwortung in Ihrem Unternehmen sichtbar wird.</p>
+      <h2>Wirkung muss sichtbar werden.</h2>
+      <p class="gross">Der Name Impact4Entrepreneurship verpflichtet uns. Deshalb wollen wir
+      nicht nur darüber berichten, was wir tun – wir wollen zunehmend zeigen, was dadurch
+      anders geworden ist. Für jedes von uns geförderte Projekt definieren wir ein Zielfoto.</p>
     </div>
 
-    <div class="wirkung auf">
-      <div class="wirkung-karte">
-        <h3>Person</h3>
-        <p>Werden Teilnehmer klarer, wahrhaftiger, verantwortungsfähiger und freier in ihren
-        Entscheidungen?</p>
-      </div>
-      <div class="wirkung-karte">
-        <h3>Unternehmen</h3>
-        <p>Werden diese Haltungen in Governance, Kultur, Produkt, Kundenbeziehungen, Kapital
-        und im Umgang mit Mitarbeitern sichtbar?</p>
-      </div>
-      <div class="wirkung-karte">
-        <h3>Multiplikation</h3>
-        <p>Entstehen Menschen und Organisationen, die die Idee weitertragen – ohne dauernde
-        Abhängigkeit von uns?</p>
+    <ul class="frage-liste auf">
+      <li>Wo stehen wir heute?</li>
+      <li>Was soll sich verändern?</li>
+      <li>Welche Schritte führen dorthin?</li>
+      <li>Welche Kennzahlen zeigen uns, ob diese Veränderung tatsächlich eintritt?</li>
+    </ul>
+
+    <div class="auf" style="margin-top:40px">
+      <h3 style="margin-bottom:14px">Orientierung an den Sustainable Development Goals</h3>
+      <p style="color:var(--sanft);max-width:70ch">Unsere Wirkungsmessung orientiert sich an
+      international etablierten Wirkungszielen wie den SDGs der Vereinten Nationen. Je nach
+      Projekt können insbesondere folgende Ziele relevant sein:</p>
+      <div class="sdg-reihe">
+        <span>SDG 4 · Hochwertige Bildung</span>
+        <span>SDG 8 · Menschenwürdige Arbeit &amp; Wirtschaftswachstum</span>
+        <span>SDG 9 · Industrie, Innovation &amp; Infrastruktur</span>
+        <span>SDG 10 · Weniger Ungleichheiten</span>
+        <span>SDG 17 · Partnerschaften zur Erreichung der Ziele</span>
       </div>
     </div>
-    <p class="wirkung-hinweis auf">Reichweite ohne Veränderung wäre für uns kein Erfolg.</p>
-  </div>
-</section>
 
-<!-- ================= WEG HINEIN ================= -->
-<section id="weg" class="hell">
-  <div class="bahn">
-    <div class="kopfzeile auf">
-      <div class="auge">Der Weg hinein</div>
-      <h2>Ein Gespräch statt eines Formulars.</h2>
-      <p class="gross">Die Plätze sind begrenzt und die Arbeit ist persönlich. Deshalb prüfen
-      beide Seiten, ob es passt.</p>
-    </div>
-
-    <div class="weg auf">
-      <div class="weg-schritt">
-        <h3>Sie melden sich</h3>
-        <p>Schreiben Sie uns in wenigen Sätzen, wer Sie sind, woran Sie gerade arbeiten und was
-        Sie sich erhoffen. Sie bekommen binnen drei Werktagen eine persönliche Antwort.</p>
-      </div>
-      <div class="weg-schritt">
-        <h3>Wir sprechen miteinander</h3>
-        <p>In einem vertraulichen Erstgespräch klären wir gemeinsam, ob der Impact Circle der
-        richtige Ort für Sie ist – und ob Sie zur Gruppe passen.</p>
-      </div>
-      <div class="weg-schritt">
-        <h3>Beide entscheiden</h3>
-        <p>Danach entscheiden Sie. Und wir auch. Wer aufgenommen wird, beginnt mit einem
-        persönlichen Aufnahmegespräch.</p>
-      </div>
+    <div class="beispiel auf" style="margin-top:36px">
+      <div class="auge" style="color:var(--lila)">Ein SDG allein ist noch keine Wirkung</div>
+      <p>Deshalb verbinden wir jedes Ziel mit konkreten Kennzahlen: Wie viele Menschen haben
+      eine Ausbildung abgeschlossen? Wie viele Arbeitsplätze wurden geschaffen? Wie viele
+      Menschen konnten in Beschäftigung integriert werden? Wie viele unternehmerische Ideen
+      wurden tatsächlich umgesetzt – und wie viele davon bestehen nach zwölf oder 24 Monaten?
+      Welche Veränderung ist bei den beteiligten Menschen eingetreten? So entsteht aus Anspruch
+      messbare Verantwortung.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= PERSON ================= -->
+<!-- ================= GRUNDSATZ ================= -->
 <section>
   <div class="bahn">
-    <div class="person auf">
-      <div class="bild"><img src="images/michael-headshot.jpg" alt="Michael Deck"></div>
-      <div>
-        <blockquote>„Menschen brauchen keinen weiteren Kurs. Sie brauchen einen Raum, in dem
-        ihre Berufung und ihre Bilanz nebeneinander liegen dürfen."</blockquote>
-        <div class="name">Michael Deck · Geschäftsführer</div>
-        <p style="margin-top:16px">Unternehmer, Gesellschafter eines Familienbetriebes und
-        ausgebildeter geistlicher Begleiter. Er führt den Impact Circle und verantwortet Lehre,
-        Begleitung und die Auswahl der Gruppe.</p>
-      </div>
+    <div class="grundsatz auf">
+      <p>Wir wollen Menschen nicht sagen, was sie denken sollen. Wir wollen ihnen helfen,
+      klarer zu erkennen, Verantwortung zu übernehmen und ins Handeln zu kommen.</p>
+      <p>Wir glauben an Unternehmertum, das dem Menschen dient. Wir glauben an Bildung, die in
+      Handlung mündet. Wir glauben an Kapital, das Wirkung ermöglicht. Und wir glauben daran,
+      dass nachhaltige Veränderung dort beginnt, wo ein Mensch bereit ist, Verantwortung zu
+      übernehmen.</p>
+      <div class="claim">Bildung ermöglichen. Verantwortung fördern. Wirkung sichtbar machen.</div>
     </div>
   </div>
 </section>
 
-<!-- ================= RANDNOTIZEN ================= -->
-<section class="hell">
+<!-- ================= AUCH VON UNS ================= -->
+<section id="auch-von-uns">
   <div class="bahn">
     <div class="kopfzeile auf">
       <div class="auge">Auch von uns</div>
-      <h2>Wenn Sie erst einmal zuhören wollen.</h2>
+      <h2>Wenn Sie erst einmal zuhören oder lesen wollen.</h2>
     </div>
     <div class="rand-gitter auf">
       <a class="rand-karte" href="podcast.html">
@@ -544,37 +659,56 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
         <h3>Menschen mit Wirkung</h3>
         <p>Einmal im Monat ein Gespräch über Berufung, Verantwortung und die Frage, wie
         Wirtschaft dem Menschen dienen kann.</p>
+        <div class="pfeil">Zum Podcast →</div>
       </a>
       <a class="rand-karte" href="newsletter.html">
         <div class="art">Newsletter</div>
         <h3>Aus unserer Arbeit</h3>
         <p>Regelmäßige Einblicke in das, was sich bei uns bewegt – ehrlich, persönlich und
         konkret.</p>
-      </a>
-      <a class="rand-karte" href="projekte.html">
-        <div class="art">Projekt</div>
-        <h3>Wegfinder e.V.</h3>
-        <p>Ein Ort, an dem pflegende Angehörige nicht allein bleiben. Wir begleiten den Verein
-        mit Strategie und unternehmerischer Methodik.</p>
-      </a>
-      <a class="rand-karte" href="manifest.html">
-        <div class="art">Manifest</div>
-        <h3>Vor Gott verantwortet</h3>
-        <p>Die geistliche Quelle unserer Arbeit – und die sieben Selbstbindungen, an denen wir
-        uns messen lassen.</p>
+        <div class="pfeil">Zum Newsletter →</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ================= SCHLUSS ================= -->
-<section id="vormerken" class="schluss">
+<!-- ================= ÜBER UNS ================= -->
+<section id="ueber-uns" class="hell">
+  <div class="bahn">
+    <div class="kopfzeile auf">
+      <div class="auge">Über uns</div>
+      <h2>Wer hinter Impact4Entrepreneurship steht.</h2>
+    </div>
+
+    <div class="person auf">
+      <div class="bild"><img src="images/michael-headshot.jpg" alt="Michael Deck"></div>
+      <div>
+        <blockquote>„Wir fördern Menschen und Organisationen, die Verantwortung übernehmen
+        wollen – mit Bildung, Kapital und Erfahrung."</blockquote>
+        <div class="name">Michael Deck · Geschäftsführer</div>
+        <p class="rolle">Unternehmer und Geschäftsführer der Impact4Entrepreneurship gGmbH. Er
+        verantwortet die strategische Ausrichtung der drei Wege – Stipendien, Beteiligungen
+        und Begleitung – entlang des Satzungszwecks.</p>
+      </div>
+    </div>
+
+    <dl class="stammdaten auf">
+      <div><dt>Unternehmen</dt><dd>Impact4Entrepreneurship gGmbH</dd></div>
+      <div><dt>Rechtsform</dt><dd>Gemeinnützige GmbH (gGmbH)</dd></div>
+      <div><dt>Geschäftsführer</dt><dd>Michael Deck</dd></div>
+      <div><dt>Kontakt</dt><dd><a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= KONTAKT / SCHLUSS ================= -->
+<section id="kontakt" class="schluss">
   <div class="bahn">
     <div class="auge" style="color:var(--flieder);justify-content:center">Nächster Schritt</div>
-    <h2>Sie müssen nicht schon alle Antworten haben.</h2>
-    <p>Aber Sie sollten bereit sein, die richtigen Fragen ernst zu nehmen.
-    Schreiben Sie uns in wenigen Sätzen, woran Sie arbeiten – wir melden uns persönlich.</p>
-    <a class="knopf gross" href="mailto:michael.deck@impact4entrepreneurship.de?subject=Impact%20Circle%20%E2%80%93%20Interesse&amp;body=Guten%20Tag%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20den%20n%C3%A4chsten%20Impact%20Circle.%0A%0AWer%20ich%20bin%3A%0A%0AWoran%20ich%20gerade%20arbeite%3A%0A%0AWas%20ich%20mir%20erhoffe%3A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">Für den nächsten Impact Circle vormerken</a>
+    <h2>Wollen Sie Teil dieses Wirkungsmodells werden?</h2>
+    <p>Ob als Stipendiat, als Organisation für eine Beteiligung oder als Mensch an einem
+    Wendepunkt: Schreiben Sie uns, worum es geht – wir melden uns persönlich.</p>
+    <a class="knopf gross" href="mailto:michael.deck@impact4entrepreneurship.de?subject=Anfrage%20Impact4Entrepreneurship">Kontakt aufnehmen</a>
     <p class="leise">Oder direkt: <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
   </div>
 </section>
@@ -585,8 +719,8 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
   <div class="bahn fussleiste">
     <div>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</div>
     <div class="fuss-links">
-      <a href="Impact4Entrepreneurship-10-Jahres-Vision.pdf" class="pdf-link">10-Jahres-Vision <span>PDF · passwortgeschützt</span></a>
-      <a href="manifest.html">Manifest</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="newsletter.html">Newsletter</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
@@ -612,11 +746,6 @@ document.querySelectorAll('.auf').forEach(el=>beobachter.observe(el));
 </script>
 
 <!-- ================= POP-UP: EINLADUNG ================= -->
-<!-- Hinweis: Die Einladung zum Schnuppertag "Reise ins Land der Sehnsucht"
-     (21.11.2026, Groß Ammensleben) liegt als video/reise-sehnsucht.mp4 bzw. -poster.jpg
-     bereit und läuft unverändert auf michaeldeck.de weiter. Zum Umschalten genügt es,
-     unten die beiden Dateinamen sowie Titel, Text, Fakten und das Ziel des Knopfes
-     auszutauschen. -->
 <div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pop-titel" hidden>
   <div class="pop-fenster">
     <button class="pop-zu" id="pop-zu" type="button" aria-label="Einladung schließen">&times;</button>
