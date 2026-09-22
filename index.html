@@ -139,6 +139,23 @@ section.hell .info-karte{background:var(--weiss);}
 .beispiel p{font-size:16px;color:var(--tief);line-height:1.6;}
 .beispiel p+p{margin-top:12px;}
 
+/* ---------- Highlight-Box mit Bild (THWS / LifeTeachUS) ---------- */
+.beispiel-bild{margin-top:8px;background:var(--flieder-hell);border-radius:16px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1.25fr;align-items:stretch;}
+.beispiel-bild .bild{position:relative;min-height:240px;background:var(--tief);}
+.beispiel-bild .bild img.foto{width:100%;height:100%;object-fit:cover;display:block;}
+.beispiel-bild .bild .marke{position:absolute;left:16px;bottom:16px;background:#fff;
+  border-radius:10px;padding:8px 12px;box-shadow:0 8px 20px rgba(47,0,58,.22);line-height:0;}
+.beispiel-bild .bild .marke img{height:20px;width:auto;display:block;}
+.beispiel-bild .inhalt{padding:28px 30px;}
+.beispiel-bild .auge{margin-bottom:10px;}
+.beispiel-bild p{font-size:16px;color:var(--tief);line-height:1.6;}
+.beispiel-bild p+p{margin-top:12px;}
+@media(max-width:720px){
+  .beispiel-bild{grid-template-columns:1fr;}
+  .beispiel-bild .bild{min-height:190px;}
+}
+
 /* ---------- Prozess-Kette (Kreislauf / Fluss) ---------- */
 .kette{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:30px;}
 .kette .glied{background:var(--weiss);border:1px solid rgba(205,182,214,.55);border-radius:100px;
@@ -408,17 +425,23 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
       bewirken?</p>
     </div>
 
-    <div class="beispiel auf">
-      <div class="auge" style="color:var(--lila)">Schwerpunkt</div>
-      <p><strong>Managing Global Dynamics – THWS Business School.</strong> Der Masterstudiengang
-      verbindet wirtschaftliches Denken mit globalen Herausforderungen, Digitalisierung,
-      Transformation, Innovation und unternehmerischer Verantwortung.</p>
-      <p>Das passt zu einer zentralen Überzeugung von Impact4Entrepreneurship: Zukunft braucht
-      Menschen, die komplexe Zusammenhänge verstehen und bereit sind, daraus Verantwortung
-      abzuleiten. Wir können Studiengebühren, Weiterbildungskosten oder andere förderfähige
-      Bildungsmaßnahmen unterstützen, soweit dies mit unserem gemeinnützigen Auftrag vereinbar
-      ist. Entscheidend ist nicht allein das Studium – entscheidend ist die Wirkung, die daraus
-      entstehen soll.</p>
+    <div class="beispiel-bild auf">
+      <div class="bild">
+        <img class="foto" src="images/managing-global-dynamics.jpg" alt="Studierende diskutieren gemeinsam an einem Tisch über globale Zusammenhänge und Nachhaltigkeit (Symbolbild)">
+        <div class="marke"><img src="images/logo-thws.png" alt="THWS"></div>
+      </div>
+      <div class="inhalt">
+        <div class="auge" style="color:var(--lila)">Schwerpunkt</div>
+        <p><strong>Managing Global Dynamics – THWS Business School.</strong> Der Masterstudiengang
+        verbindet wirtschaftliches Denken mit globalen Herausforderungen, Digitalisierung,
+        Transformation, Innovation und unternehmerischer Verantwortung.</p>
+        <p>Das passt zu einer zentralen Überzeugung von Impact4Entrepreneurship: Zukunft braucht
+        Menschen, die komplexe Zusammenhänge verstehen und bereit sind, daraus Verantwortung
+        abzuleiten. Wir können Studiengebühren, Weiterbildungskosten oder andere förderfähige
+        Bildungsmaßnahmen unterstützen, soweit dies mit unserem gemeinnützigen Auftrag vereinbar
+        ist. Entscheidend ist nicht allein das Studium – entscheidend ist die Wirkung, die daraus
+        entstehen soll.</p>
+      </div>
     </div>
 
     <div class="karten-gitter auf" style="margin-top:36px">
@@ -453,12 +476,25 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
       Rendite? Sondern: Welche Wirkung wird mit diesem Kapital möglich?</p>
     </div>
 
-    <div class="beispiel auf">
-      <div class="auge" style="color:var(--lila)">Beispiel</div>
-      <p><strong>[p3] Werkstatt gGmbH.</strong> Die [p3] Werkstatt verbindet Bildung,
-      Ausbildung, Integration, Wertevermittlung und praktisches unternehmerisches Handeln. Mit
-      einer förderorientierten Beteiligung trägt I4E dazu bei, wirtschaftliche Strukturen
-      aufzubauen, die wiederum die gemeinnützige Arbeit dauerhaft stärken.</p>
+    <div class="beispiel-bild auf">
+      <div class="bild">
+        <img class="foto" src="images/p3-werkstatt.jpg" alt="Auszubildende der [p3]-Werkstatt feiern ihren Abschluss in der Schreinerei">
+      </div>
+      <div class="inhalt">
+        <div class="auge" style="color:var(--lila)">Beispiel</div>
+        <p><strong>[p3] Werkstatt gGmbH.</strong> Die [p3] Werkstatt verbindet Bildung,
+        Ausbildung, Integration, Wertevermittlung und praktisches unternehmerisches Handeln. Mit
+        einer förderorientierten Beteiligung trägt I4E dazu bei, wirtschaftliche Strukturen
+        aufzubauen, die wiederum die gemeinnützige Arbeit dauerhaft stärken.</p>
+        <p>2016 in Freiburg als ehrenamtliches Projekt der Stadtpiraten Freiburg e.V. gestartet,
+        ist daraus mit erster Förderung der Hoffnungsträgerstiftung ein eigenständiges
+        Unternehmen geworden. In der Schreinerei entstehen Massivholzmöbel, Fahrradaufbauten und
+        Hydroponik-Systeme – gebaut von Menschen mit Flucht- oder Migrationserfahrung, die dort
+        neben der praktischen Werkstattarbeit auch Deutsch, Mathematik und CAD lernen. Der Grund:
+        Im Schnitt beginnt bislang nur jede dritte geflüchtete Person eine Ausbildung. [p3]
+        versteht sich als das fehlende Bindeglied zwischen dieser Ausgangslage, dem Arbeitsmarkt
+        und einem selbstbestimmten Platz in der Gesellschaft.</p>
+      </div>
     </div>
 
     <h3 class="auf" style="margin-top:40px;margin-bottom:6px">So entsteht ein Kreislauf</h3>
@@ -505,13 +541,25 @@ footer{background:#1f0027;color:#9b87a4;padding:46px 0;font-size:14.5px;}
       diesen Weg zu gehen.</p>
     </div>
 
-    <div class="beispiel auf">
-      <div class="auge" style="color:var(--lila)">Beispiel</div>
-      <p><strong>LifeTeachUS.</strong> Menschen begegnen Unternehmern, Persönlichkeiten und
-      Praktikern, die ihre Erfahrungen weitergeben – nicht als theoretisches Wissen, sondern
-      als gelebte Erfahrung. Wir schaffen Räume, in denen Menschen Fragen stellen dürfen: Was
-      kann ich? Was will ich? Welche Verantwortung habe ich? Welches Problem möchte ich lösen?
-      Was hindert mich daran, zu handeln? Und: Was ist jetzt mein nächster Schritt?</p>
+    <div class="beispiel-bild auf">
+      <div class="bild">
+        <img class="foto" src="images/lifeteachus.jpg" alt="Ein Referent sitzt auf einem Tisch und erzählt einer Schulklasse aus seinem Berufsleben (Symbolbild)">
+        <div class="marke"><img src="images/logo-lifeteachus.svg" alt="LifeTeachUS"></div>
+      </div>
+      <div class="inhalt">
+        <div class="auge" style="color:var(--lila)">Beispiel</div>
+        <p><strong>LifeTeachUS.</strong> Menschen begegnen Unternehmern, Persönlichkeiten und
+        Praktikern, die ihre Erfahrungen weitergeben – nicht als theoretisches Wissen, sondern
+        als gelebte Erfahrung. Wir schaffen Räume, in denen Menschen Fragen stellen dürfen: Was
+        kann ich? Was will ich? Welche Verantwortung habe ich? Welches Problem möchte ich lösen?
+        Was hindert mich daran, zu handeln? Und: Was ist jetzt mein nächster Schritt?</p>
+        <p>LifeTeachUS ist eine digitale Plattform, die Unterrichtsausfall in Lebenserfahrung
+        verwandelt: Ehrenamtliche „LifeTeacher" aus allen Berufsfeldern kommen für eine
+        45-minütige LifeLesson in die Klasse – vor Ort oder digital, werbefrei und neutral. Als
+        Kooperationspartner tragen wir mit unserem Team die Themen Geld, Wirtschaft und
+        Entrepreneurship in die Schulen und zeigen Jugendlichen so unternehmerische
+        Lebensentwürfe, die im eigenen Umfeld oft nicht sichtbar sind.</p>
+      </div>
     </div>
 
     <a class="rand-karte auf" href="podcast.html" style="margin-top:20px;max-width:70ch">
