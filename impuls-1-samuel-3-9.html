@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berufung beginnt mit Hören – 1. Samuel 3,9 | Impact4Entrepreneurship</title>
+<meta name="description" content="Ein Bibel-Impuls zu 1. Samuel 3,9 im hebräischen Urtext: Warum Berufung nicht gemacht, sondern gehört wird – und was das für Unternehmer bedeutet.">
+<link rel="icon" href="images/i4e-logo.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --tief:#2f003a; --lila-dunkel:#5b156d; --lila:#7a2a90; --flieder:#cdb6d6; --flieder-hell:#ecdff0;
+  --grund:#faf5f8; --weiss:#fffdff; --text:#3a2f40; --sanft:#6f6577; --messing:#b98b4a;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--text);background:var(--grund);
+  line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:3px solid var(--lila);outline-offset:3px;border-radius:4px;}
+
+.bahn{max-width:1180px;margin:0 auto;padding:0 28px;}
+.spalte{max-width:720px;margin:0 auto;padding:0 28px;}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.16;color:var(--tief);}
+h2{font-size:clamp(27px,3.6vw,38px);letter-spacing:-.01em;}
+h3{font-size:21px;line-height:1.3;}
+p{font-size:17px;}
+.auge{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--lila);display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.auge::before{content:"";width:34px;height:1px;background:var(--flieder);flex:0 0 auto;}
+
+/* ---------- Kopf ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(250,245,248,.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(205,182,214,.5);}
+.kopf{display:flex;align-items:center;gap:26px;height:74px;}
+.kopf img{height:34px;width:auto;}
+.zurueck{margin-left:auto;font-size:14.5px;font-weight:500;color:var(--sanft);text-decoration:none;}
+.zurueck:hover{color:var(--lila);}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--tief);color:#efe6f3;padding:92px 0 76px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-14%;top:-32%;width:58%;aspect-ratio:1;
+  border-radius:50%;background:radial-gradient(circle,rgba(122,42,144,.5),transparent 66%);pointer-events:none;}
+.hero .spalte{position:relative;z-index:2;}
+.hero .auge{color:var(--flieder);}
+.hero .auge::before{background:rgba(205,182,214,.5);}
+.hero h1{font-size:clamp(32px,4.6vw,48px);color:#fff;letter-spacing:-.015em;max-width:18ch;}
+.hero .unter{font-size:clamp(16.5px,1.8vw,19px);color:#c6b3ce;max-width:60ch;margin-top:22px;line-height:1.68;}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
+.hero .meta span{font-size:13px;color:#c6b3ce;background:rgba(255,255,255,.06);
+  border:1px solid rgba(205,182,214,.3);border-radius:100px;padding:8px 16px;}
+
+/* ---------- Abschnitte ---------- */
+section{padding:72px 0;}
+section.hell{background:var(--weiss);}
+.kopfzeile{max-width:66ch;margin-bottom:8px;}
+.intro{font-size:18px;color:var(--sanft);max-width:66ch;margin-top:14px;line-height:1.72;}
+
+/* ---------- Inhaltsverzeichnis ---------- */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:34px;}
+.toc a{display:flex;gap:14px;align-items:center;text-decoration:none;background:var(--weiss);
+  border:1px solid rgba(205,182,214,.5);border-radius:14px;padding:15px 17px;
+  color:var(--tief);transition:transform .15s ease,border-color .15s ease;}
+.toc a:hover{transform:translateY(-2px);border-color:var(--lila);}
+.toc a .num{width:30px;height:30px;border-radius:50%;flex:0 0 auto;background:var(--flieder-hell);
+  color:var(--lila);font-family:var(--serif);font-weight:700;font-size:14px;
+  display:flex;align-items:center;justify-content:center;}
+.toc a span.t{font-weight:600;font-size:14.5px;line-height:1.35;}
+
+/* ---------- Vers / Scripture-Block ---------- */
+.vers{background:var(--tief);color:#fff;border-radius:22px;padding:44px 40px;margin-top:10px;}
+.vers .hebr{font-family:var(--serif);font-size:clamp(20px,2.6vw,27px);line-height:2;color:#fff;
+  direction:rtl;text-align:center;margin-bottom:22px;}
+.vers .translit{font-style:italic;color:var(--flieder);font-size:16px;text-align:center;line-height:1.9;}
+.vers .uebers{margin-top:22px;padding-top:22px;border-top:1px solid rgba(205,182,214,.25);
+  font-family:var(--serif);font-size:clamp(18px,2.1vw,21px);color:#f1e6f4;text-align:center;
+  line-height:1.6;font-style:italic;}
+.vers cite{display:block;margin-top:16px;font-style:normal;font-family:var(--sans);font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;color:#a893b1;text-align:center;}
+@media(max-width:640px){.vers{padding:32px 24px;}}
+
+/* ---------- Hebräische Begriffskarten ---------- */
+.begriffe{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px;}
+.begriff{background:var(--weiss);border:1px solid rgba(205,182,214,.5);border-radius:16px;padding:22px 24px;}
+section.hell .begriff{background:var(--grund);}
+.begriff .wort{font-family:var(--serif);font-size:22px;color:var(--tief);direction:rtl;}
+.begriff .translit{font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--messing);
+  font-weight:600;margin-top:6px;}
+.begriff p{font-size:15px;color:var(--sanft);margin-top:10px;line-height:1.6;}
+
+/* ---------- Zitat / Hervorhebung ---------- */
+.zitat{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.4vw,25px);color:var(--tief);
+  border-left:4px solid var(--messing);padding-left:24px;margin:28px 0;max-width:62ch;line-height:1.42;}
+.zitat.lila{color:var(--lila);}
+
+/* ---------- Nummerierte Schritte ---------- */
+.schritte{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px;
+  counter-reset:w;margin-top:30px;}
+.schritt{position:relative;padding-top:42px;}
+.schritt::before{counter-increment:w;content:counter(w);position:absolute;top:0;left:0;
+  font-family:var(--serif);font-size:30px;font-weight:700;color:var(--flieder);line-height:1;}
+.schritt h3{font-size:16.5px;margin-bottom:6px;}
+.schritt p{font-size:14.5px;color:var(--sanft);line-height:1.55;}
+
+/* ---------- Hinweis / Trost-Box ---------- */
+.hinweis{background:var(--flieder-hell);border-radius:16px;padding:26px 28px;margin-top:26px;}
+.hinweis p{font-size:16px;color:var(--tief);line-height:1.62;}
+.hinweis p+p{margin-top:12px;}
+
+/* ---------- Schluss ---------- */
+.schluss{background:var(--tief);color:#efe6f3;text-align:center;padding:92px 0;}
+.schluss h2{color:#fff;max-width:22ch;margin:0 auto;}
+.schluss p{color:#c6b3ce;font-size:18px;max-width:56ch;margin:20px auto 0;}
+.schluss .knopf{display:inline-block;margin-top:30px;background:#fff;color:var(--tief);
+  text-decoration:none;font-size:15.5px;font-weight:600;padding:14px 28px;border-radius:100px;
+  transition:background .2s,transform .2s;}
+.schluss .knopf:hover{background:var(--flieder-hell);transform:translateY(-1px);}
+.schluss .leise{margin-top:20px;font-size:14.5px;color:#a893b1;}
+.schluss .leise a{color:var(--flieder);}
+
+footer{background:#1f0027;color:#9b87a4;padding:40px 0;font-size:14px;}
+.fussleiste{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
+.fussleiste a{color:#c6b3ce;text-decoration:none;}
+.fussleiste a:hover{color:#fff;}
+.fuss-links{display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
+
+@media(max-width:820px){
+  section{padding:56px 0;}
+  .hero{padding:66px 0 54px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bahn kopf">
+    <a href="index.html" aria-label="Impact4Entrepreneurship – Startseite"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship"></a>
+    <a class="zurueck" href="leitbild.html">← Zum Leitbild</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="bahn spalte">
+    <div class="auge">Bibel-Impuls · 1. Samuel 3,9</div>
+    <h1>Berufung beginnt mit Hören.</h1>
+    <p class="unter">Samuel wird nachts gerufen – zweimal. Erst beim dritten Mal erkennt er,
+    dass nicht Eli, sondern Gott selbst ihn ruft. Der hebräische Urtext dieser kleinen Szene
+    trägt eine ganze Theologie der Berufung in sich – und eine Einladung, die auch für
+    unternehmerische Entscheidungen gilt.</p>
+    <div class="meta">
+      <span>1. Samuel 3, 1–10</span>
+      <span>Hebräischer Urtext, Wort für Wort</span>
+      <span>Impuls zur Berufungsfrage</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EINLEITUNG + VERS ================= -->
+<section class="hell">
+  <div class="bahn spalte">
+    <div class="kopfzeile">
+      <div class="auge">Die Szene</div>
+      <h2>„Rede, Ewiger, denn dein Diener hört."</h2>
+      <p class="intro">Samuel schläft im Tempel, nahe der Lade Gottes. Eine Stimme ruft ihn –
+      zweimal. Er läuft zu Eli, dem alten Priester. Doch Eli hat ihn nicht gerufen. Erst beim
+      dritten Mal begreift Eli, was geschieht, und gibt Samuel einen Satz mit, der zu einem der
+      schlichtesten und zugleich gefährlichsten Gebete der Bibel wird.</p>
+    </div>
+
+    <div class="vers">
+      <div class="hebr">וַיֹּאמֶר עֵלִי לִשְׁמוּאֵל:<br>לֵךְ שְׁכָב, וְהָיָה אִם־יִקְרָא אֵלֶיךָ,<br>
+      וְאָמַרְתָּ: דַּבֵּר יְהוָה, כִּי שֹׁמֵעַ עַבְדֶּךָ.<br>וַיֵּלֶךְ שְׁמוּאֵל וַיִּשְׁכַּב בִּמְקוֹמוֹ.</div>
+      <div class="translit">Wa-jómer Eli li-Schmuél: Lech schecháv, we-hajá im-jikrá elécha,<br>
+      we-amártá: Dabbér Adonái, ki schoméa awdécha.<br>Wa-jélech Schmuél, wa-jischkáv bimkomó.</div>
+      <div class="uebers">„Und Eli sagte zu Samuel: Geh, leg dich hin. Und wenn Er dich ruft,
+      dann sollst du sagen: Rede, Ewiger, denn dein Diener hört. Und Samuel ging und legte sich
+      an seinen Ort."</div>
+      <cite>1. Samuel 3,9 – sehr wörtlich aus dem Hebräischen</cite>
+    </div>
+
+    <div class="toc">
+      <a href="#schoema"><span class="num">1</span><span class="t">Schoméa – mehr als Hören</span></a>
+      <a href="#liegen"><span class="num">2</span><span class="t">Erst liegen, dann hören</span></a>
+      <a href="#jikra"><span class="num">3</span><span class="t">Jikra – rufen heißt auch lesen</span></a>
+      <a href="#nicht-sofort"><span class="num">4</span><span class="t">Warum Samuel nicht sofort erkennt</span></a>
+      <a href="#diener"><span class="num">5</span><span class="t">„Dein Diener" – wem dient mein Leben?</span></a>
+      <a href="#ort"><span class="num">6</span><span class="t">Bimkomó – an deinem Ort</span></a>
+      <a href="#unternehmer"><span class="num">7</span><span class="t">Für den unternehmerischen Alltag</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 1. SCHOMÉA ================= -->
+<section id="schoema">
+  <div class="bahn spalte">
+    <div class="auge">01 — Das Schlüsselwort</div>
+    <h2>שֹׁמֵעַ – schoméa: mehr als Hören</h2>
+    <p class="intro">Samuel sagt nicht „Ich habe verstanden." Er sagt: „Dein Diener ist
+    hörend." Das hebräische Verb <em>schoméa</em> stammt von der Wurzel <strong>Sch-M-A</strong>
+    – derselben Wurzel wie im „Schma Jisrael", „Höre, Israel". Sie bedeutet zugleich: hören,
+    wahrnehmen, verstehen, gehorchen, antwortbereit sein.</p>
+
+    <div class="begriffe">
+      <div class="begriff">
+        <div class="wort">שֹׁמֵעַ</div>
+        <div class="translit">schoméa</div>
+        <p>hörend, wahrnehmend, antwortbereit – nie bloß akustisches Registrieren.</p>
+      </div>
+      <div class="begriff">
+        <div class="wort">שְׁמַע יִשְׂרָאֵל</div>
+        <div class="translit">Schma Jisrael</div>
+        <p>„Höre, Israel" – dieselbe Wurzel, derselbe Anspruch an das ganze Hören.</p>
+      </div>
+      <div class="begriff">
+        <div class="wort">כִּי שֹׁמֵעַ עַבְדֶּךָ</div>
+        <div class="translit">ki schoméa awdécha</div>
+        <p>„Denn dein Diener ist hörend" – nicht: „Ich habe alles verstanden."</p>
+      </div>
+    </div>
+
+    <p class="intro" style="margin-top:28px">Biblisches Hören ist nie bloß Schallaufnahme.
+    Samuels Satz ist deshalb radikal: Er sagt nicht, dass er bereits versteht. Er sagt, dass er
+    sich so öffnet, dass das Gehörte sein Handeln verändern darf.</p>
+  </div>
+</section>
+
+<!-- ================= 2. ERST LIEGEN ================= -->
+<section class="hell" id="liegen">
+  <div class="bahn spalte">
+    <div class="auge">02 — Die Reihenfolge</div>
+    <h2>Erst liegen – dann hören.</h2>
+    <p class="intro">Eli sagt zunächst nur: <em>lech schecháv</em> – „Geh, leg dich hin."
+    Geistlich bemerkenswert: Samuel soll nicht hektisch werden, nicht suchen, nicht analysieren,
+    nicht sofort handeln. Er soll zunächst liegen, warten, still werden – fast das Gegenteil
+    unserer modernen Haltung.</p>
+
+    <div class="zitat">Die Seele hört nicht notwendigerweise besser durch mehr Aktivität.
+    Oft hört sie besser durch <em>Bittul</em> – das Zurücknehmen des eigenen Ichs.</div>
+
+    <p class="intro">Wir denken häufig: Wenn Gott mich ruft, muss ich etwas tun. Der Text sagt
+    zuerst: Werde still genug, um überhaupt zu erkennen, wer ruft.</p>
+  </div>
+</section>
+
+<!-- ================= 3. JIKRA ================= -->
+<section id="jikra">
+  <div class="bahn spalte">
+    <div class="auge">03 — Der Ruf</div>
+    <h2>יִקְרָא – jikra: rufen heißt im Hebräischen auch lesen.</h2>
+    <p class="intro">Das Verb stammt von der Wurzel <strong>Q-R-A</strong> – „rufen". Dieselbe
+    Wurzel kann auch „lesen" bedeuten. Im Hebräischen liegen Rufen und Lesen sprachlich eng
+    beieinander. Der Ruf Gottes muss deshalb nicht als übernatürliche Stimme erscheinen. Er kann
+    durch etwas kommen, das sich „lesen" lässt: eine Situation, eine Begegnung, einen Menschen,
+    einen Verlust, eine unerwartete Tür, einen Satz der Tora.</p>
+    <p class="intro" style="margin-top:14px">Die geistliche Kunst besteht dann darin, die
+    Wirklichkeit lesen zu lernen.</p>
+  </div>
+</section>
+
+<!-- ================= 4. NICHT SOFORT ================= -->
+<section class="hell" id="nicht-sofort">
+  <div class="bahn spalte">
+    <div class="auge">04 — Die wichtigste Lektion</div>
+    <h2>Samuel erkennt Gottes Stimme nicht sofort.</h2>
+    <p class="intro">Samuel wird gerufen. Aber er weiß zunächst nicht, dass Gott ihn ruft – er
+    hält es für Elis Stimme. Das bedeutet: <strong>Berufung kann schon da sein, bevor der
+    Mensch sie als Berufung erkennt.</strong></p>
+
+    <div class="hinweis">
+      <p>Das ist tröstlich. Viele Menschen fragen: „Warum spricht Gott nicht zu mir?" Vielleicht
+      spricht Er – aber wir haben noch nicht gelernt, die Quelle der Stimme zu unterscheiden.
+      Darum braucht Samuel Eli.</p>
+      <p>Eli hört die Stimme nicht für Samuel. Aber er hilft ihm zu erkennen: „Das könnte Gott
+      sein." Der geistliche Begleiter sagt nicht „Ich weiß, was Gott von dir will", sondern:
+      „Achte darauf. Vielleicht spricht Gott gerade dort."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. DIENER ================= -->
+<section id="diener">
+  <div class="bahn spalte">
+    <div class="auge">05 — Die Haltung</div>
+    <h2>„Dein Diener" – wem dient mein Leben?</h2>
+    <p class="intro">Samuel bittet nicht zuerst „Erkläre mir alles" oder „Sag mir meine
+    Zukunft". Er sagt schlicht: <em>Rede.</em> Er bestimmt den Inhalt nicht – darin liegt
+    Vertrauen. Das ist schwer, denn wir möchten häufig eine Antwort von Gott, legen aber
+    gleichzeitig fest, welche Antwort akzeptabel wäre.</p>
+
+    <p class="intro" style="margin-top:14px">Samuel nennt sich <em>ewed</em> – Diener. Im
+    modernen Ohr klingt das nach Unterwerfung. Im biblischen Denken bedeutet es zunächst: Mein
+    Leben gehört nicht ausschließlich mir selbst. Ich stehe in einer Beziehung zu einem
+    Auftrag.</p>
+
+    <div class="zitat lila">Die moderne Frage lautet: Was erfüllt mich?<br>
+    Die hebräische Frage lautet: Wem dient mein Leben?</div>
+
+    <p class="intro">Und paradoxerweise kann gerade darin die tiefste Erfüllung liegen.</p>
+  </div>
+</section>
+
+<!-- ================= 6. BIMKOMO ================= -->
+<section class="hell" id="ort">
+  <div class="bahn spalte">
+    <div class="auge">06 — Der Schluss des Verses</div>
+    <h2>בִּמְקוֹמוֹ – bimkomó: an seinem Ort.</h2>
+    <p class="intro">Der Vers endet unscheinbar: „Und er legte sich an seinem Ort nieder."
+    <em>Makom</em> bedeutet „Ort". Aber <em>HaMakom</em> – „der Ort" – ist in der rabbinischen
+    Tradition auch eine Gottesbezeichnung. Nicht Gott hat in der Welt seinen Ort, sondern die
+    Welt hat in Gott ihren Ort.</p>
+    <p class="intro" style="margin-top:14px">Samuel geht zurück an seinen Ort. Und gerade dort
+    begegnet ihm HaMakom, der göttliche „Ort". Du musst vielleicht gar nicht irgendwo anders
+    hin, damit Gott zu dir sprechen kann. Gerade an deinem Ort – <em>bimkomcha</em> – kann der
+    Ruf geschehen.</p>
+  </div>
+</section>
+
+<!-- ================= REIHENFOLGE ================= -->
+<section id="reihenfolge">
+  <div class="bahn spalte">
+    <div class="auge">Chassidische Auslegung</div>
+    <h2>Eine kleine Schule der Berufung.</h2>
+    <p class="intro">Der Vers zeigt eine Reihenfolge, die fast ein Lehrpfad ist – nicht zuerst
+    „Was soll ich tun?", sondern zuerst „Was höre ich?"</p>
+
+    <div class="schritte">
+      <div class="schritt"><h3>Lech</h3><p>Geh.</p></div>
+      <div class="schritt"><h3>Schecháv</h3><p>Werde still.</p></div>
+      <div class="schritt"><h3>Jikra</h3><p>Achte auf den Ruf.</p></div>
+      <div class="schritt"><h3>Dabbér</h3><p>Lass Gott sprechen.</p></div>
+      <div class="schritt"><h3>Schoméa</h3><p>Werde hörend.</p></div>
+    </div>
+
+    <div class="zitat" style="margin-top:36px">Berufung wird nicht gemacht. Berufung wird
+    gehört.</div>
+  </div>
+</section>
+
+<!-- ================= 7. FÜR UNTERNEHMER ================= -->
+<section class="hell" id="unternehmer">
+  <div class="bahn spalte">
+    <div class="auge">07 — Die Übertragung</div>
+    <h2>Was das für unternehmerische Entscheidungen bedeutet.</h2>
+    <p class="intro">„Wirtschaft aus Berufung, Wirkung aus Klarheit" – das ist kein schöner
+    Satz, sondern eine Arbeitsanweisung. Viele Gründerinnen und Gründer stehen an einem
+    Wendepunkt und fragen zuerst: Was soll ich tun? Welche Idee setze ich um? Welchen nächsten
+    Schritt gehe ich?</p>
+    <p class="intro" style="margin-top:14px">1. Samuel 3,9 schlägt eine andere Reihenfolge vor.
+    Bevor die Frage „Was soll ich tun?" beantwortet werden kann, steht eine leisere Frage:
+    „Bin ich überhaupt hörend geworden?" Das deckt sich mit dem, was wir in der Begleitung immer
+    wieder beobachten: Klarheit entsteht selten unter Druck, sondern dort, wo jemand bereit ist,
+    erst zu verstehen, bevor er handelt – Begegnung, Reflexion, Klarheit, erst dann
+    Entscheidung und Handlung.</p>
+
+    <div class="hinweis" style="margin-top:28px">
+      <p>Die eigentliche Gebetshaltung ist nicht: „Herr, bestätige meinen Plan." Sondern:
+      „Rede, Ewiger, denn dein Diener hört." Das ist eines der schlichtesten und zugleich
+      gefährlichsten Gebete der Bibel – gefährlich, weil derjenige, der es wirklich spricht,
+      Gott nicht mehr vorschreibt, was Er sagen darf.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCHLUSS ================= -->
+<section class="schluss">
+  <div class="bahn">
+    <div class="auge" style="color:var(--flieder);justify-content:center">Der Grund unter allem</div>
+    <h2>Aus Berufung wird Klarheit. Aus Klarheit wird Wirkung.</h2>
+    <p>Mehr zu den Werten, die unsere Arbeit tragen, finden Sie in unserem Leitbild.</p>
+    <a class="knopf" href="leitbild.html">Zum Leitbild →</a>
+    <p class="leise">Fragen oder ein Gespräch gewünscht? <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="bahn fussleiste">
+    <div>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</div>
+    <div class="fuss-links">
+      <a href="index.html">Start</a>
+      <a href="leitbild.html">Leitbild</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
