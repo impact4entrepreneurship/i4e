@@ -108,7 +108,7 @@ footer a:hover{color:#fff;}
   .nav-punkt>a::after{display:none;}
 }
 
-/* ---------- Pop-up: Beteiligungsvertrag ---------- */
+/* ---------- Pop-up (Rahmen) ---------- */
 .pop{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(20,22,75,.72);backdrop-filter:blur(5px);}
 .pop.offen{display:flex;}
 .pop-fenster{background:var(--creme);border-radius:18px;max-width:660px;width:100%;max-height:92vh;overflow-y:auto;position:relative;box-shadow:0 30px 76px rgba(20,22,75,.4);animation:popauf .32s ease both;}
@@ -124,7 +124,7 @@ footer a:hover{color:#fff;}
 @media(prefers-reduced-motion:reduce){.pop-fenster{animation:none;}}
 @media(max-width:760px){.pop-text{padding:22px 22px 26px;}.pop-text h3{font-size:22px;}}
 
-/* ---------- Pop-up 2: Einladung Schnuppertag ---------- */
+/* ---------- Pop-up: Einladung Schnuppertag ---------- */
 .pop-video{width:100%;height:auto;aspect-ratio:16/9;display:block;border-radius:18px 18px 0 0;background:#000;}
 .pop-fakten{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px;}
 .pop-fakten span{background:var(--weiss);border:1px solid rgba(162,134,72,.45);border-radius:100px;padding:6px 15px;font-size:14px;color:var(--tinte);}
@@ -311,22 +311,6 @@ var m=document.getElementById('menue'),n=document.getElementById('nav');
 m.addEventListener('click',function(){var o=n.classList.toggle('offen');m.setAttribute('aria-expanded',o);});
 n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('offen');});
 </script>
-<!-- ================= POP-UP: BETEILIGUNGSVERTRAG ================= -->
-<div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pop-titel" hidden>
-  <div class="pop-fenster">
-    <button class="pop-zu" id="pop-zu" type="button" aria-label="Meldung schließen">&times;</button>
-    <img src="images/vertragsuebergabe-p3.jpg" width="1100" height="825" alt="Michael Deck (I4E gGmbH) und David Rösch (P3 Werkstatt gGmbH) mit dem unterzeichneten Beteiligungsvertrag">
-    <div class="pop-text">
-      <div class="auge">Neuigkeit</div>
-      <h3 id="pop-titel">Wo gemeinsame Werte zu verbindlichem Handeln werden.</h3>
-      <p>Auf dem CSK-Summit 2026 in Frankenthal haben David Rösch, Geschäftsführer der P3 Werkstatt gGmbH, und Michael Deck als Geschäftsführer der I4E gGmbH den Beteiligungsvertrag unterzeichnet.</p>
-      <p>Aus Gesprächen, Vertrauen und einer gemeinsamen Überzeugung ist eine verbindliche Partnerschaft geworden. Wir wünschen uns ein Unternehmertum, in dem wirtschaftliche Tragfähigkeit und Verantwortung für Menschen zusammengehören &ndash; und in dem christliche Werte im Umgang miteinander und in konkreten Entscheidungen sichtbar werden.</p>
-      <p class="pop-bild">Auf dem Bild: links Michael Deck, Geschäftsführer der I4E gGmbH; rechts David Rösch, Geschäftsführer der P3 Werkstatt gGmbH.</p>
-      <div class="pop-knoepfe"><button class="knopf" id="pop-spaeter" type="button">Zur Webseite</button></div>
-    </div>
-  </div>
-</div>
-
 <!-- ================= POP-UP 2: EINLADUNG SCHNUPPERTAG ================= -->
 <div class="pop" id="pop2" role="dialog" aria-modal="true" aria-labelledby="pop2-titel" hidden>
   <div class="pop-fenster">
@@ -358,7 +342,7 @@ n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.rem
 <script>
 (function () {
   var WARTEN = 1500;   // Verzögerung in Millisekunden
-  var reihe = ["pop", "pop2"];   // erst Vertragsübergabe, dann Einladung Schnuppertag
+  var reihe = ["pop2"];   // Einladung Schnuppertag
   var vorher = null, aktuell = -1;
 
   function el(id) { return document.getElementById(id); }
