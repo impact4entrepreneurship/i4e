@@ -123,6 +123,19 @@ footer a:hover{color:#fff;}
 .pop-zu:hover{background:rgba(20,22,75,.9);}
 @media(prefers-reduced-motion:reduce){.pop-fenster{animation:none;}}
 @media(max-width:760px){.pop-text{padding:22px 22px 26px;}.pop-text h3{font-size:22px;}}
+
+/* ---------- Pop-up 2: Einladung Schnuppertag ---------- */
+.pop-video{width:100%;height:auto;aspect-ratio:16/9;display:block;border-radius:18px 18px 0 0;background:#000;}
+.pop-fakten{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px;}
+.pop-fakten span{background:var(--weiss);border:1px solid rgba(162,134,72,.45);border-radius:100px;padding:6px 15px;font-size:14px;color:var(--tinte);}
+.pop-qr{display:flex;align-items:center;gap:16px;margin:0 0 20px;padding:14px;background:var(--weiss);border-radius:12px;}
+.pop-qr a{flex:none;display:block;width:112px;line-height:0;}
+.pop-qr svg{width:100%;height:auto;display:block;}
+.pop-qr p{font-size:15px;margin:0;}
+.pop-knoepfe{display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+.pop-spaeter{background:none;border:0;color:var(--sanft);font-size:15px;cursor:pointer;text-decoration:underline;padding:8px 4px;font-family:inherit;}
+.pop-spaeter:hover{color:var(--tinte);}
+.pop-fenster video{object-fit:cover;}
 </style>
 </head>
 <body>
@@ -313,20 +326,86 @@ n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.rem
     </div>
   </div>
 </div>
+
+<!-- ================= POP-UP 2: EINLADUNG SCHNUPPERTAG ================= -->
+<div class="pop" id="pop2" role="dialog" aria-modal="true" aria-labelledby="pop2-titel" hidden>
+  <div class="pop-fenster">
+    <button class="pop-zu" id="pop2-zu" type="button" aria-label="Einladung schließen">&times;</button>
+    <video class="pop-video" id="pop2-video" controls preload="none" playsinline poster="video/reise-sehnsucht-poster.jpg" width="1280" height="720">
+      <source src="video/reise-sehnsucht.mp4" type="video/mp4">
+    </video>
+    <div class="pop-text">
+      <div class="auge">Einladung</div>
+      <h3 id="pop2-titel">Komm mit auf die Reise ins Land der Sehnsucht.</h3>
+      <p>Birgit Nandzik und ich laden dich zu einem Kurs in kleiner Runde ein. Wir beginnen mit einem Schnuppertag.</p>
+      <div class="pop-fakten">
+        <span>Samstag, 21. November 2026</span>
+        <span>9 Uhr</span>
+        <span>Holzweg 2c, 39326 Groß Ammensleben</span>
+      </div>
+      <div class="pop-qr">
+        <a href="https://impact4entrepreneurship.github.io/event-anmeldung/anmelden.html?e=daedcbea-a355-4adf-b50c-0853f34a6a27" aria-label="Online zum Schnuppertag anmelden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 53 53" shape-rendering="crispEdges" role="img" aria-label="QR-Code zur Anmeldung"><rect x="-4" y="-4" width="53" height="53" fill="#fff"/><path fill="#26201B" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM11 0h1v1h-1zM16 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM30 0h1v1h-1zM32 0h1v1h-1zM36 0h1v1h-1zM38 0h1v1h-1zM39 0h1v1h-1zM40 0h1v1h-1zM41 0h1v1h-1zM42 0h1v1h-1zM43 0h1v1h-1zM44 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h1v1h-1zM11 1h1v1h-1zM13 1h1v1h-1zM14 1h1v1h-1zM17 1h1v1h-1zM19 1h1v1h-1zM22 1h1v1h-1zM26 1h1v1h-1zM28 1h1v1h-1zM30 1h1v1h-1zM31 1h1v1h-1zM35 1h1v1h-1zM38 1h1v1h-1zM44 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM10 2h1v1h-1zM13 2h1v1h-1zM15 2h1v1h-1zM16 2h1v1h-1zM18 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM23 2h1v1h-1zM30 2h1v1h-1zM31 2h1v1h-1zM32 2h1v1h-1zM35 2h1v1h-1zM38 2h1v1h-1zM40 2h1v1h-1zM41 2h1v1h-1zM42 2h1v1h-1zM44 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM16 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM31 3h1v1h-1zM33 3h1v1h-1zM35 3h1v1h-1zM36 3h1v1h-1zM38 3h1v1h-1zM40 3h1v1h-1zM41 3h1v1h-1zM42 3h1v1h-1zM44 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM23 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM29 4h1v1h-1zM30 4h1v1h-1zM32 4h1v1h-1zM33 4h1v1h-1zM34 4h1v1h-1zM35 4h1v1h-1zM36 4h1v1h-1zM38 4h1v1h-1zM40 4h1v1h-1zM41 4h1v1h-1zM42 4h1v1h-1zM44 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM15 5h1v1h-1zM17 5h1v1h-1zM18 5h1v1h-1zM19 5h1v1h-1zM20 5h1v1h-1zM24 5h1v1h-1zM26 5h1v1h-1zM28 5h1v1h-1zM30 5h1v1h-1zM31 5h1v1h-1zM32 5h1v1h-1zM38 5h1v1h-1zM44 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h1v1h-1zM32 6h1v1h-1zM34 6h1v1h-1zM36 6h1v1h-1zM38 6h1v1h-1zM39 6h1v1h-1zM40 6h1v1h-1zM41 6h1v1h-1zM42 6h1v1h-1zM43 6h1v1h-1zM44 6h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM13 7h1v1h-1zM17 7h1v1h-1zM18 7h1v1h-1zM19 7h1v1h-1zM20 7h1v1h-1zM24 7h1v1h-1zM25 7h1v1h-1zM27 7h1v1h-1zM29 7h1v1h-1zM32 7h1v1h-1zM33 7h1v1h-1zM0 8h1v1h-1zM3 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM10 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM16 8h1v1h-1zM19 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM27 8h1v1h-1zM28 8h1v1h-1zM30 8h1v1h-1zM31 8h1v1h-1zM33 8h1v1h-1zM34 8h1v1h-1zM35 8h1v1h-1zM37 8h1v1h-1zM39 8h1v1h-1zM0 9h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM4 9h1v1h-1zM8 9h1v1h-1zM14 9h1v1h-1zM17 9h1v1h-1zM19 9h1v1h-1zM27 9h1v1h-1zM28 9h1v1h-1zM31 9h1v1h-1zM37 9h1v1h-1zM40 9h1v1h-1zM42 9h1v1h-1zM44 9h1v1h-1zM0 10h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM12 10h1v1h-1zM13 10h1v1h-1zM15 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM24 10h1v1h-1zM32 10h1v1h-1zM34 10h1v1h-1zM35 10h1v1h-1zM36 10h1v1h-1zM44 10h1v1h-1zM0 11h1v1h-1zM4 11h1v1h-1zM7 11h1v1h-1zM11 11h1v1h-1zM14 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM19 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM23 11h1v1h-1zM27 11h1v1h-1zM29 11h1v1h-1zM31 11h1v1h-1zM33 11h1v1h-1zM34 11h1v1h-1zM35 11h1v1h-1zM36 11h1v1h-1zM37 11h1v1h-1zM39 11h1v1h-1zM40 11h1v1h-1zM41 11h1v1h-1zM43 11h1v1h-1zM44 11h1v1h-1zM0 12h1v1h-1zM6 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM21 12h1v1h-1zM24 12h1v1h-1zM25 12h1v1h-1zM26 12h1v1h-1zM27 12h1v1h-1zM31 12h1v1h-1zM32 12h1v1h-1zM33 12h1v1h-1zM34 12h1v1h-1zM38 12h1v1h-1zM40 12h1v1h-1zM2 13h1v1h-1zM3 13h1v1h-1zM7 13h1v1h-1zM10 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM24 13h1v1h-1zM25 13h1v1h-1zM27 13h1v1h-1zM32 13h1v1h-1zM34 13h1v1h-1zM37 13h1v1h-1zM42 13h1v1h-1zM44 13h1v1h-1zM1 14h1v1h-1zM2 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM10 14h1v1h-1zM12 14h1v1h-1zM20 14h1v1h-1zM23 14h1v1h-1zM24 14h1v1h-1zM26 14h1v1h-1zM27 14h1v1h-1zM29 14h1v1h-1zM31 14h1v1h-1zM35 14h1v1h-1zM37 14h1v1h-1zM38 14h1v1h-1zM40 14h1v1h-1zM41 14h1v1h-1zM42 14h1v1h-1zM43 14h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM8 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM25 15h1v1h-1zM27 15h1v1h-1zM28 15h1v1h-1zM32 15h1v1h-1zM34 15h1v1h-1zM36 15h1v1h-1zM38 15h1v1h-1zM39 15h1v1h-1zM40 15h1v1h-1zM0 16h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM3 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM27 16h1v1h-1zM30 16h1v1h-1zM32 16h1v1h-1zM37 16h1v1h-1zM3 17h1v1h-1zM5 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM11 17h1v1h-1zM12 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM18 17h1v1h-1zM20 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM25 17h1v1h-1zM26 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM29 17h1v1h-1zM33 17h1v1h-1zM35 17h1v1h-1zM38 17h1v1h-1zM39 17h1v1h-1zM40 17h1v1h-1zM43 17h1v1h-1zM0 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM18 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM28 18h1v1h-1zM32 18h1v1h-1zM33 18h1v1h-1zM35 18h1v1h-1zM39 18h1v1h-1zM43 18h1v1h-1zM44 18h1v1h-1zM2 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM8 19h1v1h-1zM10 19h1v1h-1zM13 19h1v1h-1zM15 19h1v1h-1zM17 19h1v1h-1zM19 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM25 19h1v1h-1zM26 19h1v1h-1zM27 19h1v1h-1zM30 19h1v1h-1zM32 19h1v1h-1zM33 19h1v1h-1zM34 19h1v1h-1zM36 19h1v1h-1zM37 19h1v1h-1zM38 19h1v1h-1zM39 19h1v1h-1zM41 19h1v1h-1zM43 19h1v1h-1zM4 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM13 20h1v1h-1zM14 20h1v1h-1zM15 20h1v1h-1zM16 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM28 20h1v1h-1zM29 20h1v1h-1zM31 20h1v1h-1zM33 20h1v1h-1zM36 20h1v1h-1zM37 20h1v1h-1zM38 20h1v1h-1zM39 20h1v1h-1zM40 20h1v1h-1zM43 20h1v1h-1zM1 21h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM14 21h1v1h-1zM15 21h1v1h-1zM16 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM26 21h1v1h-1zM31 21h1v1h-1zM36 21h1v1h-1zM40 21h1v1h-1zM43 21h1v1h-1zM44 21h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM10 22h1v1h-1zM11 22h1v1h-1zM12 22h1v1h-1zM18 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM29 22h1v1h-1zM32 22h1v1h-1zM34 22h1v1h-1zM36 22h1v1h-1zM38 22h1v1h-1zM40 22h1v1h-1zM42 22h1v1h-1zM43 22h1v1h-1zM44 22h1v1h-1zM1 23h1v1h-1zM4 23h1v1h-1zM8 23h1v1h-1zM9 23h1v1h-1zM11 23h1v1h-1zM16 23h1v1h-1zM17 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM25 23h1v1h-1zM26 23h1v1h-1zM28 23h1v1h-1zM29 23h1v1h-1zM31 23h1v1h-1zM34 23h1v1h-1zM36 23h1v1h-1zM40 23h1v1h-1zM41 23h1v1h-1zM43 23h1v1h-1zM44 23h1v1h-1zM2 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM7 24h1v1h-1zM8 24h1v1h-1zM9 24h1v1h-1zM11 24h1v1h-1zM12 24h1v1h-1zM14 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM26 24h1v1h-1zM27 24h1v1h-1zM28 24h1v1h-1zM29 24h1v1h-1zM30 24h1v1h-1zM31 24h1v1h-1zM32 24h1v1h-1zM33 24h1v1h-1zM34 24h1v1h-1zM36 24h1v1h-1zM37 24h1v1h-1zM38 24h1v1h-1zM39 24h1v1h-1zM40 24h1v1h-1zM41 24h1v1h-1zM44 24h1v1h-1zM0 25h1v1h-1zM1 25h1v1h-1zM2 25h1v1h-1zM4 25h1v1h-1zM5 25h1v1h-1zM7 25h1v1h-1zM12 25h1v1h-1zM15 25h1v1h-1zM19 25h1v1h-1zM20 25h1v1h-1zM25 25h1v1h-1zM27 25h1v1h-1zM28 25h1v1h-1zM31 25h1v1h-1zM34 25h1v1h-1zM35 25h1v1h-1zM37 25h1v1h-1zM40 25h1v1h-1zM44 25h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM5 26h1v1h-1zM6 26h1v1h-1zM7 26h1v1h-1zM10 26h1v1h-1zM11 26h1v1h-1zM17 26h1v1h-1zM18 26h1v1h-1zM21 26h1v1h-1zM23 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM29 26h1v1h-1zM31 26h1v1h-1zM32 26h1v1h-1zM33 26h1v1h-1zM36 26h1v1h-1zM40 26h1v1h-1zM43 26h1v1h-1zM0 27h1v1h-1zM1 27h1v1h-1zM3 27h1v1h-1zM12 27h1v1h-1zM18 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM27 27h1v1h-1zM29 27h1v1h-1zM32 27h1v1h-1zM34 27h1v1h-1zM36 27h1v1h-1zM38 27h1v1h-1zM43 27h1v1h-1zM44 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM7 28h1v1h-1zM11 28h1v1h-1zM13 28h1v1h-1zM16 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM23 28h1v1h-1zM24 28h1v1h-1zM26 28h1v1h-1zM29 28h1v1h-1zM30 28h1v1h-1zM32 28h1v1h-1zM33 28h1v1h-1zM34 28h1v1h-1zM36 28h1v1h-1zM37 28h1v1h-1zM39 28h1v1h-1zM40 28h1v1h-1zM0 29h1v1h-1zM3 29h1v1h-1zM4 29h1v1h-1zM5 29h1v1h-1zM8 29h1v1h-1zM9 29h1v1h-1zM11 29h1v1h-1zM17 29h1v1h-1zM18 29h1v1h-1zM19 29h1v1h-1zM21 29h1v1h-1zM22 29h1v1h-1zM23 29h1v1h-1zM26 29h1v1h-1zM28 29h1v1h-1zM32 29h1v1h-1zM33 29h1v1h-1zM36 29h1v1h-1zM37 29h1v1h-1zM41 29h1v1h-1zM43 29h1v1h-1zM0 30h1v1h-1zM4 30h1v1h-1zM6 30h1v1h-1zM7 30h1v1h-1zM9 30h1v1h-1zM10 30h1v1h-1zM12 30h1v1h-1zM13 30h1v1h-1zM15 30h1v1h-1zM16 30h1v1h-1zM19 30h1v1h-1zM20 30h1v1h-1zM21 30h1v1h-1zM22 30h1v1h-1zM24 30h1v1h-1zM27 30h1v1h-1zM28 30h1v1h-1zM29 30h1v1h-1zM31 30h1v1h-1zM32 30h1v1h-1zM36 30h1v1h-1zM38 30h1v1h-1zM40 30h1v1h-1zM42 30h1v1h-1zM44 30h1v1h-1zM0 31h1v1h-1zM7 31h1v1h-1zM8 31h1v1h-1zM11 31h1v1h-1zM13 31h1v1h-1zM14 31h1v1h-1zM16 31h1v1h-1zM17 31h1v1h-1zM18 31h1v1h-1zM19 31h1v1h-1zM20 31h1v1h-1zM22 31h1v1h-1zM24 31h1v1h-1zM25 31h1v1h-1zM26 31h1v1h-1zM27 31h1v1h-1zM32 31h1v1h-1zM38 31h1v1h-1zM39 31h1v1h-1zM40 31h1v1h-1zM44 31h1v1h-1zM1 32h1v1h-1zM6 32h1v1h-1zM7 32h1v1h-1zM8 32h1v1h-1zM9 32h1v1h-1zM10 32h1v1h-1zM12 32h1v1h-1zM15 32h1v1h-1zM17 32h1v1h-1zM18 32h1v1h-1zM19 32h1v1h-1zM20 32h1v1h-1zM22 32h1v1h-1zM23 32h1v1h-1zM25 32h1v1h-1zM27 32h1v1h-1zM28 32h1v1h-1zM30 32h1v1h-1zM31 32h1v1h-1zM33 32h1v1h-1zM35 32h1v1h-1zM36 32h1v1h-1zM37 32h1v1h-1zM41 32h1v1h-1zM43 32h1v1h-1zM0 33h1v1h-1zM1 33h1v1h-1zM4 33h1v1h-1zM5 33h1v1h-1zM8 33h1v1h-1zM11 33h1v1h-1zM12 33h1v1h-1zM13 33h1v1h-1zM14 33h1v1h-1zM16 33h1v1h-1zM17 33h1v1h-1zM21 33h1v1h-1zM22 33h1v1h-1zM24 33h1v1h-1zM28 33h1v1h-1zM43 33h1v1h-1zM44 33h1v1h-1zM4 34h1v1h-1zM6 34h1v1h-1zM9 34h1v1h-1zM11 34h1v1h-1zM12 34h1v1h-1zM14 34h1v1h-1zM15 34h1v1h-1zM17 34h1v1h-1zM18 34h1v1h-1zM19 34h1v1h-1zM23 34h1v1h-1zM25 34h1v1h-1zM31 34h1v1h-1zM32 34h1v1h-1zM34 34h1v1h-1zM36 34h1v1h-1zM38 34h1v1h-1zM41 34h1v1h-1zM42 34h1v1h-1zM44 34h1v1h-1zM1 35h1v1h-1zM2 35h1v1h-1zM3 35h1v1h-1zM4 35h1v1h-1zM8 35h1v1h-1zM10 35h1v1h-1zM17 35h1v1h-1zM19 35h1v1h-1zM25 35h1v1h-1zM26 35h1v1h-1zM27 35h1v1h-1zM28 35h1v1h-1zM29 35h1v1h-1zM35 35h1v1h-1zM37 35h1v1h-1zM39 35h1v1h-1zM44 35h1v1h-1zM0 36h1v1h-1zM3 36h1v1h-1zM4 36h1v1h-1zM6 36h1v1h-1zM7 36h1v1h-1zM8 36h1v1h-1zM9 36h1v1h-1zM12 36h1v1h-1zM14 36h1v1h-1zM17 36h1v1h-1zM19 36h1v1h-1zM20 36h1v1h-1zM21 36h1v1h-1zM22 36h1v1h-1zM23 36h1v1h-1zM24 36h1v1h-1zM25 36h1v1h-1zM26 36h1v1h-1zM27 36h1v1h-1zM28 36h1v1h-1zM30 36h1v1h-1zM32 36h1v1h-1zM36 36h1v1h-1zM37 36h1v1h-1zM38 36h1v1h-1zM39 36h1v1h-1zM40 36h1v1h-1zM41 36h1v1h-1zM43 36h1v1h-1zM8 37h1v1h-1zM10 37h1v1h-1zM11 37h1v1h-1zM14 37h1v1h-1zM15 37h1v1h-1zM17 37h1v1h-1zM20 37h1v1h-1zM24 37h1v1h-1zM28 37h1v1h-1zM29 37h1v1h-1zM31 37h1v1h-1zM32 37h1v1h-1zM33 37h1v1h-1zM34 37h1v1h-1zM36 37h1v1h-1zM40 37h1v1h-1zM43 37h1v1h-1zM44 37h1v1h-1zM0 38h1v1h-1zM1 38h1v1h-1zM2 38h1v1h-1zM3 38h1v1h-1zM4 38h1v1h-1zM5 38h1v1h-1zM6 38h1v1h-1zM11 38h1v1h-1zM12 38h1v1h-1zM13 38h1v1h-1zM17 38h1v1h-1zM19 38h1v1h-1zM20 38h1v1h-1zM22 38h1v1h-1zM24 38h1v1h-1zM25 38h1v1h-1zM27 38h1v1h-1zM29 38h1v1h-1zM33 38h1v1h-1zM36 38h1v1h-1zM38 38h1v1h-1zM40 38h1v1h-1zM41 38h1v1h-1zM42 38h1v1h-1zM43 38h1v1h-1zM0 39h1v1h-1zM6 39h1v1h-1zM8 39h1v1h-1zM10 39h1v1h-1zM11 39h1v1h-1zM12 39h1v1h-1zM13 39h1v1h-1zM14 39h1v1h-1zM15 39h1v1h-1zM16 39h1v1h-1zM19 39h1v1h-1zM20 39h1v1h-1zM24 39h1v1h-1zM25 39h1v1h-1zM28 39h1v1h-1zM32 39h1v1h-1zM33 39h1v1h-1zM36 39h1v1h-1zM40 39h1v1h-1zM0 40h1v1h-1zM2 40h1v1h-1zM3 40h1v1h-1zM4 40h1v1h-1zM6 40h1v1h-1zM9 40h1v1h-1zM10 40h1v1h-1zM19 40h1v1h-1zM20 40h1v1h-1zM21 40h1v1h-1zM22 40h1v1h-1zM23 40h1v1h-1zM24 40h1v1h-1zM25 40h1v1h-1zM27 40h1v1h-1zM30 40h1v1h-1zM31 40h1v1h-1zM32 40h1v1h-1zM35 40h1v1h-1zM36 40h1v1h-1zM37 40h1v1h-1zM38 40h1v1h-1zM39 40h1v1h-1zM40 40h1v1h-1zM41 40h1v1h-1zM43 40h1v1h-1zM0 41h1v1h-1zM2 41h1v1h-1zM3 41h1v1h-1zM4 41h1v1h-1zM6 41h1v1h-1zM8 41h1v1h-1zM11 41h1v1h-1zM13 41h1v1h-1zM21 41h1v1h-1zM23 41h1v1h-1zM26 41h1v1h-1zM27 41h1v1h-1zM28 41h1v1h-1zM29 41h1v1h-1zM32 41h1v1h-1zM35 41h1v1h-1zM36 41h1v1h-1zM37 41h1v1h-1zM39 41h1v1h-1zM40 41h1v1h-1zM42 41h1v1h-1zM43 41h1v1h-1zM0 42h1v1h-1zM2 42h1v1h-1zM3 42h1v1h-1zM4 42h1v1h-1zM6 42h1v1h-1zM10 42h1v1h-1zM11 42h1v1h-1zM12 42h1v1h-1zM14 42h1v1h-1zM15 42h1v1h-1zM16 42h1v1h-1zM17 42h1v1h-1zM19 42h1v1h-1zM20 42h1v1h-1zM21 42h1v1h-1zM22 42h1v1h-1zM24 42h1v1h-1zM27 42h1v1h-1zM31 42h1v1h-1zM32 42h1v1h-1zM36 42h1v1h-1zM38 42h1v1h-1zM39 42h1v1h-1zM40 42h1v1h-1zM41 42h1v1h-1zM42 42h1v1h-1zM43 42h1v1h-1zM44 42h1v1h-1zM0 43h1v1h-1zM6 43h1v1h-1zM10 43h1v1h-1zM13 43h1v1h-1zM14 43h1v1h-1zM15 43h1v1h-1zM16 43h1v1h-1zM17 43h1v1h-1zM18 43h1v1h-1zM19 43h1v1h-1zM20 43h1v1h-1zM22 43h1v1h-1zM23 43h1v1h-1zM24 43h1v1h-1zM25 43h1v1h-1zM26 43h1v1h-1zM29 43h1v1h-1zM32 43h1v1h-1zM35 43h1v1h-1zM37 43h1v1h-1zM40 43h1v1h-1zM0 44h1v1h-1zM1 44h1v1h-1zM2 44h1v1h-1zM3 44h1v1h-1zM4 44h1v1h-1zM5 44h1v1h-1zM6 44h1v1h-1zM8 44h1v1h-1zM9 44h1v1h-1zM13 44h1v1h-1zM15 44h1v1h-1zM16 44h1v1h-1zM18 44h1v1h-1zM19 44h1v1h-1zM21 44h1v1h-1zM22 44h1v1h-1zM24 44h1v1h-1zM28 44h1v1h-1zM29 44h1v1h-1zM31 44h1v1h-1zM33 44h1v1h-1zM35 44h1v1h-1zM36 44h1v1h-1zM37 44h1v1h-1zM38 44h1v1h-1zM39 44h1v1h-1zM40 44h1v1h-1zM43 44h1v1h-1z"/></svg></a>
+        <p><strong>QR-Code scannen</strong> und direkt online anmelden – oder auf den Code tippen.</p>
+      </div>
+      <div class="pop-knoepfe">
+        <a class="knopf" href="https://impact4entrepreneurship.github.io/event-anmeldung/anmelden.html?e=daedcbea-a355-4adf-b50c-0853f34a6a27">Zum Schnuppertag anmelden</a>
+        <button class="pop-spaeter" id="pop2-spaeter" type="button">Erst mal in Ruhe ansehen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 (function () {
-  var WARTEN = 1500;
-  var pop = document.getElementById("pop");
-  if (!pop) return;
-  var vorher = null;
-  function auf() { vorher = document.activeElement; pop.hidden = false; pop.classList.add("offen"); document.body.style.overflow = "hidden"; document.getElementById("pop-zu").focus(); }
-  function schliessen() { pop.classList.remove("offen"); pop.hidden = true; document.body.style.overflow = ""; if (vorher && vorher.focus) vorher.focus(); }
-  document.getElementById("pop-zu").addEventListener("click", schliessen);
-  document.getElementById("pop-spaeter").addEventListener("click", schliessen);
-  pop.addEventListener("click", function (e) { if (e.target === pop) schliessen(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && pop.classList.contains("offen")) schliessen(); });
+  var WARTEN = 1500;   // Verzögerung in Millisekunden
+  var reihe = ["pop", "pop2"];   // erst Vertragsübergabe, dann Einladung Schnuppertag
+  var vorher = null, aktuell = -1;
+
+  function el(id) { return document.getElementById(id); }
+
+  function auf(i) {
+    var pop = el(reihe[i]);
+    if (!pop) return;
+    aktuell = i;
+    pop.hidden = false;
+    pop.classList.add("offen");
+    document.body.style.overflow = "hidden";
+    var zu = pop.querySelector(".pop-zu");
+    if (zu) zu.focus();
+  }
+
+  function schliessen() {
+    var pop = el(reihe[aktuell]);
+    if (!pop) return;
+    pop.classList.remove("offen");
+    pop.hidden = true;
+    var v = pop.querySelector("video");
+    if (v && !v.paused) v.pause();
+    var naechstes = aktuell + 1;
+    if (naechstes < reihe.length) {
+      window.setTimeout(function () { auf(naechstes); }, 350);
+    } else {
+      document.body.style.overflow = "";
+      if (vorher && vorher.focus) vorher.focus();
+      aktuell = -1;
+    }
+  }
+
+  reihe.forEach(function (id) {
+    var pop = el(id);
+    if (!pop) return;
+    pop.querySelector(".pop-zu").addEventListener("click", schliessen);
+    var sp = pop.querySelector("[id$=\"spaeter\"]");
+    if (sp) sp.addEventListener("click", schliessen);
+    pop.addEventListener("click", function (e) { if (e.target === pop) schliessen(); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && aktuell >= 0) schliessen();
+  });
+
   // Erscheint bei jedem Aufruf der Seite
-  window.setTimeout(auf, WARTEN);
+  vorher = document.activeElement;
+  window.setTimeout(function () { auf(0); }, WARTEN);
 })();
 </script>
 </body>
