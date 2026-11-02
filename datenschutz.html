@@ -1,231 +1,228 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Datenschutzerklärung – Impact4Entrepreneurship gGmbH</title>
-<meta name="description" content="Datenschutzerklärung der Impact4Entrepreneurship gGmbH – Informationen zum Umgang mit Ihren personenbezogenen Daten.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datenschutz – I4E</title>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
-  @font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/playfair-display-600-latin.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/playfair-display-700-latin.woff2') format('woff2');
-    font-weight: 700; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-400-latin.woff2') format('woff2');
-    font-weight: 400; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-500-latin.woff2') format('woff2');
-    font-weight: 500; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-600-latin.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-  }
+:root{
+  --creme:#f4f0e4; --creme-dunkel:#ebe5d3; --weiss:#fffdf8;
+  --gold:#a28648; --gold-dunkel:#866d38; --gold-hell:#c4a96a; --tinte:#1d1b16; --navy:#14164b;
+  --text:#2a2721; --sanft:#6b655a;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--creme);color:var(--text);line-height:1.65;font-size:17px;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+.bahn{max-width:1180px;margin:0 auto;padding:0 28px;}
 
-  :root {
-    --lila-tief: #2f003a;
-    --lila-dunkel: #5b156d;
-    --lila-akzent: #7a2a90;
-    --flieder: #cdb6d6;
-    --flieder-hell: #ecdff0;
-    --grund: #faf5f8;
-    --weiss: #fffdff;
-    --text: #3a2f40;
-    --text-sanft: #6f6577;
-  }
+/* ---------- Kopfzeile ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--creme);border-bottom:1px solid rgba(162,134,72,.12);}
+.kopf{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--gold);}
+.logo svg{height:40px;width:auto;}
+.logo-wort{font-weight:700;font-size:26px;letter-spacing:.2em;line-height:1;text-transform:uppercase;}
+.logo-wort small{display:block;font-size:8.5px;font-weight:500;letter-spacing:.2em;margin-top:6px;color:var(--sanft);}
+nav{display:flex;align-items:center;gap:30px;}
+.nav-punkt{position:relative;}
+.nav-punkt>a{font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:26px 0;display:inline-flex;align-items:center;gap:6px;}
+.nav-punkt>a::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);}
+.nav-punkt.einzeln>a::after{display:none;}
+.unter{position:absolute;top:100%;left:-18px;min-width:230px;background:var(--weiss);border-radius:0 0 12px 12px;
+  box-shadow:0 18px 40px rgba(20,22,75,.14);padding:10px 0;display:none;}
+.nav-punkt:hover .unter,.nav-punkt:focus-within .unter{display:block;}
+.unter a{display:block;padding:9px 22px;font-size:15px;text-decoration:none;}
+.unter a:hover{background:var(--creme);color:var(--gold);}
+.knopf{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;border-radius:5px;border:0;cursor:pointer;
+  transition:background .2s;}
+.knopf:hover{background:var(--gold-dunkel);}
+.menue{display:none;background:none;border:0;font-size:28px;color:var(--gold);cursor:pointer;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ---------- Titelbild ---------- */
+.titel{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;}
+.titel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.titel::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(20,22,75,.55),rgba(20,22,75,.72));}
+.titel-text{position:relative;z-index:2;padding:40px 28px;max-width:960px;}
+.titel h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5.6vw,68px);line-height:1.12;margin-bottom:22px;}
+.titel p{font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--grund);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 17px;
-  }
+/* ---------- Abschnitte ---------- */
+.teil{padding:104px 0;}
+.teil.dunkel{background:var(--creme-dunkel);}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.zwei.dreh .bild{order:-1;}
+.auge{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:500;margin-bottom:10px;}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.15;color:var(--tinte);margin-bottom:20px;}
+.teil p{color:var(--text);margin-bottom:16px;max-width:560px;}
+.teil .knopf{margin-top:12px;}
+.bild img{width:100%;aspect-ratio:4/3.1;object-fit:cover;border-radius:16px;box-shadow:0 24px 54px rgba(20,22,75,.16);}
+.bild.hoch img{aspect-ratio:4/4.6;}
 
-  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+/* ---------- Farbband ---------- */
+.band{background:var(--gold);color:var(--tinte);padding:92px 0;text-align:center;}
+.band p{font-size:clamp(17px,2vw,22px);letter-spacing:.07em;text-transform:uppercase;font-weight:400;line-height:1.7;max-width:880px;margin:0 auto;}
+.band small{display:block;margin-top:22px;font-size:13px;letter-spacing:.14em;opacity:.75;text-transform:uppercase;}
 
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-  .col { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+/* ---------- Drei Karten ---------- */
+.kopfzeile{text-align:center;max-width:720px;margin:0 auto 54px;}
+.kopfzeile p{margin-left:auto;margin-right:auto;}
+.drei{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.karte{background:var(--weiss);border-radius:16px;padding:38px 32px;box-shadow:0 14px 36px rgba(20,22,75,.07);}
+.karte .nr{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1;margin-bottom:14px;}
+.karte h3{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--tinte);margin-bottom:10px;}
+.karte p{font-size:16px;color:var(--sanft);margin:0;}
 
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(255, 253, 255, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--flieder-hell);
-  }
-  .nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 0;
-  }
-  .nav img { height: 44px; display: block; }
-  .nav .zurueck {
-    color: var(--text-sanft); text-decoration: none;
-    font-weight: 500; font-size: 15px;
-  }
-  .nav .zurueck:hover { color: var(--lila-akzent); }
+/* ---------- Aktuelles ---------- */
+.neu{display:grid;grid-template-columns:1.15fr 1fr;background:var(--weiss);border-radius:18px;overflow:hidden;box-shadow:0 20px 48px rgba(20,22,75,.1);}
+.neu img{width:100%;height:100%;object-fit:cover;min-height:340px;}
+.neu-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
+.neu-text h3{font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.2;color:var(--tinte);margin-bottom:14px;}
+.neu-text p{color:var(--sanft);font-size:16px;margin:0;}
 
-  .legal { padding: 72px 0 96px; }
-  .abschnitt-kicker {
-    text-transform: uppercase; letter-spacing: 0.22em;
-    font-size: 13px; font-weight: 600; color: var(--lila-akzent);
-    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
-  }
-  .abschnitt-kicker::before { content: ''; width: 36px; height: 1px; background: var(--flieder); }
-  h1 { font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 700; color: var(--lila-tief); margin-bottom: 18px; }
-  .einleitung { color: var(--text-sanft); margin-bottom: 24px; }
-  h2 { font-size: 1.45rem; font-weight: 600; color: var(--lila-tief); margin: 40px 0 12px; }
-  h3 { font-size: 1.15rem; font-weight: 600; color: var(--lila-dunkel); margin: 26px 0 8px; }
-  p { margin-bottom: 13px; }
-  ul { margin: 0 0 13px 22px; }
-  li { margin-bottom: 7px; }
-  strong { font-weight: 600; color: var(--lila-tief); }
+/* ---------- Fuß ---------- */
+footer{background:var(--navy);color:#c9c6dd;padding:64px 0 40px;font-size:15px;}
+.fuss{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;}
+footer h4{color:#fff;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+footer a{display:block;text-decoration:none;padding:3px 0;}
+footer a:hover{color:#fff;}
+.fuss-logo{font-weight:700;font-size:28px;letter-spacing:.2em;color:var(--gold-hell);margin-bottom:12px;}
+.klein{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;opacity:.75;}
 
-  .karte {
-    background: var(--weiss); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 26px 30px; margin: 6px 0 10px;
-  }
-  .karte p { margin-bottom: 4px; }
+@media(max-width:900px){
+  .zwei,.neu,.drei,.fuss{grid-template-columns:1fr;gap:34px;}
+  .zwei.dreh .bild{order:0;}
+  .teil{padding:72px 0;}
+  .menue{display:block;}
+  nav{display:none;position:absolute;top:74px;left:0;right:0;background:var(--creme);flex-direction:column;align-items:flex-start;
+    padding:10px 28px 26px;gap:0;border-bottom:1px solid rgba(162,134,72,.12);}
+  nav.offen{display:flex;}
+  .nav-punkt>a{padding:12px 0;}
+  .unter{position:static;display:block;box-shadow:none;background:none;padding:0 0 6px 12px;}
+  .nav-punkt>a::after{display:none;}
+}
 
-  a.link { color: var(--lila-akzent); text-decoration: none; border-bottom: 1px solid var(--flieder-hell); word-break: break-word; }
-  a.link:hover { border-color: var(--lila-akzent); }
-  .stand { color: var(--text-sanft); font-size: 14px; margin-top: 32px; }
-
-  footer {
-    background: var(--lila-tief); padding: 28px 0;
-    color: var(--flieder); font-size: 0.9rem;
-  }
-  .fuss {
-    display: flex; justify-content: space-between;
-    flex-wrap: wrap; gap: 14px; align-items: center;
-  }
-  .fuss a { color: var(--flieder); text-decoration: none; }
-  .fuss a:hover { color: #fff; }
-  .fuss .links { display: flex; gap: 22px; flex-wrap: wrap; }
-
-  @media (max-width: 560px) { body { font-size: 16px; } .nav img { height: 34px; } }
+.legal{padding:72px 0 96px;}
+.schmal{max-width:780px;}
+.legal h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.4vw,52px);color:var(--tinte);margin-bottom:22px;}
+.legal h2{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--tinte);margin:34px 0 8px;}
+.legal p{margin-bottom:12px;max-width:none;}
+.legal a{color:var(--gold-dunkel);}
+.adresse{background:var(--weiss);border-radius:14px;padding:22px 28px;margin:18px 0 6px;box-shadow:0 10px 28px rgba(20,22,75,.07);}
+.adresse p{margin:2px 0;}
+.stand{color:var(--sanft);font-size:14px;margin-top:34px;}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="container nav">
-    <a href="index.html"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship Logo"></a>
-    <a href="index.html" class="zurueck">← Zurück zur Startseite</a>
+  <div class="bahn kopf">
+    <a class="logo" href="index.html#oben" aria-label="I4E – Startseite">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="8" fill="#a28648"/>
+        <path d="M11 27 L20 12 L29 27" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="29" r="2.4" fill="#fff"/>
+      </svg>
+      <span class="logo-wort">I4E<small>Impact4Entrepreneurship</small></span>
+    </a>
+    <button class="menue" id="menue" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <div class="nav-punkt"><a href="index.html#wege">Unsere Wege</a>
+        <div class="unter">
+          <a href="index.html#stipendien">Stipendien</a>
+          <a href="index.html#beteiligungen">Beteiligungen</a>
+          <a href="index.html#begleitung">Begleitung</a>
+        </div>
+      </div>
+      <div class="nav-punkt"><a href="index.html#ueber">Über uns</a>
+        <div class="unter">
+          <a href="index.html#auftrag">Unser Auftrag</a>
+          <a href="index.html#modell">Wirkungsmodell</a>
+          <a href="index.html">Leitbild</a>
+        </div>
+      </div>
+      <div class="nav-punkt"><a href="index.html#aktuelles">Aktuelles</a>
+        <div class="unter">
+          <a href="index.html#aktuelles">Neuigkeiten</a>
+          <a href="podcast.html">Podcast „Menschen mit Wirkung“</a>
+        </div>
+      </div>
+      <a class="knopf" href="index.html#kontakt">Kontakt</a>
+    </nav>
   </div>
 </header>
-
+<main>
 <section class="legal">
-  <div class="col">
-    <span class="abschnitt-kicker">Rechtliches</span>
-    <h1>Datenschutzerklärung</h1>
-    <p class="einleitung">Wir freuen uns über Ihr Interesse an unserer Webseite. Der Schutz Ihrer Privatsphäre ist für uns sehr wichtig. Nachstehend informieren wir Sie ausführlich über den Umgang mit Ihren Daten.</p>
+  <div class="bahn schmal">
+    <div class="auge">Rechtliches</div>
+    <h1>Datenschutz</h1>
+    <p>Der Schutz deiner persönlichen Daten ist uns wichtig. Diese Seite ist bewusst schlank gebaut: Wir setzen keine Cookies, keine Analyse- und keine Werbewerkzeuge ein und laden keine Schriften von fremden Servern.</p>
 
-    <h2>Verantwortlicher</h2>
-    <div class="karte">
-      <p><strong>Michael Deck</strong></p>
-      <p>Holzweg 2c</p>
-      <p>39326 Groß Ammensleben</p>
-      <p>E-Mail: <a class="link" href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
+    <h2>Verantwortlich</h2>
+    <div class="adresse">
+      <p><strong>Impact4Entrepreneurship gGmbH</strong></p>
+      <p>Haynauer Str. 72a, 12249 Berlin</p>
+      <p>Geschäftsführer: Michael Deck</p>
+      <p>E-Mail: <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
     </div>
 
-    <h2>1. Zugriffsdaten und Hosting</h2>
-    <p>Sie können unsere Webseiten besuchen, ohne Angaben zu Ihrer Person zu machen. Bei jedem Aufruf einer Webseite speichert der Webserver lediglich automatisch ein sogenanntes Server-Logfile, das z. B. den Namen der angeforderten Datei, Ihre IP-Adresse, Datum und Uhrzeit des Abrufs, übertragene Datenmenge und den anfragenden Provider (Zugriffsdaten) enthält und den Abruf dokumentiert. Diese Zugriffsdaten werden ausschließlich zum Zwecke der Sicherstellung eines störungsfreien Betriebs der Seite sowie der Verbesserung unseres Angebots ausgewertet. Dies dient der Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen an einer korrekten Darstellung unseres Angebots gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO. Alle Zugriffsdaten werden nur so lange verarbeitet, wie dies für die Erreichung der oben genannten Verarbeitungszwecke erforderlich ist.</p>
+    <h2>Hosting und Server-Protokolle</h2>
+    <p>Diese Webseite wird über GitHub Pages bereitgestellt (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf der Seite verarbeitet der Anbieter technisch notwendige Daten, insbesondere die IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite sowie Browser- und Systeminformationen. Das ist notwendig, um die Seite auszuliefern und ihre Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). GitHub ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
+    <p>Die Adresse impact4entrepreneurship.de leitet zusätzlich über den Domain-Anbieter auf diese Seite weiter. Dabei kann auch dort die IP-Adresse kurzzeitig verarbeitet werden.</p>
 
-    <h3>1.1 Hosting</h3>
-    <p>Die Dienste zum Hosting und zur Darstellung der Webseite werden teilweise durch unsere Dienstleister im Rahmen einer Verarbeitung in unserem Auftrag erbracht. Soweit im Rahmen der vorliegenden Datenschutzerklärung nichts anderes erläutert wird, werden alle Zugriffsdaten sowie alle Daten, die in dafür vorgesehenen Formularen auf dieser Webseite erhoben werden, auf ihren Servern verarbeitet. Bei Fragen zu unseren Dienstleistern und der Grundlage unserer Zusammenarbeit mit ihnen wenden Sie sich bitte an die in dieser Datenschutzerklärung beschriebene Kontaktmöglichkeit.</p>
-    <p>Unsere Dienstleister sitzen und/oder verwenden Server in folgenden Ländern, für die die Europäische Kommission durch Beschluss ein angemessenes Datenschutzniveau festgestellt hat: USA. Der Angemessenheitsbeschluss für die USA gilt als Grundlage für die Drittlandsübermittlung, soweit der jeweilige Dienstleister zertifiziert ist. Eine Zertifizierung liegt vor.</p>
-    <p>Unsere Dienstleister sitzen und/oder verwenden ferner Server in Ländern außerhalb der EU und des EWR. Für Länder, für die kein Angemessenheitsbeschluss der Europäischen Kommission vorliegt, stützt sich unsere Zusammenarbeit mit ihnen auf Standarddatenschutzklauseln der Europäischen Kommission.</p>
+    <h2>Cookies und Auswertung</h2>
+    <p>Wir verwenden keine Cookies und kein Tracking. Es werden keine Daten an Werbe- oder Analysedienste übermittelt.</p>
 
-    <h3>1.2 Content Delivery Network</h3>
-    <p>Zum Zwecke einer kürzeren Ladezeit setzen wir bei einigen Angeboten ein sogenanntes Content Delivery Network („CDN") ein. Bei diesem Dienst werden Inhalte, z. B. große Mediendateien, über regional verteilte Server externer CDN-Dienstleister ausgeliefert. Daher werden auf den Servern der Dienstleister Zugriffsdaten verarbeitet. Unsere Dienstleister sind im Rahmen einer Auftragsverarbeitung für uns tätig. Bei Fragen zu unseren Dienstleistern und der Grundlage unserer Zusammenarbeit mit ihnen wenden Sie sich bitte an die in dieser Datenschutzerklärung beschriebene Kontaktmöglichkeit.</p>
-    <p>Unsere Dienstleister sitzen und/oder verwenden Server in folgenden Ländern, für die die Europäische Kommission durch Beschluss ein angemessenes Datenschutzniveau festgestellt hat: USA. Der Angemessenheitsbeschluss für die USA gilt als Grundlage für die Drittlandsübermittlung, soweit der jeweilige Dienstleister zertifiziert ist. Eine Zertifizierung liegt vor. Soweit Server in Ländern ohne Angemessenheitsbeschluss genutzt werden, stützt sich unsere Zusammenarbeit auf Standarddatenschutzklauseln der Europäischen Kommission.</p>
+    <h2>Schriften</h2>
+    <p>Die verwendeten Schriften (Playfair Display, Inter) liegen auf unserem eigenen Server. Beim Aufruf wird keine Verbindung zu Google oder anderen Schriftanbietern aufgebaut.</p>
 
-    <h2>2. Datenverarbeitung zur Vertragsabwicklung und zur Kontaktaufnahme</h2>
+    <h2>Kontakt per E-Mail oder Telefon</h2>
+    <p>Wenn du uns schreibst oder anrufst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. b oder f DSGVO). Wir löschen sie, sobald sie nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
-    <h3>2.1 Datenverarbeitung zur Vertragsabwicklung</h3>
-    <p>Wir erheben personenbezogene Daten, wenn Sie uns diese im Rahmen Ihrer Bestellung oder bei einer Kontaktaufnahme mit uns (z. B. per Kontaktformular oder E-Mail) freiwillig mitteilen. Pflichtfelder werden als solche gekennzeichnet, da wir in diesen Fällen die Daten zwingend zur Vertragsabwicklung bzw. zur Bearbeitung Ihrer Kontaktaufnahme benötigen und Sie ohne deren Angabe die Bestellung nicht abschließen bzw. die Kontaktaufnahme nicht versenden können. Welche Daten erhoben werden, ist aus den jeweiligen Eingabeformularen ersichtlich.</p>
-    <p>Wir verwenden die von Ihnen mitgeteilten Daten zur Vertragsabwicklung und Bearbeitung Ihrer Anfragen (inkl. Anfragen zu und Abwicklung von ggf. bestehenden Ansprüchen aus dem Gewährleistungs-, dem Leistungsstörungs- und dem Widerrufsrecht sowie etwaiger gesetzlicher Aktualisierungspflichten) gemäß Art. 6 Abs. 1 S. 1 lit. b DSGVO. Nach vollständiger Abwicklung des Vertrages werden Ihre Daten für die weitere Verarbeitung eingeschränkt und nach Ablauf etwaiger steuer- und handelsrechtlicher Aufbewahrungsfristen gemäß Art. 6 Abs. 1 S. 1 lit. c DSGVO gelöscht, sofern Sie nicht ausdrücklich in eine weitere Nutzung Ihrer Daten gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben oder wir uns eine darüber hinausgehende, gesetzlich erlaubte Datenverwendung vorbehalten, über die wir Sie in dieser Erklärung informieren.</p>
+    <h2>Podcast-Wiedergabe</h2>
+    <p>Die Podcast-Folgen liegen bei unserem Podcast-Anbieter Podigee (Podigee GmbH, Rudolfstraße 1, 10245 Berlin). Erst wenn du bei einer Folge auf „Abspielen“ klickst, wird eine Verbindung zu dessen Servern aufgebaut und deine IP-Adresse dorthin übermittelt. Vorher findet keine Übertragung statt.</p>
 
-    <h3>Kontaktaufnahme</h3>
-    <p>Im Rahmen der Kundenkommunikation erheben wir zur Bearbeitung Ihrer Anfragen gemäß Art. 6 Abs. 1 S. 1 lit. b DSGVO personenbezogene Daten, wenn Sie uns diese bei einer Kontaktaufnahme mit uns (z. B. per Kontaktformular, Live-Chat-Tool oder E-Mail) freiwillig mitteilen. Pflichtfelder werden als solche gekennzeichnet, da wir in diesen Fällen die Daten zwingend zur Bearbeitung Ihrer Kontaktaufnahme benötigen. Welche Daten erhoben werden, ist aus den jeweiligen Eingabeformularen ersichtlich. Nach vollständiger Bearbeitung Ihrer Anfrage werden Ihre Daten gelöscht, sofern Sie nicht ausdrücklich in eine weitere Nutzung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben oder wir uns eine darüber hinausgehende, gesetzlich erlaubte Datenverwendung vorbehalten, über die wir Sie in dieser Erklärung informieren.</p>
+    <h2>Externe Links</h2>
+    <p>Diese Seite enthält Links zu anderen Anbietern, zum Beispiel zu Podcast-Plattformen oder zu Partnerorganisationen. Sobald du einen Link anklickst, gelten die Datenschutzhinweise des jeweiligen Anbieters. Auf deren Datenverarbeitung haben wir keinen Einfluss.</p>
 
-    <h3>2.2 Datenverarbeitung zur Terminbuchung / Reservierung</h3>
-    <p>Wir erheben personenbezogene Daten, wenn Sie uns diese im Rahmen einer Terminbuchung / Reservierung freiwillig mitteilen. Pflichtfelder werden als solche gekennzeichnet, da wir in diesen Fällen die Daten zwingend zur Terminbuchung / Reservierung benötigen und Sie ohne deren Angabe die Terminbuchung / Reservierung nicht versenden können. Welche Daten erhoben werden, ist aus den jeweiligen Eingabeformularen ersichtlich. Angaben in Freitextfeldern sind freiwillig und müssen für den Versand der Terminbuchung / Reservierung nicht zwingend ausgefüllt werden. Wir bitten, auf die Angabe sensibler Daten (z. B. gesundheitsbezogene Angaben wie Krankheiten) in Freitextfeldern zu verzichten.</p>
-    <p>Wir verwenden die von Ihnen mitgeteilten Daten zur Terminbuchung / Reservierung gemäß Art. 6 Abs. 1 S. 1 lit. b DSGVO. Nach vollständiger Abwicklung des gebuchten Termins / der Reservierung werden Ihre Daten für die weitere Verarbeitung eingeschränkt und nach Ablauf etwaiger steuer- und handelsrechtlicher Aufbewahrungsfristen gemäß Art. 6 Abs. 1 S. 1 lit. c DSGVO gelöscht, sofern Sie nicht ausdrücklich in eine weitere Nutzung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben oder wir uns eine darüber hinausgehende, gesetzlich erlaubte Datenverwendung vorbehalten, über die wir Sie in dieser Erklärung informieren.</p>
+    <h2>Deine Rechte</h2>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung deiner Daten. Wende dich dafür an die oben genannte E-Mail-Adresse.</p>
+    <p>Außerdem kannst du dich bei einer Datenschutzaufsichtsbehörde beschweren, zum Beispiel bei der Berliner Beauftragten für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.</p>
 
-    <h3>Terminbuchungslösung von Jimdo</h3>
-    <p>Zum Zwecke der Terminbuchung verwenden wir eine Buchungslösung der Jimdo GmbH, Stresemannstraße 375, 22761 Hamburg, auf Grundlage der Technologie der Shore GmbH, Lothstr. 19, 80797 München („Shore"). Der Dienstleister ist in unserem Auftrag für uns tätig.</p>
-
-    <h3>Bearbeitung Ihrer Anfragen und personalisierte Beratung</h3>
-    <p>Im Rahmen unserer smarten Formulare erheben wir zur Bearbeitung Ihrer Anfrage und personalisierten Beratung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO weitere, über die vertragscharakteristische Leistungserbringung hinausgehende personenbezogene Daten, wenn Sie uns diese mitteilen. Pflichtfelder werden als solche gekennzeichnet, da wir in diesen Fällen die Daten zur personalisierten Bearbeitung Ihrer Kontaktaufnahme benötigen. Welche Daten erhoben werden, ist aus den jeweiligen Eingabeformularen ersichtlich. Nach vollständiger Bearbeitung Ihrer Anfrage werden Ihre Daten gelöscht, sofern Sie nicht ausdrücklich in eine weitere Nutzung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben oder wir uns eine darüber hinausgehende, gesetzlich erlaubte Datenverwendung vorbehalten, über die wir Sie in dieser Erklärung informieren.</p>
-
-    <h2>3. Werbung per E-Mail</h2>
-    <h3>E-Mail-Newsletter mit Anmeldung</h3>
-    <p>Wenn Sie sich zu unserem Newsletter anmelden, verwenden wir die hierfür erforderlichen oder gesondert von Ihnen mitgeteilten Daten, um Ihnen regelmäßig unseren E-Mail-Newsletter aufgrund Ihrer Einwilligung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO zuzusenden. Die Abmeldung vom Newsletter ist jederzeit möglich und kann entweder durch eine Nachricht an die unten beschriebene Kontaktmöglichkeit oder über einen dafür vorgesehenen Link im Newsletter erfolgen. Nach Abmeldung löschen wir Ihre E-Mail-Adresse aus der Empfängerliste, soweit Sie nicht ausdrücklich in eine weitere Nutzung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben oder wir uns eine darüber hinausgehende, gesetzlich erlaubte Datenverwendung vorbehalten, über die wir Sie in dieser Erklärung informieren.</p>
-
-    <h2>4. Cookies und weitere Technologien</h2>
-
-    <h3>4.1 Allgemeine Informationen</h3>
-    <p>Um den Besuch unserer Webseite attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwenden wir auf verschiedenen Seiten Technologien einschließlich sogenannter Cookies. Cookies sind kleine Textdateien, die automatisch auf Ihrem Endgerät gespeichert werden. Einige der von uns verwendeten Cookies werden nach Ende der Browser-Sitzung, also nach Schließen Ihres Browsers, wieder gelöscht (sog. Sitzungs-Cookies). Andere Cookies verbleiben auf Ihrem Endgerät und ermöglichen uns, Ihren Browser beim nächsten Besuch wiederzuerkennen (persistente Cookies). Die Dauer der Speicherung können Sie der Übersicht in den Cookie-Einstellungen Ihres Webbrowsers entnehmen.</p>
-    <p><strong>Schutz der Privatsphäre bei Endgeräten.</strong> Bei Nutzung unseres Online-Angebots setzen wir unbedingt notwendige Technologien ein, um den ausdrücklich gewünschten digitalen Dienst zur Verfügung stellen zu können. Die Speicherung von Informationen in Ihrem Endgerät oder der Zugriff auf bereits gespeicherte Informationen bedürfen insoweit keiner Einwilligung. Bei nicht unbedingt erforderlichen Funktionen bedarf die Speicherung von Informationen in Ihrem Endgerät oder der Zugriff auf bereits gespeicherte Informationen Ihrer Einwilligung. Bei Nichterteilung der Einwilligung können ggf. Teile der Webseite nicht uneingeschränkt nutzbar sein. Ihre etwaig erteilten Einwilligungen bleiben bestehen, bis Sie die jeweiligen Einstellungen in Ihrem Endgerät anpassen oder zurücksetzen.</p>
-    <p><strong>Etwaig nachgelagerte Datenverarbeitung.</strong> Wir verwenden Technologien, die für die Nutzung bestimmter Funktionen unserer Webseite zwingend erforderlich sind. Durch diese werden IP-Adresse, Zeitpunkt des Besuchs, Geräte- und Browser-Informationen sowie Informationen zu Ihrer Nutzung unserer Webseite erhoben und verarbeitet. Dies dient im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen an einer optimierten Darstellung unseres Angebots gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO. Zudem verwenden wir Technologien zur Erfüllung rechtlicher Verpflichtungen (z. B. um Einwilligungen nachweisen zu können) sowie zu Webanalyse und Online-Marketing.</p>
-    <p><strong>Cookie-Einstellungen.</strong> Die Cookie-Einstellungen für Ihren Browser finden Sie in dessen Hilfe- bzw. Einstellungsbereich (Microsoft Edge, Safari, Chrome, Firefox, Opera). Soweit Sie in die Verwendung der Technologien gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben, können Sie Ihre Einwilligung jederzeit durch eine Nachricht an die in dieser Datenschutzerklärung beschriebene Kontaktmöglichkeit widerrufen.</p>
-
-    <h3>4.2 Jimdo Consent Manager Tool zur Verwaltung von Einwilligungen</h3>
-    <p>Auf unserer Webseite setzen wir das Jimdo Consent Manager Tool ein, um Sie über die Cookies und die anderen Technologien zu informieren, die wir auf unserer Webseite verwenden, sowie Ihre gegebenenfalls erforderliche Einwilligung in die Verarbeitung Ihrer personenbezogenen Daten durch diese Technologien einzuholen, zu verwalten und zu dokumentieren. Dies ist gemäß Art. 6 Abs. 1 S. 1 lit. c DSGVO zur Erfüllung unserer rechtlichen Verpflichtung gemäß Art. 7 Abs. 1 DSGVO erforderlich, Ihre Einwilligung nachweisen zu können. Das Jimdo Consent Manager Tool ist ein Angebot der Jimdo GmbH, Stresemannstraße 375, 22761 Hamburg, Deutschland („Jimdo"). Nach Abgabe Ihrer Cookie-Erklärung speichert der Webserver von Jimdo Ihre IP-Adresse, Datum und Uhrzeit Ihrer Erklärung, Browser-Informationen, Sprache und URL, von der die Erklärung gesendet wurde, sowie Informationen zu Ihrem Einwilligungsverhalten. Zudem wird ein Cookie eingesetzt, das die Informationen zu Ihrem Einwilligungsverhalten enthält. Ihre Daten werden nach 365 Tagen gelöscht, sofern Sie nicht ausdrücklich in eine weitere Nutzung gemäß Art. 6 Abs. 1 S. 1 lit. a DSGVO eingewilligt haben oder wir uns eine darüber hinausgehende, gesetzlich erlaubte Datenverwendung vorbehalten, über die wir Sie in dieser Erklärung informieren.</p>
-    <p>Unsere Dienstleister sitzen und/oder verwenden Server in folgenden Ländern, für die die Europäische Kommission durch Beschluss ein angemessenes Datenschutzniveau festgestellt hat: USA. Der Angemessenheitsbeschluss für die USA gilt als Grundlage für die Drittlandsübermittlung, soweit der jeweilige Dienstleister zertifiziert ist. Eine Zertifizierung liegt vor. Soweit Server in Ländern ohne Angemessenheitsbeschluss genutzt werden, stützt sich unsere Zusammenarbeit auf Standarddatenschutzklauseln der Europäischen Kommission.</p>
-
-    <h3>Jimdo Tracking</h3>
-    <p>Wir verwenden das Tracking- und Analyse-Tool der Jimdo GmbH, Stresemannstraße 375, 22761 Hamburg, Deutschland. Dies dient gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO der Wahrung unserer im Rahmen einer Interessensabwägung berechtigten Interessen, nämlich der statistischen Auswertung Ihres Nutzerverhaltens auf unserer Webseite und der Sicherstellung einer bedarfsgerechten, nutzerfreundlichen Gestaltung und kontinuierlichen Optimierung unserer Angebote. Für das Jimdo-Tracking kommen keine Cookies zum Einsatz. Ihre Daten (IP-Adresse, Zeitpunkt des Besuchs, Geräte- und Browser-Informationen) werden automatisch erhoben, zusammengeführt und unter Verwendung pseudonymisierter Nutzungsprofile für die dargestellten Zwecke verarbeitet. Ihre Daten werden dabei gekürzt, als Hash-Wert gespeichert und zusätzlich durch einen sich alle 24 Stunden ändernden Zufallswert verschlüsselt. Ein Rückschluss auf die Identität einzelner Nutzer wird dabei unterbunden. Eine weitere Zusammenführung der Daten findet nicht statt.</p>
-
-    <h2>5. Kontaktmöglichkeiten und Ihre Rechte</h2>
-
-    <h3>5.1 Ihre Rechte</h3>
-    <p>Als Betroffener haben Sie folgende Rechte:</p>
-    <ul>
-      <li>gemäß Art. 15 DSGVO das Recht, in dem dort bezeichneten Umfang Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen;</li>
-      <li>gemäß Art. 16 DSGVO das Recht, unverzüglich die Berichtigung unrichtiger oder die Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen;</li>
-      <li>gemäß Art. 17 DSGVO das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die weitere Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung, aus Gründen des öffentlichen Interesses oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist;</li>
-      <li>gemäß Art. 18 DSGVO das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, soweit die Richtigkeit der Daten von Ihnen bestritten wird, die Verarbeitung unrechtmäßig ist, Sie aber deren Löschung ablehnen, wir die Daten nicht mehr benötigen, Sie diese jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen, oder Sie gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung eingelegt haben;</li>
-      <li>gemäß Art. 20 DSGVO das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen;</li>
-      <li>gemäß Art. 77 DSGVO das Recht, sich bei einer Aufsichtsbehörde zu beschweren. In der Regel können Sie sich hierfür an die Aufsichtsbehörde Ihres üblichen Aufenthaltsortes oder Arbeitsplatzes oder unseres Unternehmenssitzes wenden.</li>
-    </ul>
-    <p><strong>Widerspruchsrecht.</strong> Soweit wir zur Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen personenbezogene Daten wie oben erläutert verarbeiten, können Sie dieser Verarbeitung mit Wirkung für die Zukunft widersprechen. Erfolgt die Verarbeitung zu Zwecken des Direktmarketings, können Sie dieses Recht jederzeit wie oben beschrieben ausüben. Soweit die Verarbeitung zu anderen Zwecken erfolgt, steht Ihnen ein Widerspruchsrecht nur bei Vorliegen von Gründen zu, die sich aus Ihrer besonderen Situation ergeben.</p>
-    <p>Nach Ausübung Ihres Widerspruchsrechts werden wir Ihre personenbezogenen Daten nicht weiter zu diesen Zwecken verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. Dies gilt nicht, wenn die Verarbeitung zu Zwecken des Direktmarketings erfolgt – dann werden wir Ihre personenbezogenen Daten nicht weiter zu diesem Zweck verarbeiten.</p>
-
-    <h3>5.2 Kontaktmöglichkeiten</h3>
-    <p>Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten, bei Auskünften, Berichtigung, Einschränkung oder Löschung von Daten sowie beim Widerruf erteilter Einwilligungen oder Widerspruch gegen eine bestimmte Datenverwendung wenden Sie sich bitte direkt an uns über die Kontaktdaten in unserem Impressum.</p>
-    <div class="karte">
-      <p><strong>Michael Deck</strong></p>
-      <p>Holzweg 2c, 39326 Groß Ammensleben</p>
-      <p>E-Mail: <a class="link" href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a></p>
-    </div>
-
-    <p class="stand">Stand: Juli 2026</p>
+    <p class="stand">Stand: November 2026</p>
   </div>
 </section>
-
-<footer>
-  <div class="container fuss">
-    <span>© 2026 Impact4Entrepreneurship gGmbH</span>
-    <span class="links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </span>
+</main>
+<footer id="kontakt">
+  <div class="bahn">
+    <div class="fuss">
+      <div>
+        <div class="fuss-logo">I4E</div>
+        <p>Impact4Entrepreneurship gGmbH<br>Haynauer Str. 72a, 12249 Berlin</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a>
+        <a href="tel:+491705744206">+49 170 5744206</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <div class="klein">© 2026 Impact4Entrepreneurship gGmbH · Entwurf</div>
   </div>
 </footer>
-
+<script>
+var m=document.getElementById('menue'),n=document.getElementById('nav');
+m.addEventListener('click',function(){var o=n.classList.toggle('offen');m.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('offen');});
+</script>
 </body>
 </html>
