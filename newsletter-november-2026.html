@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newsletter November 2026 – Impact4Entrepreneurship gGmbH</title>
+<meta name="description" content="I4E Newsletter November 2026 – Beteiligungsvertrag mit der P3 Werkstatt unterzeichnet · KI und Unternehmertum an der Marienschule Potsdam · Podcast-Folgen 2–4 · Interview zur Impact-Messung · Mentoring, FBG-Vortrag und Bitcoin-Workshop">
+<link rel="icon" href="images/i4e-logo.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --creme:#f4f0e4; --creme-dunkel:#ebe5d3; --weiss:#fffdf8;
+  --gold:#a28648; --gold-dunkel:#866d38; --gold-hell:#c4a96a; --tinte:#1d1b16; --navy:#14164b;
+  --text:#2a2721; --sanft:#6b655a;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--creme);color:var(--text);line-height:1.65;font-size:17px;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+.bahn{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+/* ---------- Kopfzeile ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--creme);border-bottom:1px solid rgba(162,134,72,.12);}
+.kopf{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--gold);}
+.logo svg{height:40px;width:auto;}
+.logo-wort{font-weight:700;font-size:26px;letter-spacing:.2em;line-height:1;text-transform:uppercase;}
+.logo-wort small{display:block;font-size:8.5px;font-weight:500;letter-spacing:.2em;margin-top:6px;color:var(--sanft);}
+nav{display:flex;align-items:center;gap:30px;}
+.nav-punkt{position:relative;}
+.nav-punkt>a{font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:26px 0;display:inline-flex;align-items:center;gap:6px;}
+.nav-punkt>a::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);}
+.nav-punkt.einzeln>a::after{display:none;}
+.unter{position:absolute;top:100%;left:-18px;min-width:230px;background:var(--weiss);border-radius:0 0 12px 12px;
+  box-shadow:0 18px 40px rgba(20,22,75,.14);padding:10px 0;display:none;}
+.nav-punkt:hover .unter,.nav-punkt:focus-within .unter{display:block;}
+.unter a{display:block;padding:9px 22px;font-size:15px;text-decoration:none;}
+.unter a:hover{background:var(--creme);color:var(--gold);}
+.knopf{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;border-radius:5px;border:0;cursor:pointer;
+  transition:background .2s;}
+.knopf:hover{background:var(--gold-dunkel);}
+.menue{display:none;background:none;border:0;font-size:28px;color:var(--gold);cursor:pointer;}
+
+/* ---------- Titelbild ---------- */
+.titel{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;}
+.titel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.titel::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(20,22,75,.55),rgba(20,22,75,.72));}
+.titel-text{position:relative;z-index:2;padding:40px 28px;max-width:960px;}
+.titel h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5.6vw,68px);line-height:1.12;margin-bottom:22px;}
+.titel p{font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;}
+
+/* ---------- Abschnitte ---------- */
+.teil{padding:104px 0;}
+.teil.dunkel{background:var(--creme-dunkel);}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.zwei.dreh .bild{order:-1;}
+.auge{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:500;margin-bottom:10px;}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.15;color:var(--tinte);margin-bottom:20px;}
+.teil p{color:var(--text);margin-bottom:16px;max-width:560px;}
+.teil .knopf{margin-top:12px;}
+.bild img{width:100%;aspect-ratio:4/3.1;object-fit:cover;border-radius:16px;box-shadow:0 24px 54px rgba(20,22,75,.16);}
+.bild.hoch img{aspect-ratio:4/4.6;}
+
+/* ---------- Farbband ---------- */
+.band{background:var(--gold);color:var(--tinte);padding:92px 0;text-align:center;}
+.band p{font-size:clamp(17px,2vw,22px);letter-spacing:.07em;text-transform:uppercase;font-weight:400;line-height:1.7;max-width:880px;margin:0 auto;}
+.band small{display:block;margin-top:22px;font-size:13px;letter-spacing:.14em;opacity:.75;text-transform:uppercase;}
+
+/* ---------- Drei Karten ---------- */
+.kopfzeile{text-align:center;max-width:720px;margin:0 auto 54px;}
+.kopfzeile p{margin-left:auto;margin-right:auto;}
+.drei{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.karte{background:var(--weiss);border-radius:16px;padding:38px 32px;box-shadow:0 14px 36px rgba(20,22,75,.07);}
+.karte .nr{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1;margin-bottom:14px;}
+.karte h3{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--tinte);margin-bottom:10px;}
+.karte p{font-size:16px;color:var(--sanft);margin:0;}
+
+/* ---------- Aktuelles ---------- */
+.neu{display:grid;grid-template-columns:1.15fr 1fr;background:var(--weiss);border-radius:18px;overflow:hidden;box-shadow:0 20px 48px rgba(20,22,75,.1);}
+.neu img{width:100%;height:100%;object-fit:cover;min-height:340px;}
+.neu-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
+.neu-text h3{font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.2;color:var(--tinte);margin-bottom:14px;}
+.neu-text p{color:var(--sanft);font-size:16px;margin:0;}
+
+/* ---------- Fuß ---------- */
+footer{background:var(--navy);color:#c9c6dd;padding:64px 0 40px;font-size:15px;}
+.fuss{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;}
+footer h4{color:#fff;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+footer a{display:block;text-decoration:none;padding:3px 0;}
+footer a:hover{color:#fff;}
+.fuss-logo{font-weight:700;font-size:28px;letter-spacing:.2em;color:var(--gold-hell);margin-bottom:12px;}
+.klein{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;opacity:.75;}
+
+@media(max-width:900px){
+  .zwei,.neu,.drei,.fuss{grid-template-columns:1fr;gap:34px;}
+  .zwei.dreh .bild{order:0;}
+  .teil{padding:72px 0;}
+  .menue{display:block;}
+  nav{display:none;position:absolute;top:74px;left:0;right:0;background:var(--creme);flex-direction:column;align-items:flex-start;
+    padding:10px 28px 26px;gap:0;border-bottom:1px solid rgba(162,134,72,.12);}
+  nav.offen{display:flex;}
+  .nav-punkt>a{padding:12px 0;}
+  .unter{position:static;display:block;box-shadow:none;background:none;padding:0 0 6px 12px;}
+  .nav-punkt>a::after{display:none;}
+}
+
+.legal{padding:72px 0 96px;}
+.schmal{max-width:780px;}
+.legal h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.4vw,52px);color:var(--tinte);margin-bottom:22px;}
+.legal h2{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--tinte);margin:34px 0 8px;}
+.legal p{margin-bottom:12px;max-width:none;}
+.legal a{color:var(--gold-dunkel);}
+.adresse{background:var(--weiss);border-radius:14px;padding:22px 28px;margin:18px 0 6px;box-shadow:0 10px 28px rgba(20,22,75,.07);}
+.adresse p{margin:2px 0;}
+.stand{color:var(--sanft);font-size:14px;margin-top:34px;}
+
+
+.nl-kopf{background:var(--navy);color:#fff;padding:84px 0 76px;}
+.nl-kopf .auge{color:var(--gold-hell);}
+.nl-kopf h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.8vw,56px);line-height:1.14;margin-bottom:20px;}
+.nl-kopf p{color:#c9c6dd;font-size:18px;max-width:62ch;}
+.nl-kopf a{color:var(--gold-hell);}
+.ausgaben{max-width:860px;margin:0 auto;display:grid;gap:26px;padding:72px 0 100px;}
+.ausgabe{background:var(--weiss);border-radius:16px;padding:38px 36px;box-shadow:0 14px 36px rgba(20,22,75,.07);}
+.ausgabe .marke{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:600;margin-bottom:10px;}
+.ausgabe .marke em{font-style:normal;background:var(--gold);color:var(--tinte);padding:2px 9px;border-radius:100px;margin-left:6px;}
+.ausgabe h2{font-size:clamp(24px,2.8vw,31px);margin-bottom:12px;}
+.ausgabe p{color:var(--sanft);font-size:16px;margin-bottom:18px;}
+.knoepfe{display:flex;flex-wrap:wrap;gap:12px;}
+.knopf.hell{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy);}
+.knopf.hell:hover{background:var(--navy);color:#fff;}
+.artikel{padding:72px 0 40px;}
+.col{max-width:720px;margin:0 auto;padding:0 28px;}
+.col h2{font-size:clamp(26px,3vw,34px);margin:48px 0 16px;}
+.col h2:first-child{margin-top:0;}
+.col h3{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--tinte);margin:32px 0 10px;}
+.col p{margin-bottom:16px;}
+.col a{color:var(--gold-dunkel);}
+.rubrik{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:600;
+  margin:64px 0 -22px;padding-top:22px;border-top:1px solid rgba(162,134,72,.4);}
+.col figure{margin:8px 0 22px;}
+.col figure img{width:100%;border-radius:14px;box-shadow:0 18px 40px rgba(20,22,75,.14);}
+.col figcaption{font-size:14px;color:var(--sanft);margin-top:10px;}
+.zitat{font-family:var(--serif);font-size:22px;line-height:1.45;color:var(--tinte);border-left:3px solid var(--gold);
+  padding:6px 0 6px 26px;margin:28px 0;}
+.punkte{margin:0 0 18px 0;padding-left:22px;}
+.punkte li{margin-bottom:8px;}
+.punkte li::marker{color:var(--gold);}
+.hinweis-karte{background:var(--weiss);border-radius:14px;padding:24px 28px;margin:24px 0;box-shadow:0 10px 28px rgba(20,22,75,.07);}
+.hinweis-karte p:last-child{margin-bottom:0;}
+.download{text-align:center;padding:30px 28px 100px;}
+.download .hinweis{font-size:14px;color:var(--sanft);margin-top:12px;}
+.zurueck{display:inline-block;margin-bottom:22px;font-size:14px;color:var(--gold-hell);text-decoration:none;letter-spacing:.06em;}
+@media(max-width:900px){.ausgabe{padding:30px 24px;}}
+
+/* ---- PRINT ---- */
+@page{size:A4;margin:16mm 0;}
+@page :first{margin-top:0;}
+@media print{
+  body{font-size:12.5pt;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  header,footer,.download,.zurueck,.menue{display:none!important;}
+  .nl-kopf{padding:34px 0 30px;}
+  .nl-kopf h1{font-size:30pt;}
+  .artikel{padding:26px 0 0;}
+  .col{max-width:none;padding:0 18mm;}
+  .nl-kopf .bahn{padding:0 18mm;}
+  .col figure,.zitat,.hinweis-karte,.punkte{break-inside:avoid;}
+  .col h2,.col h3,.rubrik{break-after:avoid;}
+  .col figure img{max-height:105mm;width:auto;max-width:100%;margin:0 auto;}
+  a{text-decoration:none;}
+}
+/* ---- /PRINT ---- */
+</style>
+</head>
+<body>
+<header>
+  <div class="bahn kopf">
+    <a class="logo" href="index.html#oben" aria-label="I4E – Startseite">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="8" fill="#a28648"/>
+        <path d="M11 27 L20 12 L29 27" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="29" r="2.4" fill="#fff"/>
+      </svg>
+      <span class="logo-wort">I4E<small>Impact4Entrepreneurship</small></span>
+    </a>
+    <button class="menue" id="menue" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <div class="nav-punkt"><a href="index.html#wege">Unsere Wege</a>
+        <div class="unter">
+          <a href="index.html#stipendien">Stipendien</a>
+          <a href="index.html#beteiligungen">Beteiligungen</a>
+          <a href="index.html#begleitung">Begleitung</a>
+        </div>
+      </div>
+      <div class="nav-punkt"><a href="index.html#ueber">Über uns</a>
+        <div class="unter">
+          <a href="index.html#auftrag">Unser Auftrag</a>
+          <a href="index.html#modell">Wirkungsmodell</a>
+          <a href="leitbild.html">Leitbild</a>
+        </div>
+      </div>
+      <div class="nav-punkt"><a href="index.html#aktuelles">Aktuelles</a>
+        <div class="unter">
+          <a href="newsletter.html">Neuigkeiten</a>
+          <a href="podcast.html">Podcast „Menschen mit Wirkung“</a>
+        </div>
+      </div>
+      <a class="knopf" href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="nl-kopf">
+  <div class="bahn">
+    <a class="zurueck" href="newsletter.html">← Alle Newsletter</a>
+    <div class="auge">Newsletter · November 2026</div>
+    <h1>Wirtschaft aus Berufung.<br>Wirkung aus Klarheit.</h1>
+    <p>Liebe Freundinnen und Freunde von Impact4Entrepreneurship – in diesem Newsletter geht es um einen verbindlichen Schritt, um Begegnungen in Schulen und im Netzwerk und um die Frage, wie Wirkung messbar wird.</p>
+  </div>
+</section>
+<article class="artikel">
+  <div class="col">
+
+<h2>Wo gemeinsame Werte zu verbindlichem Handeln werden</h2>
+    <figure>
+      <img src="images/newsletter-11-2026-vertrag.jpg" alt="Michael Deck und David Rösch mit den unterzeichneten Vertragsunterlagen im Eingang des Tagungshotels in Frankenthal">
+      <figcaption>Michael Deck (I4E gGmbH) und David Rösch (P3 Werkstatt gGmbH) – CSK-Summit 2026, Frankenthal</figcaption>
+    </figure>
+    <p>Auf dem CSK-Summit 2026 in Frankenthal haben <strong>David Rösch</strong>, Geschäftsführer der P3 Werkstatt gGmbH, und ich als Geschäftsführer der I4E gGmbH unseren <strong>Beteiligungsvertrag</strong> unterzeichnet.</p>
+    <p>Für mich ist das ein besonderer Moment: Aus Gesprächen, Vertrauen und einer gemeinsamen Überzeugung ist eine verbindliche Partnerschaft geworden.</p>
+    <div class="zitat">„Ich wünsche mir ein Unternehmertum, in dem wirtschaftliche Tragfähigkeit und Verantwortung für Menschen zusammengehören."</div>
+    <p>Ein Unternehmertum, in dem christliche Werte im Umgang miteinander und in konkreten Entscheidungen sichtbar werden. Mit dieser Beteiligung gehen wir als I4E einen weiteren Schritt auf diesem Weg.</p>
+    <p>Lieber David, danke für dein Vertrauen und den gemeinsamen Weg. Ich freue mich auf das, was wir miteinander gestalten werden!</p>
+
+    <span class="rubrik">Was sich konkret bewegt – Einblick in unsere Arbeit</span>
+
+    <h2>KI und Unternehmertum in der 11. Klasse</h2>
+    <figure>
+      <img src="images/newsletter-11-2026-potsdam-schule.jpg" alt="Schulgebäude der Katholischen Marienschule Potsdam hinter dem Schultor">
+      <figcaption>Katholische Marienschule Potsdam</figcaption>
+    </figure>
+    <p>Im Rahmen von <strong>LifeTeachUs</strong> war ich an der Katholischen Marienschule in Potsdam. In einer 11. Klasse habe ich über <strong>Künstliche Intelligenz und Unternehmertum</strong> gesprochen.</p>
+    <figure>
+      <img src="images/newsletter-11-2026-potsdam-schild.jpg" alt="Mauer mit dem Schriftzug Katholische Marienschule Potsdam">
+      <figcaption>Am Eingang der Katholischen Marienschule Potsdam</figcaption>
+    </figure>
+
+    <h2>Podcast „Menschen mit Wirkung" – die Reihe wächst</h2>
+    <p>Die <strong>Folgen 2, 3 und 4</strong> der neuen Podcast-Reihe sind produziert. Gespräche über das, was wirklich trägt – Folge für Folge, Monat für Monat.</p>
+    <div class="hinweis-karte">
+      <p>👉 <strong>Alle Folgen anhören:</strong> <a href="podcast.html">Zur Podcast-Reihe „Menschen mit Wirkung"</a></p>
+    </div>
+
+    <h2>Interview mit Mara Wenz: Wie kann man Impact messen?</h2>
+    <p>Für ihre Doktorarbeit hat Mara Wenz mich interviewt. Im Zentrum stand eine Frage, die uns bei I4E selbst beschäftigt: <strong>Wie kann man Impact messen?</strong> Und: Wie messen wir bei I4E den Impact?</p>
+    <p>Wirkung lässt sich nicht nur zählen. Aber sie darf auch nicht beliebig bleiben. Genau an dieser Spannung arbeiten wir.</p>
+
+    <h2>Mentoring mit Patrick Hofer von Brotreisen</h2>
+    <p>Mentoring mit <strong>Patrick Hofer</strong> von Brotreisen aus dem Mühlenviertel in Österreich. Das Thema: <strong>Berufung erkennen – und Wirkung aus Klarheit.</strong></p>
+
+    <h2>Vortrag bei der FBG eG</h2>
+    <p>Bei der FBG eG durfte ich einen Vortrag halten. Der Gedanke dahinter:</p>
+    <div class="zitat">„Begegnung ist Beziehung. Verengung ist Trennung."</div>
+
+    <h2>CSK-Summit Frankenthal: „Bitcoin im Unternehmeralltag"</h2>
+    <figure>
+      <img src="images/newsletter-11-2026-workshop.jpg" alt="Michael Deck sitzt auf einem Hocker und spricht vor Zuhörern im Workshop">
+      <figcaption>Workshop „Bitcoin im Unternehmeralltag" – CSK-Summit, Frankenthal</figcaption>
+    </figure>
+    <p>Neben der Vertragsunterzeichnung war ich auf dem Summit als <strong>Workshop-Speaker</strong> dabei – mit dem Thema „Bitcoin im Unternehmeralltag".</p>
+
+    <div class="hinweis-karte">
+      <p><strong>Rückmeldung willkommen:</strong> Ich freue mich über Gedanken, Fragen und Anregungen zu dieser Ausgabe – schreibe mir direkt an <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a>.</p>
+    </div>
+
+  </div>
+</article>
+<div class="download">
+  <a href="I4E-Newsletter-November-2026.pdf" class="knopf" download>Newsletter als PDF herunterladen</a>
+  <p class="hinweis">PDF · ca, 2,4 MB</p>
+</div>
+</main>
+<footer id="kontakt">
+  <div class="bahn">
+    <div class="fuss">
+      <div>
+        <div class="fuss-logo">I4E</div>
+        <p>Impact4Entrepreneurship gGmbH<br>Haynauer Str. 72a, 12249 Berlin</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a>
+        <a href="tel:+491705744206">+49 170 5744206</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <div class="klein">© 2026 Impact4Entrepreneurship gGmbH · Entwurf</div>
+  </div>
+</footer>
+<script>
+var m=document.getElementById('menue'),n=document.getElementById('nav');
+m.addEventListener('click',function(){var o=n.classList.toggle('offen');m.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('offen');});
+</script>
+</body>
+</html>
