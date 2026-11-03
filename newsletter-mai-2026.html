@@ -1,188 +1,211 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Newsletter Mai 2026 – Impact4Entrepreneurship gGmbH</title>
 <meta name="description" content="I4E Newsletter Mai 2026 – Wirtschaft aus Berufung. Wirkung aus Klarheit. Einblicke in unsere Arbeit: Projekt Wegfinder, Freiburg, erste Kapitalbeteiligung und Impact Founders.">
+<link rel="icon" href="images/i4e-logo.png">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
-  @font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/playfair-display-600-latin.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Playfair Display';
-    src: url('fonts/playfair-display-700-latin.woff2') format('woff2');
-    font-weight: 700; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-400-latin.woff2') format('woff2');
-    font-weight: 400; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-500-latin.woff2') format('woff2');
-    font-weight: 500; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    src: url('fonts/inter-600-latin.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-  }
+:root{
+  --creme:#f4f0e4; --creme-dunkel:#ebe5d3; --weiss:#fffdf8;
+  --gold:#a28648; --gold-dunkel:#866d38; --gold-hell:#c4a96a; --tinte:#1d1b16; --navy:#14164b;
+  --text:#2a2721; --sanft:#6b655a;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--creme);color:var(--text);line-height:1.65;font-size:17px;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+.bahn{max-width:1180px;margin:0 auto;padding:0 28px;}
 
-  :root {
-    --lila-tief: #2f003a;
-    --lila-dunkel: #5b156d;
-    --lila-akzent: #7a2a90;
-    --flieder: #cdb6d6;
-    --flieder-hell: #ecdff0;
-    --grund: #faf5f8;
-    --weiss: #fffdff;
-    --text: #3a2f40;
-    --text-sanft: #6f6577;
-  }
+/* ---------- Kopfzeile ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--creme);border-bottom:1px solid rgba(162,134,72,.12);}
+.kopf{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--gold);}
+.logo svg{height:40px;width:auto;}
+.logo-wort{font-weight:700;font-size:26px;letter-spacing:.2em;line-height:1;text-transform:uppercase;}
+.logo-wort small{display:block;font-size:8.5px;font-weight:500;letter-spacing:.2em;margin-top:6px;color:var(--sanft);}
+nav{display:flex;align-items:center;gap:30px;}
+.nav-punkt{position:relative;}
+.nav-punkt>a{font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:26px 0;display:inline-flex;align-items:center;gap:6px;}
+.nav-punkt>a::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);}
+.nav-punkt.einzeln>a::after{display:none;}
+.unter{position:absolute;top:100%;left:-18px;min-width:230px;background:var(--weiss);border-radius:0 0 12px 12px;
+  box-shadow:0 18px 40px rgba(20,22,75,.14);padding:10px 0;display:none;}
+.nav-punkt:hover .unter,.nav-punkt:focus-within .unter{display:block;}
+.unter a{display:block;padding:9px 22px;font-size:15px;text-decoration:none;}
+.unter a:hover{background:var(--creme);color:var(--gold);}
+.knopf{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;border-radius:5px;border:0;cursor:pointer;
+  transition:background .2s;}
+.knopf:hover{background:var(--gold-dunkel);}
+.menue{display:none;background:none;border:0;font-size:28px;color:var(--gold);cursor:pointer;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ---------- Titelbild ---------- */
+.titel{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;}
+.titel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.titel::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(20,22,75,.55),rgba(20,22,75,.72));}
+.titel-text{position:relative;z-index:2;padding:40px 28px;max-width:960px;}
+.titel h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5.6vw,68px);line-height:1.12;margin-bottom:22px;}
+.titel p{font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--grund);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 17px;
-  }
+/* ---------- Abschnitte ---------- */
+.teil{padding:104px 0;}
+.teil.dunkel{background:var(--creme-dunkel);}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.zwei.dreh .bild{order:-1;}
+.auge{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:500;margin-bottom:10px;}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.15;color:var(--tinte);margin-bottom:20px;}
+.teil p{color:var(--text);margin-bottom:16px;max-width:560px;}
+.teil .knopf{margin-top:12px;}
+.bild img{width:100%;aspect-ratio:4/3.1;object-fit:cover;border-radius:16px;box-shadow:0 24px 54px rgba(20,22,75,.16);}
+.bild.hoch img{aspect-ratio:4/4.6;}
 
-  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+/* ---------- Farbband ---------- */
+.band{background:var(--gold);color:var(--tinte);padding:92px 0;text-align:center;}
+.band p{font-size:clamp(17px,2vw,22px);letter-spacing:.07em;text-transform:uppercase;font-weight:400;line-height:1.7;max-width:880px;margin:0 auto;}
+.band small{display:block;margin-top:22px;font-size:13px;letter-spacing:.14em;opacity:.75;text-transform:uppercase;}
 
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-  .col { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+/* ---------- Drei Karten ---------- */
+.kopfzeile{text-align:center;max-width:720px;margin:0 auto 54px;}
+.kopfzeile p{margin-left:auto;margin-right:auto;}
+.drei{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.karte{background:var(--weiss);border-radius:16px;padding:38px 32px;box-shadow:0 14px 36px rgba(20,22,75,.07);}
+.karte .nr{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1;margin-bottom:14px;}
+.karte h3{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--tinte);margin-bottom:10px;}
+.karte p{font-size:16px;color:var(--sanft);margin:0;}
 
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(255, 253, 255, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--flieder-hell);
-  }
-  .nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 0;
-  }
-  .nav img { height: 44px; display: block; }
-  .nav .zurueck {
-    color: var(--text-sanft); text-decoration: none;
-    font-weight: 500; font-size: 15px;
-  }
-  .nav .zurueck:hover { color: var(--lila-akzent); }
+/* ---------- Aktuelles ---------- */
+.neu{display:grid;grid-template-columns:1.15fr 1fr;background:var(--weiss);border-radius:18px;overflow:hidden;box-shadow:0 20px 48px rgba(20,22,75,.1);}
+.neu img{width:100%;height:100%;object-fit:cover;min-height:340px;}
+.neu-text{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
+.neu-text h3{font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.2;color:var(--tinte);margin-bottom:14px;}
+.neu-text p{color:var(--sanft);font-size:16px;margin:0;}
 
-  /* Auftakt */
-  .auftakt {
-    padding: 90px 0 70px; text-align: center;
-    background: linear-gradient(180deg, var(--weiss) 0%, var(--grund) 100%);
-  }
-  .kicker {
-    display: inline-flex; align-items: center; gap: 12px;
-    text-transform: uppercase; letter-spacing: 0.22em;
-    font-size: 13px; font-weight: 600; color: var(--lila-akzent);
-    margin-bottom: 24px;
-  }
-  .kicker::before, .kicker::after {
-    content: ''; width: 36px; height: 1px; background: var(--flieder);
-  }
-  .auftakt h1 {
-    font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700;
-    color: var(--lila-tief); line-height: 1.15;
-    max-width: 760px; margin: 0 auto 20px;
-  }
-  .auftakt p { max-width: 620px; margin: 0 auto; color: var(--text-sanft); font-size: 1.12rem; }
+/* ---------- Fuß ---------- */
+footer{background:var(--navy);color:#c9c6dd;padding:64px 0 40px;font-size:15px;}
+.fuss{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;}
+footer h4{color:#fff;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+footer a{display:block;text-decoration:none;padding:3px 0;}
+footer a:hover{color:#fff;}
+.fuss-logo{font-weight:700;font-size:28px;letter-spacing:.2em;color:var(--gold-hell);margin-bottom:12px;}
+.klein{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;opacity:.75;}
 
-  /* Artikel */
-  .artikel { padding: 72px 0 40px; }
-  .artikel h2 {
-    font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 700;
-    color: var(--lila-tief); margin: 56px 0 18px;
-  }
-  .artikel h2:first-of-type { margin-top: 0; }
-  .artikel h3 { font-size: 1.15rem; font-weight: 600; color: var(--lila-dunkel); margin: 26px 0 8px; }
-  .artikel p { margin-bottom: 16px; font-size: 1.06rem; }
-  .artikel strong { font-weight: 600; color: var(--lila-tief); }
-  .artikel em { color: var(--lila-akzent); }
+@media(max-width:900px){
+  .zwei,.neu,.drei,.fuss{grid-template-columns:1fr;gap:34px;}
+  .zwei.dreh .bild{order:0;}
+  .teil{padding:72px 0;}
+  .menue{display:block;}
+  nav{display:none;position:absolute;top:74px;left:0;right:0;background:var(--creme);flex-direction:column;align-items:flex-start;
+    padding:10px 28px 26px;gap:0;border-bottom:1px solid rgba(162,134,72,.12);}
+  nav.offen{display:flex;}
+  .nav-punkt>a{padding:12px 0;}
+  .unter{position:static;display:block;box-shadow:none;background:none;padding:0 0 6px 12px;}
+  .nav-punkt>a::after{display:none;}
+}
 
-  .zitat {
-    margin: 28px 0; padding: 26px 30px;
-    border-left: 3px solid var(--lila-akzent);
-    background: var(--weiss); border-radius: 0 12px 12px 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem; color: var(--lila-tief); line-height: 1.5;
-  }
+.legal{padding:72px 0 96px;}
+.schmal{max-width:780px;}
+.legal h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.4vw,52px);color:var(--tinte);margin-bottom:22px;}
+.legal h2{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--tinte);margin:34px 0 8px;}
+.legal p{margin-bottom:12px;max-width:none;}
+.legal a{color:var(--gold-dunkel);}
+.adresse{background:var(--weiss);border-radius:14px;padding:22px 28px;margin:18px 0 6px;box-shadow:0 10px 28px rgba(20,22,75,.07);}
+.adresse p{margin:2px 0;}
+.stand{color:var(--sanft);font-size:14px;margin-top:34px;}
 
-  .punkte { list-style: none; margin: 18px 0 22px; }
-  .punkte li {
-    padding-left: 30px; position: relative; margin-bottom: 10px;
-  }
-  .punkte li::before {
-    content: '→'; position: absolute; left: 0;
-    color: var(--lila-akzent); font-weight: 600;
-  }
 
-  .hinweis-karte {
-    background: var(--weiss); border: 1px solid var(--flieder-hell);
-    border-radius: 18px; padding: 30px 34px; margin: 28px 0;
-  }
-  .hinweis-karte p:last-child { margin-bottom: 0; }
-
-  a.link { color: var(--lila-akzent); text-decoration: none; border-bottom: 1px solid var(--flieder-hell); word-break: break-word; }
-  a.link:hover { border-color: var(--lila-akzent); }
-
-  /* Download */
-  .download {
-    text-align: center; padding: 40px 0 90px;
-  }
-  .knopf {
-    display: inline-block; padding: 16px 36px;
-    background: var(--lila-tief); color: #fff;
-    text-decoration: none; font-weight: 600; font-size: 15px;
-    border-radius: 999px; letter-spacing: 0.02em;
-    transition: background 0.2s ease;
-  }
-  .knopf:hover { background: var(--lila-akzent); }
-  .download .hinweis { color: var(--text-sanft); font-size: 0.9rem; margin-top: 12px; }
-
-  footer {
-    background: var(--lila-tief); padding: 28px 0;
-    color: var(--flieder); font-size: 0.9rem;
-  }
-  .fuss {
-    display: flex; justify-content: space-between;
-    flex-wrap: wrap; gap: 14px; align-items: center;
-  }
-  .fuss a { color: var(--flieder); text-decoration: none; }
-  .fuss a:hover { color: #fff; }
-  .fuss .links { display: flex; gap: 22px; flex-wrap: wrap; }
-
-  @media (max-width: 560px) { body { font-size: 16px; } .nav img { height: 34px; } }
+.nl-kopf{background:var(--navy);color:#fff;padding:84px 0 76px;}
+.nl-kopf .auge{color:var(--gold-hell);}
+.nl-kopf h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.8vw,56px);line-height:1.14;margin-bottom:20px;}
+.nl-kopf p{color:#c9c6dd;font-size:18px;max-width:62ch;}
+.nl-kopf a{color:var(--gold-hell);}
+.ausgaben{max-width:860px;margin:0 auto;display:grid;gap:26px;padding:72px 0 100px;}
+.ausgabe{background:var(--weiss);border-radius:16px;padding:38px 36px;box-shadow:0 14px 36px rgba(20,22,75,.07);}
+.ausgabe .marke{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:600;margin-bottom:10px;}
+.ausgabe .marke em{font-style:normal;background:var(--gold);color:var(--tinte);padding:2px 9px;border-radius:100px;margin-left:6px;}
+.ausgabe h2{font-size:clamp(24px,2.8vw,31px);margin-bottom:12px;}
+.ausgabe p{color:var(--sanft);font-size:16px;margin-bottom:18px;}
+.knoepfe{display:flex;flex-wrap:wrap;gap:12px;}
+.knopf.hell{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy);}
+.knopf.hell:hover{background:var(--navy);color:#fff;}
+.artikel{padding:72px 0 40px;}
+.col{max-width:720px;margin:0 auto;padding:0 28px;}
+.col h2{font-size:clamp(26px,3vw,34px);margin:48px 0 16px;}
+.col h2:first-child{margin-top:0;}
+.col h3{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--tinte);margin:32px 0 10px;}
+.col p{margin-bottom:16px;}
+.col a{color:var(--gold-dunkel);}
+.rubrik{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dunkel);font-weight:600;
+  margin:64px 0 -22px;padding-top:22px;border-top:1px solid rgba(162,134,72,.4);}
+.col figure{margin:8px 0 22px;}
+.col figure img{width:100%;border-radius:14px;box-shadow:0 18px 40px rgba(20,22,75,.14);}
+.col figcaption{font-size:14px;color:var(--sanft);margin-top:10px;}
+.zitat{font-family:var(--serif);font-size:22px;line-height:1.45;color:var(--tinte);border-left:3px solid var(--gold);
+  padding:6px 0 6px 26px;margin:28px 0;}
+.punkte{margin:0 0 18px 0;padding-left:22px;}
+.punkte li{margin-bottom:8px;}
+.punkte li::marker{color:var(--gold);}
+.hinweis-karte{background:var(--weiss);border-radius:14px;padding:24px 28px;margin:24px 0;box-shadow:0 10px 28px rgba(20,22,75,.07);}
+.hinweis-karte p:last-child{margin-bottom:0;}
+.download{text-align:center;padding:30px 28px 100px;}
+.download .hinweis{font-size:14px;color:var(--sanft);margin-top:12px;}
+.zurueck{display:inline-block;margin-bottom:22px;font-size:14px;color:var(--gold-hell);text-decoration:none;letter-spacing:.06em;}
+@media(max-width:900px){.ausgabe{padding:30px 24px;}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="container nav">
-    <a href="index.html"><img src="images/i4e-logo.png" alt="Impact4Entrepreneurship Logo"></a>
-    <a href="index.html" class="zurueck">← Zurück zur Startseite</a>
+  <div class="bahn kopf">
+    <a class="logo" href="index.html#oben" aria-label="I4E – Startseite">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="8" fill="#a28648"/>
+        <path d="M11 27 L20 12 L29 27" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="29" r="2.4" fill="#fff"/>
+      </svg>
+      <span class="logo-wort">I4E<small>Impact4Entrepreneurship</small></span>
+    </a>
+    <button class="menue" id="menue" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <div class="nav-punkt"><a href="index.html#wege">Unsere Wege</a>
+        <div class="unter">
+          <a href="index.html#stipendien">Stipendien</a>
+          <a href="index.html#beteiligungen">Beteiligungen</a>
+          <a href="index.html#begleitung">Begleitung</a>
+        </div>
+      </div>
+      <div class="nav-punkt"><a href="index.html#ueber">Über uns</a>
+        <div class="unter">
+          <a href="index.html#auftrag">Unser Auftrag</a>
+          <a href="index.html#modell">Wirkungsmodell</a>
+          <a href="leitbild.html">Leitbild</a>
+        </div>
+      </div>
+      <div class="nav-punkt"><a href="index.html#aktuelles">Aktuelles</a>
+        <div class="unter">
+          <a href="newsletter.html">Neuigkeiten</a>
+          <a href="podcast.html">Podcast „Menschen mit Wirkung“</a>
+        </div>
+      </div>
+      <a class="knopf" href="index.html#kontakt">Kontakt</a>
+    </nav>
   </div>
 </header>
-
-<!-- Auftakt -->
-<div class="auftakt">
-  <div class="container">
-    <span class="kicker">Newsletter · Mai 2026</span>
+<main>
+<section class="nl-kopf">
+  <div class="bahn">
+    <a class="zurueck" href="newsletter.html">← Alle Newsletter</a>
+    <div class="auge">Newsletter · Mai 2026</div>
     <h1>Wirtschaft aus Berufung.<br>Wirkung aus Klarheit.</h1>
     <p>Liebe Freundinnen und Freunde von Impact4Entrepreneurship – mit diesem Newsletter öffnen wir ein neues Kapitel und geben ihm ein sichtbares Zeichen.</p>
   </div>
-</div>
-
-<!-- Inhalt -->
+</section>
 <article class="artikel">
   <div class="col">
 
@@ -235,24 +258,38 @@
 
   </div>
 </article>
-
-<!-- Download -->
 <div class="download">
   <div class="container">
     <a href="I4E-Newsletter-Mai-2026.pdf" class="knopf" download>Newsletter als PDF herunterladen</a>
     <p class="hinweis">PDF · ca. 7 MB</p>
   </div>
 </div>
-
-<footer>
-  <div class="container fuss">
-    <span>© 2026 Impact4Entrepreneurship gGmbH – gemeinnützige Gesellschaft</span>
-    <span class="links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </span>
+</main>
+<footer id="kontakt">
+  <div class="bahn">
+    <div class="fuss">
+      <div>
+        <div class="fuss-logo">I4E</div>
+        <p>Impact4Entrepreneurship gGmbH<br>Haynauer Str. 72a, 12249 Berlin</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="mailto:michael.deck@impact4entrepreneurship.de">michael.deck@impact4entrepreneurship.de</a>
+        <a href="tel:+491705744206">+49 170 5744206</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <div class="klein">© 2026 Impact4Entrepreneurship gGmbH · Entwurf</div>
   </div>
 </footer>
-
+<script>
+var m=document.getElementById('menue'),n=document.getElementById('nav');
+m.addEventListener('click',function(){var o=n.classList.toggle('offen');m.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('offen');});
+</script>
 </body>
 </html>
